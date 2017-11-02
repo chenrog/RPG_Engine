@@ -22,7 +22,7 @@ public:
      * Returns the allies.
      * @return The allies.
      */
-    PlayerUnit getPlayer()const;
+    PlayerUnit getPlayer() const;
 
     /**
      * Function that moves the player based on key input. If the player moves onto a
@@ -40,13 +40,13 @@ public:
      * Returns the Overworld and all its cells.
      * @return The game's overworld.
      */
-    WorldMap getWorldMap()const;
+    WorldMap getWorldMap() const;
 
     /**
      * Returns the current game state.
      * @return OVERWORLD, MENU, or BATTLE.
      */
-    game_state_t getCurrentGameState()const;
+    game_state_t getCurrentGameState() const;
 
     /**
      * Returns whether or not the game is over.
@@ -68,6 +68,11 @@ public:
     static const int INVENTORY_SLOTS = 20;
     const int PARTY_SIZE = 2;
 
+    /**
+	* Sets the current gamestate to the given one
+	*/
+    void World::setCurrentGameState(game_state_t gameState);
+
     //TODO: not sure what these numbers are yet. i know they change per player though so it wont be const.
     unsigned const int STARTING_VIT = 1;
     unsigned const int STARTING_INT = 1;
@@ -84,9 +89,9 @@ public:
 
 private:
     // Only doing one player for now.
-    PlayerUnit* player;
+    PlayerUnit *player;
     //unordered_map inventory;
-    WorldMap* worldMap;
+    WorldMap *worldMap;
     Item inventory[INVENTORY_SLOTS];
     int curInventorySize = 0;
     game_state_t gameState;
