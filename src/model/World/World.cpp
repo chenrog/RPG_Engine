@@ -3,7 +3,9 @@
 //
 
 #include "World.h"
+#include <ctime>
 #include <random>
+
 /**
  * World Creation method.
  */
@@ -14,23 +16,22 @@ World::World()  {
     vector<Spell>     spellList;
 //    this->inventory;
     //TODO: probably need new here.
-
-        this->player = new PlayerUnit("Twen", starting_point, STARTING_VIT, STARTING_INT, STARTING_DEX,
+    this->player = new PlayerUnit("Twen", starting_point, STARTING_VIT, STARTING_INT, STARTING_DEX,
                                   STARTING_STR, STARTING_LVL, true, equipmentList, spellList, STARTING_MOD_VIT,
                                   STARTING_MOD_INT, STARTING_MOD_DEX, STARTING_MOD_STR);
     this->gameState = OVERWORLD;
 
 }
 
-PlayerUnit World::getPlayer() {
+PlayerUnit World::getPlayer() const {
     return *player;
 }
 
-WorldMap World::getWorldMap() {
+WorldMap World::getWorldMap() const {
     return *worldMap;
 }
 
-game_state_t World::getCurrentGameState() {
+game_state_t World::getCurrentGameState() const {
     return gameState;
 }
 
@@ -59,12 +60,7 @@ inline void World::trash(int i) {
     curInventorySize--;
 }
 
-//unordered_map<Item, int> World::getInventory() {
-//    return inventory;
-//}
-
-void World::movePlayer(direction_t direction, int distance)
-{
+void World::movePlayer(direction_t direction, int distance) {
     // Move the player
     player->move(direction, 1);
 
@@ -77,7 +73,7 @@ void World::movePlayer(direction_t direction, int distance)
         std::mt19937 mt(rd());
         std::uniform_real_distribution<double> dist(0.0, 10.0);
         int random_number = dist(mt); // Between 0 and 9
-        if(random_number > 1){
+        if (random_number > 1) {
             // initiate a battle sequence
         }
     }

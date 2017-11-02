@@ -26,3 +26,11 @@ void IEntity::enableVisibility() {
 void IEntity::disableVisibility() {
     visible = false;
 }
+
+void IEntity::setPosition(Posn posn) {
+    this->position = posn;
+}
+
+bool IEntity::is_item() {
+    return item;
+}
