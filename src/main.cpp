@@ -4,9 +4,9 @@
 #include "view/GameWindow.h"
 
 //Screen dimension constants
-const int SCREEN_GRID_MULTIPLIER = 10;
-const int SCREEN_WIDTH = 64;
-const int SCREEN_HEIGHT = 48;
+const int SCREEN_GRID_MULTIPLIER = 100;
+const int SCREEN_WIDTH = 9;
+const int SCREEN_HEIGHT = 9;
 
 int main( int argc, char* args[] ) {
     // initialize the game

@@ -12,6 +12,15 @@
 
 class MapCellTest {
 
+    void testMapCellConstructor(){
+        MapCell c1 = MapCell(Point(0,0), true);
+        TS_ASSERT_EQUALS(c1.getPosition().getX(), 0);
+        TS_ASSERT_EQUALS(c1.getPosition().getY(), 0);
+        TS_ASSERT_EQUALS(c1.isWalkable(), true);
+        TS_ASSERT_EQUALS(c1.isRandomEncounterable(), true);
+        TS_ASSERT_EQUALS()
+    }
+
 };
 
 

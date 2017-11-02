@@ -26,7 +26,7 @@ public:
     }
 
     void testDrop() {
-        vector<Item> * vector = new vector<Item>();
+        std::vector<Item> *vector = new std::vector<Item>();
         vector->push_back(Item("Key Item", "MAD COW"));
         EnemyUnit *enemyUnit = new EnemyUnit(1, 2, 3, 4, false, "Georgina", *vector);
         TS_ASSERT_EQUALS(enemyUnit->calcDrop().getDescription(), "MAD COW");

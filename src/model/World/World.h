@@ -84,9 +84,9 @@ public:
 
 private:
     // Only doing one player for now.
-    PlayerUnit player;
+    PlayerUnit* player;
     //unordered_map inventory;
-    WorldMap worldMap;
+    WorldMap* worldMap;
     Item inventory[INVENTORY_SLOTS];
     int curInventorySize = 0;
     game_state_t gameState;
