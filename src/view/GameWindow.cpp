@@ -1,5 +1,6 @@
 #include <SDL.h>
 #include "GameWindow.h"
+#include "../model/GameState.h"
 
 GameWindow::GameWindow(string title, unsigned int width, unsigned int height, unsigned int multiplier) {
     this->title = move(title);
@@ -67,122 +68,78 @@ void GameWindow::pollEvents() {
                 this->closed = true;
                 break;
 
-                // check for key press
-            case SDL_KEYDOWN:
-
                 // check for specific key press, output based on current game state
-                switch (event.key.keysym.sym) {
-
-                    // left arrow key
-                    case SDLK_LEFT:
-
-                        // if the player is in the overworld, move left
-                        if (game.getCurrentGameState == 0) {
-                            game.getPlayer.movePlayer(LEFT, 1);
+            case SDL_KEYDOWN:
+                // OVERWORLD
+                if (game.getCurrentGameState() == OVERWORLD) {
+                    bool moved;
+                    bool acted;
+                    auto direction;
+                    auto action;
+                    switch (event.key.keysym.sym) {
+                        // left
+                        case SDLK_LEFT:
+                            direction = LEFT;
+                            moved = true;
                             break;
-                        }
-
-                        // if the player is in the menu, navigate left
-                        if (game.getCurrentGameState == 1) {
-                            // move to the left-er option in the general menu, unless it hits a bound
+                        // right
+                        case SDLK_RIGHT:
+                            direction = RIGHT;
+                            moved = true;
                             break;
-                        }
-
-                        // if the player is in the battle menu, navigate left
-                        if (game.getCurrentGameState == 2) {
-                            // move to the left-er option in the battle menu, unless it hits a bound
+                        // up
+                        case SDLK_UP:
+                            direction = UP;
+                            moved = true;
                             break;
-                        }
-
-                        // if the player is conversing, advance or end the conversation
-                        if (game.getCurrentGameState == 3) {
-                            // advance the text/make it go away
+                        // down
+                        case SDLK_DOWN:
+                            direction = DOWN;
+                            moved = true;
                             break;
-                        }
-
-                        // right arrow key
-                    case SDLK_RIGHT:
-
-                        // if the player is in the overworld, move right
-                        if (game.getCurrentGameState == 0) {
-                            game.getPlayer.movePlayer(RIGHT, 1);
+                        // default/unused key
+                        default:
                             break;
-                        }
+                    }
 
-                        // if the player is in the menu, navigate right
-                        if (game.getCurrentGameState == 1) {
-                            // move to the right-er option in the general menu, unless it hits a bound
+                    // checks if it was movement
+                    if (moved) {
+                        game.movePlayer(direction, 1);
+                    }
+                }
+
+
+                // MENU
+                if (game.getCurrentGameState() == MENU) {
+                    switch(event.key.keysym.sym) {
+                        // TODO: left
+                        case SDLK_LEFT:
                             break;
-                        }
-
-                        // if the player is in the battle menu, navigate right
-                        if (game.getCurrentGameState == 2) {
-                            // move to the right-er option in the battle menu, unless it hits a bound
+                        // TODO: right
+                        case SDLK_RIGHT:
                             break;
-                        }
+                    }
+                }
 
-                        // if the player is conversing, advance or end the conversation
-                        if (game.getCurrentGameState == 3) {
-                            // advance the text/make it go away
+
+                // BATTLE
+                if (game.getCurrentGameState() == BATTLE) {
+                    switch(event.key.keysym.sym) {
+                        // TODO: left
+                        case SDLK_LEFT:
                             break;
-                        }
-
-                        // up arrow key
-                    case SDLK_UP:
-
-                        // if the player is in the overworld, move up
-                        if (game.getCurrentGameState == 0) {
-                            game.getPlayer.movePlayer(UP, 1);
+                            // TODO: right
+                        case SDLK_RIGHT:
                             break;
-                        }
-
-                        // if the player is in the menu, do nothing
-                        if (game.getCurrentGameState == 1) {
-                            break;
-                        }
-
-                        // if the player is in the battle menu, do nothing
-                        if (game.getCurrentGameState == 2) {
-                            break;
-                        }
-
-                        // if the player is conversing, advance or end the conversation
-                        if (game.getCurrentGameState == 3) {
-                            // advance the text/make it go away
-                            break;
-                        }
-
-                        // down arrow key
-                    case SDLK_DOWN:
-
-                        // if the player is in the overworld, move down
-                        if (game.getCurrentGameState == 0) {
-                            game.getPlayer.movePlayer(DOWN, 1);
-                            break;
-                        }
-
-                        // if the player is in the menu, do nothing
-                        if (game.getCurrentGameState == 1) {
-                            break;
-                        }
-
-                        // if the player is in the battle menu, do nothing
-                        if (game.getCurrentGameState == 2) {
-                            break;
-                        }
-
-                        // if the player is conversing, advance or end the conversation
-                        if (game.getCurrentGameState == 3) {
-                            // advance the text/make it go away
-                            break;
-                        }
+                    }
+                }
 
 
                         // enter key
                     case SDLK_ENTER:
 
                         // if the player is in the overworld, look for interactions at all adjacencies
-                        if (game.getCurrentGameState == 0) {
+                        if (game.getCurrentGameState() == 0) {
 
                             // ********** interactions for beggining battle and collecting item will be made and used here**********
 
@@ -214,19 +171,19 @@ void GameWindow::pollEvents() {
                         }
 
                         // if the player is in the menu, select option being hovered
-                        if (game.getCurrentGameState == 1) {
+                        if (game.getCurrentGameState() == 1) {
                             //select in menu
                             break;
                         }
 
                         // if the player is in the battle menu, select option being hovered
-                        if (game.getCurrentGameState == 2) {
+                        if (game.getCurrentGameState() == 2) {
                             //select in menu
                             break;
                         }
 
                         // if the player is conversing, advance or end the conversation
-                        if (game.getCurrentGameState == 3) {
+                        if (game.getCurrentGameState() == 3) {
                             // advance the text/make it go away
                             break;
                         }
@@ -235,39 +192,26 @@ void GameWindow::pollEvents() {
                     case SDLK_P:
 
                         // if the player is in the overworld, goes to menu game state
-                        if (game.getCurrentGameState == 0) {
+                        if (game.getCurrentGameState() == 0) {
                             game.setCurrentGameState(MENU);
                             break;
                         }
 
                         // if the player is in the menu, goes to overworld game state
-                        if (game.getCurrentGameState == 1) {
+                        if (game.getCurrentGameState() == 1) {
                             game.setCurrentGameState(OVERWORLD);
                             break;
                         }
 
                         // if the player is in the battle menu, do nothing
-                        if (game.getCurrentGameState == 2) {
+                        if (game.getCurrentGameState() == 2) {
                             break;
                         }
 
                         // if the player is conversing, do nothing
-                        if (game.getCurrentGameState == 3) {
+                        if (game.getCurrentGameState() == 3) {
                             break;
                         }
-
-
-                        printf("Key press detected\n");
-                        break;
-
-                        // check for key release
-                    case SDL_KEYUP:
-                        printf("Key release detected\n");
-                        break;
-
-                        // default: do nothing
-                    default:
-                        break;
                 }
         }
     }
