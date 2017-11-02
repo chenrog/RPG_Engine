@@ -12,16 +12,14 @@ int main( int argc, char* args[] ) {
     // initialize the game
     GameWindow g = GameWindow(
             "$WAG",
-            SCREEN_WIDTH * SCREEN_GRID_MULTIPLIER,
-            SCREEN_HEIGHT * SCREEN_GRID_MULTIPLIER);
+            SCREEN_WIDTH,
+            SCREEN_HEIGHT,
+            SCREEN_GRID_MULTIPLIER);
 
 
     // A basic main loop to prevent blocking
     while (!g.is_closed()) {
-        /* Poll for events. SDL_PollEvent() returns 0 when there are no  */
-        /* more events on the event queue, our while loop will exit when */
-        /* that occurs.                                                  */
-        g.pollEvents();
+        g.pollEvents(); // Poll for events (controls).
 
         SDL_Delay(20); // waits 20 milliseconds
     }

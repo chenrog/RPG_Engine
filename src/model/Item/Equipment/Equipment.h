@@ -44,7 +44,7 @@ public:
     Equip_Builder(string name, equip_type_t type);
     Equipment * build();
     // setters for the fields
-    Equip_Builder setPosition(const Posn &position);
+    Equip_Builder setPosition(unsigned int a, unsigned int b);
     Equip_Builder setVisibility(const bool &visibility);
     Equip_Builder setVit(int vit);
     Equip_Builder setVit_mod(unsigned int vit_mod);

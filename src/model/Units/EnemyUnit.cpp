@@ -1,4 +1,5 @@
 #include "EnemyUnit.h"
+#include <random>
 
 EnemyUnit::EnemyUnit(unsigned int vit, unsigned int intel, unsigned int speed, unsigned int str, bool melee,
                      string name, vector<Item> drops) {
@@ -50,6 +51,9 @@ EnemyUnit::EnemyUnit(const EnemyUnit &unit) {
 }
 
 Item EnemyUnit::calcDrop() {
-    int random_int = static_cast<int>(rand() % drop.size());
+    std::random_device rd;
+    std::mt19937 mt(rd());
+    std::uniform_real_distribution<double> dist(0.0, drop.size());
+    int random_int = dist(mt);
     return this->drop[random_int];
 }

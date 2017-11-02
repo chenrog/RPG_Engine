@@ -3,16 +3,15 @@
 
 #include "../src/model/Item/Item.h"
 #include <cxxtest/TestSuite.h>
-
 #include <iostream>
 
-class ItemTest {
+class ItemTest : public CxxTest::TestSuite {
 public:
 
-    testMethods() {
-        Item * item = new Item("Name", "Description");
-        TS_ASSERT_EQUALS("Name", item->getName());
-        TS_ASSERT_EQUALS("Description", item->getDescription());
+    void testMethods() {
+        Item item = Item("Name", "Description");
+        TS_ASSERT_EQUALS("Name", item.getName());
+        TS_ASSERT_EQUALS("Description", item.getDescription());
     }
 };
 

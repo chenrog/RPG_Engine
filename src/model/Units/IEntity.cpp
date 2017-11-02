@@ -27,8 +27,8 @@ void IEntity::disableVisibility() {
     visible = false;
 }
 
-void IEntity::setPosition(Posn posn) {
-    this->position = posn;
+void IEntity::setPosition(unsigned int a, unsigned int b) {
+    position = Posn(a, b);
 }
 
 bool IEntity::is_item() {

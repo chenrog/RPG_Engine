@@ -3,7 +3,6 @@
 //
 
 #include "World.h"
-#include <ctime>
 #include <random>
 
 /**
@@ -47,7 +46,7 @@ inline bool World::addToInventory(Item item) {
     if (curInventorySize == INVENTORY_SLOTS) {
         return false;
     } else {
-        inventory[curInventorySize] = item;
+        inventory[curInventorySize] = std::move(item);
         curInventorySize++;
         return true;
     }

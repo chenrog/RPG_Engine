@@ -106,8 +106,8 @@ Equipment * Equip_Builder::build() {
     return equipment;
 }
 
-Equip_Builder Equip_Builder::setPosition(const Posn &position) {
-    this->position = position;
+Equip_Builder Equip_Builder::setPosition(unsigned int a, unsigned int b) {
+    this->position = Posn(a, b);
     return *this;
 }
 Equip_Builder Equip_Builder::setVisibility(const bool &visible) {

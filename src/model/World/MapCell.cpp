@@ -42,6 +42,10 @@ void MapCell::setRandomEncounters(bool encounter) {
     randomEncounterable = encounter;
 }
 
+bool MapCell::isEmpty() {
+    return this->c_entity == nullptr;
+}
+
 // some function that controls how this cell is displayed, will be based on whether or not this Cell is "inhabited"
 void MapCell::draw() {
     //this is where the color, shape, etc of however we want to display a cell

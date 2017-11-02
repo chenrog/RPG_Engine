@@ -25,7 +25,7 @@ public:
 
     virtual Posn getPosition();
 
-    virtual void setPosition(Posn posn);
+    virtual void setPosition(unsigned int a, unsigned int b);
 
     virtual bool is_item();
 

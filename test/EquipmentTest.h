@@ -6,20 +6,19 @@
 
 #include <iostream>
 
-class EquipmentTest {
+class EquipmentTest : public CxxTest::TestSuite {
 public:
-
     void testEquipmentBuilder() {
         Equip_Builder *equip_builder = new Equip_Builder("Helmet", HELMET);
-        equip_builder->setPosition(Point(0, 1));
+        equip_builder->setPosition(0, 1);
         equip_builder->setVit(1);
         equip_builder->setIntel(2);
         equip_builder->setStr(3);
-        equip_builder->setSpeed(4);
+        equip_builder->setDex(4);
         equip_builder->setVit_mod(5);
         equip_builder->setInt_mod(6);
         equip_builder->setStr_mod(7);
-        equip_builder->setSpeed_mod(8);
+        equip_builder->setDex_mod(8);
         equip_builder->setVisibility(true);
         Equipment *equipment = equip_builder->build();
         TS_ASSERT_EQUALS(equipment->getName(), "Helmet");
@@ -38,7 +37,6 @@ public:
         TS_ASSERT_EQUALS(equipment->getStr(), 10);
         TS_ASSERT_EQUALS(equipment->getSpeed(), 12);
         delete equip_builder;
-
     }
 };
 

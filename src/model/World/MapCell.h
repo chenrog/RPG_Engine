@@ -28,6 +28,8 @@ public:
 
     void setRandomEncounters(bool encounter);
 
+    bool isEmpty();
+
     void draw();
 
 

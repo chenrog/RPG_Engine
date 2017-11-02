@@ -1,13 +1,11 @@
 #include <SDL.h>
 #include "GameWindow.h"
 
-GameWindow::GameWindow(string title, unsigned int width, unsigned int height, unsigned int cell_x,
-                       unsigned int cell_y) {
+GameWindow::GameWindow(string title, unsigned int width, unsigned int height, unsigned int multiplier) {
     this->title = move(title);
     this->width = width;
     this->height = height;
-    this->cell_x = cell_x;
-    this->cell_y = cell_y;
+    this->multiplier = multiplier;
     // this calls init and sets the state of closed based on if the window opens properly
     closed = !init();
 }
@@ -108,7 +106,7 @@ void GameWindow::drawWorld() const {
                         SDL_SetRenderDrawColor(renderer, 217, 83, 79, 255);
                     }
                     SDL_RenderFillRect(renderer, cell);
-                    if (!curCell.getEntity().isEmpty()) {
+                    if (!curCell.isEmpty()) {
                         cell.w = cell_x - 5;
                         cell.h = cell_y - 5;
                         cell.x = curCell.getPosition().getX();
