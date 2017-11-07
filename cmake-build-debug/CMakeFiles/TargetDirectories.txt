@@ -1,0 +1,3 @@
+/Users/roger/CS3520-2017FA-PROJ/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/roger/CS3520-2017FA-PROJ/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/roger/CS3520-2017FA-PROJ/cmake-build-debug/CMakeFiles/CS3520_2017FA_PROJ.dir
