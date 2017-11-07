@@ -1,6 +1,7 @@
 #ifndef CS3520_2017FA_PROJ_EQUIPMENT_H
 #define CS3520_2017FA_PROJ_EQUIPMENT_H
 
+#include "EquipType.h"
 #include <string>
 #include <cassert>
 
@@ -8,6 +9,9 @@ using namespace std;
 
 class Equipment {
 public:
+    Equipment(string name, equip_type_t type, signed int v, unsigned int vm, signed int i, unsigned int im,
+              signed int sp, unsigned int spm, signed int st, unsigned int stm);
+
     friend Equipment & build();
 
     void level_up();
@@ -17,7 +21,7 @@ public:
 private:
     const string       name;
     unsigned int       level;
-    const equip_type_t type;
+    equip_type_t       type;
     // vitality stats by this equipment
     signed int         vit;
     unsigned int       vit_mod;
@@ -30,12 +34,38 @@ private:
     // strength stats by this equipment
     signed int         str;
     unsigned int       str_mod;
+};
 
-protected:
-    enum equip_type_t {Helmet = 0, Armor = 1, Boots = 2, Primary = 3, Offhand = 4};
+class Equip_Builder {
+public:
+    Equip_Builder(string name, equip_type_t type);
+    Equipment & build();
+    Equip_Builder & setName(const string &name);
+    // setters for the fields
+    Equip_Builder setVit(int vit);
+    Equip_Builder setVit_mod(unsigned int vit_mod);
+    Equip_Builder setIntel(int intel);
+    Equip_Builder setInt_mod(unsigned int int_mod);
+    Equip_Builder setSpeed(int speed);
+    Equip_Builder setSpeed_mod(unsigned int speed_mod);
+    Equip_Builder setStr(int str);
+    Equip_Builder setStr_mod(unsigned int str_mod);
 
-    Equipment(string name, unsigned int type, signed int v, unsigned int vm, signed int i, unsigned int im,
-              signed int sp, unsigned int spm, signed int st, unsigned int stm);
+private:
+    string       name;
+    equip_type_t type;
+    // vitality stats by this equipment
+    signed int   vit = 0;
+    unsigned int vit_mod = 0;
+    // intelligence stats by this equipment
+    signed int   intel = 0;
+    unsigned int int_mod = 0;
+    // speed stats by this equipment
+    signed int   speed = 0;
+    unsigned int speed_mod = 0;
+    // strength stats by this equipment
+    signed int   str = 0;
+    unsigned int str_mod = 0;
 };
 
 #endif //CS3520_2017FA_PROJ_EQUIPMENT_H
