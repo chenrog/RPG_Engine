@@ -1,27 +1,8 @@
+#include "IUnit.h"
 
-void Unit::takeDamage(const int damage) { }
-void castSpell(const Spell spell); // to be figured out later
-void Equip(Equipment const equipment);
-void addEXP(int const exp);
-int getDamage();
-Item calcDrop();
+IUnit::IUnit() {}
 
-/**
- *
- * @param vit
- * @param intel
- * @param dex
- * @param str
- */
-Unit(int vit, int intel, int dex, int str);
+IUnit::IUnit(const IUnit &unit) {}
 
-/**
- *
- * @param vit
- * @param intel
- * @param dex
- * @param str
- * @param equipment
- * @param spell
- */
-Unit(int vit, int intel, int dex, int str, Equipment equipment[], Spells spell[]);
+IUnit::~IUnit() {}
+
