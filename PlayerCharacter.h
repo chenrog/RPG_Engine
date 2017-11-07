@@ -11,7 +11,7 @@ class PlayerCharacter : public IUnit {
     * @param dex
     * @param str
     */
-    PlayerCharacter::PlayerCharacter(int vit, int intel, int dex, int str);
+    PlayerCharacter(unsigned int vit, unsigned int intel, unsigned int speed, unsigned int str);
 
     /**
     *
@@ -22,7 +22,8 @@ class PlayerCharacter : public IUnit {
     * @param equipment
     * @param spell
     */
-    PlayerCharacter::PlayerCharacter(int vit, int intel, int dex, int str, Equipment equipment[], Spells spell[]);
+    PlayerCharacter(unsigned int vit, unsigned int intel, unsigned int dex, unsigned int str,
+                    Equipment equipment[], Spells spell[]);
 
     void takeDamage(const int damage, bool is_physical);
 

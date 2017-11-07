@@ -8,111 +8,117 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/Users/roger/CS3520-2017FA-PROJ/cmake-build-debug"/>
+				<Option working_dir="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/roger/CS3520-2017FA-PROJ/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/roger/CS3520-2017FA-PROJ/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/roger/CS3520-2017FA-PROJ/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/roger/CS3520-2017FA-PROJ/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="rebuild_cache">
-				<Option working_dir="/Users/roger/CS3520-2017FA-PROJ/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/roger/CS3520-2017FA-PROJ/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/roger/CS3520-2017FA-PROJ/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/roger/CS3520-2017FA-PROJ/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/roger/CS3520-2017FA-PROJ/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="edit_cache">
-				<Option working_dir="/Users/roger/CS3520-2017FA-PROJ/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/roger/CS3520-2017FA-PROJ/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/roger/CS3520-2017FA-PROJ/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/roger/CS3520-2017FA-PROJ/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/roger/CS3520-2017FA-PROJ/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="CS3520_2017FA_PROJ">
-				<Option output="/Users/roger/CS3520-2017FA-PROJ/cmake-build-debug/CS3520_2017FA_PROJ" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/roger/CS3520-2017FA-PROJ/cmake-build-debug"/>
+				<Option output="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/CS3520_2017FA_PROJ.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/9.0.0/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
-					<Add directory="/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include-fixed"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/roger/CS3520-2017FA-PROJ/cmake-build-debug/Makefile&quot;  VERBOSE=1 CS3520_2017FA_PROJ"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/roger/CS3520-2017FA-PROJ/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/roger/CS3520-2017FA-PROJ/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/roger/CS3520-2017FA-PROJ/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/Makefile&quot;  VERBOSE=1 CS3520_2017FA_PROJ"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="CS3520_2017FA_PROJ/fast">
-				<Option output="/Users/roger/CS3520-2017FA-PROJ/cmake-build-debug/CS3520_2017FA_PROJ" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/roger/CS3520-2017FA-PROJ/cmake-build-debug"/>
+				<Option output="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/CS3520_2017FA_PROJ.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/9.0.0/include"/>
-					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
-					<Add directory="/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include-fixed"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/roger/CS3520-2017FA-PROJ/cmake-build-debug/Makefile&quot;  VERBOSE=1 CS3520_2017FA_PROJ/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/roger/CS3520-2017FA-PROJ/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/roger/CS3520-2017FA-PROJ/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/roger/CS3520-2017FA-PROJ/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/Makefile&quot;  VERBOSE=1 CS3520_2017FA_PROJ/fast"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/roger/CS3520-2017FA-PROJ/BattleMode.cpp">
+		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/BattleMode.cpp">
 			<Option target="CS3520_2017FA_PROJ"/>
 		</Unit>
-		<Unit filename="/Users/roger/CS3520-2017FA-PROJ/Equipment.h">
+		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/Equipment.h">
 			<Option target="CS3520_2017FA_PROJ"/>
 		</Unit>
-		<Unit filename="/Users/roger/CS3520-2017FA-PROJ/IUnit.cpp">
+		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/IUnit.cpp">
 			<Option target="CS3520_2017FA_PROJ"/>
 		</Unit>
-		<Unit filename="/Users/roger/CS3520-2017FA-PROJ/IUnit.h">
+		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/IUnit.h">
 			<Option target="CS3520_2017FA_PROJ"/>
 		</Unit>
-		<Unit filename="/Users/roger/CS3520-2017FA-PROJ/Item.h">
+		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/Item.h">
 			<Option target="CS3520_2017FA_PROJ"/>
 		</Unit>
-		<Unit filename="/Users/roger/CS3520-2017FA-PROJ/Map.cpp">
+		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/Map.cpp">
 			<Option target="CS3520_2017FA_PROJ"/>
 		</Unit>
-		<Unit filename="/Users/roger/CS3520-2017FA-PROJ/README.md">
+		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/PlayerCharacter.cpp">
 			<Option target="CS3520_2017FA_PROJ"/>
 		</Unit>
-		<Unit filename="/Users/roger/CS3520-2017FA-PROJ/Spells.h">
+		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/PlayerCharacter.h">
 			<Option target="CS3520_2017FA_PROJ"/>
 		</Unit>
-		<Unit filename="/Users/roger/CS3520-2017FA-PROJ/main.cpp">
+		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/README.md">
 			<Option target="CS3520_2017FA_PROJ"/>
 		</Unit>
-		<Unit filename="/Users/roger/CS3520-2017FA-PROJ/proposal.pdf">
+		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/Spells.h">
 			<Option target="CS3520_2017FA_PROJ"/>
 		</Unit>
-		<Unit filename="/Users/roger/CS3520-2017FA-PROJ/CMakeLists.txt">
+		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/main.cpp">
+			<Option target="CS3520_2017FA_PROJ"/>
+		</Unit>
+		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/proposal.pdf">
+			<Option target="CS3520_2017FA_PROJ"/>
+		</Unit>
+		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

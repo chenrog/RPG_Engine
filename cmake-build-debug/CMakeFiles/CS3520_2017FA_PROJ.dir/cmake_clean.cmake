@@ -1,10 +1,13 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/CS3520_2017FA_PROJ.dir/BattleMode.cpp.o"
-  "CMakeFiles/CS3520_2017FA_PROJ.dir/IUnit.cpp.o"
-  "CMakeFiles/CS3520_2017FA_PROJ.dir/main.cpp.o"
-  "CMakeFiles/CS3520_2017FA_PROJ.dir/Map.cpp.o"
+  "CMakeFiles/CS3520_2017FA_PROJ.dir/BattleMode.cpp.obj"
+  "CMakeFiles/CS3520_2017FA_PROJ.dir/IUnit.cpp.obj"
+  "CMakeFiles/CS3520_2017FA_PROJ.dir/PlayerCharacter.cpp.obj"
+  "CMakeFiles/CS3520_2017FA_PROJ.dir/main.cpp.obj"
+  "CMakeFiles/CS3520_2017FA_PROJ.dir/Map.cpp.obj"
   "CS3520_2017FA_PROJ.pdb"
-  "CS3520_2017FA_PROJ"
+  "CS3520_2017FA_PROJ.exe"
+  "CS3520_2017FA_PROJ.exe.manifest"
+  "libCS3520_2017FA_PROJ.dll.a"
 )
 
 # Per-language clean rules from dependency scanning.

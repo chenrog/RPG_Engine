@@ -9,6 +9,8 @@ set(SOURCE_FILES
         Item.h
         IUnit.cpp
         IUnit.h
+        PlayerCharacter.cpp
+        PlayerCharacter.h
         main.cpp
         Map.cpp
         proposal.pdf
