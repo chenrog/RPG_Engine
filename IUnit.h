@@ -48,6 +48,8 @@ public:
      */
     virtual Item calcDrop();
 
+    virtual void updateStats();
+
 
 protected:
     virtual unsigned int health, mana, p_defense, m_defense;

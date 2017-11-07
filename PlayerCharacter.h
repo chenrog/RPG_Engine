@@ -28,6 +28,7 @@ class PlayerCharacter : public IUnit {
     void takeDamage(const int damage, bool is_physical);
 
     int castSpell(const Spell spell); // to be figured out later
+
     void Equip(Equipment const equipment);
 
     void addEXP(int const exp);
@@ -35,6 +36,8 @@ class PlayerCharacter : public IUnit {
     int basicAttack(bool is_physical);
 
     Item calcDrop();
+
+    void updateStats();
 };
 
 
