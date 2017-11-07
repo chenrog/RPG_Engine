@@ -15,6 +15,6 @@ set(SOURCE_FILES
         Map.cpp
         proposal.pdf
         README.md
-        Spells.h)
+        Spells.h Equipment.cpp)
 
 add_executable(CS3520_2017FA_PROJ ${SOURCE_FILES})
