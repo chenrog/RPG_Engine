@@ -40,7 +40,7 @@ void Equipment::display() {
             type = "Offhand";
     }
 
-    cout << "{ " << type;
+    cout << "{ " << type << " - " << this->name;
 
     if (this->level > 0) {
         cout << "+" << this->level;
