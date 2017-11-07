@@ -2,11 +2,15 @@
 #include <time.h>
 #include <iostream>
 #include "PlayerCharacter.h"
+#include "Equipment.h"
+#include "Spell.h"
 
 using namespace std;
 
 PlayerCharacter::PlayerCharacter(unsigned int vit, unsigned int intel, unsigned int speed, unsigned int str,
-                                 double mod_vit, double mod_int, double mod_speed, double mod_str, bool is_melee) {
+                                 double mod_vit, double mod_int, double mod_speed, double mod_str, bool is_melee,
+                                 string name) {
+    move(name);
     this->vit = vit;
     this->intel = intel;
     this->speed = speed;
@@ -16,13 +20,14 @@ PlayerCharacter::PlayerCharacter(unsigned int vit, unsigned int intel, unsigned 
     this->mod_str = mod_str;
     this->mod_speed = mod_speed;
     this->is_melee = is_melee;
+    this->lvl = 1;
 
     updateStats();
 }
 
 PlayerCharacter::PlayerCharacter(unsigned int vit, unsigned int intel, unsigned int dex, unsigned int str,
                                  Equipment equipment[], Spell spell[], double mod_vit,
-                                 double mod_int, double mod_str, double mod_speed, bool is_melee) {
+                                 double mod_int, double mod_str, double mod_speed, bool is_melee, unsigned int lvl) {
     this->vit = vit;
     this->intel = intel;
     this->speed = speed;
@@ -32,6 +37,7 @@ PlayerCharacter::PlayerCharacter(unsigned int vit, unsigned int intel, unsigned 
     this->mod_str = mod_str;
     this->mod_speed = mod_speed;
     this->is_melee = is_melee;
+    this->lvl = lvl;
 
     updateStats();
 
@@ -64,13 +70,14 @@ int PlayerCharacter::takeDamage(const int damage, int hit_chance, bool is_physic
 }
 
 Equipment PlayerCharacter::Equip(Equipment const equipment) {
-    
+
 }
 
 bool PlayerCharacter::addEXP(int const exp) {
     int new_exp = this->exp + exp;
     if (new_exp >= 100) {
         this->exp %= 100;
+        lvl += 1;
         srand((unsigned) time(nullptr));
         int lowest = 1, highest = 10;
         int range = (highest - lowest) + 1;

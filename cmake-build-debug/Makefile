@@ -149,6 +149,33 @@ BattleMode.cpp.s:
 	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/BattleMode.cpp.s
 .PHONY : BattleMode.cpp.s
 
+Equipment.obj: Equipment.cpp.obj
+
+.PHONY : Equipment.obj
+
+# target to build an object file
+Equipment.cpp.obj:
+	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/Equipment.cpp.obj
+.PHONY : Equipment.cpp.obj
+
+Equipment.i: Equipment.cpp.i
+
+.PHONY : Equipment.i
+
+# target to preprocess a source file
+Equipment.cpp.i:
+	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/Equipment.cpp.i
+.PHONY : Equipment.cpp.i
+
+Equipment.s: Equipment.cpp.s
+
+.PHONY : Equipment.s
+
+# target to generate assembly for a file
+Equipment.cpp.s:
+	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/Equipment.cpp.s
+.PHONY : Equipment.cpp.s
+
 IUnit.obj: IUnit.cpp.obj
 
 .PHONY : IUnit.obj
@@ -269,6 +296,9 @@ help:
 	@echo ... BattleMode.obj
 	@echo ... BattleMode.i
 	@echo ... BattleMode.s
+	@echo ... Equipment.obj
+	@echo ... Equipment.i
+	@echo ... Equipment.s
 	@echo ... IUnit.obj
 	@echo ... IUnit.i
 	@echo ... IUnit.s

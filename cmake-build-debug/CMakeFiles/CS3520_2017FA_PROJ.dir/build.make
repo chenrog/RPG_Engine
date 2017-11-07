@@ -128,9 +128,33 @@ CMakeFiles/CS3520_2017FA_PROJ.dir/PlayerCharacter.cpp.obj.provides: CMakeFiles/C
 CMakeFiles/CS3520_2017FA_PROJ.dir/PlayerCharacter.cpp.obj.provides.build: CMakeFiles/CS3520_2017FA_PROJ.dir/PlayerCharacter.cpp.obj
 
 
+CMakeFiles/CS3520_2017FA_PROJ.dir/Equipment.cpp.obj: CMakeFiles/CS3520_2017FA_PROJ.dir/flags.make
+CMakeFiles/CS3520_2017FA_PROJ.dir/Equipment.cpp.obj: ../Equipment.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/CS3520_2017FA_PROJ.dir/Equipment.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\CS3520_2017FA_PROJ.dir\Equipment.cpp.obj -c C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\Equipment.cpp
+
+CMakeFiles/CS3520_2017FA_PROJ.dir/Equipment.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CS3520_2017FA_PROJ.dir/Equipment.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\Equipment.cpp > CMakeFiles\CS3520_2017FA_PROJ.dir\Equipment.cpp.i
+
+CMakeFiles/CS3520_2017FA_PROJ.dir/Equipment.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CS3520_2017FA_PROJ.dir/Equipment.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\Equipment.cpp -o CMakeFiles\CS3520_2017FA_PROJ.dir\Equipment.cpp.s
+
+CMakeFiles/CS3520_2017FA_PROJ.dir/Equipment.cpp.obj.requires:
+
+.PHONY : CMakeFiles/CS3520_2017FA_PROJ.dir/Equipment.cpp.obj.requires
+
+CMakeFiles/CS3520_2017FA_PROJ.dir/Equipment.cpp.obj.provides: CMakeFiles/CS3520_2017FA_PROJ.dir/Equipment.cpp.obj.requires
+	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/Equipment.cpp.obj.provides.build
+.PHONY : CMakeFiles/CS3520_2017FA_PROJ.dir/Equipment.cpp.obj.provides
+
+CMakeFiles/CS3520_2017FA_PROJ.dir/Equipment.cpp.obj.provides.build: CMakeFiles/CS3520_2017FA_PROJ.dir/Equipment.cpp.obj
+
+
 CMakeFiles/CS3520_2017FA_PROJ.dir/main.cpp.obj: CMakeFiles/CS3520_2017FA_PROJ.dir/flags.make
 CMakeFiles/CS3520_2017FA_PROJ.dir/main.cpp.obj: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/CS3520_2017FA_PROJ.dir/main.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/CS3520_2017FA_PROJ.dir/main.cpp.obj"
 	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\CS3520_2017FA_PROJ.dir\main.cpp.obj -c C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\main.cpp
 
 CMakeFiles/CS3520_2017FA_PROJ.dir/main.cpp.i: cmake_force
@@ -154,7 +178,7 @@ CMakeFiles/CS3520_2017FA_PROJ.dir/main.cpp.obj.provides.build: CMakeFiles/CS3520
 
 CMakeFiles/CS3520_2017FA_PROJ.dir/Map.cpp.obj: CMakeFiles/CS3520_2017FA_PROJ.dir/flags.make
 CMakeFiles/CS3520_2017FA_PROJ.dir/Map.cpp.obj: ../Map.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/CS3520_2017FA_PROJ.dir/Map.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/CS3520_2017FA_PROJ.dir/Map.cpp.obj"
 	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\CS3520_2017FA_PROJ.dir\Map.cpp.obj -c C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\Map.cpp
 
 CMakeFiles/CS3520_2017FA_PROJ.dir/Map.cpp.i: cmake_force
@@ -181,6 +205,7 @@ CS3520_2017FA_PROJ_OBJECTS = \
 "CMakeFiles/CS3520_2017FA_PROJ.dir/BattleMode.cpp.obj" \
 "CMakeFiles/CS3520_2017FA_PROJ.dir/IUnit.cpp.obj" \
 "CMakeFiles/CS3520_2017FA_PROJ.dir/PlayerCharacter.cpp.obj" \
+"CMakeFiles/CS3520_2017FA_PROJ.dir/Equipment.cpp.obj" \
 "CMakeFiles/CS3520_2017FA_PROJ.dir/main.cpp.obj" \
 "CMakeFiles/CS3520_2017FA_PROJ.dir/Map.cpp.obj"
 
@@ -190,13 +215,14 @@ CS3520_2017FA_PROJ_EXTERNAL_OBJECTS =
 CS3520_2017FA_PROJ.exe: CMakeFiles/CS3520_2017FA_PROJ.dir/BattleMode.cpp.obj
 CS3520_2017FA_PROJ.exe: CMakeFiles/CS3520_2017FA_PROJ.dir/IUnit.cpp.obj
 CS3520_2017FA_PROJ.exe: CMakeFiles/CS3520_2017FA_PROJ.dir/PlayerCharacter.cpp.obj
+CS3520_2017FA_PROJ.exe: CMakeFiles/CS3520_2017FA_PROJ.dir/Equipment.cpp.obj
 CS3520_2017FA_PROJ.exe: CMakeFiles/CS3520_2017FA_PROJ.dir/main.cpp.obj
 CS3520_2017FA_PROJ.exe: CMakeFiles/CS3520_2017FA_PROJ.dir/Map.cpp.obj
 CS3520_2017FA_PROJ.exe: CMakeFiles/CS3520_2017FA_PROJ.dir/build.make
 CS3520_2017FA_PROJ.exe: CMakeFiles/CS3520_2017FA_PROJ.dir/linklibs.rsp
 CS3520_2017FA_PROJ.exe: CMakeFiles/CS3520_2017FA_PROJ.dir/objects1.rsp
 CS3520_2017FA_PROJ.exe: CMakeFiles/CS3520_2017FA_PROJ.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable CS3520_2017FA_PROJ.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable CS3520_2017FA_PROJ.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\CS3520_2017FA_PROJ.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -207,6 +233,7 @@ CMakeFiles/CS3520_2017FA_PROJ.dir/build: CS3520_2017FA_PROJ.exe
 CMakeFiles/CS3520_2017FA_PROJ.dir/requires: CMakeFiles/CS3520_2017FA_PROJ.dir/BattleMode.cpp.obj.requires
 CMakeFiles/CS3520_2017FA_PROJ.dir/requires: CMakeFiles/CS3520_2017FA_PROJ.dir/IUnit.cpp.obj.requires
 CMakeFiles/CS3520_2017FA_PROJ.dir/requires: CMakeFiles/CS3520_2017FA_PROJ.dir/PlayerCharacter.cpp.obj.requires
+CMakeFiles/CS3520_2017FA_PROJ.dir/requires: CMakeFiles/CS3520_2017FA_PROJ.dir/Equipment.cpp.obj.requires
 CMakeFiles/CS3520_2017FA_PROJ.dir/requires: CMakeFiles/CS3520_2017FA_PROJ.dir/main.cpp.obj.requires
 CMakeFiles/CS3520_2017FA_PROJ.dir/requires: CMakeFiles/CS3520_2017FA_PROJ.dir/Map.cpp.obj.requires
 
