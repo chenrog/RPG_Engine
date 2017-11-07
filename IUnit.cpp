@@ -1,6 +1,3 @@
-//
-// Created by whyar on 11/6/2017.
-//
 
 void Unit::takeDamage(const int damage) { }
 void castSpell(const Spell spell); // to be figured out later
