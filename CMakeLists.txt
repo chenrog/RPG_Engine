@@ -11,10 +11,11 @@ set(SOURCE_FILES
         IUnit.h
         PlayerCharacter.cpp
         PlayerCharacter.h
+        Equipment.cpp
         main.cpp
         Map.cpp
         proposal.pdf
         README.md
-        Spells.h Equipment.cpp)
+        Spell.h Equipment.cpp)
 
 add_executable(CS3520_2017FA_PROJ ${SOURCE_FILES})

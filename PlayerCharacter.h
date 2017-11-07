@@ -2,6 +2,8 @@
 #define CS3520_2017FA_PROJ_PLAYERCHARACTER_H
 
 #include "IUnit.h"
+#include "Equipment.h"
+#include "Spell.h"
 
 class PlayerCharacter : public IUnit {
 public:
@@ -13,7 +15,7 @@ public:
     * @param str
     */
     PlayerCharacter(unsigned int vit, unsigned int intel, unsigned int speed, unsigned int str, double mod_vit,
-                    double mod_int, double mod_speed, double mod_str, bool is_melee);
+                    double mod_int, double mod_speed, double mod_str, bool is_melee, string name);
 
     /**
     *
@@ -25,8 +27,8 @@ public:
     * @param spell
     */
     PlayerCharacter(unsigned int vit, unsigned int intel, unsigned int dex, unsigned int str,
-                    Equipment equipment[], Spells spell[], double mod_vit, double mod_int,
-                    double mod_speed, double mod_str, bool is_melee);
+                    Equipment equipment[], Spell spell[], double mod_vit, double mod_int,
+                    double mod_speed, double mod_str, bool is_melee, unsigned int lvl, string name);
 
     ~PlayerCharacter();
 

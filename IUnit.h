@@ -5,6 +5,11 @@
 #ifndef CS3520_2017FA_PROJ_UNIT_H
 #define CS3520_2017FA_PROJ_UNIT_H
 
+#include "Equipment.h"
+#include "Spell.h"
+#include "Item.h"
+#include <string>
+
 class IUnit {
 public:
     IUnit();
@@ -55,9 +60,10 @@ public:
 
 
 protected:
+    virtual const string name;
     virtual unsigned int health, mana, p_defense, m_defense;
     virtual unsigned int vit, intel, speed, str;
-    virtual unsigned int max_exp, exp;
+    virtual unsigned int lvl, exp;
     bool is_melee;
     virtual Equipment * equip; // each element in the array pertains to a specific stats
     virtual Spell * spells; // will be displayed in a list when the player selects this option
