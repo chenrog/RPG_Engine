@@ -4,6 +4,7 @@
 #include "IUnit.h"
 
 class PlayerCharacter : public IUnit {
+public:
     /**
     *
     * @param vit
@@ -11,7 +12,8 @@ class PlayerCharacter : public IUnit {
     * @param dex
     * @param str
     */
-    PlayerCharacter(unsigned int vit, unsigned int intel, unsigned int speed, unsigned int str);
+    PlayerCharacter(unsigned int vit, unsigned int intel, unsigned int speed, unsigned int str, double mod_vit,
+                    double mod_int, double mod_speed, double mod_str, bool is_melee);
 
     /**
     *
@@ -23,21 +25,27 @@ class PlayerCharacter : public IUnit {
     * @param spell
     */
     PlayerCharacter(unsigned int vit, unsigned int intel, unsigned int dex, unsigned int str,
-                    Equipment equipment[], Spells spell[]);
+                    Equipment equipment[], Spells spell[], double mod_vit, double mod_int,
+                    double mod_speed, double mod_str, bool is_melee);
 
-    void takeDamage(const int damage, bool is_physical);
+    ~PlayerCharacter();
+
+    int takeDamage(const int damage, int hit_chance, bool is_physical);
 
     int castSpell(const Spell spell); // to be figured out later
 
-    void Equip(Equipment const equipment);
+    Equipment Equip(Equipment const equipment);
 
-    void addEXP(int const exp);
+    bool addEXP(int const exp);
 
     int basicAttack(bool is_physical);
 
     Item calcDrop();
 
     void updateStats();
+
+private:
+    double mod_vit, mod_int, mod_speed, mod_str;
 };
 
 
