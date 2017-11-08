@@ -5,9 +5,9 @@
 #ifndef CS3520_2017FA_PROJ_UNIT_H
 #define CS3520_2017FA_PROJ_UNIT_H
 
-#include "Equipment.h"
-#include "Spell.h"
-#include "Item.h"
+#include "../Equipment.h"
+#include "../Spell.h"
+#include "../Item.h"
 #include <string>
 
 class IUnit {
@@ -31,22 +31,22 @@ public:
     virtual int calcBasicAttack();
 
     /**
-     *
+     * Calculates what drops when the unit is defeated.
      * @return
      */
     virtual Item calcDrop();
 
-    friend int getX(const IUnit &unit);
+    virtual friend int getX(const IUnit &unit);
 
-    friend int getY(const IUnit &unit);
+    virtual friend int getY(const IUnit &unit);
 
-    void setX(int x);
+    virtual void setX(int x);
 
-    void setY(int y);
+    virtual void setY(int y);
 
 
 protected:
-    virtual const string name;
+    virtual string name;
     virtual unsigned int curr_health, health, cur_mana, mana, p_defense, m_defense;
     virtual unsigned int vit, intel, speed, str;
     virtual unsigned int lvl, exp;
