@@ -85,9 +85,6 @@
 		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/BattleMode.cpp">
 			<Option target="CS3520_2017FA_PROJ"/>
 		</Unit>
-		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/Equipment.cpp">
-			<Option target="CS3520_2017FA_PROJ"/>
-		</Unit>
 		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/Equipment.h">
 			<Option target="CS3520_2017FA_PROJ"/>
 		</Unit>
@@ -101,12 +98,6 @@
 			<Option target="CS3520_2017FA_PROJ"/>
 		</Unit>
 		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/Map.cpp">
-			<Option target="CS3520_2017FA_PROJ"/>
-		</Unit>
-		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/PlayerCharacter.cpp">
-			<Option target="CS3520_2017FA_PROJ"/>
-		</Unit>
-		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/PlayerCharacter.h">
 			<Option target="CS3520_2017FA_PROJ"/>
 		</Unit>
 		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/README.md">

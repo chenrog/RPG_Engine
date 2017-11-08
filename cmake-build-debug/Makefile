@@ -149,33 +149,6 @@ BattleMode.cpp.s:
 	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/BattleMode.cpp.s
 .PHONY : BattleMode.cpp.s
 
-Equipment.obj: Equipment.cpp.obj
-
-.PHONY : Equipment.obj
-
-# target to build an object file
-Equipment.cpp.obj:
-	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/Equipment.cpp.obj
-.PHONY : Equipment.cpp.obj
-
-Equipment.i: Equipment.cpp.i
-
-.PHONY : Equipment.i
-
-# target to preprocess a source file
-Equipment.cpp.i:
-	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/Equipment.cpp.i
-.PHONY : Equipment.cpp.i
-
-Equipment.s: Equipment.cpp.s
-
-.PHONY : Equipment.s
-
-# target to generate assembly for a file
-Equipment.cpp.s:
-	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/Equipment.cpp.s
-.PHONY : Equipment.cpp.s
-
 IUnit.obj: IUnit.cpp.obj
 
 .PHONY : IUnit.obj
@@ -230,33 +203,6 @@ Map.cpp.s:
 	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/Map.cpp.s
 .PHONY : Map.cpp.s
 
-PlayerCharacter.obj: PlayerCharacter.cpp.obj
-
-.PHONY : PlayerCharacter.obj
-
-# target to build an object file
-PlayerCharacter.cpp.obj:
-	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/PlayerCharacter.cpp.obj
-.PHONY : PlayerCharacter.cpp.obj
-
-PlayerCharacter.i: PlayerCharacter.cpp.i
-
-.PHONY : PlayerCharacter.i
-
-# target to preprocess a source file
-PlayerCharacter.cpp.i:
-	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/PlayerCharacter.cpp.i
-.PHONY : PlayerCharacter.cpp.i
-
-PlayerCharacter.s: PlayerCharacter.cpp.s
-
-.PHONY : PlayerCharacter.s
-
-# target to generate assembly for a file
-PlayerCharacter.cpp.s:
-	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/PlayerCharacter.cpp.s
-.PHONY : PlayerCharacter.cpp.s
-
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -296,18 +242,12 @@ help:
 	@echo ... BattleMode.obj
 	@echo ... BattleMode.i
 	@echo ... BattleMode.s
-	@echo ... Equipment.obj
-	@echo ... Equipment.i
-	@echo ... Equipment.s
 	@echo ... IUnit.obj
 	@echo ... IUnit.i
 	@echo ... IUnit.s
 	@echo ... Map.obj
 	@echo ... Map.i
 	@echo ... Map.s
-	@echo ... PlayerCharacter.obj
-	@echo ... PlayerCharacter.i
-	@echo ... PlayerCharacter.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
