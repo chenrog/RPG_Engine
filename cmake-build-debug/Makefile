@@ -47,10 +47,10 @@ RM = "C:\Program Files\JetBrains\CLion 2017.2.2\bin\cmake\bin\cmake.exe" -E remo
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ
+CMAKE_SOURCE_DIR = "C:\Users\Andrew Alcala\CLionProjects\CS3520-2017FA-PROJ"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\cmake-build-debug
+CMAKE_BINARY_DIR = "C:\Users\Andrew Alcala\CLionProjects\CS3520-2017FA-PROJ\cmake-build-debug"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -79,9 +79,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\cmake-build-debug\CMakeFiles C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\cmake-build-debug\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Andrew Alcala\CLionProjects\CS3520-2017FA-PROJ\cmake-build-debug\CMakeFiles" "C:\Users\Andrew Alcala\CLionProjects\CS3520-2017FA-PROJ\cmake-build-debug\CMakeFiles\progress.marks"
 	$(MAKE) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Andrew Alcala\CLionProjects\CS3520-2017FA-PROJ\cmake-build-debug\CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -202,6 +202,60 @@ model/Map.s: model/Map.cpp.s
 model/Map.cpp.s:
 	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/model/Map.cpp.s
 .PHONY : model/Map.cpp.s
+
+model/Point.obj: model/Point.cpp.obj
+
+.PHONY : model/Point.obj
+
+# target to build an object file
+model/Point.cpp.obj:
+	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/model/Point.cpp.obj
+.PHONY : model/Point.cpp.obj
+
+model/Point.i: model/Point.cpp.i
+
+.PHONY : model/Point.i
+
+# target to preprocess a source file
+model/Point.cpp.i:
+	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/model/Point.cpp.i
+.PHONY : model/Point.cpp.i
+
+model/Point.s: model/Point.cpp.s
+
+.PHONY : model/Point.s
+
+# target to generate assembly for a file
+model/Point.cpp.s:
+	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/model/Point.cpp.s
+.PHONY : model/Point.cpp.s
+
+model/Units/AEntity.obj: model/Units/AEntity.cpp.obj
+
+.PHONY : model/Units/AEntity.obj
+
+# target to build an object file
+model/Units/AEntity.cpp.obj:
+	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/AEntity.cpp.obj
+.PHONY : model/Units/AEntity.cpp.obj
+
+model/Units/AEntity.i: model/Units/AEntity.cpp.i
+
+.PHONY : model/Units/AEntity.i
+
+# target to preprocess a source file
+model/Units/AEntity.cpp.i:
+	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/AEntity.cpp.i
+.PHONY : model/Units/AEntity.cpp.i
+
+model/Units/AEntity.s: model/Units/AEntity.cpp.s
+
+.PHONY : model/Units/AEntity.s
+
+# target to generate assembly for a file
+model/Units/AEntity.cpp.s:
+	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/AEntity.cpp.s
+.PHONY : model/Units/AEntity.cpp.s
 
 model/Units/EnemyUnit.obj: model/Units/EnemyUnit.cpp.obj
 
@@ -329,6 +383,12 @@ help:
 	@echo ... model/Map.obj
 	@echo ... model/Map.i
 	@echo ... model/Map.s
+	@echo ... model/Point.obj
+	@echo ... model/Point.i
+	@echo ... model/Point.s
+	@echo ... model/Units/AEntity.obj
+	@echo ... model/Units/AEntity.i
+	@echo ... model/Units/AEntity.s
 	@echo ... model/Units/EnemyUnit.obj
 	@echo ... model/Units/EnemyUnit.i
 	@echo ... model/Units/EnemyUnit.s
