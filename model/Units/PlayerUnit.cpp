@@ -2,7 +2,7 @@
 #include <ctime>
 #include <iostream>
 #include "PlayerUnit.h"
-#include "../Equipment.h"
+#include "../Equipment/Equipment.h"
 
 
 using namespace std;
@@ -20,11 +20,10 @@ PlayerUnit::PlayerUnit(unsigned int vit, unsigned int intel, unsigned int speed,
     this->mod_str = mod_str;
     this->mod_speed = mod_speed;
     this->is_melee = is_melee;
+    updateStats();
     this->health = this->max_health;
     this->mana = this->max_mana;
     this->lvl = 1;
-
-    updateStats();
 }
 
 PlayerUnit::PlayerUnit(unsigned int vit, unsigned int intel, unsigned int dex, unsigned int str,
@@ -40,7 +39,8 @@ PlayerUnit::PlayerUnit(unsigned int vit, unsigned int intel, unsigned int dex, u
     this->mod_str = mod_str;
     this->mod_speed = mod_speed;
     this->is_melee = is_melee;
-    this->lvl = lvl;
+    this->lvl = lvl
+    updateStats();
     this->health = this->max_health;
     this->mana = this->max_mana;
 

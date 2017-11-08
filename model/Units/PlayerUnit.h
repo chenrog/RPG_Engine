@@ -2,7 +2,7 @@
 #define CS3520_2017FA_PROJ_PLAYERCHARACTER_H
 
 #include "IUnit.h"
-#include "../Equipment.h"
+#include "../Equipment/Equipment.h"
 #include "../Spell.h"
 
 class PlayerUnit : public IUnit {

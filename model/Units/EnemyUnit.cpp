@@ -1,8 +1,7 @@
 #include "EnemyUnit.h"
 
-EnemyUnit::EnemyUnit(unsigned int vit, unsigned int intel, unsigned int speed, unsigned int str,
-                       double mod_vit, double mod_int, double mod_speed, double mod_str, bool is_melee,
-                       string name) {
+EnemyUnit::EnemyUnit(unsigned int vit, unsigned int intel, unsigned int speed, unsigned int str, bool is_melee,
+                       string name, tuple<int, Item> drops) {
     this->name = name;
     this->st_vit = vit;
     this->st_intel = intel;
@@ -16,6 +15,7 @@ EnemyUnit::EnemyUnit(unsigned int vit, unsigned int intel, unsigned int speed, u
     this->health = this->max_health;
     this->mana = this->max_mana;
     this->lvl = 1;
+    this->drop = drops;
 
     updateStats();
 }
