@@ -23,7 +23,7 @@ public:
      * @param type
      * @param dialogue
      */
-    NPCUnit(NPCUnitType_t type, string name, string dialogue, Item[] items);
+    NPCUnit(NPCUnitType_t type, string name, string dialogue, Item items[]);
 
     ~NPCUnit();
 
@@ -31,7 +31,7 @@ public:
 private:
     NPCUnitType_t type;
     string dialogue;
-    Item[] items;
+    Item * items;
 };
 
 

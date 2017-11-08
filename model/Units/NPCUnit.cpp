@@ -7,7 +7,7 @@ NPCUnit::NPCUnit(NPCUnitType_t type, string name, string dialogue) {
     this->dialogue = dialogue;
 }
 
-NPCUnit::NPCUnit(NPCUnitType_t type, string name, string dialogue, Item[] items) {
+NPCUnit::NPCUnit(NPCUnitType_t type, string name, string dialogue, Item items[]) {
     assert(type == VENDOR);
     this->type = type;
     this->dialogue = dialogue;

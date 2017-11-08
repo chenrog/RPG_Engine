@@ -30,12 +30,6 @@ public:
      */
     virtual int calcBasicAttack();
 
-    /**
-     * Calculates what drops when the unit is defeated.
-     * @return
-     */
-    virtual Item calcDrop();
-
     virtual friend int getX(const IUnit &unit);
 
     virtual friend int getY(const IUnit &unit);

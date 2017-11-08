@@ -4,8 +4,17 @@
 #define CS3520_2017FA_PROJ_ENEMYUNIT_H
 
 class EnemyUnit : public IUnit {
-    EnemyUnit(unsigned int vit, unsigned int intel, unsigned int speed, unsigned int str, double mod_vit,
-               double mod_int, double mod_speed, double mod_str, bool is_melee, string name);
+public:
+    EnemyUnit(unsigned int vit, unsigned int intel, unsigned int speed, unsigned int str,
+              bool is_melee, string name, Item item[]);
+
+    EnemyUnit(const EnemyUnit &unit);
+
+    /**
+     * Calculates what drops when the unit is defeated.
+     * @return
+     */
+    Item calcDrop();
 };
 
 
