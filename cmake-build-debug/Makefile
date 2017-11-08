@@ -122,87 +122,6 @@ CS3520_2017FA_PROJ/fast:
 	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/build
 .PHONY : CS3520_2017FA_PROJ/fast
 
-BattleMode.obj: BattleMode.cpp.obj
-
-.PHONY : BattleMode.obj
-
-# target to build an object file
-BattleMode.cpp.obj:
-	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/BattleMode.cpp.obj
-.PHONY : BattleMode.cpp.obj
-
-BattleMode.i: BattleMode.cpp.i
-
-.PHONY : BattleMode.i
-
-# target to preprocess a source file
-BattleMode.cpp.i:
-	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/BattleMode.cpp.i
-.PHONY : BattleMode.cpp.i
-
-BattleMode.s: BattleMode.cpp.s
-
-.PHONY : BattleMode.s
-
-# target to generate assembly for a file
-BattleMode.cpp.s:
-	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/BattleMode.cpp.s
-.PHONY : BattleMode.cpp.s
-
-IUnit.obj: IUnit.cpp.obj
-
-.PHONY : IUnit.obj
-
-# target to build an object file
-IUnit.cpp.obj:
-	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/IUnit.cpp.obj
-.PHONY : IUnit.cpp.obj
-
-IUnit.i: IUnit.cpp.i
-
-.PHONY : IUnit.i
-
-# target to preprocess a source file
-IUnit.cpp.i:
-	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/IUnit.cpp.i
-.PHONY : IUnit.cpp.i
-
-IUnit.s: IUnit.cpp.s
-
-.PHONY : IUnit.s
-
-# target to generate assembly for a file
-IUnit.cpp.s:
-	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/IUnit.cpp.s
-.PHONY : IUnit.cpp.s
-
-Map.obj: Map.cpp.obj
-
-.PHONY : Map.obj
-
-# target to build an object file
-Map.cpp.obj:
-	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/Map.cpp.obj
-.PHONY : Map.cpp.obj
-
-Map.i: Map.cpp.i
-
-.PHONY : Map.i
-
-# target to preprocess a source file
-Map.cpp.i:
-	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/Map.cpp.i
-.PHONY : Map.cpp.i
-
-Map.s: Map.cpp.s
-
-.PHONY : Map.s
-
-# target to generate assembly for a file
-Map.cpp.s:
-	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/Map.cpp.s
-.PHONY : Map.cpp.s
-
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -230,6 +149,168 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+model/Equipment.obj: model/Equipment.cpp.obj
+
+.PHONY : model/Equipment.obj
+
+# target to build an object file
+model/Equipment.cpp.obj:
+	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/model/Equipment.cpp.obj
+.PHONY : model/Equipment.cpp.obj
+
+model/Equipment.i: model/Equipment.cpp.i
+
+.PHONY : model/Equipment.i
+
+# target to preprocess a source file
+model/Equipment.cpp.i:
+	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/model/Equipment.cpp.i
+.PHONY : model/Equipment.cpp.i
+
+model/Equipment.s: model/Equipment.cpp.s
+
+.PHONY : model/Equipment.s
+
+# target to generate assembly for a file
+model/Equipment.cpp.s:
+	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/model/Equipment.cpp.s
+.PHONY : model/Equipment.cpp.s
+
+model/Map.obj: model/Map.cpp.obj
+
+.PHONY : model/Map.obj
+
+# target to build an object file
+model/Map.cpp.obj:
+	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/model/Map.cpp.obj
+.PHONY : model/Map.cpp.obj
+
+model/Map.i: model/Map.cpp.i
+
+.PHONY : model/Map.i
+
+# target to preprocess a source file
+model/Map.cpp.i:
+	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/model/Map.cpp.i
+.PHONY : model/Map.cpp.i
+
+model/Map.s: model/Map.cpp.s
+
+.PHONY : model/Map.s
+
+# target to generate assembly for a file
+model/Map.cpp.s:
+	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/model/Map.cpp.s
+.PHONY : model/Map.cpp.s
+
+model/Units/EnemyUnit.obj: model/Units/EnemyUnit.cpp.obj
+
+.PHONY : model/Units/EnemyUnit.obj
+
+# target to build an object file
+model/Units/EnemyUnit.cpp.obj:
+	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/EnemyUnit.cpp.obj
+.PHONY : model/Units/EnemyUnit.cpp.obj
+
+model/Units/EnemyUnit.i: model/Units/EnemyUnit.cpp.i
+
+.PHONY : model/Units/EnemyUnit.i
+
+# target to preprocess a source file
+model/Units/EnemyUnit.cpp.i:
+	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/EnemyUnit.cpp.i
+.PHONY : model/Units/EnemyUnit.cpp.i
+
+model/Units/EnemyUnit.s: model/Units/EnemyUnit.cpp.s
+
+.PHONY : model/Units/EnemyUnit.s
+
+# target to generate assembly for a file
+model/Units/EnemyUnit.cpp.s:
+	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/EnemyUnit.cpp.s
+.PHONY : model/Units/EnemyUnit.cpp.s
+
+model/Units/IUnit.obj: model/Units/IUnit.cpp.obj
+
+.PHONY : model/Units/IUnit.obj
+
+# target to build an object file
+model/Units/IUnit.cpp.obj:
+	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/IUnit.cpp.obj
+.PHONY : model/Units/IUnit.cpp.obj
+
+model/Units/IUnit.i: model/Units/IUnit.cpp.i
+
+.PHONY : model/Units/IUnit.i
+
+# target to preprocess a source file
+model/Units/IUnit.cpp.i:
+	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/IUnit.cpp.i
+.PHONY : model/Units/IUnit.cpp.i
+
+model/Units/IUnit.s: model/Units/IUnit.cpp.s
+
+.PHONY : model/Units/IUnit.s
+
+# target to generate assembly for a file
+model/Units/IUnit.cpp.s:
+	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/IUnit.cpp.s
+.PHONY : model/Units/IUnit.cpp.s
+
+model/Units/NPCUnit.obj: model/Units/NPCUnit.cpp.obj
+
+.PHONY : model/Units/NPCUnit.obj
+
+# target to build an object file
+model/Units/NPCUnit.cpp.obj:
+	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/NPCUnit.cpp.obj
+.PHONY : model/Units/NPCUnit.cpp.obj
+
+model/Units/NPCUnit.i: model/Units/NPCUnit.cpp.i
+
+.PHONY : model/Units/NPCUnit.i
+
+# target to preprocess a source file
+model/Units/NPCUnit.cpp.i:
+	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/NPCUnit.cpp.i
+.PHONY : model/Units/NPCUnit.cpp.i
+
+model/Units/NPCUnit.s: model/Units/NPCUnit.cpp.s
+
+.PHONY : model/Units/NPCUnit.s
+
+# target to generate assembly for a file
+model/Units/NPCUnit.cpp.s:
+	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/NPCUnit.cpp.s
+.PHONY : model/Units/NPCUnit.cpp.s
+
+model/Units/PlayerUnit.obj: model/Units/PlayerUnit.cpp.obj
+
+.PHONY : model/Units/PlayerUnit.obj
+
+# target to build an object file
+model/Units/PlayerUnit.cpp.obj:
+	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/PlayerUnit.cpp.obj
+.PHONY : model/Units/PlayerUnit.cpp.obj
+
+model/Units/PlayerUnit.i: model/Units/PlayerUnit.cpp.i
+
+.PHONY : model/Units/PlayerUnit.i
+
+# target to preprocess a source file
+model/Units/PlayerUnit.cpp.i:
+	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/PlayerUnit.cpp.i
+.PHONY : model/Units/PlayerUnit.cpp.i
+
+model/Units/PlayerUnit.s: model/Units/PlayerUnit.cpp.s
+
+.PHONY : model/Units/PlayerUnit.s
+
+# target to generate assembly for a file
+model/Units/PlayerUnit.cpp.s:
+	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/PlayerUnit.cpp.s
+.PHONY : model/Units/PlayerUnit.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -239,18 +320,27 @@ help:
 	@echo ... CS3520_2017FA_PROJ
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... BattleMode.obj
-	@echo ... BattleMode.i
-	@echo ... BattleMode.s
-	@echo ... IUnit.obj
-	@echo ... IUnit.i
-	@echo ... IUnit.s
-	@echo ... Map.obj
-	@echo ... Map.i
-	@echo ... Map.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... model/Equipment.obj
+	@echo ... model/Equipment.i
+	@echo ... model/Equipment.s
+	@echo ... model/Map.obj
+	@echo ... model/Map.i
+	@echo ... model/Map.s
+	@echo ... model/Units/EnemyUnit.obj
+	@echo ... model/Units/EnemyUnit.i
+	@echo ... model/Units/EnemyUnit.s
+	@echo ... model/Units/IUnit.obj
+	@echo ... model/Units/IUnit.i
+	@echo ... model/Units/IUnit.s
+	@echo ... model/Units/NPCUnit.obj
+	@echo ... model/Units/NPCUnit.i
+	@echo ... model/Units/NPCUnit.s
+	@echo ... model/Units/PlayerUnit.obj
+	@echo ... model/Units/PlayerUnit.i
+	@echo ... model/Units/PlayerUnit.s
 .PHONY : help
 
 

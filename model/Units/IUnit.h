@@ -14,41 +14,21 @@ class IUnit {
 public:
     IUnit();
     IUnit(const IUnit &unit);
-    ~IUnit();
+
+    virtual ~IUnit();
 
     /**
      * Calculates the damage a unit takes based on a damage stat passed in by the class. Returns the amount of damage
      * taken by the unit
      * @param damage
      */
-    virtual int takeDamage(const int damage, int hit_chance, bool is_physical);
-
-    /**
-     * Casts the given spell based upon the spell selected by the user.
-     * @param spell
-     * @return the damage of the spell
-     */
-    virtual int castSpell(const Spell spell); // to be figured out later
-
-    /**
-     * Equips the chosen equipment to the player character and applies stat changes as necessary. Returns the old
-     * equipment, if there is one.
-     * @param equipment
-     */
-    virtual Equipment Equip(Equipment const equipment);
-
-    /**
-     * adds EXP from a battle to the exp of this unit. Then calculates if there is a level up by this unit. Returns
-     * true if there is a level up.
-     * @param exp
-     */
-    virtual bool addEXP(int const exp);
+    virtual int takeDamage(int damage, int hit_chance, bool is_physical);
 
     /**
      *
      * @return the damage statistic dealt by this unit.
      */
-    virtual int basicAttack(bool is_physical);
+    virtual int calcBasicAttack();
 
     /**
      *
@@ -56,7 +36,13 @@ public:
      */
     virtual Item calcDrop();
 
-    virtual void updateStats();
+    friend int getX(const IUnit &unit);
+
+    friend int getY(const IUnit &unit);
+
+    void setX(int x);
+
+    void setY(int y);
 
 
 protected:
@@ -64,6 +50,7 @@ protected:
     virtual unsigned int curr_health, health, cur_mana, mana, p_defense, m_defense;
     virtual unsigned int vit, intel, speed, str;
     virtual unsigned int lvl, exp;
+    virtual int pos_x, pos_y;
     bool is_melee;
     virtual Equipment * equip; // each element in the array pertains to a specific stats
     virtual Spell * spells; // will be displayed in a list when the player selects this option

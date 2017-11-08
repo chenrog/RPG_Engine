@@ -1,13 +1,13 @@
 #include <cstdlib>
 #include <time.h>
 #include <iostream>
-#include "PlayerCharacter.h"
+#include "PlayerUnit.h"
 #include "Equipment.h"
 #include "Spell.h"
 
 using namespace std;
 
-PlayerCharacter::PlayerCharacter(unsigned int vit, unsigned int intel, unsigned int speed, unsigned int str,
+PlayerUnit::PlayerUnit(unsigned int vit, unsigned int intel, unsigned int speed, unsigned int str,
                                  double mod_vit, double mod_int, double mod_speed, double mod_str, bool is_melee,
                                  string name) {
     move(name);
@@ -27,7 +27,7 @@ PlayerCharacter::PlayerCharacter(unsigned int vit, unsigned int intel, unsigned 
     updateStats();
 }
 
-PlayerCharacter::PlayerCharacter(unsigned int vit, unsigned int intel, unsigned int dex, unsigned int str,
+PlayerUnit::PlayerUnit(unsigned int vit, unsigned int intel, unsigned int dex, unsigned int str,
                                  Equipment equipment[], Spell spell[], double mod_vit,
                                  double mod_int, double mod_str, double mod_speed, bool is_melee, unsigned int lvl) {
     this->vit = vit;
@@ -49,34 +49,36 @@ PlayerCharacter::PlayerCharacter(unsigned int vit, unsigned int intel, unsigned 
     this->spells = spell;
 }
 
-void PlayerCharacter::updateStats() {
+PlayerUnit::~PlayerUnit() {
+    delete[] this->spells;
+    delete[] this->equip;
+}
+
+void PlayerUnit::updateStats() {
     this->health = vit * 100;
     this->mana = intel * 100;
     this->p_defense = vit * 10 + speed;
     this->m_defense = intel * 10 + speed;
 }
 
-int PlayerCharacter::takeDamage(const int damage, int hit_chance, bool is_physical) {
-    if (is_physical) {
-        int damage_taken = (damage - p_defense);
-        if (hit_chance <= 1 + int((100 * -1) * rand() / (RAND_MAX + 1.0))) {
-            health -= damage_taken;
-            return damage_taken;
-        } else {
-            return 0;
-        }
-    } else {
-        int damage_taken = (damage - m_defense);
-        health -= damage_taken;
-        return damage_taken;
-    }
+Equipment PlayerUnit::Equip(Equipment const equipment) {
+    Equipment curEquip = this->equip[equipment.getType()];
+    this->str -= curEquip.getStr();
+    this->vit -= curEquip.getVit();
+    this->intel -= curEquip.getIntel();
+    this->speed -= curEquip.getSpeed();
+
+    // have something here that moves the current equipment into the world inventory;
+
+    this->str += equipment.getStr();
+    this->vit += equipment.getVit();
+    this->intel += equipment.getIntel();
+    this->speed += equipment.getSpeed();
+    this->equip[equipment.getType()] = equipment;
+    updateStats();
 }
 
-Equipment PlayerCharacter::Equip(Equipment const equipment) {
-    this->equip[equipment.];
-}
-
-bool PlayerCharacter::addEXP(int const exp) {
+bool PlayerUnit::addEXP(int const exp) {
     int new_exp = this->exp + exp;
     if (new_exp >= 100) {
         this->exp %= 100;
@@ -95,10 +97,3 @@ bool PlayerCharacter::addEXP(int const exp) {
     }
 }
 
-int PlayerCharacter::basicAttack(bool is_physical) {
-    if (is_physical) {
-        return this->str * 10;
-    } else {
-        return this->intel * 10;
-    }
-}
