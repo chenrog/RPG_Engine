@@ -5,9 +5,9 @@
 #ifndef CS3520_2017FA_PROJ_UNIT_H
 #define CS3520_2017FA_PROJ_UNIT_H
 
-#include "Equipment.h"
-#include "Spell.h"
-#include "Item.h"
+#include "../Equipment/Equipment.h"
+#include "../Spell.h"
+#include "../Item.h"
 #include <string>
 
 class IUnit {

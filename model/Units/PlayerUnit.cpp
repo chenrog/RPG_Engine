@@ -2,8 +2,6 @@
 #include <time.h>
 #include <iostream>
 #include "PlayerUnit.h"
-#include "Equipment.h"
-#include "Spell.h"
 
 using namespace std;
 
