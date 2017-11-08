@@ -4,9 +4,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/BattleMode.cpp" "C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/CMakeFiles/CS3520_2017FA_PROJ.dir/BattleMode.cpp.obj"
+  "C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/Equipment.cpp" "C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/CMakeFiles/CS3520_2017FA_PROJ.dir/Equipment.cpp.obj"
   "C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/IUnit.cpp" "C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/CMakeFiles/CS3520_2017FA_PROJ.dir/IUnit.cpp.obj"
   "C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/Map.cpp" "C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/CMakeFiles/CS3520_2017FA_PROJ.dir/Map.cpp.obj"
+  "C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/PlayerCharacter.cpp" "C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/CMakeFiles/CS3520_2017FA_PROJ.dir/PlayerCharacter.cpp.obj"
   "C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/main.cpp" "C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/CMakeFiles/CS3520_2017FA_PROJ.dir/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

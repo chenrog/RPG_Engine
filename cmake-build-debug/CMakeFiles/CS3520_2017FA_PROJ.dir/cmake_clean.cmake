@@ -1,8 +1,9 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/CS3520_2017FA_PROJ.dir/BattleMode.cpp.obj"
+  "CMakeFiles/CS3520_2017FA_PROJ.dir/Equipment.cpp.obj"
   "CMakeFiles/CS3520_2017FA_PROJ.dir/IUnit.cpp.obj"
-  "CMakeFiles/CS3520_2017FA_PROJ.dir/main.cpp.obj"
+  "CMakeFiles/CS3520_2017FA_PROJ.dir/PlayerCharacter.cpp.obj"
   "CMakeFiles/CS3520_2017FA_PROJ.dir/Map.cpp.obj"
+  "CMakeFiles/CS3520_2017FA_PROJ.dir/main.cpp.obj"
   "CS3520_2017FA_PROJ.pdb"
   "CS3520_2017FA_PROJ.exe"
   "CS3520_2017FA_PROJ.exe.manifest"

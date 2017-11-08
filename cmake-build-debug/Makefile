@@ -122,32 +122,32 @@ CS3520_2017FA_PROJ/fast:
 	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/build
 .PHONY : CS3520_2017FA_PROJ/fast
 
-BattleMode.obj: BattleMode.cpp.obj
+Equipment.obj: Equipment.cpp.obj
 
-.PHONY : BattleMode.obj
+.PHONY : Equipment.obj
 
 # target to build an object file
-BattleMode.cpp.obj:
-	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/BattleMode.cpp.obj
-.PHONY : BattleMode.cpp.obj
+Equipment.cpp.obj:
+	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/Equipment.cpp.obj
+.PHONY : Equipment.cpp.obj
 
-BattleMode.i: BattleMode.cpp.i
+Equipment.i: Equipment.cpp.i
 
-.PHONY : BattleMode.i
+.PHONY : Equipment.i
 
 # target to preprocess a source file
-BattleMode.cpp.i:
-	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/BattleMode.cpp.i
-.PHONY : BattleMode.cpp.i
+Equipment.cpp.i:
+	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/Equipment.cpp.i
+.PHONY : Equipment.cpp.i
 
-BattleMode.s: BattleMode.cpp.s
+Equipment.s: Equipment.cpp.s
 
-.PHONY : BattleMode.s
+.PHONY : Equipment.s
 
 # target to generate assembly for a file
-BattleMode.cpp.s:
-	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/BattleMode.cpp.s
-.PHONY : BattleMode.cpp.s
+Equipment.cpp.s:
+	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/Equipment.cpp.s
+.PHONY : Equipment.cpp.s
 
 IUnit.obj: IUnit.cpp.obj
 
@@ -203,6 +203,33 @@ Map.cpp.s:
 	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/Map.cpp.s
 .PHONY : Map.cpp.s
 
+PlayerCharacter.obj: PlayerCharacter.cpp.obj
+
+.PHONY : PlayerCharacter.obj
+
+# target to build an object file
+PlayerCharacter.cpp.obj:
+	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/PlayerCharacter.cpp.obj
+.PHONY : PlayerCharacter.cpp.obj
+
+PlayerCharacter.i: PlayerCharacter.cpp.i
+
+.PHONY : PlayerCharacter.i
+
+# target to preprocess a source file
+PlayerCharacter.cpp.i:
+	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/PlayerCharacter.cpp.i
+.PHONY : PlayerCharacter.cpp.i
+
+PlayerCharacter.s: PlayerCharacter.cpp.s
+
+.PHONY : PlayerCharacter.s
+
+# target to generate assembly for a file
+PlayerCharacter.cpp.s:
+	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/PlayerCharacter.cpp.s
+.PHONY : PlayerCharacter.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -239,15 +266,18 @@ help:
 	@echo ... CS3520_2017FA_PROJ
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... BattleMode.obj
-	@echo ... BattleMode.i
-	@echo ... BattleMode.s
+	@echo ... Equipment.obj
+	@echo ... Equipment.i
+	@echo ... Equipment.s
 	@echo ... IUnit.obj
 	@echo ... IUnit.i
 	@echo ... IUnit.s
 	@echo ... Map.obj
 	@echo ... Map.i
 	@echo ... Map.s
+	@echo ... PlayerCharacter.obj
+	@echo ... PlayerCharacter.i
+	@echo ... PlayerCharacter.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

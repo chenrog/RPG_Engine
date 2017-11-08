@@ -82,7 +82,10 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/BattleMode.cpp">
+		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/EquipType.h">
+			<Option target="CS3520_2017FA_PROJ"/>
+		</Unit>
+		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/Equipment.cpp">
 			<Option target="CS3520_2017FA_PROJ"/>
 		</Unit>
 		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/Equipment.h">
@@ -94,22 +97,19 @@
 		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/IUnit.h">
 			<Option target="CS3520_2017FA_PROJ"/>
 		</Unit>
-		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/Item.h">
-			<Option target="CS3520_2017FA_PROJ"/>
-		</Unit>
 		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/Map.cpp">
 			<Option target="CS3520_2017FA_PROJ"/>
 		</Unit>
-		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/README.md">
+		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/PlayerCharacter.cpp">
+			<Option target="CS3520_2017FA_PROJ"/>
+		</Unit>
+		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/PlayerCharacter.h">
 			<Option target="CS3520_2017FA_PROJ"/>
 		</Unit>
 		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/Spell.h">
 			<Option target="CS3520_2017FA_PROJ"/>
 		</Unit>
 		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/main.cpp">
-			<Option target="CS3520_2017FA_PROJ"/>
-		</Unit>
-		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/proposal.pdf">
 			<Option target="CS3520_2017FA_PROJ"/>
 		</Unit>
 		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/CMakeLists.txt">
