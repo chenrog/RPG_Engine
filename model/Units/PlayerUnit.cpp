@@ -2,7 +2,7 @@
 #include <ctime>
 #include <iostream>
 #include "PlayerUnit.h"
-#include "../Equipment.h"
+#include "../Equipment/Equipment.h"
 
 
 using namespace std;
