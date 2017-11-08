@@ -5,47 +5,69 @@
 #ifndef CS3520_2017FA_PROJ_UNIT_H
 #define CS3520_2017FA_PROJ_UNIT_H
 
+#include "Equipment.h"
+#include "Spell.h"
+#include "Item.h"
+#include <string>
+
 class IUnit {
 public:
+    IUnit();
+    IUnit(const IUnit &unit);
+    ~IUnit();
+
     /**
-     * Calculates the damage a unit takes based on a damage stat passed in by the class.
+     * Calculates the damage a unit takes based on a damage stat passed in by the class. Returns the amount of damage
+     * taken by the unit
      * @param damage
      */
-    void takeDamage(const int damage);
+    virtual int takeDamage(const int damage, int hit_chance, bool is_physical);
 
     /**
      * Casts the given spell based upon the spell selected by the user.
      * @param spell
+     * @return the damage of the spell
      */
-    void castSpell(const Spell spell); // to be figured out later
+    virtual int castSpell(const Spell spell); // to be figured out later
 
     /**
-     * Equips the chosen equipment to the player character and applies stat changes as necessary.
+     * Equips the chosen equipment to the player character and applies stat changes as necessary. Returns the old
+     * equipment, if there is one.
      * @param equipment
      */
-    void Equip(Equipment const equipment);
+    virtual Equipment Equip(Equipment const equipment);
 
     /**
-     * adds EXP from a battle to the exp of this unit. Then calculates if there is a level up by this unit.
+     * adds EXP from a battle to the exp of this unit. Then calculates if there is a level up by this unit. Returns
+     * true if there is a level up.
      * @param exp
      */
-    void addEXP(int const exp);
+    virtual bool addEXP(int const exp);
+
+    /**
+     *
+     * @return the damage statistic dealt by this unit.
+     */
+    virtual int basicAttack(bool is_physical);
 
     /**
      *
      * @return
      */
-    int getDamage(int );
-    Item calcDrop();
+    virtual Item calcDrop();
+
+    virtual void updateStats();
 
 
-private:
-    int health, mana, p_defense, m_defense, p_damage, m_damage;
-    int vit, intel, spe, str;
-    int max_exp, exp;
-    Equipment * equip; // each element in the array pertains to a specific stats
-    Spell * spells; // will be displayed in a list when the player selects this option
-    Item * drop; // randomly will drop an item in this list after defeat
+protected:
+    virtual const string name;
+    virtual unsigned int health, mana, p_defense, m_defense;
+    virtual unsigned int vit, intel, speed, str;
+    virtual unsigned int lvl, exp;
+    bool is_melee;
+    virtual Equipment * equip; // each element in the array pertains to a specific stats
+    virtual Spell * spells; // will be displayed in a list when the player selects this option
+    virtual Item * drop; // randomly will drop an item in this list after defeat
 };
 
 #endif //CS3520_2017FA_PROJ_UNIT_H
