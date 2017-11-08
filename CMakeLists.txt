@@ -17,6 +17,8 @@ set(SOURCE_FILES
         model/Map.cpp
         model/Spell.h
         main.cpp
-        model/EquipType.h)
+        model/EquipType.h
+        model/Point.cpp
+        model/Point.h)
 
 add_executable(CS3520_2017FA_PROJ ${SOURCE_FILES})
