@@ -13,9 +13,9 @@ set(SOURCE_FILES
         model/Units/PlayerUnit.cpp
         model/Units/PlayerUnit.h
         model/BattleMode.cpp
-        model/Equipment.cpp
-        model/Equipment.h
-        model/EquipType.h
+        model/Equipment/Equipment.cpp
+        model/Equipment/Equipment.h
+        model/Equipment/EquipType.h
         model/Item.h
         model/Map.cpp
         model/Point.cpp
