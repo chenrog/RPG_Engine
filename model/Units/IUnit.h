@@ -48,7 +48,6 @@ protected:
     bool is_melee;
     virtual Equipment * equip; // each element in the array pertains to a specific stats
     virtual Spell * spells; // will be displayed in a list when the player selects this option
-    virtual Item * drop; // randomly will drop an item in this list after defeat
 };
 
 #endif //CS3520_2017FA_PROJ_UNIT_H
