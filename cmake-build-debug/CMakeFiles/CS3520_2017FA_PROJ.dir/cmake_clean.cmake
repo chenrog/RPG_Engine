@@ -6,6 +6,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/PlayerUnit.cpp.obj"
   "CMakeFiles/CS3520_2017FA_PROJ.dir/model/Map.cpp.obj"
   "CMakeFiles/CS3520_2017FA_PROJ.dir/main.cpp.obj"
+  "CMakeFiles/CS3520_2017FA_PROJ.dir/model/Point.cpp.obj"
+  "CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/AEntity.cpp.obj"
   "CS3520_2017FA_PROJ.pdb"
   "CS3520_2017FA_PROJ.exe"
   "CS3520_2017FA_PROJ.exe.manifest"

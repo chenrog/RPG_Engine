@@ -42,10 +42,10 @@ RM = "C:\Program Files\JetBrains\CLion 2017.2.2\bin\cmake\bin\cmake.exe" -E remo
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ
+CMAKE_SOURCE_DIR = "C:\Users\Andrew Alcala\CLionProjects\CS3520-2017FA-PROJ"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\cmake-build-debug
+CMAKE_BINARY_DIR = "C:\Users\Andrew Alcala\CLionProjects\CS3520-2017FA-PROJ\cmake-build-debug"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/CS3520_2017FA_PROJ.dir/depend.make
@@ -58,16 +58,16 @@ include CMakeFiles/CS3520_2017FA_PROJ.dir/flags.make
 
 CMakeFiles/CS3520_2017FA_PROJ.dir/model/Equipment.cpp.obj: CMakeFiles/CS3520_2017FA_PROJ.dir/flags.make
 CMakeFiles/CS3520_2017FA_PROJ.dir/model/Equipment.cpp.obj: ../model/Equipment.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/CS3520_2017FA_PROJ.dir/model/Equipment.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\CS3520_2017FA_PROJ.dir\model\Equipment.cpp.obj -c C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\model\Equipment.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Andrew Alcala\CLionProjects\CS3520-2017FA-PROJ\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/CS3520_2017FA_PROJ.dir/model/Equipment.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\CS3520_2017FA_PROJ.dir\model\Equipment.cpp.obj -c "C:\Users\Andrew Alcala\CLionProjects\CS3520-2017FA-PROJ\model\Equipment.cpp"
 
 CMakeFiles/CS3520_2017FA_PROJ.dir/model/Equipment.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CS3520_2017FA_PROJ.dir/model/Equipment.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\model\Equipment.cpp > CMakeFiles\CS3520_2017FA_PROJ.dir\model\Equipment.cpp.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Andrew Alcala\CLionProjects\CS3520-2017FA-PROJ\model\Equipment.cpp" > CMakeFiles\CS3520_2017FA_PROJ.dir\model\Equipment.cpp.i
 
 CMakeFiles/CS3520_2017FA_PROJ.dir/model/Equipment.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CS3520_2017FA_PROJ.dir/model/Equipment.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\model\Equipment.cpp -o CMakeFiles\CS3520_2017FA_PROJ.dir\model\Equipment.cpp.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Andrew Alcala\CLionProjects\CS3520-2017FA-PROJ\model\Equipment.cpp" -o CMakeFiles\CS3520_2017FA_PROJ.dir\model\Equipment.cpp.s
 
 CMakeFiles/CS3520_2017FA_PROJ.dir/model/Equipment.cpp.obj.requires:
 
@@ -82,16 +82,16 @@ CMakeFiles/CS3520_2017FA_PROJ.dir/model/Equipment.cpp.obj.provides.build: CMakeF
 
 CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/IUnit.cpp.obj: CMakeFiles/CS3520_2017FA_PROJ.dir/flags.make
 CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/IUnit.cpp.obj: ../model/Units/IUnit.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/IUnit.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\CS3520_2017FA_PROJ.dir\model\Units\IUnit.cpp.obj -c C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\model\Units\IUnit.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Andrew Alcala\CLionProjects\CS3520-2017FA-PROJ\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/IUnit.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\CS3520_2017FA_PROJ.dir\model\Units\IUnit.cpp.obj -c "C:\Users\Andrew Alcala\CLionProjects\CS3520-2017FA-PROJ\model\Units\IUnit.cpp"
 
 CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/IUnit.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/IUnit.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\model\Units\IUnit.cpp > CMakeFiles\CS3520_2017FA_PROJ.dir\model\Units\IUnit.cpp.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Andrew Alcala\CLionProjects\CS3520-2017FA-PROJ\model\Units\IUnit.cpp" > CMakeFiles\CS3520_2017FA_PROJ.dir\model\Units\IUnit.cpp.i
 
 CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/IUnit.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/IUnit.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\model\Units\IUnit.cpp -o CMakeFiles\CS3520_2017FA_PROJ.dir\model\Units\IUnit.cpp.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Andrew Alcala\CLionProjects\CS3520-2017FA-PROJ\model\Units\IUnit.cpp" -o CMakeFiles\CS3520_2017FA_PROJ.dir\model\Units\IUnit.cpp.s
 
 CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/IUnit.cpp.obj.requires:
 
@@ -106,16 +106,16 @@ CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/IUnit.cpp.obj.provides.build: CMak
 
 CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/NPCUnit.cpp.obj: CMakeFiles/CS3520_2017FA_PROJ.dir/flags.make
 CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/NPCUnit.cpp.obj: ../model/Units/NPCUnit.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/NPCUnit.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\CS3520_2017FA_PROJ.dir\model\Units\NPCUnit.cpp.obj -c C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\model\Units\NPCUnit.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Andrew Alcala\CLionProjects\CS3520-2017FA-PROJ\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/NPCUnit.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\CS3520_2017FA_PROJ.dir\model\Units\NPCUnit.cpp.obj -c "C:\Users\Andrew Alcala\CLionProjects\CS3520-2017FA-PROJ\model\Units\NPCUnit.cpp"
 
 CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/NPCUnit.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/NPCUnit.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\model\Units\NPCUnit.cpp > CMakeFiles\CS3520_2017FA_PROJ.dir\model\Units\NPCUnit.cpp.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Andrew Alcala\CLionProjects\CS3520-2017FA-PROJ\model\Units\NPCUnit.cpp" > CMakeFiles\CS3520_2017FA_PROJ.dir\model\Units\NPCUnit.cpp.i
 
 CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/NPCUnit.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/NPCUnit.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\model\Units\NPCUnit.cpp -o CMakeFiles\CS3520_2017FA_PROJ.dir\model\Units\NPCUnit.cpp.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Andrew Alcala\CLionProjects\CS3520-2017FA-PROJ\model\Units\NPCUnit.cpp" -o CMakeFiles\CS3520_2017FA_PROJ.dir\model\Units\NPCUnit.cpp.s
 
 CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/NPCUnit.cpp.obj.requires:
 
@@ -130,16 +130,16 @@ CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/NPCUnit.cpp.obj.provides.build: CM
 
 CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/EnemyUnit.cpp.obj: CMakeFiles/CS3520_2017FA_PROJ.dir/flags.make
 CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/EnemyUnit.cpp.obj: ../model/Units/EnemyUnit.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/EnemyUnit.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\CS3520_2017FA_PROJ.dir\model\Units\EnemyUnit.cpp.obj -c C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\model\Units\EnemyUnit.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Andrew Alcala\CLionProjects\CS3520-2017FA-PROJ\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/EnemyUnit.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\CS3520_2017FA_PROJ.dir\model\Units\EnemyUnit.cpp.obj -c "C:\Users\Andrew Alcala\CLionProjects\CS3520-2017FA-PROJ\model\Units\EnemyUnit.cpp"
 
 CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/EnemyUnit.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/EnemyUnit.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\model\Units\EnemyUnit.cpp > CMakeFiles\CS3520_2017FA_PROJ.dir\model\Units\EnemyUnit.cpp.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Andrew Alcala\CLionProjects\CS3520-2017FA-PROJ\model\Units\EnemyUnit.cpp" > CMakeFiles\CS3520_2017FA_PROJ.dir\model\Units\EnemyUnit.cpp.i
 
 CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/EnemyUnit.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/EnemyUnit.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\model\Units\EnemyUnit.cpp -o CMakeFiles\CS3520_2017FA_PROJ.dir\model\Units\EnemyUnit.cpp.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Andrew Alcala\CLionProjects\CS3520-2017FA-PROJ\model\Units\EnemyUnit.cpp" -o CMakeFiles\CS3520_2017FA_PROJ.dir\model\Units\EnemyUnit.cpp.s
 
 CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/EnemyUnit.cpp.obj.requires:
 
@@ -154,16 +154,16 @@ CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/EnemyUnit.cpp.obj.provides.build: 
 
 CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/PlayerUnit.cpp.obj: CMakeFiles/CS3520_2017FA_PROJ.dir/flags.make
 CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/PlayerUnit.cpp.obj: ../model/Units/PlayerUnit.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/PlayerUnit.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\CS3520_2017FA_PROJ.dir\model\Units\PlayerUnit.cpp.obj -c C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\model\Units\PlayerUnit.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Andrew Alcala\CLionProjects\CS3520-2017FA-PROJ\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/PlayerUnit.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\CS3520_2017FA_PROJ.dir\model\Units\PlayerUnit.cpp.obj -c "C:\Users\Andrew Alcala\CLionProjects\CS3520-2017FA-PROJ\model\Units\PlayerUnit.cpp"
 
 CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/PlayerUnit.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/PlayerUnit.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\model\Units\PlayerUnit.cpp > CMakeFiles\CS3520_2017FA_PROJ.dir\model\Units\PlayerUnit.cpp.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Andrew Alcala\CLionProjects\CS3520-2017FA-PROJ\model\Units\PlayerUnit.cpp" > CMakeFiles\CS3520_2017FA_PROJ.dir\model\Units\PlayerUnit.cpp.i
 
 CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/PlayerUnit.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/PlayerUnit.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\model\Units\PlayerUnit.cpp -o CMakeFiles\CS3520_2017FA_PROJ.dir\model\Units\PlayerUnit.cpp.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Andrew Alcala\CLionProjects\CS3520-2017FA-PROJ\model\Units\PlayerUnit.cpp" -o CMakeFiles\CS3520_2017FA_PROJ.dir\model\Units\PlayerUnit.cpp.s
 
 CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/PlayerUnit.cpp.obj.requires:
 
@@ -178,16 +178,16 @@ CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/PlayerUnit.cpp.obj.provides.build:
 
 CMakeFiles/CS3520_2017FA_PROJ.dir/model/Map.cpp.obj: CMakeFiles/CS3520_2017FA_PROJ.dir/flags.make
 CMakeFiles/CS3520_2017FA_PROJ.dir/model/Map.cpp.obj: ../model/Map.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/CS3520_2017FA_PROJ.dir/model/Map.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\CS3520_2017FA_PROJ.dir\model\Map.cpp.obj -c C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\model\Map.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Andrew Alcala\CLionProjects\CS3520-2017FA-PROJ\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/CS3520_2017FA_PROJ.dir/model/Map.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\CS3520_2017FA_PROJ.dir\model\Map.cpp.obj -c "C:\Users\Andrew Alcala\CLionProjects\CS3520-2017FA-PROJ\model\Map.cpp"
 
 CMakeFiles/CS3520_2017FA_PROJ.dir/model/Map.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CS3520_2017FA_PROJ.dir/model/Map.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\model\Map.cpp > CMakeFiles\CS3520_2017FA_PROJ.dir\model\Map.cpp.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Andrew Alcala\CLionProjects\CS3520-2017FA-PROJ\model\Map.cpp" > CMakeFiles\CS3520_2017FA_PROJ.dir\model\Map.cpp.i
 
 CMakeFiles/CS3520_2017FA_PROJ.dir/model/Map.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CS3520_2017FA_PROJ.dir/model/Map.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\model\Map.cpp -o CMakeFiles\CS3520_2017FA_PROJ.dir\model\Map.cpp.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Andrew Alcala\CLionProjects\CS3520-2017FA-PROJ\model\Map.cpp" -o CMakeFiles\CS3520_2017FA_PROJ.dir\model\Map.cpp.s
 
 CMakeFiles/CS3520_2017FA_PROJ.dir/model/Map.cpp.obj.requires:
 
@@ -202,16 +202,16 @@ CMakeFiles/CS3520_2017FA_PROJ.dir/model/Map.cpp.obj.provides.build: CMakeFiles/C
 
 CMakeFiles/CS3520_2017FA_PROJ.dir/main.cpp.obj: CMakeFiles/CS3520_2017FA_PROJ.dir/flags.make
 CMakeFiles/CS3520_2017FA_PROJ.dir/main.cpp.obj: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/CS3520_2017FA_PROJ.dir/main.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\CS3520_2017FA_PROJ.dir\main.cpp.obj -c C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Andrew Alcala\CLionProjects\CS3520-2017FA-PROJ\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/CS3520_2017FA_PROJ.dir/main.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\CS3520_2017FA_PROJ.dir\main.cpp.obj -c "C:\Users\Andrew Alcala\CLionProjects\CS3520-2017FA-PROJ\main.cpp"
 
 CMakeFiles/CS3520_2017FA_PROJ.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CS3520_2017FA_PROJ.dir/main.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\main.cpp > CMakeFiles\CS3520_2017FA_PROJ.dir\main.cpp.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Andrew Alcala\CLionProjects\CS3520-2017FA-PROJ\main.cpp" > CMakeFiles\CS3520_2017FA_PROJ.dir\main.cpp.i
 
 CMakeFiles/CS3520_2017FA_PROJ.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CS3520_2017FA_PROJ.dir/main.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\main.cpp -o CMakeFiles\CS3520_2017FA_PROJ.dir\main.cpp.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Andrew Alcala\CLionProjects\CS3520-2017FA-PROJ\main.cpp" -o CMakeFiles\CS3520_2017FA_PROJ.dir\main.cpp.s
 
 CMakeFiles/CS3520_2017FA_PROJ.dir/main.cpp.obj.requires:
 
@@ -224,6 +224,54 @@ CMakeFiles/CS3520_2017FA_PROJ.dir/main.cpp.obj.provides: CMakeFiles/CS3520_2017F
 CMakeFiles/CS3520_2017FA_PROJ.dir/main.cpp.obj.provides.build: CMakeFiles/CS3520_2017FA_PROJ.dir/main.cpp.obj
 
 
+CMakeFiles/CS3520_2017FA_PROJ.dir/model/Point.cpp.obj: CMakeFiles/CS3520_2017FA_PROJ.dir/flags.make
+CMakeFiles/CS3520_2017FA_PROJ.dir/model/Point.cpp.obj: ../model/Point.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Andrew Alcala\CLionProjects\CS3520-2017FA-PROJ\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/CS3520_2017FA_PROJ.dir/model/Point.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\CS3520_2017FA_PROJ.dir\model\Point.cpp.obj -c "C:\Users\Andrew Alcala\CLionProjects\CS3520-2017FA-PROJ\model\Point.cpp"
+
+CMakeFiles/CS3520_2017FA_PROJ.dir/model/Point.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CS3520_2017FA_PROJ.dir/model/Point.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Andrew Alcala\CLionProjects\CS3520-2017FA-PROJ\model\Point.cpp" > CMakeFiles\CS3520_2017FA_PROJ.dir\model\Point.cpp.i
+
+CMakeFiles/CS3520_2017FA_PROJ.dir/model/Point.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CS3520_2017FA_PROJ.dir/model/Point.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Andrew Alcala\CLionProjects\CS3520-2017FA-PROJ\model\Point.cpp" -o CMakeFiles\CS3520_2017FA_PROJ.dir\model\Point.cpp.s
+
+CMakeFiles/CS3520_2017FA_PROJ.dir/model/Point.cpp.obj.requires:
+
+.PHONY : CMakeFiles/CS3520_2017FA_PROJ.dir/model/Point.cpp.obj.requires
+
+CMakeFiles/CS3520_2017FA_PROJ.dir/model/Point.cpp.obj.provides: CMakeFiles/CS3520_2017FA_PROJ.dir/model/Point.cpp.obj.requires
+	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/model/Point.cpp.obj.provides.build
+.PHONY : CMakeFiles/CS3520_2017FA_PROJ.dir/model/Point.cpp.obj.provides
+
+CMakeFiles/CS3520_2017FA_PROJ.dir/model/Point.cpp.obj.provides.build: CMakeFiles/CS3520_2017FA_PROJ.dir/model/Point.cpp.obj
+
+
+CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/AEntity.cpp.obj: CMakeFiles/CS3520_2017FA_PROJ.dir/flags.make
+CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/AEntity.cpp.obj: ../model/Units/AEntity.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Andrew Alcala\CLionProjects\CS3520-2017FA-PROJ\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/AEntity.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\CS3520_2017FA_PROJ.dir\model\Units\AEntity.cpp.obj -c "C:\Users\Andrew Alcala\CLionProjects\CS3520-2017FA-PROJ\model\Units\AEntity.cpp"
+
+CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/AEntity.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/AEntity.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Andrew Alcala\CLionProjects\CS3520-2017FA-PROJ\model\Units\AEntity.cpp" > CMakeFiles\CS3520_2017FA_PROJ.dir\model\Units\AEntity.cpp.i
+
+CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/AEntity.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/AEntity.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Andrew Alcala\CLionProjects\CS3520-2017FA-PROJ\model\Units\AEntity.cpp" -o CMakeFiles\CS3520_2017FA_PROJ.dir\model\Units\AEntity.cpp.s
+
+CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/AEntity.cpp.obj.requires:
+
+.PHONY : CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/AEntity.cpp.obj.requires
+
+CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/AEntity.cpp.obj.provides: CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/AEntity.cpp.obj.requires
+	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/AEntity.cpp.obj.provides.build
+.PHONY : CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/AEntity.cpp.obj.provides
+
+CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/AEntity.cpp.obj.provides.build: CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/AEntity.cpp.obj
+
+
 # Object files for target CS3520_2017FA_PROJ
 CS3520_2017FA_PROJ_OBJECTS = \
 "CMakeFiles/CS3520_2017FA_PROJ.dir/model/Equipment.cpp.obj" \
@@ -232,7 +280,9 @@ CS3520_2017FA_PROJ_OBJECTS = \
 "CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/EnemyUnit.cpp.obj" \
 "CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/PlayerUnit.cpp.obj" \
 "CMakeFiles/CS3520_2017FA_PROJ.dir/model/Map.cpp.obj" \
-"CMakeFiles/CS3520_2017FA_PROJ.dir/main.cpp.obj"
+"CMakeFiles/CS3520_2017FA_PROJ.dir/main.cpp.obj" \
+"CMakeFiles/CS3520_2017FA_PROJ.dir/model/Point.cpp.obj" \
+"CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/AEntity.cpp.obj"
 
 # External object files for target CS3520_2017FA_PROJ
 CS3520_2017FA_PROJ_EXTERNAL_OBJECTS =
@@ -244,11 +294,13 @@ CS3520_2017FA_PROJ.exe: CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/EnemyUnit.
 CS3520_2017FA_PROJ.exe: CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/PlayerUnit.cpp.obj
 CS3520_2017FA_PROJ.exe: CMakeFiles/CS3520_2017FA_PROJ.dir/model/Map.cpp.obj
 CS3520_2017FA_PROJ.exe: CMakeFiles/CS3520_2017FA_PROJ.dir/main.cpp.obj
+CS3520_2017FA_PROJ.exe: CMakeFiles/CS3520_2017FA_PROJ.dir/model/Point.cpp.obj
+CS3520_2017FA_PROJ.exe: CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/AEntity.cpp.obj
 CS3520_2017FA_PROJ.exe: CMakeFiles/CS3520_2017FA_PROJ.dir/build.make
 CS3520_2017FA_PROJ.exe: CMakeFiles/CS3520_2017FA_PROJ.dir/linklibs.rsp
 CS3520_2017FA_PROJ.exe: CMakeFiles/CS3520_2017FA_PROJ.dir/objects1.rsp
 CS3520_2017FA_PROJ.exe: CMakeFiles/CS3520_2017FA_PROJ.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable CS3520_2017FA_PROJ.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\Andrew Alcala\CLionProjects\CS3520-2017FA-PROJ\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable CS3520_2017FA_PROJ.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\CS3520_2017FA_PROJ.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -263,6 +315,8 @@ CMakeFiles/CS3520_2017FA_PROJ.dir/requires: CMakeFiles/CS3520_2017FA_PROJ.dir/mo
 CMakeFiles/CS3520_2017FA_PROJ.dir/requires: CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/PlayerUnit.cpp.obj.requires
 CMakeFiles/CS3520_2017FA_PROJ.dir/requires: CMakeFiles/CS3520_2017FA_PROJ.dir/model/Map.cpp.obj.requires
 CMakeFiles/CS3520_2017FA_PROJ.dir/requires: CMakeFiles/CS3520_2017FA_PROJ.dir/main.cpp.obj.requires
+CMakeFiles/CS3520_2017FA_PROJ.dir/requires: CMakeFiles/CS3520_2017FA_PROJ.dir/model/Point.cpp.obj.requires
+CMakeFiles/CS3520_2017FA_PROJ.dir/requires: CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/AEntity.cpp.obj.requires
 
 .PHONY : CMakeFiles/CS3520_2017FA_PROJ.dir/requires
 
@@ -271,6 +325,6 @@ CMakeFiles/CS3520_2017FA_PROJ.dir/clean:
 .PHONY : CMakeFiles/CS3520_2017FA_PROJ.dir/clean
 
 CMakeFiles/CS3520_2017FA_PROJ.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\cmake-build-debug C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\cmake-build-debug C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\cmake-build-debug\CMakeFiles\CS3520_2017FA_PROJ.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "C:\Users\Andrew Alcala\CLionProjects\CS3520-2017FA-PROJ" "C:\Users\Andrew Alcala\CLionProjects\CS3520-2017FA-PROJ" "C:\Users\Andrew Alcala\CLionProjects\CS3520-2017FA-PROJ\cmake-build-debug" "C:\Users\Andrew Alcala\CLionProjects\CS3520-2017FA-PROJ\cmake-build-debug" "C:\Users\Andrew Alcala\CLionProjects\CS3520-2017FA-PROJ\cmake-build-debug\CMakeFiles\CS3520_2017FA_PROJ.dir\DependInfo.cmake" --color=$(COLOR)
 .PHONY : CMakeFiles/CS3520_2017FA_PROJ.dir/depend
 

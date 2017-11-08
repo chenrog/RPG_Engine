@@ -8,11 +8,13 @@
 #include "../Equipment/Equipment.h"
 #include "../Spell.h"
 #include "../Item.h"
+#include "AEntity.h"
 #include <string>
 
-class IUnit {
+class IUnit : public AEntity {
 public:
     IUnit();
+
     IUnit(const IUnit &unit);
 
     virtual ~IUnit();
@@ -30,24 +32,13 @@ public:
      */
     virtual int calcBasicAttack();
 
-    virtual friend int getX(const IUnit &unit);
-
-    virtual friend int getY(const IUnit &unit);
-
-    virtual void setX(int x);
-
-    virtual void setY(int y);
-
-
 protected:
-    virtual string name;
-    virtual unsigned int curr_health, health, cur_mana, mana, p_defense, m_defense;
-    virtual unsigned int vit, intel, speed, str;
+    virtual unsigned int health, max_health, mana, max_mana, p_defense, m_defense;
+    virtual unsigned int st_vit, st_intel, st_speed, st_str;
     virtual unsigned int lvl, exp;
-    virtual int pos_x, pos_y;
     bool is_melee;
-    virtual Equipment * equip; // each element in the array pertains to a specific stats
-    virtual Spell * spells; // will be displayed in a list when the player selects this option
+    virtual Equipment *equip; // each element in the array pertains to a specific stats
+    virtual Spell *spells; // will be displayed in a list when the player selects this option
 };
 
 #endif //CS3520_2017FA_PROJ_UNIT_H

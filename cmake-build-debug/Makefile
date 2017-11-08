@@ -47,10 +47,10 @@ RM = "C:\Program Files\JetBrains\CLion 2017.2.2\bin\cmake\bin\cmake.exe" -E remo
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ
+CMAKE_SOURCE_DIR = "C:\Users\Andrew Alcala\CLionProjects\CS3520-2017FA-PROJ"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\cmake-build-debug
+CMAKE_BINARY_DIR = "C:\Users\Andrew Alcala\CLionProjects\CS3520-2017FA-PROJ\cmake-build-debug"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -79,9 +79,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\cmake-build-debug\CMakeFiles C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\cmake-build-debug\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Andrew Alcala\CLionProjects\CS3520-2017FA-PROJ\cmake-build-debug\CMakeFiles" "C:\Users\Andrew Alcala\CLionProjects\CS3520-2017FA-PROJ\cmake-build-debug\CMakeFiles\progress.marks"
 	$(MAKE) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Andrew Alcala\CLionProjects\CS3520-2017FA-PROJ\cmake-build-debug\CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -149,59 +149,32 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-model/BattleMode.obj: model/BattleMode.cpp.obj
+model/Equipment.obj: model/Equipment.cpp.obj
 
-.PHONY : model/BattleMode.obj
-
-# target to build an object file
-model/BattleMode.cpp.obj:
-	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/model/BattleMode.cpp.obj
-.PHONY : model/BattleMode.cpp.obj
-
-model/BattleMode.i: model/BattleMode.cpp.i
-
-.PHONY : model/BattleMode.i
-
-# target to preprocess a source file
-model/BattleMode.cpp.i:
-	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/model/BattleMode.cpp.i
-.PHONY : model/BattleMode.cpp.i
-
-model/BattleMode.s: model/BattleMode.cpp.s
-
-.PHONY : model/BattleMode.s
-
-# target to generate assembly for a file
-model/BattleMode.cpp.s:
-	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/model/BattleMode.cpp.s
-.PHONY : model/BattleMode.cpp.s
-
-model/Equipment/Equipment.obj: model/Equipment/Equipment.cpp.obj
-
-.PHONY : model/Equipment/Equipment.obj
+.PHONY : model/Equipment.obj
 
 # target to build an object file
-model/Equipment/Equipment.cpp.obj:
-	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/model/Equipment/Equipment.cpp.obj
-.PHONY : model/Equipment/Equipment.cpp.obj
+model/Equipment.cpp.obj:
+	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/model/Equipment.cpp.obj
+.PHONY : model/Equipment.cpp.obj
 
-model/Equipment/Equipment.i: model/Equipment/Equipment.cpp.i
+model/Equipment.i: model/Equipment.cpp.i
 
-.PHONY : model/Equipment/Equipment.i
+.PHONY : model/Equipment.i
 
 # target to preprocess a source file
-model/Equipment/Equipment.cpp.i:
-	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/model/Equipment/Equipment.cpp.i
-.PHONY : model/Equipment/Equipment.cpp.i
+model/Equipment.cpp.i:
+	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/model/Equipment.cpp.i
+.PHONY : model/Equipment.cpp.i
 
-model/Equipment/Equipment.s: model/Equipment/Equipment.cpp.s
+model/Equipment.s: model/Equipment.cpp.s
 
-.PHONY : model/Equipment/Equipment.s
+.PHONY : model/Equipment.s
 
 # target to generate assembly for a file
-model/Equipment/Equipment.cpp.s:
-	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/model/Equipment/Equipment.cpp.s
-.PHONY : model/Equipment/Equipment.cpp.s
+model/Equipment.cpp.s:
+	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/model/Equipment.cpp.s
+.PHONY : model/Equipment.cpp.s
 
 model/Map.obj: model/Map.cpp.obj
 
@@ -256,6 +229,33 @@ model/Point.s: model/Point.cpp.s
 model/Point.cpp.s:
 	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/model/Point.cpp.s
 .PHONY : model/Point.cpp.s
+
+model/Units/AEntity.obj: model/Units/AEntity.cpp.obj
+
+.PHONY : model/Units/AEntity.obj
+
+# target to build an object file
+model/Units/AEntity.cpp.obj:
+	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/AEntity.cpp.obj
+.PHONY : model/Units/AEntity.cpp.obj
+
+model/Units/AEntity.i: model/Units/AEntity.cpp.i
+
+.PHONY : model/Units/AEntity.i
+
+# target to preprocess a source file
+model/Units/AEntity.cpp.i:
+	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/AEntity.cpp.i
+.PHONY : model/Units/AEntity.cpp.i
+
+model/Units/AEntity.s: model/Units/AEntity.cpp.s
+
+.PHONY : model/Units/AEntity.s
+
+# target to generate assembly for a file
+model/Units/AEntity.cpp.s:
+	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/AEntity.cpp.s
+.PHONY : model/Units/AEntity.cpp.s
 
 model/Units/EnemyUnit.obj: model/Units/EnemyUnit.cpp.obj
 
@@ -377,18 +377,18 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
-	@echo ... model/BattleMode.obj
-	@echo ... model/BattleMode.i
-	@echo ... model/BattleMode.s
-	@echo ... model/Equipment/Equipment.obj
-	@echo ... model/Equipment/Equipment.i
-	@echo ... model/Equipment/Equipment.s
+	@echo ... model/Equipment.obj
+	@echo ... model/Equipment.i
+	@echo ... model/Equipment.s
 	@echo ... model/Map.obj
 	@echo ... model/Map.i
 	@echo ... model/Map.s
 	@echo ... model/Point.obj
 	@echo ... model/Point.i
 	@echo ... model/Point.s
+	@echo ... model/Units/AEntity.obj
+	@echo ... model/Units/AEntity.i
+	@echo ... model/Units/AEntity.s
 	@echo ... model/Units/EnemyUnit.obj
 	@echo ... model/Units/EnemyUnit.i
 	@echo ... model/Units/EnemyUnit.s
