@@ -61,7 +61,7 @@ public:
 
 protected:
     virtual const string name;
-    virtual unsigned int health, mana, p_defense, m_defense;
+    virtual unsigned int curr_health, health, cur_mana, mana, p_defense, m_defense;
     virtual unsigned int vit, intel, speed, str;
     virtual unsigned int lvl, exp;
     bool is_melee;
