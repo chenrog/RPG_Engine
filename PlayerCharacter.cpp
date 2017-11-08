@@ -20,6 +20,8 @@ PlayerCharacter::PlayerCharacter(unsigned int vit, unsigned int intel, unsigned 
     this->mod_str = mod_str;
     this->mod_speed = mod_speed;
     this->is_melee = is_melee;
+    this->curr_health = this->health;
+    this->cur_mana = this->mana;
     this->lvl = 1;
 
     updateStats();
@@ -38,10 +40,11 @@ PlayerCharacter::PlayerCharacter(unsigned int vit, unsigned int intel, unsigned 
     this->mod_speed = mod_speed;
     this->is_melee = is_melee;
     this->lvl = lvl;
+    this->curr_health = this->health;
+    this->cur_mana = this->mana;
 
     updateStats();
 
-    // to be refined later
     this->equip = equipment;
     this->spells = spell;
 }
@@ -70,7 +73,7 @@ int PlayerCharacter::takeDamage(const int damage, int hit_chance, bool is_physic
 }
 
 Equipment PlayerCharacter::Equip(Equipment const equipment) {
-
+    this->equip[equipment.];
 }
 
 bool PlayerCharacter::addEXP(int const exp) {
@@ -81,10 +84,10 @@ bool PlayerCharacter::addEXP(int const exp) {
         srand((unsigned) time(nullptr));
         int lowest = 1, highest = 10;
         int range = (highest - lowest) + 1;
-        this->mod_vit += lowest + int(range * rand() / (RAND_MAX + 1.0)) * mod_vit;
-        this->mod_int += lowest + int(range * rand() / (RAND_MAX + 1.0)) * mod_int;
-        this->mod_speed += lowest + int(range * rand() / (RAND_MAX + 1.0)) * mod_speed;
-        this->mod_str += lowest + int(range * rand() / (RAND_MAX + 1.0)) * mod_str;
+        this->vit += (lowest + int(range * rand() / (RAND_MAX + 1.0))) * mod_vit;
+        this->intel += (lowest + int(range * rand() / (RAND_MAX + 1.0))) * mod_int;
+        this->speed += (lowest + int(range * rand() / (RAND_MAX + 1.0))) * mod_speed;
+        this->str += (lowest + int(range * rand() / (RAND_MAX + 1.0))) * mod_str;
         updateStats();
         return true;
     } else {
