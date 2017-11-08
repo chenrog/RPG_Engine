@@ -4,21 +4,23 @@ project(CS3520_2017FA_PROJ)
 set(CMAKE_CXX_STANDARD 11)
 
 set(SOURCE_FILES
-        model/Equipment.cpp
-        model/Equipment.h
+        model/Units/EnemyUnit.cpp
+        model/Units/EnemyUnit.h
         model/Units/IUnit.cpp
         model/Units/IUnit.h
         model/Units/NPCUnit.cpp
         model/Units/NPCUnit.h
-        model/Units/EnemyUnit.cpp
-        model/Units/EnemyUnit.h
-        model/Units/PlayerUnit.h
         model/Units/PlayerUnit.cpp
+        model/Units/PlayerUnit.h
+        model/BattleMode.cpp
+        model/Equipment/Equipment.cpp
+        model/Equipment/Equipment.h
+        model/Equipment/EquipType.h
+        model/Item.h
         model/Map.cpp
-        model/Spell.h
-        main.cpp
-        model/EquipType.h
         model/Point.cpp
-        model/Point.h)
+        model/Point.h
+        model/Spell.h
+        main.cpp)
 
 add_executable(CS3520_2017FA_PROJ ${SOURCE_FILES})
