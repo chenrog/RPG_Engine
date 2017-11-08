@@ -4,13 +4,10 @@
 
 #include "Equipment.h"
 #include <iostream>
-#include <string>
-#include <cassert>
-#include <utility>
 
 using namespace std;
 
-Equipment::Equipment(string name, unsigned int type, signed int v, unsigned int vm, signed int i, unsigned int im,
+Equipment::Equipment(string name, equip_type_t type, signed int v, unsigned int vm, signed int i, unsigned int im,
                      signed int sp, unsigned int spm, signed int st, unsigned int stm) :
         name(std::move(name)), level(0), type(type), vit(v), vit_mod(vm), intel(i), int_mod(im), speed(sp),
         speed_mod(spm), str(st), str_mod(stm) { }
@@ -30,14 +27,19 @@ void Equipment::display() {
     switch (this->type) {
         case Helmet :
             type = "Helmet";
+            break;
         case Armor :
             type = "Armor";
+            break;
         case Boots :
             type = "Boots";
+            break;
         case Primary :
             type = "Weapon";
+            break;
         case Offhand :
             type = "Offhand";
+            break;
     }
 
     cout << "{ " << type << " - " << this->name;
@@ -53,81 +55,79 @@ void Equipment::display() {
     cout << "SPEED(" << this->speed << ") }" << endl;
 }
 
-class Equip_Builder {
-public:
-    Equip_Builder(string name, unsigned int type) : name(std::move(name)), type(type) { }
+const string & Equipment::getName() const {
+    return name;
+}
 
-    // this builds a new Equipment with the stats of this equipment
-    Equipment & build() {
-        assert(0 <= type < 5);
-        auto equipment = new Equipment(name, type, vit, vit_mod, intel, int_mod, speed, speed_mod, str, str_mod);
-        return *equipment;
-    }
+equip_type_t Equipment::getType() const {
+    return type;
+}
 
-    Equip_Builder & setName(const string &name) {
-        Equip_Builder::name = name;
-        return *this;
-    }
+int Equipment::getVit() const {
+    return vit;
+}
 
-    Equip_Builder setType(unsigned int type) {
-        Equip_Builder::type = type;
-        return *this;
-    }
+int Equipment::getIntel() const {
+    return intel;
+}
 
-    Equip_Builder setVit(int vit) {
-        Equip_Builder::vit = vit;
-        return *this;
-    }
+int Equipment::getSpeed() const {
+    return speed;
+}
 
-    Equip_Builder setVit_mod(unsigned int vit_mod) {
-        Equip_Builder::vit_mod = vit_mod;
-        return *this;
-    }
+int Equipment::getStr() const {
+    return str;
+}
 
-    Equip_Builder setIntel(int intel) {
-        Equip_Builder::intel = intel;
-        return *this;
-    }
+Equip_Builder::Equip_Builder(string name, equip_type_t type) : name(std::move(name)), type(type) { }
 
-    Equip_Builder setInt_mod(unsigned int int_mod) {
-        Equip_Builder::int_mod = int_mod;
-        return *this;
-    }
+// this builds a new Equipment with the stats of this equipment
+Equipment & Equip_Builder::build() {
+    auto equipment = new Equipment(name, type, vit, vit_mod, intel, int_mod, speed, speed_mod, str, str_mod);
+    return *equipment;
+}
 
-    Equip_Builder setSpeed(int speed) {
-        Equip_Builder::speed = speed;
-        return *this;
-    }
+Equip_Builder Equip_Builder::setName(const string &name) {
+    this->name = name;
+    return *this;
+}
 
-    Equip_Builder setSpeed_mod(unsigned int speed_mod) {
-        Equip_Builder::speed_mod = speed_mod;
-        return *this;
-    }
+Equip_Builder Equip_Builder::setVit(int vit) {
+    this->vit = vit;
+    return *this;
+}
 
-    Equip_Builder setStr(int str) {
-        Equip_Builder::str = str;
-        return *this;
-    }
+Equip_Builder Equip_Builder::setVit_mod(unsigned int vit_mod) {
+    this->vit_mod = vit_mod;
+    return *this;
+}
 
-    Equip_Builder setStr_mod(unsigned int str_mod) {
-        Equip_Builder::str_mod = str_mod;
-        return *this;
-    }
+Equip_Builder Equip_Builder::setIntel(int intel) {
+    this->intel = intel;
+    return *this;
+}
 
-private:
-    string       name;
-    unsigned int type;
+Equip_Builder Equip_Builder::setInt_mod(unsigned int int_mod) {
+    this->int_mod = int_mod;
+    return *this;
+}
 
-    // vitality stats by this equipment
-    signed int   vit = 0;
-    unsigned int vit_mod = 0;
-    // intelligence stats by this equipment
-    signed int   intel = 0;
-    unsigned int int_mod = 0;
-    // speed stats by this equipment
-    signed int   speed = 0;
-    unsigned int speed_mod = 0;
-    // strength stats by this equipment
-    signed int   str = 0;
-    unsigned int str_mod = 0;
-};
+Equip_Builder Equip_Builder::setSpeed(int speed) {
+    this->speed = speed;
+    return *this;
+}
+
+Equip_Builder Equip_Builder::setSpeed_mod(unsigned int speed_mod) {
+    this->speed_mod = speed_mod;
+    return *this;
+}
+
+Equip_Builder Equip_Builder::setStr(int str) {
+    this->str = str;
+    return *this;
+}
+
+Equip_Builder Equip_Builder::setStr_mod(unsigned int str_mod) {
+    this->str_mod = str_mod;
+    return *this;
+}
