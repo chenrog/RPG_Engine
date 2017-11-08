@@ -1,16 +1,16 @@
 #include <cstdlib>
-#include <time.h>
+#include <ctime>
 #include <iostream>
 #include "PlayerUnit.h"
-#include "Equipment.h"
-#include "Spell.h"
+#include "../Equipment.h"
+
 
 using namespace std;
 
 PlayerUnit::PlayerUnit(unsigned int vit, unsigned int intel, unsigned int speed, unsigned int str,
                                  double mod_vit, double mod_int, double mod_speed, double mod_str, bool is_melee,
                                  string name) {
-    move(name);
+    this->name = name;
     this->vit = vit;
     this->intel = intel;
     this->speed = speed;
@@ -30,6 +30,7 @@ PlayerUnit::PlayerUnit(unsigned int vit, unsigned int intel, unsigned int speed,
 PlayerUnit::PlayerUnit(unsigned int vit, unsigned int intel, unsigned int dex, unsigned int str,
                                  Equipment equipment[], Spell spell[], double mod_vit,
                                  double mod_int, double mod_str, double mod_speed, bool is_melee, unsigned int lvl) {
+    this->name = name;
     this->vit = vit;
     this->intel = intel;
     this->speed = speed;

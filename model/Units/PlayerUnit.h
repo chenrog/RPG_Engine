@@ -2,8 +2,8 @@
 #define CS3520_2017FA_PROJ_PLAYERCHARACTER_H
 
 #include "IUnit.h"
-#include "Equipment.h"
-#include "Spell.h"
+#include "../Equipment.h"
+#include "../Spell.h"
 
 class PlayerUnit : public IUnit {
 public:
@@ -43,26 +43,27 @@ public:
                     Equipment equipment[], Spell spell[], double mod_vit, double mod_int,
                     double mod_speed, double mod_str, bool is_melee, unsigned int lvl, string name);
 
-    ~PlayerUnit();
+    ~PlayerUnit() override;
 
     /**
      * Equips the chosen equipment to the player character and applies stat changes as necessary. Returns the old
      * equipment, if there is one.
      * @param equipment
      */
-    Equipment Equip(Equipment const equipment);
+    Equipment Equip(Equipment equipment);
 
     /**
      * adds EXP from a battle to the exp of this unit. Then calculates if there is a level up by this unit. Returns
      * true if there is a level up.
      * @param exp
      */
-    bool addEXP(int const exp);
+    bool addEXP(int exp);
 
     /**
     * updates the statistics of the unit.
     */
     void updateStats();
+
 
 private:
     double mod_vit, mod_int, mod_speed, mod_str;

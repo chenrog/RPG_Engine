@@ -5,9 +5,9 @@
 #ifndef CS3520_2017FA_PROJ_UNIT_H
 #define CS3520_2017FA_PROJ_UNIT_H
 
-#include "Equipment.h"
-#include "Spell.h"
-#include "Item.h"
+#include "../Equipment.h"
+#include "../Spell.h"
+#include "../Item.h"
 #include <string>
 
 class IUnit {
@@ -30,23 +30,17 @@ public:
      */
     virtual int calcBasicAttack();
 
-    /**
-     *
-     * @return
-     */
-    virtual Item calcDrop();
+    virtual friend int getX(const IUnit &unit);
 
-    friend int getX(const IUnit &unit);
+    virtual friend int getY(const IUnit &unit);
 
-    friend int getY(const IUnit &unit);
+    virtual void setX(int x);
 
-    void setX(int x);
-
-    void setY(int y);
+    virtual void setY(int y);
 
 
 protected:
-    virtual const string name;
+    virtual string name;
     virtual unsigned int curr_health, health, cur_mana, mana, p_defense, m_defense;
     virtual unsigned int vit, intel, speed, str;
     virtual unsigned int lvl, exp;
@@ -54,7 +48,6 @@ protected:
     bool is_melee;
     virtual Equipment * equip; // each element in the array pertains to a specific stats
     virtual Spell * spells; // will be displayed in a list when the player selects this option
-    virtual Item * drop; // randomly will drop an item in this list after defeat
 };
 
 #endif //CS3520_2017FA_PROJ_UNIT_H
