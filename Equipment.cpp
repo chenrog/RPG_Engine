@@ -4,17 +4,13 @@
 
 #include "Equipment.h"
 #include <iostream>
-#include <string>
-#include <cassert>
-#include <utility>
 
 using namespace std;
 
 Equipment::Equipment(string name, equip_type_t type, signed int v, unsigned int vm, signed int i, unsigned int im,
                      signed int sp, unsigned int spm, signed int st, unsigned int stm) :
         name(std::move(name)), level(0), type(type), vit(v), vit_mod(vm), intel(i), int_mod(im), speed(sp),
-        speed_mod(spm), str(st), str_mod(stm) {
-}
+        speed_mod(spm), str(st), str_mod(stm) { }
 
 void Equipment::level_up() {
     this->level += 1;
@@ -59,6 +55,30 @@ void Equipment::display() {
     cout << "SPEED(" << this->speed << ") }" << endl;
 }
 
+const string & Equipment::getName() const {
+    return name;
+}
+
+equip_type_t Equipment::getType() const {
+    return type;
+}
+
+int Equipment::getVit() const {
+    return vit;
+}
+
+int Equipment::getIntel() const {
+    return intel;
+}
+
+int Equipment::getSpeed() const {
+    return speed;
+}
+
+int Equipment::getStr() const {
+    return str;
+}
+
 Equip_Builder::Equip_Builder(string name, equip_type_t type) : name(std::move(name)), type(type) { }
 
 // this builds a new Equipment with the stats of this equipment
@@ -67,7 +87,7 @@ Equipment & Equip_Builder::build() {
     return *equipment;
 }
 
-Equip_Builder & Equip_Builder::setName(const string &name) {
+Equip_Builder Equip_Builder::setName(const string &name) {
     this->name = name;
     return *this;
 }

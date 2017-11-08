@@ -11,37 +11,43 @@ class Equipment {
 public:
     Equipment(string name, equip_type_t type, signed int v, unsigned int vm, signed int i, unsigned int im,
               signed int sp, unsigned int spm, signed int st, unsigned int stm);
-
+    // functions
     friend Equipment & build();
-
     void level_up();
-
     void display();
+    // getters
+    const string & getName() const;
+    equip_type_t getType() const;
+    int getVit() const;
+    int getStr() const;
+    int getSpeed() const;
+    int getIntel() const;
 
 private:
-    const string       name;
-    unsigned int       level;
-    equip_type_t       type;
+    const string name;
+    unsigned int level;
+    equip_type_t type;
     // vitality stats by this equipment
-    signed int         vit;
-    unsigned int       vit_mod;
+    signed int   vit;
+    unsigned int vit_mod;
     // intelligence stats by this equipment
-    signed int         intel;
-    unsigned int       int_mod;
+    signed int   intel;
+    unsigned int int_mod;
     // speed stats by this equipment
-    signed int         speed;
-    unsigned int       speed_mod;
+    signed int   speed;
+    unsigned int speed_mod;
     // strength stats by this equipment
-    signed int         str;
-    unsigned int       str_mod;
+    signed int   str;
+    unsigned int str_mod;
 };
 
 class Equip_Builder {
 public:
+    // builder constructor and build function
     Equip_Builder(string name, equip_type_t type);
     Equipment & build();
-    Equip_Builder & setName(const string &name);
     // setters for the fields
+    Equip_Builder setName(const string &name);
     Equip_Builder setVit(int vit);
     Equip_Builder setVit_mod(unsigned int vit_mod);
     Equip_Builder setIntel(int intel);
