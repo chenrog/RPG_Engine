@@ -20,11 +20,10 @@ PlayerUnit::PlayerUnit(unsigned int vit, unsigned int intel, unsigned int speed,
     this->mod_str = mod_str;
     this->mod_speed = mod_speed;
     this->is_melee = is_melee;
+    updateStats();
     this->curr_health = this->health;
     this->cur_mana = this->mana;
     this->lvl = 1;
-
-    updateStats();
 }
 
 PlayerUnit::PlayerUnit(unsigned int vit, unsigned int intel, unsigned int dex, unsigned int str,
@@ -41,6 +40,7 @@ PlayerUnit::PlayerUnit(unsigned int vit, unsigned int intel, unsigned int dex, u
     this->mod_speed = mod_speed;
     this->is_melee = is_melee;
     this->lvl = lvl;
+    updateStats();
     this->curr_health = this->health;
     this->cur_mana = this->mana;
 
