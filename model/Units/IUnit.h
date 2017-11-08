@@ -32,6 +32,11 @@ public:
      */
     virtual int calcBasicAttack();
 
+    /**
+    * updates the statistics of the unit.
+    */
+    void updateStats();
+
 protected:
     virtual unsigned int health, max_health, mana, max_mana, p_defense, m_defense;
     virtual unsigned int st_vit, st_intel, st_speed, st_str;

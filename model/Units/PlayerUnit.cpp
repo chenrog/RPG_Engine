@@ -55,13 +55,6 @@ PlayerUnit::~PlayerUnit() {
     delete[] this->equip;
 }
 
-void PlayerUnit::updateStats() {
-    this->max_health = st_vit * 100;
-    this->max_mana = st_intel * 100;
-    this->p_defense = st_vit * 10 + st_speed;
-    this->m_defense = st_intel * 10 + st_speed;
-}
-
 Equipment PlayerUnit::Equip(Equipment const equipment) {
     Equipment curEquip = this->equip[equipment.getType()];
     this->st_str -= curEquip.getStr();

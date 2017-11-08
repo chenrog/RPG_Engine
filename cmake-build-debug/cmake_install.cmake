@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/Andrew Alcala/CLionProjects/CS3520-2017FA-PROJ
+# Install script for directory: C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -35,5 +35,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/Andrew Alcala/CLionProjects/CS3520-2017FA-PROJ/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

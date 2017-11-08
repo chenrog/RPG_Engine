@@ -59,11 +59,6 @@ public:
      */
     bool addEXP(int exp);
 
-    /**
-    * updates the statistics of the unit.
-    */
-    void updateStats();
-
 
 private:
     double mod_vit, mod_int, mod_speed, mod_str;

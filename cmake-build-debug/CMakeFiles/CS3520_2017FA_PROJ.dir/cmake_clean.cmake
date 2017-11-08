@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/CS3520_2017FA_PROJ.dir/model/Equipment.cpp.obj"
+  "CMakeFiles/CS3520_2017FA_PROJ.dir/model/Equipment/Equipment.cpp.obj"
   "CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/IUnit.cpp.obj"
   "CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/NPCUnit.cpp.obj"
   "CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/EnemyUnit.cpp.obj"

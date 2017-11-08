@@ -47,10 +47,10 @@ RM = "C:\Program Files\JetBrains\CLion 2017.2.2\bin\cmake\bin\cmake.exe" -E remo
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Users\Andrew Alcala\CLionProjects\CS3520-2017FA-PROJ"
+CMAKE_SOURCE_DIR = C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Users\Andrew Alcala\CLionProjects\CS3520-2017FA-PROJ\cmake-build-debug"
+CMAKE_BINARY_DIR = C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -79,9 +79,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Andrew Alcala\CLionProjects\CS3520-2017FA-PROJ\cmake-build-debug\CMakeFiles" "C:\Users\Andrew Alcala\CLionProjects\CS3520-2017FA-PROJ\cmake-build-debug\CMakeFiles\progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\cmake-build-debug\CMakeFiles C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\cmake-build-debug\CMakeFiles\progress.marks
 	$(MAKE) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Andrew Alcala\CLionProjects\CS3520-2017FA-PROJ\cmake-build-debug\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -149,32 +149,32 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-model/Equipment.obj: model/Equipment.cpp.obj
+model/Equipment/Equipment.obj: model/Equipment/Equipment.cpp.obj
 
-.PHONY : model/Equipment.obj
+.PHONY : model/Equipment/Equipment.obj
 
 # target to build an object file
-model/Equipment.cpp.obj:
-	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/model/Equipment.cpp.obj
-.PHONY : model/Equipment.cpp.obj
+model/Equipment/Equipment.cpp.obj:
+	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/model/Equipment/Equipment.cpp.obj
+.PHONY : model/Equipment/Equipment.cpp.obj
 
-model/Equipment.i: model/Equipment.cpp.i
+model/Equipment/Equipment.i: model/Equipment/Equipment.cpp.i
 
-.PHONY : model/Equipment.i
+.PHONY : model/Equipment/Equipment.i
 
 # target to preprocess a source file
-model/Equipment.cpp.i:
-	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/model/Equipment.cpp.i
-.PHONY : model/Equipment.cpp.i
+model/Equipment/Equipment.cpp.i:
+	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/model/Equipment/Equipment.cpp.i
+.PHONY : model/Equipment/Equipment.cpp.i
 
-model/Equipment.s: model/Equipment.cpp.s
+model/Equipment/Equipment.s: model/Equipment/Equipment.cpp.s
 
-.PHONY : model/Equipment.s
+.PHONY : model/Equipment/Equipment.s
 
 # target to generate assembly for a file
-model/Equipment.cpp.s:
-	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/model/Equipment.cpp.s
-.PHONY : model/Equipment.cpp.s
+model/Equipment/Equipment.cpp.s:
+	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/model/Equipment/Equipment.cpp.s
+.PHONY : model/Equipment/Equipment.cpp.s
 
 model/Map.obj: model/Map.cpp.obj
 
@@ -377,9 +377,9 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
-	@echo ... model/Equipment.obj
-	@echo ... model/Equipment.i
-	@echo ... model/Equipment.s
+	@echo ... model/Equipment/Equipment.obj
+	@echo ... model/Equipment/Equipment.i
+	@echo ... model/Equipment/Equipment.s
 	@echo ... model/Map.obj
 	@echo ... model/Map.i
 	@echo ... model/Map.s
