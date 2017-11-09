@@ -56,7 +56,7 @@ void Equipment::display() {
     cout << "VITALITY(" << this->vit << "), ";
     cout << "INTELLIGENCE(" << this->intel << "), ";
     cout << "STRENGTH(" << this->str << "), ";
-    cout << "SPEED(" << this->speed << ") }" << endl;
+    cout << "DEXTERITY(" << this->speed << ") }" << endl;
 }
 
 equip_type_t Equipment::getType() const {

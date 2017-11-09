@@ -4,7 +4,7 @@
 #include <vector>
 #include "IUnit.h"
 #include "../Equipment/Equipment.h"
-#include "../Spell.h"
+#include "../Spells/Spell.h"
 
 class PlayerUnit : public IUnit {
 public:
