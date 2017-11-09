@@ -11,6 +11,7 @@
 #include "Units/PlayerUnit.h"
 #include "GameState.h"
 #include "WorldMap.h"
+#include "Units/EnemyUnit.h"
 
 class World {
 public:
@@ -29,6 +30,11 @@ public:
      * cell that has random encounters, generate whether or not there is an encounter.
      */
     void movePlayer(direction_t direction, int distance);
+
+    /**
+     * Begins a random encounter battle.
+     */
+    void startRandomEncounter();
 
     /**
      * Returns the inventory as a map corresponding items to their quantity.

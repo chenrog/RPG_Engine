@@ -50,18 +50,23 @@ unordered_map<Item, int> World::getInventory() {
     return inventory;
 }
 
-void World::movePlayer(direction_t direction, int distance)
-{
+void World::movePlayer(direction_t direction, int distance) {
     // Move the player
     player.move(direction, 1);
     // Check for Random Encounter?
-    if(worldMap.getWorldMap().at(player.getPosition().getX()).at(player.getPosition().getY()).isRandomEncounterable()){
+    if (worldMap.getWorldMap().at(player.getPosition().getX()).at(
+            player.getPosition().getY()).isRandomEncounterable()) {
         std::random_device rd;
         std::mt19937 mt(rd());
         std::uniform_real_distribution<double> dist(0.0, 10.0);
         int random_number = dist(mt); // Between 0 and 9
-        if(random_number > 1){
-            // initiate a battle sequence
+        if (random_number > 1) {
+            startRandomEncounter();
         }
     }
+}
+
+void World::startRandomEncounter() {
+    this->gameState = BATTLE;
+    EnemyUnit enemy = Enemy.
 }
