@@ -33,6 +33,11 @@ public:
      */
     virtual int calcBasicAttack();
 
+    /**
+    * updates the statistics of the unit.
+    */
+    virtual void updateStats();
+
     unsigned int get_health() const;
     unsigned int get_max_health() const;
     unsigned int get_mana() const;
@@ -43,11 +48,6 @@ public:
     unsigned int get_int() const;
     unsigned int get_dex() const;
     unsigned int get_str() const;
-
-    /**
-    * updates the statistics of the unit.
-    */
-    void updateStats();
 
 protected:
     unsigned int health, max_health, mana, max_mana, p_defense, m_defense;
