@@ -7,6 +7,7 @@
 
 #include <iostream>
 #include "../Point.h"
+#include <string>
 
 using namespace std;
 
@@ -15,20 +16,20 @@ using namespace std;
  */
 class AEntity {
 public:
+    // TODO: make uninstantiable
     AEntity();
 
     virtual ~AEntity();
-    //TODO: I want to define all the func bodies in the cpp, but then how do we keep AEntity abstract???
 
-    virtual const string & getName() const = 0;
+    virtual const string & getName() const;
 
-    virtual Point getPosition() = 0;
+    virtual Point getPosition();
 
-    virtual bool isVisible() = 0;
+    virtual bool isVisible();
 
-    virtual void enableVisibility() = 0;
+    virtual void enableVisibility();
 
-    virtual void disableVisibility() = 0;
+    virtual void disableVisibility();
 
 protected:
     // The entity properties.

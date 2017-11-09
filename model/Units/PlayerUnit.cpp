@@ -9,7 +9,7 @@ using namespace std;
 
 PlayerUnit::PlayerUnit(string name, Point position, bool visible, unsigned int vit, unsigned int intel,
                        unsigned int dex, unsigned int str, unsigned int lvl, bool is_melee, Equipment *equipment,
-                       Spell *spell, double mod_vit, double mod_int, double mod_speed, double mod_dex) {
+                       Spell *spell, double mod_vit, double mod_int, double mod_dex, double mod_str) {
     this->name = name;
     this->position = position;
     this->visible = visible;

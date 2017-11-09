@@ -56,21 +56,6 @@ void Equipment::display() {
     cout << "SPEED(" << this->speed << ") }" << endl;
 }
 
-const string &Equipment::getName() const {
-    return name;
-}
-Point Equipment::getPosition(){
-    return position;
-}
-bool Equipment::isVisible(){
-    return visible;
-}
-void Equipment::enableVisibility(){
-    visible = true;
-}
-void Equipment::disableVisibility(){
-    visible = false;
-}
 equip_type_t Equipment::getType() const {
     return type;
 }
@@ -78,7 +63,7 @@ int Equipment::getVit() const {
     return vit;
 }
 
-int Equipment::getIntel() const {
+int Equipment::getIntel() const{
     return intel;
 }
 

@@ -15,12 +15,7 @@ public:
     friend Equipment & build();
     void level_up();
     void display();
-    // getters
-    const string & getName() const override;
-    Point getPosition() override;
-    bool isVisible() override;
-    void enableVisibility() override;
-    void disableVisibility() override ;
+
     equip_type_t getType() const;
     int getVit() const;
     int getStr() const;
