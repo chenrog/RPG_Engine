@@ -85,6 +85,12 @@
 		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/main.cpp">
 			<Option target="CS3520_2017FA_PROJ"/>
 		</Unit>
+		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/BattleMode.cpp">
+			<Option target="CS3520_2017FA_PROJ"/>
+		</Unit>
+		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/BattleMode.h">
+			<Option target="CS3520_2017FA_PROJ"/>
+		</Unit>
 		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Equipment/EquipType.h">
 			<Option target="CS3520_2017FA_PROJ"/>
 		</Unit>
@@ -92,6 +98,9 @@
 			<Option target="CS3520_2017FA_PROJ"/>
 		</Unit>
 		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Equipment/Equipment.h">
+			<Option target="CS3520_2017FA_PROJ"/>
+		</Unit>
+		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Item.h">
 			<Option target="CS3520_2017FA_PROJ"/>
 		</Unit>
 		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Map.cpp">
@@ -128,6 +137,9 @@
 			<Option target="CS3520_2017FA_PROJ"/>
 		</Unit>
 		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Units/NPCUnit.h">
+			<Option target="CS3520_2017FA_PROJ"/>
+		</Unit>
+		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Units/NPCUnitType.h">
 			<Option target="CS3520_2017FA_PROJ"/>
 		</Unit>
 		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Units/PlayerUnit.cpp">

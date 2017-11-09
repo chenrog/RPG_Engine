@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/main.cpp" "C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/CMakeFiles/CS3520_2017FA_PROJ.dir/main.cpp.obj"
+  "C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/BattleMode.cpp" "C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/CMakeFiles/CS3520_2017FA_PROJ.dir/model/BattleMode.cpp.obj"
   "C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Equipment/Equipment.cpp" "C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/CMakeFiles/CS3520_2017FA_PROJ.dir/model/Equipment/Equipment.cpp.obj"
   "C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Map.cpp" "C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/CMakeFiles/CS3520_2017FA_PROJ.dir/model/Map.cpp.obj"
   "C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Point.cpp" "C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/CMakeFiles/CS3520_2017FA_PROJ.dir/model/Point.cpp.obj"

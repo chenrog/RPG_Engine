@@ -7,10 +7,14 @@ set(SOURCE_FILES
         model/Equipment/Equipment.cpp
         model/Equipment/Equipment.h
         model/Equipment/EquipType.h
+        model/BattleMode.cpp
+        model/BattleMode.h
+        model/Item.h
         model/Units/IUnit.cpp
         model/Units/IUnit.h
         model/Units/NPCUnit.cpp
         model/Units/NPCUnit.h
+        model/Units/NPCUnitType.h
         model/Units/EnemyUnit.cpp
         model/Units/EnemyUnit.h
         model/Units/PlayerUnit.h
