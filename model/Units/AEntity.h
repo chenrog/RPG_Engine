@@ -1,5 +1,5 @@
 //
-// Created by Andrew Alcala on 11/8/2017..
+// Created by Andrew Alcala on 11/8/2017...
 //
 
 #ifndef CS3520_2017FA_PROJ_AENTITY_H
