@@ -21,6 +21,6 @@ set(SOURCE_FILES
         model/Point.cpp
         model/Point.h
         model/Units/AEntity.cpp
-        model/Units/AEntity.h)
+        model/Units/AEntity.h model/Item.cpp)
 
 add_executable(CS3520_2017FA_PROJ ${SOURCE_FILES})
