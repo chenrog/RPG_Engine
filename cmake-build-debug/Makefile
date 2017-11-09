@@ -178,6 +178,33 @@ model/BattleMode.cpp.s:
 	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/model/BattleMode.cpp.s
 .PHONY : model/BattleMode.cpp.s
 
+model/Consumable.obj: model/Consumable.cpp.obj
+
+.PHONY : model/Consumable.obj
+
+# target to build an object file
+model/Consumable.cpp.obj:
+	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/model/Consumable.cpp.obj
+.PHONY : model/Consumable.cpp.obj
+
+model/Consumable.i: model/Consumable.cpp.i
+
+.PHONY : model/Consumable.i
+
+# target to preprocess a source file
+model/Consumable.cpp.i:
+	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/model/Consumable.cpp.i
+.PHONY : model/Consumable.cpp.i
+
+model/Consumable.s: model/Consumable.cpp.s
+
+.PHONY : model/Consumable.s
+
+# target to generate assembly for a file
+model/Consumable.cpp.s:
+	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/model/Consumable.cpp.s
+.PHONY : model/Consumable.cpp.s
+
 model/Equipment/Equipment.obj: model/Equipment/Equipment.cpp.obj
 
 .PHONY : model/Equipment/Equipment.obj
@@ -439,6 +466,9 @@ help:
 	@echo ... model/BattleMode.obj
 	@echo ... model/BattleMode.i
 	@echo ... model/BattleMode.s
+	@echo ... model/Consumable.obj
+	@echo ... model/Consumable.i
+	@echo ... model/Consumable.s
 	@echo ... model/Equipment/Equipment.obj
 	@echo ... model/Equipment/Equipment.i
 	@echo ... model/Equipment/Equipment.s

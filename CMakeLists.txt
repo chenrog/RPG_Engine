@@ -11,6 +11,9 @@ set(SOURCE_FILES
         model/BattleMode.h
         model/Item.cpp
         model/Item.h
+        model/Consumable.cpp
+        model/Consumable.h
+        model/Consumable_Type_t.h
         model/Units/IUnit.cpp
         model/Units/IUnit.h
         model/Units/NPCUnit.cpp
