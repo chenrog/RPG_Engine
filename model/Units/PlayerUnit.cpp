@@ -2,6 +2,7 @@
 #include <ctime>
 #include <iostream>
 #include "PlayerUnit.h"
+#include <vector>
 #include "../Equipment/Equipment.h"
 
 
@@ -10,7 +11,7 @@ using namespace std;
 PlayerUnit::PlayerUnit(string name, Point position, bool visible,
                        unsigned int vit, unsigned int intel, unsigned int dex, unsigned int str,
                        unsigned int lvl, bool is_melee,
-                       Equipment equipment[], Spell spell[],
+                       vector<Equipment> equipmentList, vector<Spell> spellList,
                        double mod_vit, double mod_int, double mod_dex, double mod_str) {
     this->name = name;
     this->position = position;
@@ -24,10 +25,13 @@ PlayerUnit::PlayerUnit(string name, Point position, bool visible,
     this->mod_str = mod_str;
     this->mod_dex = mod_dex;
     this->is_melee = is_melee;
+    // TODO: do equipmentList and spellList need to update stats here?
+    this->equipmentList = equipmentList;
+    this->spellList = spellList;
     updateStats();
     this->health = this->max_health;
     this->mana = this->max_mana;
-    this->lvl = 1;
+    this->lvl = lvl;
 }
 
 PlayerUnit::~PlayerUnit() {
@@ -35,8 +39,9 @@ PlayerUnit::~PlayerUnit() {
     delete[] this->equip;
 }
 
-Equipment PlayerUnit::Equip(Equipment const equipment) {
-    Equipment curEquip = this->equip[equipment.getType()];
+Equipment PlayerUnit::equip(Equipment const equipment) {
+    //TODO: idea: inititalize vector with 5 'empty' equipment
+    Equipment curEquip = this->equipmentList[equipment.getType()];
     this->st_str -= curEquip.getStr();
     this->st_vit -= curEquip.getVit();
     this->st_int -= curEquip.getIntel();
@@ -48,7 +53,7 @@ Equipment PlayerUnit::Equip(Equipment const equipment) {
     this->st_vit += equipment.getVit();
     this->st_int += equipment.getIntel();
     this->st_dex += equipment.getSpeed();
-    this->equip[equipment.getType()] = equipment;
+    this->equipmentList[equipment.getType()] = equipment;
     updateStats();
 }
 

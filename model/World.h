@@ -6,8 +6,12 @@
 #define CS3520_2017FA_PROJ_WORLD_H
 
 
+#include <vector>
+#include <bits/unordered_map.h>
 #include "Units/PlayerUnit.h"
 #include "GameState.h"
+#include "WorldMap.h"
+#include "InventoryEntry.h"
 
 class World {
 public:
@@ -22,10 +26,16 @@ public:
     vector<PlayerUnit> getAllies();
 
     /**
+     * Returns the inventory as a map corresponding items to their quantity.
+     * @return
+     */
+    unordered_map<Item, int> getInventory();
+
+    /**
      * Returns the Overworld and all its cells.
      * @return The game's overworld.
      */
-    OverWorld getOverWorld();
+    WorldMap getWorldMap();
 
     /**
      * Returns the current game state.
@@ -45,11 +55,26 @@ public:
      */
     void onTick(int currTick);
 
-    int INVENTORY_SLOTS = 5;
+    // Constants
+    const int INVENTORY_SLOTS = 5;
+    const int PARTY_SIZE = 2;
+
+    //TODO: not sure what these numbers are yet. i know they change per player though so it wont be const.
+    const int STARTING_VIT = 1;
+    const int STARTING_INT = 1;
+    const int STARTING_DEX = 1;
+    const int STARTING_STR = 1;
+    const int STARTING_LVL = 1;
+
+    const int STARTING_MOD_VIT = 1;
+    const int STARTING_MOD_INT = 1;
+    const int STARTING_MOD_DEX = 1;
+    const int STARTING_MOD_STR = 1;
 
 private:
     vector<PlayerUnit> allies;
-    OverWorld overWorld;
+    unordered_map<Item, int> inventory;
+    WorldMap worldMap;
     game_state_t gameState;
     bool gameOver = false;
 };
