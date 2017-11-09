@@ -9,13 +9,13 @@ using namespace std;
 
 class Equipment : public AEntity{
 public:
-    Equipment(string name, Point position, bool visible, equip_type_t type, signed int v, unsigned int vm, signed int i, unsigned int im,
-              signed int sp, unsigned int spm, signed int st, unsigned int stm);
+    Equipment(string name, Point position, bool visible, equip_type_t type, signed int v, unsigned int vm, signed int i,
+              unsigned int im, signed int sp, unsigned int spm, signed int st, unsigned int stm);
     // functions
     friend Equipment & build();
     void level_up();
     void display();
-
+    // getters to return the value of the given stat
     equip_type_t getType() const;
     int getVit() const;
     int getStr() const;

@@ -29,19 +29,19 @@ void Equipment::display() {
 
     // this determines what to output based on the equipment type
     switch (this->type) {
-        case Helmet :
+        case HELMET :
             type = "Helmet";
             break;
-        case Armor :
+        case ARMOR :
             type = "Armor";
             break;
-        case Boots :
+        case BOOTS :
             type = "Boots";
             break;
-        case Primary :
+        case PRIMARY :
             type = "Weapon";
             break;
-        case Offhand :
+        case OFFHAND :
             type = "Offhand";
             break;
     }
@@ -87,7 +87,7 @@ Equipment &Equip_Builder::build() {
 }
 
 Equip_Builder Equip_Builder::setName(const string &name) {
-    this->name = name;
+    this->name = std::move(name);
     return *this;
 }
 

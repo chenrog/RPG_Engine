@@ -16,7 +16,7 @@ PlayerUnit::PlayerUnit(string name, Point position, bool visible,
     this->position = position;
     this->visible = visible;
     this->st_vit = vit;
-    this->st_intel = intel;
+    this->st_int = intel;
     this->st_dex = dex;
     this->st_str = str;
     this->mod_vit = mod_vit;
@@ -42,23 +42,23 @@ PlayerUnit::~PlayerUnit() {
 
 void PlayerUnit::updateStats() {
     this->max_health = st_vit * 100;
-    this->max_mana = st_intel * 100;
+    this->max_mana = st_int * 100;
     this->p_defense = st_vit * 10 + st_dex;
-    this->m_defense = st_intel * 10 + st_dex;
+    this->m_defense = st_int * 10 + st_dex;
 }
 
 Equipment PlayerUnit::Equip(Equipment const equipment) {
     Equipment curEquip = this->equip[equipment.getType()];
     this->st_str -= curEquip.getStr();
     this->st_vit -= curEquip.getVit();
-    this->st_intel -= curEquip.getIntel();
+    this->st_int -= curEquip.getIntel();
     this->st_dex -= curEquip.getSpeed();
 
     // have something here that moves the current equipment into the world inventory;
 
     this->st_str += equipment.getStr();
     this->st_vit += equipment.getVit();
-    this->st_intel += equipment.getIntel();
+    this->st_int += equipment.getIntel();
     this->st_dex += equipment.getSpeed();
     this->equip[equipment.getType()] = equipment;
     updateStats();
@@ -73,7 +73,7 @@ bool PlayerUnit::addEXP(int const exp) {
         int lowest = 1, highest = 10;
         int range = (highest - lowest) + 1;
         this->st_vit += (lowest + int(range * rand() / (RAND_MAX + 1.0))) * mod_vit;
-        this->st_intel += (lowest + int(range * rand() / (RAND_MAX + 1.0))) * mod_int;
+        this->st_int += (lowest + int(range * rand() / (RAND_MAX + 1.0))) * mod_int;
         this->st_dex += (lowest + int(range * rand() / (RAND_MAX + 1.0))) * mod_dex;
         this->st_str += (lowest + int(range * rand() / (RAND_MAX + 1.0))) * mod_str;
         updateStats();
