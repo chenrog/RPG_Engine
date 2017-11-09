@@ -8,7 +8,9 @@
 #include "../Equipment/Equipment.h"
 #include "../Item.h"
 #include "AEntity.h"
+#include "../Direction.h"
 #include <string>
+#include <vector>
 
 class Spell;
 
@@ -18,7 +20,13 @@ public:
 
     IUnit(const IUnit &unit);
 
-    virtual ~IUnit();
+    virtual ~IUnit();\
+
+    /**
+     * Move this Unit in the given direction, x distance away
+     * @param direction
+     */
+    virtual void move(direction_t direction, unsigned int distance);
 
     /**
      * Calculates the damage a unit takes based on a damage stat passed in by the class. Returns the amount of damage
@@ -54,8 +62,8 @@ protected:
     unsigned int st_vit, st_int, st_dex, st_str;
     unsigned int lvl, exp;
     bool is_melee;
-    Equipment *equip; // each element in the array pertains to a specific stats
-    Spell *spells; // will be displayed in a list when the player selects this option
+    vector<Equipment> equipmentList; // each element in the array pertains to a specific stats
+    vector<Spell> spellList; // will be displayed in a list when the player selects this option
 };
 
 #endif //CS3520_2017FA_PROJ_UNIT_H
