@@ -59,16 +59,16 @@ void Equipment::display() {
 const string &Equipment::getName() const {
     return name;
 }
-Point Equipment::getPosition() override{
+Point Equipment::getPosition(){
     return position;
 }
-bool Equipment::isVisible() override{
+bool Equipment::isVisible(){
     return visible;
 }
-void Equipment::enableVisibility() override{
+void Equipment::enableVisibility(){
     visible = true;
 }
-void Equipment::disableVisibility() override{
+void Equipment::disableVisibility(){
     visible = false;
 }
 equip_type_t Equipment::getType() const {

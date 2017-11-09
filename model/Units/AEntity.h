@@ -18,6 +18,7 @@ public:
     AEntity();
 
     virtual ~AEntity();
+    //TODO: I want to define all the func bodies in the cpp, but then how do we keep AEntity abstract???
 
     virtual const string & getName() const = 0;
 
