@@ -7,6 +7,7 @@
 
 #include <iostream>
 #include "../Point.h"
+#include <string>
 
 using namespace std;
 
@@ -15,25 +16,26 @@ using namespace std;
  */
 class AEntity {
 public:
+    // TODO: make uninstantiable
     AEntity();
 
     virtual ~AEntity();
 
-    virtual Point getPosition() = 0;
+    virtual const string & getName() const;
 
-    virtual bool isVisible() = 0;
+    virtual Point getPosition();
 
-    virtual string getName() = 0;
+    virtual bool isVisible();
 
-    virtual void enableVisibility() = 0;
+    virtual void enableVisibility();
 
-    virtual void disableVisibility() = 0;
+    virtual void disableVisibility();
 
 protected:
     // The entity properties.
+    string name;
     Point position;
     bool visible;
-    string name;
 };
 
 

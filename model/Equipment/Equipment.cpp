@@ -7,10 +7,14 @@
 
 using namespace std;
 
-Equipment::Equipment(string name, equip_type_t type, signed int v, unsigned int vm, signed int i, unsigned int im,
-                     signed int sp, unsigned int spm, signed int st, unsigned int stm) :
-        name(std::move(name)), level(0), type(type), vit(v), vit_mod(vm), intel(i), int_mod(im), speed(sp),
-        speed_mod(spm), str(st), str_mod(stm) { }
+Equipment::Equipment(string name, Point position, bool visible, equip_type_t type, signed int v, unsigned int vm,
+                     signed int i, unsigned int im, signed int sp, unsigned int spm, signed int st, unsigned int stm) :
+        level(0), type(type), vit(v), vit_mod(vm), intel(i), int_mod(im), speed(sp), speed_mod(spm), str(st), str_mod(stm) {
+
+        this->name = std::move(name);
+        this->position = position;
+        this->visible = visible;
+}
 
 void Equipment::level_up() {
     this->level += 1;
@@ -55,19 +59,14 @@ void Equipment::display() {
     cout << "SPEED(" << this->speed << ") }" << endl;
 }
 
-const string & Equipment::getName() const {
-    return name;
-}
-
 equip_type_t Equipment::getType() const {
     return type;
 }
-
 int Equipment::getVit() const {
     return vit;
 }
 
-int Equipment::getIntel() const {
+int Equipment::getIntel() const{
     return intel;
 }
 
@@ -79,16 +78,25 @@ int Equipment::getStr() const {
     return str;
 }
 
-Equip_Builder::Equip_Builder(string name, equip_type_t type) : name(std::move(name)), type(type) { }
+Equip_Builder::Equip_Builder(string name, equip_type_t type) : name(std::move(name)), type(type) {}
 
 // this builds a new Equipment with the stats of this equipment
-Equipment & Equip_Builder::build() {
-    auto equipment = new Equipment(name, type, vit, vit_mod, intel, int_mod, speed, speed_mod, str, str_mod);
+Equipment &Equip_Builder::build() {
+    auto equipment = new Equipment(name, position, visible, type, vit, vit_mod, intel, int_mod, speed, speed_mod, str, str_mod);
     return *equipment;
 }
 
 Equip_Builder Equip_Builder::setName(const string &name) {
     this->name = name;
+    return *this;
+}
+
+Equip_Builder Equip_Builder::setPosition(const Point &position) {
+    this->position = position;
+    return *this;
+}
+Equip_Builder Equip_Builder::setVisibility(const bool &visible) {
+    this->visible = visible;
     return *this;
 }
 

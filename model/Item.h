@@ -5,4 +5,14 @@
 #ifndef CS3520_2017FA_PROJ_ITEM_H
 #define CS3520_2017FA_PROJ_ITEM_H
 
+#include "Units/AEntity.h"
+
+class Item : public AEntity {
+public:
+    string getDescription();
+
+protected:
+    string description;
+};
+
 #endif //CS3520_2017FA_PROJ_ITEM_H

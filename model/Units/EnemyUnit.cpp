@@ -5,7 +5,7 @@ EnemyUnit::EnemyUnit(unsigned int vit, unsigned int intel, unsigned int speed, u
     this->name = name;
     this->st_vit = vit;
     this->st_intel = intel;
-    this->st_speed = speed;
+    this->st_dex = speed;
     this->st_str = str;
     this->mod_vit = mod_vit;
     this->mod_int = mod_int;
