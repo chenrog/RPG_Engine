@@ -7,15 +7,10 @@ EnemyUnit::EnemyUnit(unsigned int vit, unsigned int intel, unsigned int speed, u
     this->st_intel = intel;
     this->st_dex = speed;
     this->st_str = str;
-    this->mod_vit = mod_vit;
-    this->mod_int = mod_int;
-    this->mod_str = mod_str;
-    this->mod_speed = mod_speed;
     this->is_melee = is_melee;
+    updateStats();
     this->health = this->max_health;
     this->mana = this->max_mana;
     this->lvl = 1;
     this->drop = drops;
-
-    updateStats();
 }

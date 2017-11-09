@@ -6,10 +6,15 @@ set(CMAKE_CXX_STANDARD 11)
 set(SOURCE_FILES
         model/Equipment/Equipment.cpp
         model/Equipment/Equipment.h
+        model/Equipment/EquipType.h
+        model/BattleMode.cpp
+        model/BattleMode.h
+        model/Item.h
         model/Units/IUnit.cpp
         model/Units/IUnit.h
         model/Units/NPCUnit.cpp
         model/Units/NPCUnit.h
+        model/Units/NPCUnitType.h
         model/Units/EnemyUnit.cpp
         model/Units/EnemyUnit.h
         model/Units/PlayerUnit.h
@@ -17,10 +22,7 @@ set(SOURCE_FILES
         model/Map.cpp
         model/Spell.h
         main.cpp
-        model/Equipment/EquipType.h
         model/Point.cpp
-        model/Point.h
-        model/Units/AEntity.cpp
-        model/Units/AEntity.h model/Item.cpp)
+        model/Point.h model/Units/AEntity.cpp model/Units/AEntity.h)
 
 add_executable(CS3520_2017FA_PROJ ${SOURCE_FILES})

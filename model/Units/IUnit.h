@@ -6,11 +6,13 @@
 #define CS3520_2017FA_PROJ_UNIT_H
 
 #include "../Equipment/Equipment.h"
+#include "../Spell.h"
 #include "../Item.h"
+<<<<<<< HEAD
+=======
 #include "AEntity.h"
+>>>>>>> refs/remotes/origin/Working-on-Unit
 #include <string>
-
-class Spell;
 
 class IUnit : public AEntity {
 public:
@@ -33,13 +35,18 @@ public:
      */
     virtual int calcBasicAttack();
 
+    /**
+    * updates the statistics of the unit.
+    */
+    void updateStats();
+
 protected:
-    unsigned int health, max_health, mana, max_mana, p_defense, m_defense;
-    unsigned int st_vit, st_intel, st_dex, st_str;
-    unsigned int lvl, exp;
+    virtual unsigned int health, max_health, mana, max_mana, p_defense, m_defense;
+    virtual unsigned int st_vit, st_intel, st_speed, st_str;
+    virtual unsigned int lvl, exp;
     bool is_melee;
-    Equipment *equip; // each element in the array pertains to a specific stats
-    Spell *spells; // will be displayed in a list when the player selects this option
+    virtual Equipment *equip; // each element in the array pertains to a specific stats
+    virtual Spell *spells; // will be displayed in a list when the player selects this option
 };
 
 #endif //CS3520_2017FA_PROJ_UNIT_H
