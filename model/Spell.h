@@ -13,6 +13,7 @@ public:
     int getHitChance(const IUnit & unit);
 private:
     int base_hit_chance;
+    bool damage_type;
 };
 
 #endif //CS3520_2017FA_PROJ_SPELLS_H
