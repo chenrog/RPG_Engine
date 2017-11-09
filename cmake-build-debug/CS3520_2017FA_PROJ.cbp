@@ -100,6 +100,9 @@
 		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Equipment/Equipment.h">
 			<Option target="CS3520_2017FA_PROJ"/>
 		</Unit>
+		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Item.cpp">
+			<Option target="CS3520_2017FA_PROJ"/>
+		</Unit>
 		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Item.h">
 			<Option target="CS3520_2017FA_PROJ"/>
 		</Unit>

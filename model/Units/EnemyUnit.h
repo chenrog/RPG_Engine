@@ -8,7 +8,7 @@
 class EnemyUnit : public IUnit {
 public:
     EnemyUnit(unsigned int vit, unsigned int intel, unsigned int speed, unsigned int str,
-              bool is_melee, string name, tuple<int, Item> drop);
+              bool is_melee, string name, Item drop[]);
 
     EnemyUnit(const EnemyUnit &unit);
 
@@ -19,7 +19,7 @@ public:
     Item calcDrop();
 
 private:
-    tuple<int, Item> * drop; // randomly will drop an item in this list after defeat
+    Item drop[]; // randomly will drop an item in this list after defeat
 };
 
 

@@ -2,36 +2,13 @@
 #include <ctime>
 #include <iostream>
 #include "PlayerUnit.h"
-<<<<<<< HEAD
-=======
-#include "../Equipment/Equipment.h"
 
->>>>>>> refs/remotes/origin/Working-on-Unit
 
 using namespace std;
 
-PlayerUnit::PlayerUnit(unsigned int vit, unsigned int intel, unsigned int speed, unsigned int str,
-                                 double mod_vit, double mod_int, double mod_speed, double mod_str, bool is_melee,
-                                 string name) {
-    this->name = name;
-    this->st_vit = vit;
-    this->st_intel = intel;
-    this->st_speed = speed;
-    this->st_str = str;
-    this->mod_vit = mod_vit;
-    this->mod_int = mod_int;
-    this->mod_str = mod_str;
-    this->mod_speed = mod_speed;
-    this->is_melee = is_melee;
-    updateStats();
-    this->health = this->max_health;
-    this->mana = this->max_mana;
-    this->lvl = 1;
-}
-
-PlayerUnit::PlayerUnit(unsigned int vit, unsigned int intel, unsigned int dex, unsigned int str,
-                                 Equipment equipment[], Spell spell[], double mod_vit,
-                                 double mod_int, double mod_str, double mod_speed, bool is_melee, unsigned int lvl) {
+PlayerUnit::PlayerUnit(string name, Point position, bool visible, unsigned int vit, unsigned int intel, unsigned int dex,
+                       unsigned int str,  unsigned int lvl, bool is_melee, Equipment equipment[], Spell spell[], double mod_vit, double mod_int,
+                       double mod_dex, double mod_str) {
     this->name = name;
     this->st_vit = vit;
     this->st_intel = intel;
@@ -40,9 +17,9 @@ PlayerUnit::PlayerUnit(unsigned int vit, unsigned int intel, unsigned int dex, u
     this->mod_vit = mod_vit;
     this->mod_int = mod_int;
     this->mod_str = mod_str;
-    this->mod_speed = mod_speed;
+    this->mod_dex = mod_dex;
     this->is_melee = is_melee;
-    this->lvl = lvl
+    this->lvl = lvl;
     updateStats();
     this->health = this->max_health;
     this->mana = this->max_mana;
@@ -80,13 +57,10 @@ bool PlayerUnit::addEXP(int const exp) {
     if (new_exp >= 100) {
         this->exp %= 100;
         lvl += 1;
-        srand((unsigned) time(nullptr));
-        int lowest = 1, highest = 10;
-        int range = (highest - lowest) + 1;
-        this->st_vit += (lowest + int(range * rand() / (RAND_MAX + 1.0))) * mod_vit;
-        this->st_intel += (lowest + int(range * rand() / (RAND_MAX + 1.0))) * mod_int;
-        this->st_speed += (lowest + int(range * rand() / (RAND_MAX + 1.0))) * mod_speed;
-        this->st_str += (lowest + int(range * rand() / (RAND_MAX + 1.0))) * mod_str;
+        this->st_vit += rand() % 10 * mod_vit;
+        this->st_intel += rand() % 10 * mod_int;
+        this->st_speed += rand() % 10 * mod_dex;
+        this->st_str += rand() % 10 * mod_str;
         updateStats();
         return true;
     } else {

@@ -203,6 +203,33 @@ model/Equipment/Equipment.cpp.s:
 	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/model/Equipment/Equipment.cpp.s
 .PHONY : model/Equipment/Equipment.cpp.s
 
+model/Item.obj: model/Item.cpp.obj
+
+.PHONY : model/Item.obj
+
+# target to build an object file
+model/Item.cpp.obj:
+	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/model/Item.cpp.obj
+.PHONY : model/Item.cpp.obj
+
+model/Item.i: model/Item.cpp.i
+
+.PHONY : model/Item.i
+
+# target to preprocess a source file
+model/Item.cpp.i:
+	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/model/Item.cpp.i
+.PHONY : model/Item.cpp.i
+
+model/Item.s: model/Item.cpp.s
+
+.PHONY : model/Item.s
+
+# target to generate assembly for a file
+model/Item.cpp.s:
+	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/model/Item.cpp.s
+.PHONY : model/Item.cpp.s
+
 model/Map.obj: model/Map.cpp.obj
 
 .PHONY : model/Map.obj
@@ -410,6 +437,9 @@ help:
 	@echo ... model/Equipment/Equipment.obj
 	@echo ... model/Equipment/Equipment.i
 	@echo ... model/Equipment/Equipment.s
+	@echo ... model/Item.obj
+	@echo ... model/Item.i
+	@echo ... model/Item.s
 	@echo ... model/Map.obj
 	@echo ... model/Map.i
 	@echo ... model/Map.s

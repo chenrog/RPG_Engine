@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/CS3520_2017FA_PROJ.dir/model/Equipment/Equipment.cpp.obj"
   "CMakeFiles/CS3520_2017FA_PROJ.dir/model/BattleMode.cpp.obj"
+  "CMakeFiles/CS3520_2017FA_PROJ.dir/model/Item.cpp.obj"
   "CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/IUnit.cpp.obj"
   "CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/NPCUnit.cpp.obj"
   "CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/EnemyUnit.cpp.obj"

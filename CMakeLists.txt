@@ -9,6 +9,7 @@ set(SOURCE_FILES
         model/Equipment/EquipType.h
         model/BattleMode.cpp
         model/BattleMode.h
+        model/Item.cpp
         model/Item.h
         model/Units/IUnit.cpp
         model/Units/IUnit.h
