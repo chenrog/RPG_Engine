@@ -29,23 +29,3 @@ int IUnit::calcBasicAttack() {
         return this->st_intel * 10;
     }
 }
-
-const string &IUnit::getName() const {
-    return name;
-}
-
-Point IUnit::getPosition() {
-    return position;
-}
-
-bool IUnit::isVisible() {
-    return visible;
-}
-
-void IUnit::enableVisibility() {
-    visible = true;
-}
-
-void IUnit::disableVisibility() {
-    visible = false;
-}

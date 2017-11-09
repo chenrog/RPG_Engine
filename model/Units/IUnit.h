@@ -19,16 +19,6 @@ public:
 
     virtual ~IUnit();
 
-    const string &getName() const override;
-
-    Point getPosition() override;
-
-    bool isVisible() override;
-
-    void enableVisibility() override;
-
-    void disableVisibility() override;
-
     /**
      * Calculates the damage a unit takes based on a damage stat passed in by the class. Returns the amount of damage
      * taken by the unit
