@@ -24,7 +24,26 @@ PlayerUnit::PlayerUnit(string name, Point position, bool visible,
     this->mod_str = mod_str;
     this->mod_dex = mod_dex;
     this->is_melee = is_melee;
-    this->lvl = lvl
+    updateStats();
+    this->health = this->max_health;
+    this->mana = this->max_mana;
+    this->lvl = 1;
+}
+
+PlayerUnit::PlayerUnit(unsigned int vit, unsigned int intel, unsigned int dex, unsigned int str,
+                                 Equipment equipment[], Spell spell[], double mod_vit,
+                                 double mod_int, double mod_str, double mod_speed, bool is_melee, unsigned int lvl) {
+    this->name = name;
+    this->st_vit = vit;
+    this->st_intel = intel;
+    this->st_speed = st_speed;
+    this->st_str = str;
+    this->mod_vit = mod_vit;
+    this->mod_int = mod_int;
+    this->mod_str = mod_str;
+    this->mod_speed = mod_speed;
+    this->is_melee = is_melee;
+	this->lvl = lvl;
     updateStats();
     this->health = this->max_health;
     this->mana = this->max_mana;
