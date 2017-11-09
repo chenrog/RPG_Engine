@@ -17,10 +17,10 @@ public:
     void display();
     // getters
     const string & getName() const override;
-    Point getPosition() override = 0;
-    bool isVisible() override = 0;
-    void enableVisibility() override = 0;
-    void disableVisibility() override = 0;
+    Point getPosition() override;
+    bool isVisible() override;
+    void enableVisibility() override;
+    void disableVisibility() override ;
     equip_type_t getType() const;
     int getVit() const;
     int getStr() const;
