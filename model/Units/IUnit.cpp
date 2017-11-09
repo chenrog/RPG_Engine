@@ -60,3 +60,10 @@ unsigned int IUnit::get_dex() const{
 unsigned int IUnit::get_str() const{
     return this->st_str;
 }
+
+void IUnit::updateStats() {
+    this->max_health = st_vit * 100;
+    this->max_mana = st_intel * 100;
+    this->p_defense = st_vit * 10 + st_speed;
+    this->m_defense = st_intel * 10 + st_speed;
+}

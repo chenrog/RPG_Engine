@@ -44,6 +44,11 @@ public:
     unsigned int get_dex() const;
     unsigned int get_str() const;
 
+    /**
+    * updates the statistics of the unit.
+    */
+    void updateStats();
+
 protected:
     unsigned int health, max_health, mana, max_mana, p_defense, m_defense;
     unsigned int st_vit, st_int, st_dex, st_str;
