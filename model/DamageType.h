@@ -1,5 +1,5 @@
 //
-// Created by Roger Chen on 11/8/17.
+// Created by Roger Chen on 11/8/17..
 //
 
 #ifndef CS3520_2017FA_PROJ_DAMAGETYPE_H
