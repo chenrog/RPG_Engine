@@ -39,7 +39,7 @@ PlayerUnit::PlayerUnit(unsigned int vit, unsigned int intel, unsigned int dex, u
     this->mod_str = mod_str;
     this->mod_speed = mod_speed;
     this->is_melee = is_melee;
-    this->lvl = lvl
+	this->lvl = lvl;
     updateStats();
     this->health = this->max_health;
     this->mana = this->max_mana;
