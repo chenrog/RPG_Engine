@@ -128,33 +128,9 @@ CMakeFiles/CS3520_2017FA_PROJ.dir/model/Item.cpp.obj.provides: CMakeFiles/CS3520
 CMakeFiles/CS3520_2017FA_PROJ.dir/model/Item.cpp.obj.provides.build: CMakeFiles/CS3520_2017FA_PROJ.dir/model/Item.cpp.obj
 
 
-CMakeFiles/CS3520_2017FA_PROJ.dir/model/Consumable.cpp.obj: CMakeFiles/CS3520_2017FA_PROJ.dir/flags.make
-CMakeFiles/CS3520_2017FA_PROJ.dir/model/Consumable.cpp.obj: ../model/Consumable.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/CS3520_2017FA_PROJ.dir/model/Consumable.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\CS3520_2017FA_PROJ.dir\model\Consumable.cpp.obj -c C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\model\Consumable.cpp
-
-CMakeFiles/CS3520_2017FA_PROJ.dir/model/Consumable.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CS3520_2017FA_PROJ.dir/model/Consumable.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\model\Consumable.cpp > CMakeFiles\CS3520_2017FA_PROJ.dir\model\Consumable.cpp.i
-
-CMakeFiles/CS3520_2017FA_PROJ.dir/model/Consumable.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CS3520_2017FA_PROJ.dir/model/Consumable.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\model\Consumable.cpp -o CMakeFiles\CS3520_2017FA_PROJ.dir\model\Consumable.cpp.s
-
-CMakeFiles/CS3520_2017FA_PROJ.dir/model/Consumable.cpp.obj.requires:
-
-.PHONY : CMakeFiles/CS3520_2017FA_PROJ.dir/model/Consumable.cpp.obj.requires
-
-CMakeFiles/CS3520_2017FA_PROJ.dir/model/Consumable.cpp.obj.provides: CMakeFiles/CS3520_2017FA_PROJ.dir/model/Consumable.cpp.obj.requires
-	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/model/Consumable.cpp.obj.provides.build
-.PHONY : CMakeFiles/CS3520_2017FA_PROJ.dir/model/Consumable.cpp.obj.provides
-
-CMakeFiles/CS3520_2017FA_PROJ.dir/model/Consumable.cpp.obj.provides.build: CMakeFiles/CS3520_2017FA_PROJ.dir/model/Consumable.cpp.obj
-
-
 CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/IUnit.cpp.obj: CMakeFiles/CS3520_2017FA_PROJ.dir/flags.make
 CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/IUnit.cpp.obj: ../model/Units/IUnit.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/IUnit.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/IUnit.cpp.obj"
 	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\CS3520_2017FA_PROJ.dir\model\Units\IUnit.cpp.obj -c C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\model\Units\IUnit.cpp
 
 CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/IUnit.cpp.i: cmake_force
@@ -178,7 +154,7 @@ CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/IUnit.cpp.obj.provides.build: CMak
 
 CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/NPCUnit.cpp.obj: CMakeFiles/CS3520_2017FA_PROJ.dir/flags.make
 CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/NPCUnit.cpp.obj: ../model/Units/NPCUnit.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/NPCUnit.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/NPCUnit.cpp.obj"
 	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\CS3520_2017FA_PROJ.dir\model\Units\NPCUnit.cpp.obj -c C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\model\Units\NPCUnit.cpp
 
 CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/NPCUnit.cpp.i: cmake_force
@@ -202,7 +178,7 @@ CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/NPCUnit.cpp.obj.provides.build: CM
 
 CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/EnemyUnit.cpp.obj: CMakeFiles/CS3520_2017FA_PROJ.dir/flags.make
 CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/EnemyUnit.cpp.obj: ../model/Units/EnemyUnit.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/EnemyUnit.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/EnemyUnit.cpp.obj"
 	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\CS3520_2017FA_PROJ.dir\model\Units\EnemyUnit.cpp.obj -c C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\model\Units\EnemyUnit.cpp
 
 CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/EnemyUnit.cpp.i: cmake_force
@@ -226,7 +202,7 @@ CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/EnemyUnit.cpp.obj.provides.build: 
 
 CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/PlayerUnit.cpp.obj: CMakeFiles/CS3520_2017FA_PROJ.dir/flags.make
 CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/PlayerUnit.cpp.obj: ../model/Units/PlayerUnit.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/PlayerUnit.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/PlayerUnit.cpp.obj"
 	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\CS3520_2017FA_PROJ.dir\model\Units\PlayerUnit.cpp.obj -c C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\model\Units\PlayerUnit.cpp
 
 CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/PlayerUnit.cpp.i: cmake_force
@@ -250,7 +226,7 @@ CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/PlayerUnit.cpp.obj.provides.build:
 
 CMakeFiles/CS3520_2017FA_PROJ.dir/model/Map.cpp.obj: CMakeFiles/CS3520_2017FA_PROJ.dir/flags.make
 CMakeFiles/CS3520_2017FA_PROJ.dir/model/Map.cpp.obj: ../model/Map.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/CS3520_2017FA_PROJ.dir/model/Map.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/CS3520_2017FA_PROJ.dir/model/Map.cpp.obj"
 	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\CS3520_2017FA_PROJ.dir\model\Map.cpp.obj -c C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\model\Map.cpp
 
 CMakeFiles/CS3520_2017FA_PROJ.dir/model/Map.cpp.i: cmake_force
@@ -274,7 +250,7 @@ CMakeFiles/CS3520_2017FA_PROJ.dir/model/Map.cpp.obj.provides.build: CMakeFiles/C
 
 CMakeFiles/CS3520_2017FA_PROJ.dir/main.cpp.obj: CMakeFiles/CS3520_2017FA_PROJ.dir/flags.make
 CMakeFiles/CS3520_2017FA_PROJ.dir/main.cpp.obj: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/CS3520_2017FA_PROJ.dir/main.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/CS3520_2017FA_PROJ.dir/main.cpp.obj"
 	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\CS3520_2017FA_PROJ.dir\main.cpp.obj -c C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\main.cpp
 
 CMakeFiles/CS3520_2017FA_PROJ.dir/main.cpp.i: cmake_force
@@ -298,7 +274,7 @@ CMakeFiles/CS3520_2017FA_PROJ.dir/main.cpp.obj.provides.build: CMakeFiles/CS3520
 
 CMakeFiles/CS3520_2017FA_PROJ.dir/model/Point.cpp.obj: CMakeFiles/CS3520_2017FA_PROJ.dir/flags.make
 CMakeFiles/CS3520_2017FA_PROJ.dir/model/Point.cpp.obj: ../model/Point.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/CS3520_2017FA_PROJ.dir/model/Point.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/CS3520_2017FA_PROJ.dir/model/Point.cpp.obj"
 	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\CS3520_2017FA_PROJ.dir\model\Point.cpp.obj -c C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\model\Point.cpp
 
 CMakeFiles/CS3520_2017FA_PROJ.dir/model/Point.cpp.i: cmake_force
@@ -322,7 +298,7 @@ CMakeFiles/CS3520_2017FA_PROJ.dir/model/Point.cpp.obj.provides.build: CMakeFiles
 
 CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/AEntity.cpp.obj: CMakeFiles/CS3520_2017FA_PROJ.dir/flags.make
 CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/AEntity.cpp.obj: ../model/Units/AEntity.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/AEntity.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/AEntity.cpp.obj"
 	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\CS3520_2017FA_PROJ.dir\model\Units\AEntity.cpp.obj -c C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\model\Units\AEntity.cpp
 
 CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/AEntity.cpp.i: cmake_force
@@ -349,7 +325,6 @@ CS3520_2017FA_PROJ_OBJECTS = \
 "CMakeFiles/CS3520_2017FA_PROJ.dir/model/Equipment/Equipment.cpp.obj" \
 "CMakeFiles/CS3520_2017FA_PROJ.dir/model/BattleMode.cpp.obj" \
 "CMakeFiles/CS3520_2017FA_PROJ.dir/model/Item.cpp.obj" \
-"CMakeFiles/CS3520_2017FA_PROJ.dir/model/Consumable.cpp.obj" \
 "CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/IUnit.cpp.obj" \
 "CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/NPCUnit.cpp.obj" \
 "CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/EnemyUnit.cpp.obj" \
@@ -365,7 +340,6 @@ CS3520_2017FA_PROJ_EXTERNAL_OBJECTS =
 CS3520_2017FA_PROJ.exe: CMakeFiles/CS3520_2017FA_PROJ.dir/model/Equipment/Equipment.cpp.obj
 CS3520_2017FA_PROJ.exe: CMakeFiles/CS3520_2017FA_PROJ.dir/model/BattleMode.cpp.obj
 CS3520_2017FA_PROJ.exe: CMakeFiles/CS3520_2017FA_PROJ.dir/model/Item.cpp.obj
-CS3520_2017FA_PROJ.exe: CMakeFiles/CS3520_2017FA_PROJ.dir/model/Consumable.cpp.obj
 CS3520_2017FA_PROJ.exe: CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/IUnit.cpp.obj
 CS3520_2017FA_PROJ.exe: CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/NPCUnit.cpp.obj
 CS3520_2017FA_PROJ.exe: CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/EnemyUnit.cpp.obj
@@ -378,7 +352,7 @@ CS3520_2017FA_PROJ.exe: CMakeFiles/CS3520_2017FA_PROJ.dir/build.make
 CS3520_2017FA_PROJ.exe: CMakeFiles/CS3520_2017FA_PROJ.dir/linklibs.rsp
 CS3520_2017FA_PROJ.exe: CMakeFiles/CS3520_2017FA_PROJ.dir/objects1.rsp
 CS3520_2017FA_PROJ.exe: CMakeFiles/CS3520_2017FA_PROJ.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable CS3520_2017FA_PROJ.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable CS3520_2017FA_PROJ.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\CS3520_2017FA_PROJ.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -389,7 +363,6 @@ CMakeFiles/CS3520_2017FA_PROJ.dir/build: CS3520_2017FA_PROJ.exe
 CMakeFiles/CS3520_2017FA_PROJ.dir/requires: CMakeFiles/CS3520_2017FA_PROJ.dir/model/Equipment/Equipment.cpp.obj.requires
 CMakeFiles/CS3520_2017FA_PROJ.dir/requires: CMakeFiles/CS3520_2017FA_PROJ.dir/model/BattleMode.cpp.obj.requires
 CMakeFiles/CS3520_2017FA_PROJ.dir/requires: CMakeFiles/CS3520_2017FA_PROJ.dir/model/Item.cpp.obj.requires
-CMakeFiles/CS3520_2017FA_PROJ.dir/requires: CMakeFiles/CS3520_2017FA_PROJ.dir/model/Consumable.cpp.obj.requires
 CMakeFiles/CS3520_2017FA_PROJ.dir/requires: CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/IUnit.cpp.obj.requires
 CMakeFiles/CS3520_2017FA_PROJ.dir/requires: CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/NPCUnit.cpp.obj.requires
 CMakeFiles/CS3520_2017FA_PROJ.dir/requires: CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/EnemyUnit.cpp.obj.requires
