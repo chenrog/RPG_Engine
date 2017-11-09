@@ -6,17 +6,17 @@
 
 class Point {
 private:
-    int x, y;  // Private data members
+    unsigned int x, y;  // Private data members
 
 public:
-    Point(int x = 0, int y = 0); // Constructor with default arguments
-    int getX() const;  // Getter
-    void setX(int x);  // Setter
-    int getY() const;
+    Point(unsigned int x = 0, unsigned int y = 0); // Constructor with default arguments
+    unsigned int getX() const;  // Getter
+    void setX(unsigned int x);  // Setter
+    unsigned int getY() const;
 
-    void setY(int y);
+    void setY(unsigned int y);
 
-    void setXY(int x, int y);
+    void setXY(unsigned int x, unsigned int y);
 
     void print() const;
 };
