@@ -7,11 +7,14 @@
 
 using namespace std;
 
-Equipment::Equipment(string name,  Point position, bool visible, equip_type_t type, signed int v, unsigned int vm, signed int i, unsigned int im,
-                     signed int sp, unsigned int spm, signed int st, unsigned int stm) :
-        name(std::move(name)), visible(visible), position(position), level(0), type(type), vit(v), vit_mod(vm), intel(i),
-        int_mod(im), speed(sp),
-        speed_mod(spm), str(st), str_mod(stm) {}
+Equipment::Equipment(string name, Point position, bool visible, equip_type_t type, signed int v, unsigned int vm,
+                     signed int i, unsigned int im, signed int sp, unsigned int spm, signed int st, unsigned int stm) :
+        level(0), type(type), vit(v), vit_mod(vm), intel(i), int_mod(im), speed(sp), speed_mod(spm), str(st), str_mod(stm) {
+
+        this->name = std::move(name);
+        this->position = position;
+        this->visible = visible;
+}
 
 void Equipment::level_up() {
     this->level += 1;

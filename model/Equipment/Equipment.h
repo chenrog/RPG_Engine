@@ -59,8 +59,8 @@ public:
 
 private:
     string       name;
-    Point        position;
-    bool         visible;
+    Point        position = NULL;
+    bool         visible = false;
     equip_type_t type;
     // vitality stats by this equipment
     signed int   vit = 0;
