@@ -11,14 +11,14 @@ WorldMap::WorldMap() {
     for (int i = 0; i < WORLDMAP_HEIGHT; i++) {
         for (int j = 0; j < WORLDMAP_WIDTH; j++) {
             //TODO: Probably need new here.
-            map[i].push_back(MapCell(Point(i, j), NULL, true));
+            gridMap[i].push_back(MapCell(Point(i, j), NULL, true));
         }
     }
 
 }
 
 std::vector<vector<MapCell>> WorldMap::getWorldMap() {
-    return map;
+    return gridMap;
 }
 
 // some function that controls how this cell is displayed, will be based on whether or not this Cell is "inhabited"

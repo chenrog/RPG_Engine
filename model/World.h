@@ -11,7 +11,6 @@
 #include "Units/PlayerUnit.h"
 #include "GameState.h"
 #include "WorldMap.h"
-#include "InventoryEntry.h"
 
 class World {
 public:
@@ -23,7 +22,13 @@ public:
      * Returns the allies.
      * @return The allies.
      */
-    vector<PlayerUnit> getAllies();
+    PlayerUnit getPlayer();
+
+    /**
+     * Function that moves the player based on key input. If the player moves onto a
+     * cell that has random encounters, generate whether or not there is an encounter.
+     */
+    void movePlayer(direction_t direction, int distance);
 
     /**
      * Returns the inventory as a map corresponding items to their quantity.
@@ -60,19 +65,22 @@ public:
     const int PARTY_SIZE = 2;
 
     //TODO: not sure what these numbers are yet. i know they change per player though so it wont be const.
-    const int STARTING_VIT = 1;
-    const int STARTING_INT = 1;
-    const int STARTING_DEX = 1;
-    const int STARTING_STR = 1;
-    const int STARTING_LVL = 1;
+    unsigned const int STARTING_VIT = 1;
+    unsigned const int STARTING_INT = 1;
+    unsigned const int STARTING_DEX = 1;
+    unsigned const int STARTING_STR = 1;
+    unsigned const int STARTING_LVL = 1;
 
-    const int STARTING_MOD_VIT = 1;
-    const int STARTING_MOD_INT = 1;
-    const int STARTING_MOD_DEX = 1;
-    const int STARTING_MOD_STR = 1;
+    unsigned const int STARTING_MOD_VIT = 1;
+    unsigned const int STARTING_MOD_INT = 1;
+    unsigned const int STARTING_MOD_DEX = 1;
+    unsigned const int STARTING_MOD_STR = 1;
+
+    unsigned const double RANDOM_ENCOUNTER_CHANCE = .05;
 
 private:
-    vector<PlayerUnit> allies;
+    // Only doing one player for now.
+    PlayerUnit player;
     unordered_map<Item, int> inventory;
     WorldMap worldMap;
     game_state_t gameState;

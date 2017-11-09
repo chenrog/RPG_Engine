@@ -8,6 +8,7 @@
 #include "../Equipment/Equipment.h"
 #include "../Item.h"
 #include "AEntity.h"
+#include "../Direction.h"
 #include <string>
 #include <vector>
 
@@ -19,7 +20,13 @@ public:
 
     IUnit(const IUnit &unit);
 
-    virtual ~IUnit();
+    virtual ~IUnit();\
+
+    /**
+     * Move this Unit in the given direction, x distance away
+     * @param direction
+     */
+    virtual void move(direction_t direction, unsigned int distance);
 
     /**
      * Calculates the damage a unit takes based on a damage stat passed in by the class. Returns the amount of damage

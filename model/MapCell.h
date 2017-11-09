@@ -22,11 +22,18 @@ public:
 
     void setWalkability(bool new_walkable);
 
+    bool isRandomEncounterable();
+
+    void setRandomEncounters(bool encounter);
+
+    void draw();
+
 
 private:
     Point position;
     AEntity c_entity;
     bool walkable;
+    bool randomEncounterable;
 };
 
 

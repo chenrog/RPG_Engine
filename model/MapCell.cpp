@@ -29,3 +29,18 @@ bool MapCell::isWalkable() {
 void MapCell::setWalkability(bool new_walkable) {
     walkable = new_walkable;
 }
+
+void MapCell::setRandomEncounters(bool encounter) {
+    randomEncounterable = encounter;
+}
+
+// some function that controls how this cell is displayed, will be based on whether or not this Cell is "inhabited"
+void MapCell::draw() {
+    //this is where the color, shape, etc of however we want to display a cell
+    // this function will also call draw on the item, if this is the place where we want to draw the sprite of the occupant
+}
+
+
+bool MapCell::isRandomEncounterable() {
+    return randomEncounterable;
+}

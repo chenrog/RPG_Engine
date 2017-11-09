@@ -8,6 +8,7 @@
 
 class PlayerUnit : public IUnit {
 public:
+    PlayerUnit();
 
     /**
      *

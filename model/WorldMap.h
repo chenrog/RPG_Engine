@@ -20,7 +20,7 @@ public:
     const int WORLDMAP_HEIGHT = 30;
 
 private:
-    vector<vector<MapCell>> map;
+    vector<vector<MapCell>> gridMap;
 };
 
 

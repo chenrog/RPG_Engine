@@ -8,6 +8,28 @@
 
 using namespace std;
 
+PlayerUnit::PlayerUnit() {
+    this->name = "Twen";
+    this->position = Point(0, 0);
+    this->visible = true;
+    this->st_vit = 1;
+    this->st_int = 1;
+    this->st_dex = 1;
+    this->st_str = 1;
+    this->mod_vit = 1;
+    this->mod_int = 1;
+    this->mod_str = 1;
+    this->mod_dex = 1;
+    this->is_melee = true;
+    this->equipmentList = vector<Equipment>();
+    this->spellList = vector<Spell>();
+    updateStats();
+    this->health = 1;
+    this->mana = 1;
+    this->lvl = 1;
+}
+
+
 PlayerUnit::PlayerUnit(string name, Point position, bool visible,
                        unsigned int vit, unsigned int intel, unsigned int dex, unsigned int str,
                        unsigned int lvl, bool is_melee,
@@ -75,4 +97,5 @@ bool PlayerUnit::addEXP(int const exp) {
         return false;
     }
 }
+
 
