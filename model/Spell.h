@@ -6,10 +6,11 @@
 
 #include "DamageType.h"
 #include <string>
+#ifndef CS3520_2017FA_PROJ_UNIT_H
+#include "Units/IUnit.h"
+#endif //CS3520_2017FA_PROJ_UNIT_H
 
 using namespace std;
-
-class IUnit;
 
 class Spell {
 public:
@@ -52,5 +53,4 @@ private:
     int           mod_hit_chance = 1;
     damage_type_t damage_type;
 };
-
 #endif //CS3520_2017FA_PROJ_SPELLS_H

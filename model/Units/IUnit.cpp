@@ -30,33 +30,33 @@ int IUnit::calcBasicAttack() {
     }
 }
 
-unsigned int IUnit::get_health() {
+unsigned int IUnit::get_health() const{
     return this->health;
 }
-unsigned int IUnit::get_max_health() {
+unsigned int IUnit::get_max_health() const{
     return this->max_health;
 }
-unsigned int IUnit::get_mana() {
+unsigned int IUnit::get_mana() const{
     return this->mana;
 }
-unsigned int IUnit::get_max_mana() {
+unsigned int IUnit::get_max_mana() const{
     return this->max_mana;
 }
-unsigned int IUnit::get_p_def() {
+unsigned int IUnit::get_p_def() const{
     return this->p_defense;
 }
-unsigned int IUnit::get_m_def() {
+unsigned int IUnit::get_m_def() const{
     return this->m_defense;
 }
-unsigned int IUnit::get_vit() {
+unsigned int IUnit::get_vit() const{
     return this->st_vit;
 }
-unsigned int IUnit::get_int() {
+unsigned int IUnit::get_int() const{
     return this->st_int;
 }
-unsigned int IUnit::get_dex() {
+unsigned int IUnit::get_dex() const{
     return this->st_dex;
 }
-unsigned int IUnit::get_str() {
+unsigned int IUnit::get_str() const{
     return this->st_str;
 }

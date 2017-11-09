@@ -33,16 +33,16 @@ public:
      */
     virtual int calcBasicAttack();
 
-    unsigned int get_health();
-    unsigned int get_max_health();
-    unsigned int get_mana();
-    unsigned int get_max_mana();
-    unsigned int get_p_def();
-    unsigned int get_m_def();
-    unsigned int get_vit();
-    unsigned int get_int();
-    unsigned int get_dex();
-    unsigned int get_str();
+    unsigned int get_health() const;
+    unsigned int get_max_health() const;
+    unsigned int get_mana() const;
+    unsigned int get_max_mana() const;
+    unsigned int get_p_def() const;
+    unsigned int get_m_def() const;
+    unsigned int get_vit() const;
+    unsigned int get_int() const;
+    unsigned int get_dex() const;
+    unsigned int get_str() const;
 
 protected:
     unsigned int health, max_health, mana, max_mana, p_defense, m_defense;
