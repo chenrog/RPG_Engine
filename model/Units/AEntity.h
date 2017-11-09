@@ -19,11 +19,11 @@ public:
 
     virtual ~AEntity();
 
+    virtual const string & getName() const = 0;
+
     virtual Point getPosition() = 0;
 
     virtual bool isVisible() = 0;
-
-    virtual string getName() = 0;
 
     virtual void enableVisibility() = 0;
 
@@ -31,9 +31,9 @@ public:
 
 protected:
     // The entity properties.
+    string name;
     Point position;
     bool visible;
-    string name;
 };
 
 

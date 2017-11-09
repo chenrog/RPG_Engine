@@ -7,9 +7,9 @@
 
 using namespace std;
 
-Equipment::Equipment(string name, equip_type_t type, signed int v, unsigned int vm, signed int i, unsigned int im,
+Equipment::Equipment(string name,  Point position, bool visible, equip_type_t type, signed int v, unsigned int vm, signed int i, unsigned int im,
                      signed int sp, unsigned int spm, signed int st, unsigned int stm) :
-        name(std::move(name)), visible(false), position(NULL), level(0), type(type), vit(v), vit_mod(vm), intel(i),
+        name(std::move(name)), visible(visible), position(position), level(0), type(type), vit(v), vit_mod(vm), intel(i),
         int_mod(im), speed(sp),
         speed_mod(spm), str(st), str_mod(stm) {}
 
@@ -59,11 +59,21 @@ void Equipment::display() {
 const string &Equipment::getName() const {
     return name;
 }
-
+Point Equipment::getPosition() override{
+    return position;
+}
+bool Equipment::isVisible() override{
+    return visible;
+}
+void Equipment::enableVisibility() override{
+    visible = true;
+}
+void Equipment::disableVisibility() override{
+    visible = false;
+}
 equip_type_t Equipment::getType() const {
     return type;
 }
-
 int Equipment::getVit() const {
     return vit;
 }
@@ -84,7 +94,7 @@ Equip_Builder::Equip_Builder(string name, equip_type_t type) : name(std::move(na
 
 // this builds a new Equipment with the stats of this equipment
 Equipment &Equip_Builder::build() {
-    auto equipment = new Equipment(name, type, vit, vit_mod, intel, int_mod, speed, speed_mod, str, str_mod);
+    auto equipment = new Equipment(name, position, visible, type, vit, vit_mod, intel, int_mod, speed, speed_mod, str, str_mod);
     return *equipment;
 }
 
@@ -93,13 +103,12 @@ Equip_Builder Equip_Builder::setName(const string &name) {
     return *this;
 }
 
-Equip_Builder Equip_Builder::setVisibility(const bool &visible) {
-    this->visible = visible;
-    return *this;
-}
-
 Equip_Builder Equip_Builder::setPosition(const Point &position) {
     this->position = position;
+    return *this;
+}
+Equip_Builder Equip_Builder::setVisibility(const bool &visible) {
+    this->visible = visible;
     return *this;
 }
 

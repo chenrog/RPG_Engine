@@ -9,14 +9,18 @@ using namespace std;
 
 class Equipment : public AEntity{
 public:
-    Equipment(string name, equip_type_t type, signed int v, unsigned int vm, signed int i, unsigned int im,
+    Equipment(string name, Point position, bool visible, equip_type_t type, signed int v, unsigned int vm, signed int i, unsigned int im,
               signed int sp, unsigned int spm, signed int st, unsigned int stm);
     // functions
     friend Equipment & build();
     void level_up();
     void display();
     // getters
-    const string & getName() const;
+    const string & getName() const override;
+    Point getPosition() override = 0;
+    bool isVisible() override = 0;
+    void enableVisibility() override = 0;
+    void disableVisibility() override = 0;
     equip_type_t getType() const;
     int getVit() const;
     int getStr() const;
@@ -47,8 +51,8 @@ public:
     Equipment & build();
     // setters for the fields
     Equip_Builder setName(const string &name);
-    Equip_Builder setVisibility(const bool &visibility);
     Equip_Builder setPosition(const Point &position);
+    Equip_Builder setVisibility(const bool &visibility);
     Equip_Builder setVit(int vit);
     Equip_Builder setVit_mod(unsigned int vit_mod);
     Equip_Builder setIntel(int intel);
@@ -60,8 +64,8 @@ public:
 
 private:
     string       name;
-    bool         visible;
     Point        position;
+    bool         visible;
     equip_type_t type;
     // vitality stats by this equipment
     signed int   vit = 0;
