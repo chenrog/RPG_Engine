@@ -7,21 +7,6 @@
 
 class PlayerUnit : public IUnit {
 public:
-    /**
-     *
-     * @param vit
-     * @param intel
-     * @param speed
-     * @param str
-     * @param mod_vit
-     * @param mod_int
-     * @param mod_speed
-     * @param mod_str
-     * @param is_melee
-     * @param name
-     */
-    PlayerUnit(unsigned int vit, unsigned int intel, unsigned int speed, unsigned int str, double mod_vit,
-                    double mod_int, double mod_speed, double mod_str, bool is_melee, string name);
 
     /**
      *
@@ -33,15 +18,15 @@ public:
      * @param spell
      * @param mod_vit
      * @param mod_int
-     * @param mod_speed
-     * @param mod_str
+     * @param mod_dex
+     * @param mod_dex
      * @param is_melee
      * @param lvl
      * @param name
      */
-    PlayerUnit(unsigned int vit, unsigned int intel, unsigned int dex, unsigned int str,
-                    Equipment equipment[], Spell spell[], double mod_vit, double mod_int,
-                    double mod_speed, double mod_str, bool is_melee, unsigned int lvl, string name);
+    PlayerUnit(string name, Point position, bool visible, unsigned int vit, unsigned int intel, unsigned int dex,
+               unsigned int str,  unsigned int lvl, bool is_melee, Equipment equipment[], Spell spell[], double mod_vit, double mod_int,
+               double mod_dex, double mod_str);
 
     ~PlayerUnit() override;
 
@@ -61,7 +46,7 @@ public:
 
 
 private:
-    double mod_vit, mod_int, mod_speed, mod_str;
+    double mod_vit, mod_int, mod_dex, mod_str;
 };
 
 

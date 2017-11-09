@@ -2,20 +2,20 @@
 #define CS3520_2017FA_PROJ_EQUIPMENT_H
 
 #include "EquipType.h"
+#include "../Units/AEntity.h"
 #include <string>
 
 using namespace std;
 
-class Equipment {
+class Equipment : public AEntity{
 public:
-    Equipment(string name, equip_type_t type, signed int v, unsigned int vm, signed int i, unsigned int im,
+    Equipment(string name, Point position, bool visible, equip_type_t type, signed int v, unsigned int vm, signed int i, unsigned int im,
               signed int sp, unsigned int spm, signed int st, unsigned int stm);
     // functions
     friend Equipment & build();
     void level_up();
     void display();
-    // getters
-    const string & getName() const;
+
     equip_type_t getType() const;
     int getVit() const;
     int getStr() const;
@@ -23,7 +23,6 @@ public:
     int getIntel() const;
 
 private:
-    const string name;
     unsigned int level;
     equip_type_t type;
     // vitality stats by this equipment
@@ -47,6 +46,8 @@ public:
     Equipment & build();
     // setters for the fields
     Equip_Builder setName(const string &name);
+    Equip_Builder setPosition(const Point &position);
+    Equip_Builder setVisibility(const bool &visibility);
     Equip_Builder setVit(int vit);
     Equip_Builder setVit_mod(unsigned int vit_mod);
     Equip_Builder setIntel(int intel);
@@ -58,6 +59,8 @@ public:
 
 private:
     string       name;
+    Point        position = NULL;
+    bool         visible = false;
     equip_type_t type;
     // vitality stats by this equipment
     signed int   vit = 0;
