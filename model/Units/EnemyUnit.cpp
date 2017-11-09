@@ -4,7 +4,7 @@ EnemyUnit::EnemyUnit(unsigned int vit, unsigned int intel, unsigned int speed, u
                        string name, tuple<int, Item> drops) {
     this->name = name;
     this->st_vit = vit;
-    this->st_intel = intel;
+    this->st_int = intel;
     this->st_dex = speed;
     this->st_str = str;
     this->mod_vit = mod_vit;

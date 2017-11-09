@@ -33,9 +33,20 @@ public:
      */
     virtual int calcBasicAttack();
 
+    unsigned int get_health();
+    unsigned int get_max_health();
+    unsigned int get_mana();
+    unsigned int get_max_mana();
+    unsigned int get_p_def();
+    unsigned int get_m_def();
+    unsigned int get_vit();
+    unsigned int get_int();
+    unsigned int get_dex();
+    unsigned int get_str();
+
 protected:
     unsigned int health, max_health, mana, max_mana, p_defense, m_defense;
-    unsigned int st_vit, st_intel, st_dex, st_str;
+    unsigned int st_vit, st_int, st_dex, st_str;
     unsigned int lvl, exp;
     bool is_melee;
     Equipment *equip; // each element in the array pertains to a specific stats
