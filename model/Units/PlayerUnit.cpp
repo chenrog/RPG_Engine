@@ -30,40 +30,9 @@ PlayerUnit::PlayerUnit(string name, Point position, bool visible,
     this->lvl = 1;
 }
 
-PlayerUnit::PlayerUnit(unsigned int vit, unsigned int intel, unsigned int dex, unsigned int str,
-                                 Equipment equipment[], Spell spell[], double mod_vit,
-                                 double mod_int, double mod_str, double mod_speed, bool is_melee, unsigned int lvl) {
-    this->name = name;
-    this->st_vit = vit;
-    this->st_intel = intel;
-    this->st_speed = st_speed;
-    this->st_str = str;
-    this->mod_vit = mod_vit;
-    this->mod_int = mod_int;
-    this->mod_str = mod_str;
-    this->mod_speed = mod_speed;
-    this->is_melee = is_melee;
-	this->lvl = lvl;
-    updateStats();
-    this->health = this->max_health;
-    this->mana = this->max_mana;
-
-    updateStats();
-
-    this->equip = equipment;
-    this->spells = spell;
-}
-
 PlayerUnit::~PlayerUnit() {
     delete[] this->spells;
     delete[] this->equip;
-}
-
-void PlayerUnit::updateStats() {
-    this->max_health = st_vit * 100;
-    this->max_mana = st_int * 100;
-    this->p_defense = st_vit * 10 + st_dex;
-    this->m_defense = st_int * 10 + st_dex;
 }
 
 Equipment PlayerUnit::Equip(Equipment const equipment) {
