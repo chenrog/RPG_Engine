@@ -67,16 +67,16 @@ Spell.h
 C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Spells/Spell.h
 
 C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Spells/Spell.h
+../Units/IUnit.h
+C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Units/IUnit.h
 DamageType.h
 C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Spells/DamageType.h
-string
--
 SpellType.h
 C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Spells/SpellType.h
 TargetType.h
 C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Spells/TargetType.h
-../Units/IUnit.h
-C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Units/IUnit.h
+string
+-
 
 C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Spells/SpellType.h
 
@@ -161,28 +161,24 @@ C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Equipment/Equipment.h
 C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Spells/Spell.h
 
 C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/World.cpp
-vector
--
-cstdlib
--
+World.h
+C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/World.h
 ctime
 -
 random
 -
-World.h
-C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/World.h
 
 C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/World.h
-vector
--
-bits/unordered_map.h
--
 Units/PlayerUnit.h
 C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Units/PlayerUnit.h
 GameState.h
 C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/GameState.h
 WorldMap.h
 C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/WorldMap.h
+Item.h
+C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Item.h
+vector
+-
 
 C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/WorldMap.cpp
 vector
