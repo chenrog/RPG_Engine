@@ -91,15 +91,6 @@
 		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/BattleMode.h">
 			<Option target="CS3520_2017FA_PROJ"/>
 		</Unit>
-		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Consumable.cpp">
-			<Option target="CS3520_2017FA_PROJ"/>
-		</Unit>
-		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Consumable.h">
-			<Option target="CS3520_2017FA_PROJ"/>
-		</Unit>
-		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Consumable_Type_t.h">
-			<Option target="CS3520_2017FA_PROJ"/>
-		</Unit>
 		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Equipment/EquipType.h">
 			<Option target="CS3520_2017FA_PROJ"/>
 		</Unit>
