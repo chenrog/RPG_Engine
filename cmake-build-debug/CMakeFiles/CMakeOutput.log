@@ -28,32 +28,32 @@ The CXX compiler identification is GNU, found in "C:/Users/whyar/Documents/GitHu
 Determining if the C compiler works passed with the following output:
 Change Dir: C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_70b40/fast"
-C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_70b40.dir\build.make CMakeFiles/cmTC_70b40.dir/build
+Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_56052/fast"
+C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_56052.dir\build.make CMakeFiles/cmTC_56052.dir/build
 mingw32-make.exe[1]: Entering directory 'C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_70b40.dir/testCCompiler.c.obj
-C:\MinGW\bin\gcc.exe    -o CMakeFiles\cmTC_70b40.dir\testCCompiler.c.obj   -c C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\cmake-build-debug\CMakeFiles\CMakeTmp\testCCompiler.c
-Linking C executable cmTC_70b40.exe
-"C:\Program Files\JetBrains\CLion 2017.2.2\bin\cmake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_70b40.dir\link.txt --verbose=1
-"C:\Program Files\JetBrains\CLion 2017.2.2\bin\cmake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_70b40.dir/objects.a
-C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_70b40.dir/objects.a @CMakeFiles\cmTC_70b40.dir\objects1.rsp
-C:\MinGW\bin\gcc.exe      -Wl,--whole-archive CMakeFiles\cmTC_70b40.dir/objects.a -Wl,--no-whole-archive  -o cmTC_70b40.exe -Wl,--out-implib,libcmTC_70b40.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_70b40.dir\linklibs.rsp
+Building C object CMakeFiles/cmTC_56052.dir/testCCompiler.c.obj
+C:\MinGW\bin\gcc.exe    -o CMakeFiles\cmTC_56052.dir\testCCompiler.c.obj   -c C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\cmake-build-debug\CMakeFiles\CMakeTmp\testCCompiler.c
+Linking C executable cmTC_56052.exe
+"C:\Program Files\JetBrains\CLion 2017.2.2\bin\cmake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_56052.dir\link.txt --verbose=1
+"C:\Program Files\JetBrains\CLion 2017.2.2\bin\cmake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_56052.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_56052.dir/objects.a @CMakeFiles\cmTC_56052.dir\objects1.rsp
+C:\MinGW\bin\gcc.exe      -Wl,--whole-archive CMakeFiles\cmTC_56052.dir/objects.a -Wl,--no-whole-archive  -o cmTC_56052.exe -Wl,--out-implib,libcmTC_56052.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_56052.dir\linklibs.rsp
 mingw32-make.exe[1]: Leaving directory 'C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
 Detecting C compiler ABI info compiled with the following output:
 Change Dir: C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_4a299/fast"
-C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_4a299.dir\build.make CMakeFiles/cmTC_4a299.dir/build
+Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_1c0be/fast"
+C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_1c0be.dir\build.make CMakeFiles/cmTC_1c0be.dir/build
 mingw32-make.exe[1]: Entering directory 'C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_4a299.dir/CMakeCCompilerABI.c.obj
-C:\MinGW\bin\gcc.exe    -o CMakeFiles\cmTC_4a299.dir\CMakeCCompilerABI.c.obj   -c "C:\Program Files\JetBrains\CLion 2017.2.2\bin\cmake\share\cmake-3.8\Modules\CMakeCCompilerABI.c"
-Linking C executable cmTC_4a299.exe
-"C:\Program Files\JetBrains\CLion 2017.2.2\bin\cmake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_4a299.dir\link.txt --verbose=1
-"C:\Program Files\JetBrains\CLion 2017.2.2\bin\cmake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_4a299.dir/objects.a
-C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_4a299.dir/objects.a @CMakeFiles\cmTC_4a299.dir\objects1.rsp
-C:\MinGW\bin\gcc.exe     -v -Wl,--whole-archive CMakeFiles\cmTC_4a299.dir/objects.a -Wl,--no-whole-archive  -o cmTC_4a299.exe -Wl,--out-implib,libcmTC_4a299.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
+Building C object CMakeFiles/cmTC_1c0be.dir/CMakeCCompilerABI.c.obj
+C:\MinGW\bin\gcc.exe    -o CMakeFiles\cmTC_1c0be.dir\CMakeCCompilerABI.c.obj   -c "C:\Program Files\JetBrains\CLion 2017.2.2\bin\cmake\share\cmake-3.8\Modules\CMakeCCompilerABI.c"
+Linking C executable cmTC_1c0be.exe
+"C:\Program Files\JetBrains\CLion 2017.2.2\bin\cmake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_1c0be.dir\link.txt --verbose=1
+"C:\Program Files\JetBrains\CLion 2017.2.2\bin\cmake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_1c0be.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_1c0be.dir/objects.a @CMakeFiles\cmTC_1c0be.dir\objects1.rsp
+C:\MinGW\bin\gcc.exe     -v -Wl,--whole-archive CMakeFiles\cmTC_1c0be.dir/objects.a -Wl,--no-whole-archive  -o cmTC_1c0be.exe -Wl,--out-implib,libcmTC_1c0be.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
 Using built-in specs.
 COLLECT_GCC=C:\MinGW\bin\gcc.exe
 COLLECT_LTO_WRAPPER=c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/lto-wrapper.exe
@@ -63,9 +63,9 @@ Thread model: win32
 gcc version 6.3.0 (MinGW.org GCC-6.3.0-1) 
 COMPILER_PATH=c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/;c:/mingw/bin/../libexec/gcc/;c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/
 LIBRARY_PATH=c:/mingw/bin/../lib/gcc/mingw32/6.3.0/;c:/mingw/bin/../lib/gcc/;c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/lib/;c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_4a299.exe' '-mtune=generic' '-march=i586'
- c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/collect2.exe -plugin c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/liblto_plugin-0.dll -plugin-opt=c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\Users\whyar\AppData\Local\Temp\cczmhcFi.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -Bdynamic -o cmTC_4a299.exe c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../crt2.o c:/mingw/bin/../lib/gcc/mingw32/6.3.0/crtbegin.o -Lc:/mingw/bin/../lib/gcc/mingw32/6.3.0 -Lc:/mingw/bin/../lib/gcc -Lc:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/lib -Lc:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../.. --whole-archive CMakeFiles\cmTC_4a299.dir/objects.a --no-whole-archive --out-implib libcmTC_4a299.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt c:/mingw/bin/../lib/gcc/mingw32/6.3.0/crtend.o
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_4a299.exe' '-mtune=generic' '-march=i586'
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_1c0be.exe' '-mtune=generic' '-march=i586'
+ c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/collect2.exe -plugin c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/liblto_plugin-0.dll -plugin-opt=c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\Users\whyar\AppData\Local\Temp\ccG1TanA.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -Bdynamic -o cmTC_1c0be.exe c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../crt2.o c:/mingw/bin/../lib/gcc/mingw32/6.3.0/crtbegin.o -Lc:/mingw/bin/../lib/gcc/mingw32/6.3.0 -Lc:/mingw/bin/../lib/gcc -Lc:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/lib -Lc:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../.. --whole-archive CMakeFiles\cmTC_1c0be.dir/objects.a --no-whole-archive --out-implib libcmTC_1c0be.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt c:/mingw/bin/../lib/gcc/mingw32/6.3.0/crtend.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_1c0be.exe' '-mtune=generic' '-march=i586'
 mingw32-make.exe[1]: Leaving directory 'C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
@@ -73,16 +73,16 @@ Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld\.exe|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_4a299/fast"]
-  ignore line: [C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_4a299.dir\build.make CMakeFiles/cmTC_4a299.dir/build]
+  ignore line: [Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_1c0be/fast"]
+  ignore line: [C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_1c0be.dir\build.make CMakeFiles/cmTC_1c0be.dir/build]
   ignore line: [mingw32-make.exe[1]: Entering directory 'C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/CMakeFiles/CMakeTmp']
-  ignore line: [Building C object CMakeFiles/cmTC_4a299.dir/CMakeCCompilerABI.c.obj]
-  ignore line: [C:\MinGW\bin\gcc.exe    -o CMakeFiles\cmTC_4a299.dir\CMakeCCompilerABI.c.obj   -c "C:\Program Files\JetBrains\CLion 2017.2.2\bin\cmake\share\cmake-3.8\Modules\CMakeCCompilerABI.c"]
-  ignore line: [Linking C executable cmTC_4a299.exe]
-  ignore line: ["C:\Program Files\JetBrains\CLion 2017.2.2\bin\cmake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_4a299.dir\link.txt --verbose=1]
-  ignore line: ["C:\Program Files\JetBrains\CLion 2017.2.2\bin\cmake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_4a299.dir/objects.a]
-  ignore line: [C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_4a299.dir/objects.a @CMakeFiles\cmTC_4a299.dir\objects1.rsp]
-  ignore line: [C:\MinGW\bin\gcc.exe     -v -Wl,--whole-archive CMakeFiles\cmTC_4a299.dir/objects.a -Wl,--no-whole-archive  -o cmTC_4a299.exe -Wl,--out-implib,libcmTC_4a299.dll.a -Wl,--major-image-version,0,--minor-image-version,0 ]
+  ignore line: [Building C object CMakeFiles/cmTC_1c0be.dir/CMakeCCompilerABI.c.obj]
+  ignore line: [C:\MinGW\bin\gcc.exe    -o CMakeFiles\cmTC_1c0be.dir\CMakeCCompilerABI.c.obj   -c "C:\Program Files\JetBrains\CLion 2017.2.2\bin\cmake\share\cmake-3.8\Modules\CMakeCCompilerABI.c"]
+  ignore line: [Linking C executable cmTC_1c0be.exe]
+  ignore line: ["C:\Program Files\JetBrains\CLion 2017.2.2\bin\cmake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_1c0be.dir\link.txt --verbose=1]
+  ignore line: ["C:\Program Files\JetBrains\CLion 2017.2.2\bin\cmake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_1c0be.dir/objects.a]
+  ignore line: [C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_1c0be.dir/objects.a @CMakeFiles\cmTC_1c0be.dir\objects1.rsp]
+  ignore line: [C:\MinGW\bin\gcc.exe     -v -Wl,--whole-archive CMakeFiles\cmTC_1c0be.dir/objects.a -Wl,--no-whole-archive  -o cmTC_1c0be.exe -Wl,--out-implib,libcmTC_1c0be.dll.a -Wl,--major-image-version,0,--minor-image-version,0 ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=C:\MinGW\bin\gcc.exe]
   ignore line: [COLLECT_LTO_WRAPPER=c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/lto-wrapper.exe]
@@ -97,13 +97,13 @@ Parsed C implicit link information from above output:
   ignore line: [c:/mingw/bin/../lib/gcc/]
   ignore line: [c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/lib/]
   ignore line: [c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_4a299.exe' '-mtune=generic' '-march=i586']
-  link line: [ c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/collect2.exe -plugin c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/liblto_plugin-0.dll -plugin-opt=c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\Users\whyar\AppData\Local\Temp\cczmhcFi.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -Bdynamic -o cmTC_4a299.exe c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../crt2.o c:/mingw/bin/../lib/gcc/mingw32/6.3.0/crtbegin.o -Lc:/mingw/bin/../lib/gcc/mingw32/6.3.0 -Lc:/mingw/bin/../lib/gcc -Lc:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/lib -Lc:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../.. --whole-archive CMakeFiles\cmTC_4a299.dir/objects.a --no-whole-archive --out-implib libcmTC_4a299.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt c:/mingw/bin/../lib/gcc/mingw32/6.3.0/crtend.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_1c0be.exe' '-mtune=generic' '-march=i586']
+  link line: [ c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/collect2.exe -plugin c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/liblto_plugin-0.dll -plugin-opt=c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\Users\whyar\AppData\Local\Temp\ccG1TanA.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -Bdynamic -o cmTC_1c0be.exe c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../crt2.o c:/mingw/bin/../lib/gcc/mingw32/6.3.0/crtbegin.o -Lc:/mingw/bin/../lib/gcc/mingw32/6.3.0 -Lc:/mingw/bin/../lib/gcc -Lc:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/lib -Lc:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../.. --whole-archive CMakeFiles\cmTC_1c0be.dir/objects.a --no-whole-archive --out-implib libcmTC_1c0be.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt c:/mingw/bin/../lib/gcc/mingw32/6.3.0/crtend.o]
     arg [c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/collect2.exe] ==> ignore
     arg [-plugin] ==> ignore
     arg [c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/liblto_plugin-0.dll] ==> ignore
     arg [-plugin-opt=c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/lto-wrapper.exe] ==> ignore
-    arg [-plugin-opt=-fresolution=C:\Users\whyar\AppData\Local\Temp\cczmhcFi.res] ==> ignore
+    arg [-plugin-opt=-fresolution=C:\Users\whyar\AppData\Local\Temp\ccG1TanA.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lmingw32] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_eh] ==> ignore
@@ -122,7 +122,7 @@ Parsed C implicit link information from above output:
     arg [-plugin-opt=-pass-through=-lmsvcrt] ==> ignore
     arg [-Bdynamic] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_4a299.exe] ==> ignore
+    arg [cmTC_1c0be.exe] ==> ignore
     arg [c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../crt2.o] ==> ignore
     arg [c:/mingw/bin/../lib/gcc/mingw32/6.3.0/crtbegin.o] ==> ignore
     arg [-Lc:/mingw/bin/../lib/gcc/mingw32/6.3.0] ==> dir [c:/mingw/bin/../lib/gcc/mingw32/6.3.0]
@@ -130,10 +130,10 @@ Parsed C implicit link information from above output:
     arg [-Lc:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/lib] ==> dir [c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/lib]
     arg [-Lc:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../..] ==> dir [c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../..]
     arg [--whole-archive] ==> ignore
-    arg [CMakeFiles\cmTC_4a299.dir/objects.a] ==> ignore
+    arg [CMakeFiles\cmTC_1c0be.dir/objects.a] ==> ignore
     arg [--no-whole-archive] ==> ignore
     arg [--out-implib] ==> ignore
-    arg [libcmTC_4a299.dll.a] ==> ignore
+    arg [libcmTC_1c0be.dll.a] ==> ignore
     arg [--major-image-version] ==> ignore
     arg [0] ==> ignore
     arg [--minor-image-version] ==> ignore
@@ -173,16 +173,16 @@ Parsed C implicit link information from above output:
 Detecting C [-std=c11] compiler features compiled with the following output:
 Change Dir: C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_a7056/fast"
-C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_a7056.dir\build.make CMakeFiles/cmTC_a7056.dir/build
+Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_6c37f/fast"
+C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_6c37f.dir\build.make CMakeFiles/cmTC_6c37f.dir/build
 mingw32-make.exe[1]: Entering directory 'C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_a7056.dir/feature_tests.c.obj
-C:\MinGW\bin\gcc.exe   -std=c11 -o CMakeFiles\cmTC_a7056.dir\feature_tests.c.obj   -c C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\cmake-build-debug\CMakeFiles\feature_tests.c
-Linking C executable cmTC_a7056.exe
-"C:\Program Files\JetBrains\CLion 2017.2.2\bin\cmake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_a7056.dir\link.txt --verbose=1
-"C:\Program Files\JetBrains\CLion 2017.2.2\bin\cmake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_a7056.dir/objects.a
-C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_a7056.dir/objects.a @CMakeFiles\cmTC_a7056.dir\objects1.rsp
-C:\MinGW\bin\gcc.exe      -Wl,--whole-archive CMakeFiles\cmTC_a7056.dir/objects.a -Wl,--no-whole-archive  -o cmTC_a7056.exe -Wl,--out-implib,libcmTC_a7056.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_a7056.dir\linklibs.rsp
+Building C object CMakeFiles/cmTC_6c37f.dir/feature_tests.c.obj
+C:\MinGW\bin\gcc.exe   -std=c11 -o CMakeFiles\cmTC_6c37f.dir\feature_tests.c.obj   -c C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\cmake-build-debug\CMakeFiles\feature_tests.c
+Linking C executable cmTC_6c37f.exe
+"C:\Program Files\JetBrains\CLion 2017.2.2\bin\cmake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_6c37f.dir\link.txt --verbose=1
+"C:\Program Files\JetBrains\CLion 2017.2.2\bin\cmake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_6c37f.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_6c37f.dir/objects.a @CMakeFiles\cmTC_6c37f.dir\objects1.rsp
+C:\MinGW\bin\gcc.exe      -Wl,--whole-archive CMakeFiles\cmTC_6c37f.dir/objects.a -Wl,--no-whole-archive  -o cmTC_6c37f.exe -Wl,--out-implib,libcmTC_6c37f.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_6c37f.dir\linklibs.rsp
 mingw32-make.exe[1]: Leaving directory 'C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
@@ -195,16 +195,16 @@ mingw32-make.exe[1]: Leaving directory 'C:/Users/whyar/Documents/GitHub/CS3520-2
 Detecting C [-std=c99] compiler features compiled with the following output:
 Change Dir: C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_9e2aa/fast"
-C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_9e2aa.dir\build.make CMakeFiles/cmTC_9e2aa.dir/build
+Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_7d388/fast"
+C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_7d388.dir\build.make CMakeFiles/cmTC_7d388.dir/build
 mingw32-make.exe[1]: Entering directory 'C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_9e2aa.dir/feature_tests.c.obj
-C:\MinGW\bin\gcc.exe   -std=c99 -o CMakeFiles\cmTC_9e2aa.dir\feature_tests.c.obj   -c C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\cmake-build-debug\CMakeFiles\feature_tests.c
-Linking C executable cmTC_9e2aa.exe
-"C:\Program Files\JetBrains\CLion 2017.2.2\bin\cmake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_9e2aa.dir\link.txt --verbose=1
-"C:\Program Files\JetBrains\CLion 2017.2.2\bin\cmake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_9e2aa.dir/objects.a
-C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_9e2aa.dir/objects.a @CMakeFiles\cmTC_9e2aa.dir\objects1.rsp
-C:\MinGW\bin\gcc.exe      -Wl,--whole-archive CMakeFiles\cmTC_9e2aa.dir/objects.a -Wl,--no-whole-archive  -o cmTC_9e2aa.exe -Wl,--out-implib,libcmTC_9e2aa.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_9e2aa.dir\linklibs.rsp
+Building C object CMakeFiles/cmTC_7d388.dir/feature_tests.c.obj
+C:\MinGW\bin\gcc.exe   -std=c99 -o CMakeFiles\cmTC_7d388.dir\feature_tests.c.obj   -c C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\cmake-build-debug\CMakeFiles\feature_tests.c
+Linking C executable cmTC_7d388.exe
+"C:\Program Files\JetBrains\CLion 2017.2.2\bin\cmake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_7d388.dir\link.txt --verbose=1
+"C:\Program Files\JetBrains\CLion 2017.2.2\bin\cmake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_7d388.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_7d388.dir/objects.a @CMakeFiles\cmTC_7d388.dir\objects1.rsp
+C:\MinGW\bin\gcc.exe      -Wl,--whole-archive CMakeFiles\cmTC_7d388.dir/objects.a -Wl,--no-whole-archive  -o cmTC_7d388.exe -Wl,--out-implib,libcmTC_7d388.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_7d388.dir\linklibs.rsp
 mingw32-make.exe[1]: Leaving directory 'C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
@@ -217,16 +217,16 @@ mingw32-make.exe[1]: Leaving directory 'C:/Users/whyar/Documents/GitHub/CS3520-2
 Detecting C [-std=c90] compiler features compiled with the following output:
 Change Dir: C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_722ac/fast"
-C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_722ac.dir\build.make CMakeFiles/cmTC_722ac.dir/build
+Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_30ceb/fast"
+C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_30ceb.dir\build.make CMakeFiles/cmTC_30ceb.dir/build
 mingw32-make.exe[1]: Entering directory 'C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_722ac.dir/feature_tests.c.obj
-C:\MinGW\bin\gcc.exe   -std=c90 -o CMakeFiles\cmTC_722ac.dir\feature_tests.c.obj   -c C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\cmake-build-debug\CMakeFiles\feature_tests.c
-Linking C executable cmTC_722ac.exe
-"C:\Program Files\JetBrains\CLion 2017.2.2\bin\cmake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_722ac.dir\link.txt --verbose=1
-"C:\Program Files\JetBrains\CLion 2017.2.2\bin\cmake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_722ac.dir/objects.a
-C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_722ac.dir/objects.a @CMakeFiles\cmTC_722ac.dir\objects1.rsp
-C:\MinGW\bin\gcc.exe      -Wl,--whole-archive CMakeFiles\cmTC_722ac.dir/objects.a -Wl,--no-whole-archive  -o cmTC_722ac.exe -Wl,--out-implib,libcmTC_722ac.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_722ac.dir\linklibs.rsp
+Building C object CMakeFiles/cmTC_30ceb.dir/feature_tests.c.obj
+C:\MinGW\bin\gcc.exe   -std=c90 -o CMakeFiles\cmTC_30ceb.dir\feature_tests.c.obj   -c C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\cmake-build-debug\CMakeFiles\feature_tests.c
+Linking C executable cmTC_30ceb.exe
+"C:\Program Files\JetBrains\CLion 2017.2.2\bin\cmake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_30ceb.dir\link.txt --verbose=1
+"C:\Program Files\JetBrains\CLion 2017.2.2\bin\cmake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_30ceb.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_30ceb.dir/objects.a @CMakeFiles\cmTC_30ceb.dir\objects1.rsp
+C:\MinGW\bin\gcc.exe      -Wl,--whole-archive CMakeFiles\cmTC_30ceb.dir/objects.a -Wl,--no-whole-archive  -o cmTC_30ceb.exe -Wl,--out-implib,libcmTC_30ceb.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_30ceb.dir\linklibs.rsp
 mingw32-make.exe[1]: Leaving directory 'C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
@@ -237,32 +237,32 @@ mingw32-make.exe[1]: Leaving directory 'C:/Users/whyar/Documents/GitHub/CS3520-2
 Determining if the CXX compiler works passed with the following output:
 Change Dir: C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_92ff7/fast"
-C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_92ff7.dir\build.make CMakeFiles/cmTC_92ff7.dir/build
+Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_87e21/fast"
+C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_87e21.dir\build.make CMakeFiles/cmTC_87e21.dir/build
 mingw32-make.exe[1]: Entering directory 'C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_92ff7.dir/testCXXCompiler.cxx.obj
-C:\MinGW\bin\g++.exe     -o CMakeFiles\cmTC_92ff7.dir\testCXXCompiler.cxx.obj -c C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\cmake-build-debug\CMakeFiles\CMakeTmp\testCXXCompiler.cxx
-Linking CXX executable cmTC_92ff7.exe
-"C:\Program Files\JetBrains\CLion 2017.2.2\bin\cmake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_92ff7.dir\link.txt --verbose=1
-"C:\Program Files\JetBrains\CLion 2017.2.2\bin\cmake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_92ff7.dir/objects.a
-C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_92ff7.dir/objects.a @CMakeFiles\cmTC_92ff7.dir\objects1.rsp
-C:\MinGW\bin\g++.exe      -Wl,--whole-archive CMakeFiles\cmTC_92ff7.dir/objects.a -Wl,--no-whole-archive  -o cmTC_92ff7.exe -Wl,--out-implib,libcmTC_92ff7.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_92ff7.dir\linklibs.rsp
+Building CXX object CMakeFiles/cmTC_87e21.dir/testCXXCompiler.cxx.obj
+C:\MinGW\bin\g++.exe     -o CMakeFiles\cmTC_87e21.dir\testCXXCompiler.cxx.obj -c C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\cmake-build-debug\CMakeFiles\CMakeTmp\testCXXCompiler.cxx
+Linking CXX executable cmTC_87e21.exe
+"C:\Program Files\JetBrains\CLion 2017.2.2\bin\cmake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_87e21.dir\link.txt --verbose=1
+"C:\Program Files\JetBrains\CLion 2017.2.2\bin\cmake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_87e21.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_87e21.dir/objects.a @CMakeFiles\cmTC_87e21.dir\objects1.rsp
+C:\MinGW\bin\g++.exe      -Wl,--whole-archive CMakeFiles\cmTC_87e21.dir/objects.a -Wl,--no-whole-archive  -o cmTC_87e21.exe -Wl,--out-implib,libcmTC_87e21.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_87e21.dir\linklibs.rsp
 mingw32-make.exe[1]: Leaving directory 'C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
 Detecting CXX compiler ABI info compiled with the following output:
 Change Dir: C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_06eef/fast"
-C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_06eef.dir\build.make CMakeFiles/cmTC_06eef.dir/build
+Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_7852b/fast"
+C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_7852b.dir\build.make CMakeFiles/cmTC_7852b.dir/build
 mingw32-make.exe[1]: Entering directory 'C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_06eef.dir/CMakeCXXCompilerABI.cpp.obj
-C:\MinGW\bin\g++.exe     -o CMakeFiles\cmTC_06eef.dir\CMakeCXXCompilerABI.cpp.obj -c "C:\Program Files\JetBrains\CLion 2017.2.2\bin\cmake\share\cmake-3.8\Modules\CMakeCXXCompilerABI.cpp"
-Linking CXX executable cmTC_06eef.exe
-"C:\Program Files\JetBrains\CLion 2017.2.2\bin\cmake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_06eef.dir\link.txt --verbose=1
-"C:\Program Files\JetBrains\CLion 2017.2.2\bin\cmake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_06eef.dir/objects.a
-C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_06eef.dir/objects.a @CMakeFiles\cmTC_06eef.dir\objects1.rsp
-C:\MinGW\bin\g++.exe     -v -Wl,--whole-archive CMakeFiles\cmTC_06eef.dir/objects.a -Wl,--no-whole-archive  -o cmTC_06eef.exe -Wl,--out-implib,libcmTC_06eef.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
+Building CXX object CMakeFiles/cmTC_7852b.dir/CMakeCXXCompilerABI.cpp.obj
+C:\MinGW\bin\g++.exe     -o CMakeFiles\cmTC_7852b.dir\CMakeCXXCompilerABI.cpp.obj -c "C:\Program Files\JetBrains\CLion 2017.2.2\bin\cmake\share\cmake-3.8\Modules\CMakeCXXCompilerABI.cpp"
+Linking CXX executable cmTC_7852b.exe
+"C:\Program Files\JetBrains\CLion 2017.2.2\bin\cmake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_7852b.dir\link.txt --verbose=1
+"C:\Program Files\JetBrains\CLion 2017.2.2\bin\cmake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_7852b.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_7852b.dir/objects.a @CMakeFiles\cmTC_7852b.dir\objects1.rsp
+C:\MinGW\bin\g++.exe     -v -Wl,--whole-archive CMakeFiles\cmTC_7852b.dir/objects.a -Wl,--no-whole-archive  -o cmTC_7852b.exe -Wl,--out-implib,libcmTC_7852b.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
 Using built-in specs.
 COLLECT_GCC=C:\MinGW\bin\g++.exe
 COLLECT_LTO_WRAPPER=c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/lto-wrapper.exe
@@ -272,9 +272,9 @@ Thread model: win32
 gcc version 6.3.0 (MinGW.org GCC-6.3.0-1) 
 COMPILER_PATH=c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/;c:/mingw/bin/../libexec/gcc/;c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/
 LIBRARY_PATH=c:/mingw/bin/../lib/gcc/mingw32/6.3.0/;c:/mingw/bin/../lib/gcc/;c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/lib/;c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_06eef.exe' '-shared-libgcc' '-mtune=generic' '-march=i586'
- c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/collect2.exe -plugin c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/liblto_plugin-0.dll -plugin-opt=c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\Users\whyar\AppData\Local\Temp\cc7l99Vt.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -Bdynamic -u ___register_frame_info -u ___deregister_frame_info -o cmTC_06eef.exe c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../crt2.o c:/mingw/bin/../lib/gcc/mingw32/6.3.0/crtbegin.o -Lc:/mingw/bin/../lib/gcc/mingw32/6.3.0 -Lc:/mingw/bin/../lib/gcc -Lc:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/lib -Lc:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../.. --whole-archive CMakeFiles\cmTC_06eef.dir/objects.a --no-whole-archive --out-implib libcmTC_06eef.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt c:/mingw/bin/../lib/gcc/mingw32/6.3.0/crtend.o
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_06eef.exe' '-shared-libgcc' '-mtune=generic' '-march=i586'
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_7852b.exe' '-shared-libgcc' '-mtune=generic' '-march=i586'
+ c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/collect2.exe -plugin c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/liblto_plugin-0.dll -plugin-opt=c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\Users\whyar\AppData\Local\Temp\cceZLUhd.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -Bdynamic -u ___register_frame_info -u ___deregister_frame_info -o cmTC_7852b.exe c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../crt2.o c:/mingw/bin/../lib/gcc/mingw32/6.3.0/crtbegin.o -Lc:/mingw/bin/../lib/gcc/mingw32/6.3.0 -Lc:/mingw/bin/../lib/gcc -Lc:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/lib -Lc:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../.. --whole-archive CMakeFiles\cmTC_7852b.dir/objects.a --no-whole-archive --out-implib libcmTC_7852b.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt c:/mingw/bin/../lib/gcc/mingw32/6.3.0/crtend.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_7852b.exe' '-shared-libgcc' '-mtune=generic' '-march=i586'
 mingw32-make.exe[1]: Leaving directory 'C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
@@ -282,16 +282,16 @@ Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld\.exe|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_06eef/fast"]
-  ignore line: [C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_06eef.dir\build.make CMakeFiles/cmTC_06eef.dir/build]
+  ignore line: [Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_7852b/fast"]
+  ignore line: [C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_7852b.dir\build.make CMakeFiles/cmTC_7852b.dir/build]
   ignore line: [mingw32-make.exe[1]: Entering directory 'C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/CMakeFiles/CMakeTmp']
-  ignore line: [Building CXX object CMakeFiles/cmTC_06eef.dir/CMakeCXXCompilerABI.cpp.obj]
-  ignore line: [C:\MinGW\bin\g++.exe     -o CMakeFiles\cmTC_06eef.dir\CMakeCXXCompilerABI.cpp.obj -c "C:\Program Files\JetBrains\CLion 2017.2.2\bin\cmake\share\cmake-3.8\Modules\CMakeCXXCompilerABI.cpp"]
-  ignore line: [Linking CXX executable cmTC_06eef.exe]
-  ignore line: ["C:\Program Files\JetBrains\CLion 2017.2.2\bin\cmake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_06eef.dir\link.txt --verbose=1]
-  ignore line: ["C:\Program Files\JetBrains\CLion 2017.2.2\bin\cmake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_06eef.dir/objects.a]
-  ignore line: [C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_06eef.dir/objects.a @CMakeFiles\cmTC_06eef.dir\objects1.rsp]
-  ignore line: [C:\MinGW\bin\g++.exe     -v -Wl,--whole-archive CMakeFiles\cmTC_06eef.dir/objects.a -Wl,--no-whole-archive  -o cmTC_06eef.exe -Wl,--out-implib,libcmTC_06eef.dll.a -Wl,--major-image-version,0,--minor-image-version,0 ]
+  ignore line: [Building CXX object CMakeFiles/cmTC_7852b.dir/CMakeCXXCompilerABI.cpp.obj]
+  ignore line: [C:\MinGW\bin\g++.exe     -o CMakeFiles\cmTC_7852b.dir\CMakeCXXCompilerABI.cpp.obj -c "C:\Program Files\JetBrains\CLion 2017.2.2\bin\cmake\share\cmake-3.8\Modules\CMakeCXXCompilerABI.cpp"]
+  ignore line: [Linking CXX executable cmTC_7852b.exe]
+  ignore line: ["C:\Program Files\JetBrains\CLion 2017.2.2\bin\cmake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_7852b.dir\link.txt --verbose=1]
+  ignore line: ["C:\Program Files\JetBrains\CLion 2017.2.2\bin\cmake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_7852b.dir/objects.a]
+  ignore line: [C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_7852b.dir/objects.a @CMakeFiles\cmTC_7852b.dir\objects1.rsp]
+  ignore line: [C:\MinGW\bin\g++.exe     -v -Wl,--whole-archive CMakeFiles\cmTC_7852b.dir/objects.a -Wl,--no-whole-archive  -o cmTC_7852b.exe -Wl,--out-implib,libcmTC_7852b.dll.a -Wl,--major-image-version,0,--minor-image-version,0 ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=C:\MinGW\bin\g++.exe]
   ignore line: [COLLECT_LTO_WRAPPER=c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/lto-wrapper.exe]
@@ -306,13 +306,13 @@ Parsed CXX implicit link information from above output:
   ignore line: [c:/mingw/bin/../lib/gcc/]
   ignore line: [c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/lib/]
   ignore line: [c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_06eef.exe' '-shared-libgcc' '-mtune=generic' '-march=i586']
-  link line: [ c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/collect2.exe -plugin c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/liblto_plugin-0.dll -plugin-opt=c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\Users\whyar\AppData\Local\Temp\cc7l99Vt.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -Bdynamic -u ___register_frame_info -u ___deregister_frame_info -o cmTC_06eef.exe c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../crt2.o c:/mingw/bin/../lib/gcc/mingw32/6.3.0/crtbegin.o -Lc:/mingw/bin/../lib/gcc/mingw32/6.3.0 -Lc:/mingw/bin/../lib/gcc -Lc:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/lib -Lc:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../.. --whole-archive CMakeFiles\cmTC_06eef.dir/objects.a --no-whole-archive --out-implib libcmTC_06eef.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt c:/mingw/bin/../lib/gcc/mingw32/6.3.0/crtend.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_7852b.exe' '-shared-libgcc' '-mtune=generic' '-march=i586']
+  link line: [ c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/collect2.exe -plugin c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/liblto_plugin-0.dll -plugin-opt=c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\Users\whyar\AppData\Local\Temp\cceZLUhd.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -Bdynamic -u ___register_frame_info -u ___deregister_frame_info -o cmTC_7852b.exe c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../crt2.o c:/mingw/bin/../lib/gcc/mingw32/6.3.0/crtbegin.o -Lc:/mingw/bin/../lib/gcc/mingw32/6.3.0 -Lc:/mingw/bin/../lib/gcc -Lc:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/lib -Lc:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../.. --whole-archive CMakeFiles\cmTC_7852b.dir/objects.a --no-whole-archive --out-implib libcmTC_7852b.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt c:/mingw/bin/../lib/gcc/mingw32/6.3.0/crtend.o]
     arg [c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/collect2.exe] ==> ignore
     arg [-plugin] ==> ignore
     arg [c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/liblto_plugin-0.dll] ==> ignore
     arg [-plugin-opt=c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/lto-wrapper.exe] ==> ignore
-    arg [-plugin-opt=-fresolution=C:\Users\whyar\AppData\Local\Temp\cc7l99Vt.res] ==> ignore
+    arg [-plugin-opt=-fresolution=C:\Users\whyar\AppData\Local\Temp\cceZLUhd.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lmingw32] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
@@ -335,7 +335,7 @@ Parsed CXX implicit link information from above output:
     arg [-u] ==> ignore
     arg [___deregister_frame_info] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_06eef.exe] ==> ignore
+    arg [cmTC_7852b.exe] ==> ignore
     arg [c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../crt2.o] ==> ignore
     arg [c:/mingw/bin/../lib/gcc/mingw32/6.3.0/crtbegin.o] ==> ignore
     arg [-Lc:/mingw/bin/../lib/gcc/mingw32/6.3.0] ==> dir [c:/mingw/bin/../lib/gcc/mingw32/6.3.0]
@@ -343,10 +343,10 @@ Parsed CXX implicit link information from above output:
     arg [-Lc:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/lib] ==> dir [c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/lib]
     arg [-Lc:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../..] ==> dir [c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../..]
     arg [--whole-archive] ==> ignore
-    arg [CMakeFiles\cmTC_06eef.dir/objects.a] ==> ignore
+    arg [CMakeFiles\cmTC_7852b.dir/objects.a] ==> ignore
     arg [--no-whole-archive] ==> ignore
     arg [--out-implib] ==> ignore
-    arg [libcmTC_06eef.dll.a] ==> ignore
+    arg [libcmTC_7852b.dll.a] ==> ignore
     arg [--major-image-version] ==> ignore
     arg [0] ==> ignore
     arg [--minor-image-version] ==> ignore
@@ -387,16 +387,16 @@ Parsed CXX implicit link information from above output:
 Detecting CXX [-std=c++1z] compiler features compiled with the following output:
 Change Dir: C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_4edce/fast"
-C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_4edce.dir\build.make CMakeFiles/cmTC_4edce.dir/build
+Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_a742d/fast"
+C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_a742d.dir\build.make CMakeFiles/cmTC_a742d.dir/build
 mingw32-make.exe[1]: Entering directory 'C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_4edce.dir/feature_tests.cxx.obj
-C:\MinGW\bin\g++.exe    -std=c++1z -o CMakeFiles\cmTC_4edce.dir\feature_tests.cxx.obj -c C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\cmake-build-debug\CMakeFiles\feature_tests.cxx
-Linking CXX executable cmTC_4edce.exe
-"C:\Program Files\JetBrains\CLion 2017.2.2\bin\cmake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_4edce.dir\link.txt --verbose=1
-"C:\Program Files\JetBrains\CLion 2017.2.2\bin\cmake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_4edce.dir/objects.a
-C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_4edce.dir/objects.a @CMakeFiles\cmTC_4edce.dir\objects1.rsp
-C:\MinGW\bin\g++.exe      -Wl,--whole-archive CMakeFiles\cmTC_4edce.dir/objects.a -Wl,--no-whole-archive  -o cmTC_4edce.exe -Wl,--out-implib,libcmTC_4edce.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_4edce.dir\linklibs.rsp
+Building CXX object CMakeFiles/cmTC_a742d.dir/feature_tests.cxx.obj
+C:\MinGW\bin\g++.exe    -std=c++1z -o CMakeFiles\cmTC_a742d.dir\feature_tests.cxx.obj -c C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\cmake-build-debug\CMakeFiles\feature_tests.cxx
+Linking CXX executable cmTC_a742d.exe
+"C:\Program Files\JetBrains\CLion 2017.2.2\bin\cmake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_a742d.dir\link.txt --verbose=1
+"C:\Program Files\JetBrains\CLion 2017.2.2\bin\cmake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_a742d.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_a742d.dir/objects.a @CMakeFiles\cmTC_a742d.dir\objects1.rsp
+C:\MinGW\bin\g++.exe      -Wl,--whole-archive CMakeFiles\cmTC_a742d.dir/objects.a -Wl,--no-whole-archive  -o cmTC_a742d.exe -Wl,--out-implib,libcmTC_a742d.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_a742d.dir\linklibs.rsp
 mingw32-make.exe[1]: Leaving directory 'C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
@@ -462,16 +462,16 @@ mingw32-make.exe[1]: Leaving directory 'C:/Users/whyar/Documents/GitHub/CS3520-2
 Detecting CXX [-std=c++14] compiler features compiled with the following output:
 Change Dir: C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_b8a74/fast"
-C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_b8a74.dir\build.make CMakeFiles/cmTC_b8a74.dir/build
+Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_06d0a/fast"
+C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_06d0a.dir\build.make CMakeFiles/cmTC_06d0a.dir/build
 mingw32-make.exe[1]: Entering directory 'C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_b8a74.dir/feature_tests.cxx.obj
-C:\MinGW\bin\g++.exe    -std=c++14 -o CMakeFiles\cmTC_b8a74.dir\feature_tests.cxx.obj -c C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\cmake-build-debug\CMakeFiles\feature_tests.cxx
-Linking CXX executable cmTC_b8a74.exe
-"C:\Program Files\JetBrains\CLion 2017.2.2\bin\cmake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_b8a74.dir\link.txt --verbose=1
-"C:\Program Files\JetBrains\CLion 2017.2.2\bin\cmake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_b8a74.dir/objects.a
-C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_b8a74.dir/objects.a @CMakeFiles\cmTC_b8a74.dir\objects1.rsp
-C:\MinGW\bin\g++.exe      -Wl,--whole-archive CMakeFiles\cmTC_b8a74.dir/objects.a -Wl,--no-whole-archive  -o cmTC_b8a74.exe -Wl,--out-implib,libcmTC_b8a74.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_b8a74.dir\linklibs.rsp
+Building CXX object CMakeFiles/cmTC_06d0a.dir/feature_tests.cxx.obj
+C:\MinGW\bin\g++.exe    -std=c++14 -o CMakeFiles\cmTC_06d0a.dir\feature_tests.cxx.obj -c C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\cmake-build-debug\CMakeFiles\feature_tests.cxx
+Linking CXX executable cmTC_06d0a.exe
+"C:\Program Files\JetBrains\CLion 2017.2.2\bin\cmake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_06d0a.dir\link.txt --verbose=1
+"C:\Program Files\JetBrains\CLion 2017.2.2\bin\cmake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_06d0a.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_06d0a.dir/objects.a @CMakeFiles\cmTC_06d0a.dir\objects1.rsp
+C:\MinGW\bin\g++.exe      -Wl,--whole-archive CMakeFiles\cmTC_06d0a.dir/objects.a -Wl,--no-whole-archive  -o cmTC_06d0a.exe -Wl,--out-implib,libcmTC_06d0a.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_06d0a.dir\linklibs.rsp
 mingw32-make.exe[1]: Leaving directory 'C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
@@ -537,16 +537,16 @@ mingw32-make.exe[1]: Leaving directory 'C:/Users/whyar/Documents/GitHub/CS3520-2
 Detecting CXX [-std=c++11] compiler features compiled with the following output:
 Change Dir: C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_9f08e/fast"
-C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_9f08e.dir\build.make CMakeFiles/cmTC_9f08e.dir/build
+Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_c28dc/fast"
+C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_c28dc.dir\build.make CMakeFiles/cmTC_c28dc.dir/build
 mingw32-make.exe[1]: Entering directory 'C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_9f08e.dir/feature_tests.cxx.obj
-C:\MinGW\bin\g++.exe    -std=c++11 -o CMakeFiles\cmTC_9f08e.dir\feature_tests.cxx.obj -c C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\cmake-build-debug\CMakeFiles\feature_tests.cxx
-Linking CXX executable cmTC_9f08e.exe
-"C:\Program Files\JetBrains\CLion 2017.2.2\bin\cmake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_9f08e.dir\link.txt --verbose=1
-"C:\Program Files\JetBrains\CLion 2017.2.2\bin\cmake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_9f08e.dir/objects.a
-C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_9f08e.dir/objects.a @CMakeFiles\cmTC_9f08e.dir\objects1.rsp
-C:\MinGW\bin\g++.exe      -Wl,--whole-archive CMakeFiles\cmTC_9f08e.dir/objects.a -Wl,--no-whole-archive  -o cmTC_9f08e.exe -Wl,--out-implib,libcmTC_9f08e.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_9f08e.dir\linklibs.rsp
+Building CXX object CMakeFiles/cmTC_c28dc.dir/feature_tests.cxx.obj
+C:\MinGW\bin\g++.exe    -std=c++11 -o CMakeFiles\cmTC_c28dc.dir\feature_tests.cxx.obj -c C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\cmake-build-debug\CMakeFiles\feature_tests.cxx
+Linking CXX executable cmTC_c28dc.exe
+"C:\Program Files\JetBrains\CLion 2017.2.2\bin\cmake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_c28dc.dir\link.txt --verbose=1
+"C:\Program Files\JetBrains\CLion 2017.2.2\bin\cmake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_c28dc.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_c28dc.dir/objects.a @CMakeFiles\cmTC_c28dc.dir\objects1.rsp
+C:\MinGW\bin\g++.exe      -Wl,--whole-archive CMakeFiles\cmTC_c28dc.dir/objects.a -Wl,--no-whole-archive  -o cmTC_c28dc.exe -Wl,--out-implib,libcmTC_c28dc.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_c28dc.dir\linklibs.rsp
 mingw32-make.exe[1]: Leaving directory 'C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
@@ -612,16 +612,16 @@ mingw32-make.exe[1]: Leaving directory 'C:/Users/whyar/Documents/GitHub/CS3520-2
 Detecting CXX [-std=c++98] compiler features compiled with the following output:
 Change Dir: C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_de082/fast"
-C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_de082.dir\build.make CMakeFiles/cmTC_de082.dir/build
+Run Build Command:"C:/MinGW/bin/mingw32-make.exe" "cmTC_f59fd/fast"
+C:/MinGW/bin/mingw32-make.exe -f CMakeFiles\cmTC_f59fd.dir\build.make CMakeFiles/cmTC_f59fd.dir/build
 mingw32-make.exe[1]: Entering directory 'C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_de082.dir/feature_tests.cxx.obj
-C:\MinGW\bin\g++.exe    -std=c++98 -o CMakeFiles\cmTC_de082.dir\feature_tests.cxx.obj -c C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\cmake-build-debug\CMakeFiles\feature_tests.cxx
-Linking CXX executable cmTC_de082.exe
-"C:\Program Files\JetBrains\CLion 2017.2.2\bin\cmake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_de082.dir\link.txt --verbose=1
-"C:\Program Files\JetBrains\CLion 2017.2.2\bin\cmake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_de082.dir/objects.a
-C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_de082.dir/objects.a @CMakeFiles\cmTC_de082.dir\objects1.rsp
-C:\MinGW\bin\g++.exe      -Wl,--whole-archive CMakeFiles\cmTC_de082.dir/objects.a -Wl,--no-whole-archive  -o cmTC_de082.exe -Wl,--out-implib,libcmTC_de082.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_de082.dir\linklibs.rsp
+Building CXX object CMakeFiles/cmTC_f59fd.dir/feature_tests.cxx.obj
+C:\MinGW\bin\g++.exe    -std=c++98 -o CMakeFiles\cmTC_f59fd.dir\feature_tests.cxx.obj -c C:\Users\whyar\Documents\GitHub\CS3520-2017FA-PROJ\cmake-build-debug\CMakeFiles\feature_tests.cxx
+Linking CXX executable cmTC_f59fd.exe
+"C:\Program Files\JetBrains\CLion 2017.2.2\bin\cmake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_f59fd.dir\link.txt --verbose=1
+"C:\Program Files\JetBrains\CLion 2017.2.2\bin\cmake\bin\cmake.exe" -E remove -f CMakeFiles\cmTC_f59fd.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\cmTC_f59fd.dir/objects.a @CMakeFiles\cmTC_f59fd.dir\objects1.rsp
+C:\MinGW\bin\g++.exe      -Wl,--whole-archive CMakeFiles\cmTC_f59fd.dir/objects.a -Wl,--no-whole-archive  -o cmTC_f59fd.exe -Wl,--out-implib,libcmTC_f59fd.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_f59fd.dir\linklibs.rsp
 mingw32-make.exe[1]: Leaving directory 'C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 

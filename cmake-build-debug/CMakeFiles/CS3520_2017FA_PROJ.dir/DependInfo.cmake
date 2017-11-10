@@ -8,13 +8,16 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/BattleMode.cpp" "C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/CMakeFiles/CS3520_2017FA_PROJ.dir/model/BattleMode.cpp.obj"
   "C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Equipment/Equipment.cpp" "C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/CMakeFiles/CS3520_2017FA_PROJ.dir/model/Equipment/Equipment.cpp.obj"
   "C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Item.cpp" "C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/CMakeFiles/CS3520_2017FA_PROJ.dir/model/Item.cpp.obj"
-  "C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Map.cpp" "C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/CMakeFiles/CS3520_2017FA_PROJ.dir/model/Map.cpp.obj"
+  "C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/MapCell.cpp" "C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/CMakeFiles/CS3520_2017FA_PROJ.dir/model/MapCell.cpp.obj"
   "C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Point.cpp" "C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/CMakeFiles/CS3520_2017FA_PROJ.dir/model/Point.cpp.obj"
+  "C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Spells/Spell.cpp" "C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/CMakeFiles/CS3520_2017FA_PROJ.dir/model/Spells/Spell.cpp.obj"
   "C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Units/AEntity.cpp" "C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/AEntity.cpp.obj"
   "C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Units/EnemyUnit.cpp" "C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/EnemyUnit.cpp.obj"
   "C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Units/IUnit.cpp" "C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/IUnit.cpp.obj"
   "C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Units/NPCUnit.cpp" "C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/NPCUnit.cpp.obj"
   "C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Units/PlayerUnit.cpp" "C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/PlayerUnit.cpp.obj"
+  "C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/World.cpp" "C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/CMakeFiles/CS3520_2017FA_PROJ.dir/model/World.cpp.obj"
+  "C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/WorldMap.cpp" "C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/CMakeFiles/CS3520_2017FA_PROJ.dir/model/WorldMap.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

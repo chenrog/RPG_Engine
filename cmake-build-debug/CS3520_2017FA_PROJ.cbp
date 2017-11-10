@@ -91,6 +91,9 @@
 		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/BattleMode.h">
 			<Option target="CS3520_2017FA_PROJ"/>
 		</Unit>
+		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Direction.h">
+			<Option target="CS3520_2017FA_PROJ"/>
+		</Unit>
 		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Equipment/EquipType.h">
 			<Option target="CS3520_2017FA_PROJ"/>
 		</Unit>
@@ -100,13 +103,19 @@
 		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Equipment/Equipment.h">
 			<Option target="CS3520_2017FA_PROJ"/>
 		</Unit>
+		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/GameState.h">
+			<Option target="CS3520_2017FA_PROJ"/>
+		</Unit>
 		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Item.cpp">
 			<Option target="CS3520_2017FA_PROJ"/>
 		</Unit>
 		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Item.h">
 			<Option target="CS3520_2017FA_PROJ"/>
 		</Unit>
-		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Map.cpp">
+		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/MapCell.cpp">
+			<Option target="CS3520_2017FA_PROJ"/>
+		</Unit>
+		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/MapCell.h">
 			<Option target="CS3520_2017FA_PROJ"/>
 		</Unit>
 		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Point.cpp">
@@ -115,7 +124,19 @@
 		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Point.h">
 			<Option target="CS3520_2017FA_PROJ"/>
 		</Unit>
-		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Spell.h">
+		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Spells/DamageType.h">
+			<Option target="CS3520_2017FA_PROJ"/>
+		</Unit>
+		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Spells/Spell.cpp">
+			<Option target="CS3520_2017FA_PROJ"/>
+		</Unit>
+		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Spells/Spell.h">
+			<Option target="CS3520_2017FA_PROJ"/>
+		</Unit>
+		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Spells/SpellType.h">
+			<Option target="CS3520_2017FA_PROJ"/>
+		</Unit>
+		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Spells/TargetType.h">
 			<Option target="CS3520_2017FA_PROJ"/>
 		</Unit>
 		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Units/AEntity.cpp">
@@ -149,6 +170,18 @@
 			<Option target="CS3520_2017FA_PROJ"/>
 		</Unit>
 		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Units/PlayerUnit.h">
+			<Option target="CS3520_2017FA_PROJ"/>
+		</Unit>
+		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/World.cpp">
+			<Option target="CS3520_2017FA_PROJ"/>
+		</Unit>
+		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/World.h">
+			<Option target="CS3520_2017FA_PROJ"/>
+		</Unit>
+		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/WorldMap.cpp">
+			<Option target="CS3520_2017FA_PROJ"/>
+		</Unit>
+		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/WorldMap.h">
 			<Option target="CS3520_2017FA_PROJ"/>
 		</Unit>
 		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/CMakeLists.txt">

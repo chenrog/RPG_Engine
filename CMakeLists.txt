@@ -7,10 +7,6 @@ set(SOURCE_FILES
         model/Equipment/Equipment.cpp
         model/Equipment/Equipment.h
         model/Equipment/EquipType.h
-        model/BattleMode.cpp
-        model/BattleMode.h
-        model/Item.cpp
-        model/Item.h
         model/Units/IUnit.cpp
         model/Units/IUnit.h
         model/Units/NPCUnit.cpp
@@ -20,9 +16,23 @@ set(SOURCE_FILES
         model/Units/EnemyUnit.h
         model/Units/PlayerUnit.h
         model/Units/PlayerUnit.cpp
-        model/Map.cpp
-        model/Spell.h
+        model/BattleMode.cpp
+        model/BattleMode.h
+        model/Item.cpp
+        model/Item.h
+        model/Spells/Spell.h
+        model/Spells/DamageType.h
+        model/Spells/Spell.cpp
+        model/Spells/SpellType.h
+        model/Spells/TargetType.h
         main.cpp
+        model/Direction.h
+        model/GameState.h
+        model/MapCell.cpp
+        model/World.cpp
+        model/World.h
+        model/WorldMap.cpp
+        model/WorldMap.h
         model/Point.cpp
         model/Point.h model/Units/AEntity.cpp model/Units/AEntity.h)
 
