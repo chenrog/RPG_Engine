@@ -59,7 +59,7 @@ public:
 
 private:
     string       name;
-    Point        position = NULL;
+    Point        position;
     bool         visible = false;
     equip_type_t type;
     // vitality stats by this equipment
