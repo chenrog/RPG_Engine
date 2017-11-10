@@ -12,7 +12,6 @@ public:
     Equipment(string name, Point position, bool visible, equip_type_t type, signed int v, unsigned int vm, signed int i,
               unsigned int im, signed int sp, unsigned int spm, signed int st, unsigned int stm);
     // functions
-    friend Equipment & build();
     void level_up();
     void display();
     // getters to return the value of the given stat
@@ -43,7 +42,7 @@ class Equip_Builder {
 public:
     // builder constructor and build function
     Equip_Builder(string name, equip_type_t type);
-    Equipment & build();
+    Equipment & buildEquip();
     // setters for the fields
     Equip_Builder setName(const string &name);
     Equip_Builder setPosition(const Point &position);

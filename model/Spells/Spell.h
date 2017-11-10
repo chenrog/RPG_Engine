@@ -19,7 +19,6 @@ class Spell {
 public:
     Spell(string spell, int base_damage, int mod_damage, int base_hit_chance, int mod_hit_chance,
           spell_type_t spell_type, damage_type_t damage_type, target_type_t target_type);
-    friend Spell & build();
 
     int  getDamage(const IUnit & unit);
     int  getHitChance(const IUnit & unit);
@@ -45,7 +44,7 @@ class Spell_Builder {
 public:
     // builder constructor and build function
     Spell_Builder(string spell, spell_type_t spell_type, damage_type_t damage_type, target_type_t target_type);
-    Spell & build();
+    Spell & buildSpell();
     // setters for the fields
     Spell_Builder setDamage(int damage);
     Spell_Builder setDamageMod(int damage_mod);
