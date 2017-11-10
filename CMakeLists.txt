@@ -23,8 +23,6 @@ set(SOURCE_FILES
         model/Units/EnemyUnit.h
         model/Units/PlayerUnit.h
         model/Units/PlayerUnit.cpp
-        model/Map.cpp
-        model/Spell.h
         main.cpp
         model/Point.cpp
         model/Point.h model/Units/AEntity.cpp model/Units/AEntity.h)
