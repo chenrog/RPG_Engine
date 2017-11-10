@@ -122,8 +122,6 @@ CS3520_2017FA_PROJ/fast:
 	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/build
 .PHONY : CS3520_2017FA_PROJ/fast
 
-<<<<<<< HEAD
-=======
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -177,33 +175,6 @@ model/BattleMode.s: model/BattleMode.cpp.s
 model/BattleMode.cpp.s:
 	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/model/BattleMode.cpp.s
 .PHONY : model/BattleMode.cpp.s
-
-model/Consumable.obj: model/Consumable.cpp.obj
-
-.PHONY : model/Consumable.obj
-
-# target to build an object file
-model/Consumable.cpp.obj:
-	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/model/Consumable.cpp.obj
-.PHONY : model/Consumable.cpp.obj
-
-model/Consumable.i: model/Consumable.cpp.i
-
-.PHONY : model/Consumable.i
-
-# target to preprocess a source file
-model/Consumable.cpp.i:
-	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/model/Consumable.cpp.i
-.PHONY : model/Consumable.cpp.i
-
-model/Consumable.s: model/Consumable.cpp.s
-
-.PHONY : model/Consumable.s
-
-# target to generate assembly for a file
-model/Consumable.cpp.s:
-	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/model/Consumable.cpp.s
-.PHONY : model/Consumable.cpp.s
 
 model/Equipment/Equipment.obj: model/Equipment/Equipment.cpp.obj
 
@@ -259,32 +230,32 @@ model/Item.cpp.s:
 	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/model/Item.cpp.s
 .PHONY : model/Item.cpp.s
 
-model/Map.obj: model/Map.cpp.obj
+model/MapCell.obj: model/MapCell.cpp.obj
 
-.PHONY : model/Map.obj
+.PHONY : model/MapCell.obj
 
 # target to build an object file
-model/Map.cpp.obj:
-	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/model/Map.cpp.obj
-.PHONY : model/Map.cpp.obj
+model/MapCell.cpp.obj:
+	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/model/MapCell.cpp.obj
+.PHONY : model/MapCell.cpp.obj
 
-model/Map.i: model/Map.cpp.i
+model/MapCell.i: model/MapCell.cpp.i
 
-.PHONY : model/Map.i
+.PHONY : model/MapCell.i
 
 # target to preprocess a source file
-model/Map.cpp.i:
-	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/model/Map.cpp.i
-.PHONY : model/Map.cpp.i
+model/MapCell.cpp.i:
+	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/model/MapCell.cpp.i
+.PHONY : model/MapCell.cpp.i
 
-model/Map.s: model/Map.cpp.s
+model/MapCell.s: model/MapCell.cpp.s
 
-.PHONY : model/Map.s
+.PHONY : model/MapCell.s
 
 # target to generate assembly for a file
-model/Map.cpp.s:
-	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/model/Map.cpp.s
-.PHONY : model/Map.cpp.s
+model/MapCell.cpp.s:
+	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/model/MapCell.cpp.s
+.PHONY : model/MapCell.cpp.s
 
 model/Point.obj: model/Point.cpp.obj
 
@@ -312,6 +283,33 @@ model/Point.s: model/Point.cpp.s
 model/Point.cpp.s:
 	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/model/Point.cpp.s
 .PHONY : model/Point.cpp.s
+
+model/Spells/Spell.obj: model/Spells/Spell.cpp.obj
+
+.PHONY : model/Spells/Spell.obj
+
+# target to build an object file
+model/Spells/Spell.cpp.obj:
+	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/model/Spells/Spell.cpp.obj
+.PHONY : model/Spells/Spell.cpp.obj
+
+model/Spells/Spell.i: model/Spells/Spell.cpp.i
+
+.PHONY : model/Spells/Spell.i
+
+# target to preprocess a source file
+model/Spells/Spell.cpp.i:
+	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/model/Spells/Spell.cpp.i
+.PHONY : model/Spells/Spell.cpp.i
+
+model/Spells/Spell.s: model/Spells/Spell.cpp.s
+
+.PHONY : model/Spells/Spell.s
+
+# target to generate assembly for a file
+model/Spells/Spell.cpp.s:
+	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/model/Spells/Spell.cpp.s
+.PHONY : model/Spells/Spell.cpp.s
 
 model/Units/AEntity.obj: model/Units/AEntity.cpp.obj
 
@@ -448,7 +446,60 @@ model/Units/PlayerUnit.cpp.s:
 	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/PlayerUnit.cpp.s
 .PHONY : model/Units/PlayerUnit.cpp.s
 
->>>>>>> parent of 488683f... Done with Consumable
+model/World.obj: model/World.cpp.obj
+
+.PHONY : model/World.obj
+
+# target to build an object file
+model/World.cpp.obj:
+	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/model/World.cpp.obj
+.PHONY : model/World.cpp.obj
+
+model/World.i: model/World.cpp.i
+
+.PHONY : model/World.i
+
+# target to preprocess a source file
+model/World.cpp.i:
+	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/model/World.cpp.i
+.PHONY : model/World.cpp.i
+
+model/World.s: model/World.cpp.s
+
+.PHONY : model/World.s
+
+# target to generate assembly for a file
+model/World.cpp.s:
+	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/model/World.cpp.s
+.PHONY : model/World.cpp.s
+
+model/WorldMap.obj: model/WorldMap.cpp.obj
+
+.PHONY : model/WorldMap.obj
+
+# target to build an object file
+model/WorldMap.cpp.obj:
+	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/model/WorldMap.cpp.obj
+.PHONY : model/WorldMap.cpp.obj
+
+model/WorldMap.i: model/WorldMap.cpp.i
+
+.PHONY : model/WorldMap.i
+
+# target to preprocess a source file
+model/WorldMap.cpp.i:
+	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/model/WorldMap.cpp.i
+.PHONY : model/WorldMap.cpp.i
+
+model/WorldMap.s: model/WorldMap.cpp.s
+
+.PHONY : model/WorldMap.s
+
+# target to generate assembly for a file
+model/WorldMap.cpp.s:
+	$(MAKE) -f CMakeFiles\CS3520_2017FA_PROJ.dir\build.make CMakeFiles/CS3520_2017FA_PROJ.dir/model/WorldMap.cpp.s
+.PHONY : model/WorldMap.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -458,29 +509,27 @@ help:
 	@echo ... CS3520_2017FA_PROJ
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-<<<<<<< HEAD
-=======
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
 	@echo ... model/BattleMode.obj
 	@echo ... model/BattleMode.i
 	@echo ... model/BattleMode.s
-	@echo ... model/Consumable.obj
-	@echo ... model/Consumable.i
-	@echo ... model/Consumable.s
 	@echo ... model/Equipment/Equipment.obj
 	@echo ... model/Equipment/Equipment.i
 	@echo ... model/Equipment/Equipment.s
 	@echo ... model/Item.obj
 	@echo ... model/Item.i
 	@echo ... model/Item.s
-	@echo ... model/Map.obj
-	@echo ... model/Map.i
-	@echo ... model/Map.s
+	@echo ... model/MapCell.obj
+	@echo ... model/MapCell.i
+	@echo ... model/MapCell.s
 	@echo ... model/Point.obj
 	@echo ... model/Point.i
 	@echo ... model/Point.s
+	@echo ... model/Spells/Spell.obj
+	@echo ... model/Spells/Spell.i
+	@echo ... model/Spells/Spell.s
 	@echo ... model/Units/AEntity.obj
 	@echo ... model/Units/AEntity.i
 	@echo ... model/Units/AEntity.s
@@ -496,7 +545,12 @@ help:
 	@echo ... model/Units/PlayerUnit.obj
 	@echo ... model/Units/PlayerUnit.i
 	@echo ... model/Units/PlayerUnit.s
->>>>>>> parent of 488683f... Done with Consumable
+	@echo ... model/World.obj
+	@echo ... model/World.i
+	@echo ... model/World.s
+	@echo ... model/WorldMap.obj
+	@echo ... model/WorldMap.i
+	@echo ... model/WorldMap.s
 .PHONY : help
 
 
