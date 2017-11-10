@@ -8,18 +8,18 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug"/>
+				<Option working_dir="C:/Users/Andrew Alcala/CLionProjects/CS3520-2017FA-PROJ/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Andrew Alcala/CLionProjects/CS3520-2017FA-PROJ/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Andrew Alcala/CLionProjects/CS3520-2017FA-PROJ/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Andrew Alcala/CLionProjects/CS3520-2017FA-PROJ/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Andrew Alcala/CLionProjects/CS3520-2017FA-PROJ/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="CS3520_2017FA_PROJ">
-				<Option output="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/CS3520_2017FA_PROJ.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug"/>
+				<Option output="C:/Users/Andrew Alcala/CLionProjects/CS3520-2017FA-PROJ/cmake-build-debug/CS3520_2017FA_PROJ.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Andrew Alcala/CLionProjects/CS3520-2017FA-PROJ/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -33,15 +33,15 @@
 					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/Makefile&quot;  VERBOSE=1 CS3520_2017FA_PROJ"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Andrew Alcala/CLionProjects/CS3520-2017FA-PROJ/cmake-build-debug/Makefile&quot;  VERBOSE=1 CS3520_2017FA_PROJ"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Andrew Alcala/CLionProjects/CS3520-2017FA-PROJ/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Andrew Alcala/CLionProjects/CS3520-2017FA-PROJ/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Andrew Alcala/CLionProjects/CS3520-2017FA-PROJ/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="CS3520_2017FA_PROJ/fast">
-				<Option output="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/CS3520_2017FA_PROJ.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug"/>
+				<Option output="C:/Users/Andrew Alcala/CLionProjects/CS3520-2017FA-PROJ/cmake-build-debug/CS3520_2017FA_PROJ.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Andrew Alcala/CLionProjects/CS3520-2017FA-PROJ/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -55,112 +55,145 @@
 					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/Makefile&quot;  VERBOSE=1 CS3520_2017FA_PROJ/fast"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Andrew Alcala/CLionProjects/CS3520-2017FA-PROJ/cmake-build-debug/Makefile&quot;  VERBOSE=1 CS3520_2017FA_PROJ/fast"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Andrew Alcala/CLionProjects/CS3520-2017FA-PROJ/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Andrew Alcala/CLionProjects/CS3520-2017FA-PROJ/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Andrew Alcala/CLionProjects/CS3520-2017FA-PROJ/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug"/>
+				<Option working_dir="C:/Users/Andrew Alcala/CLionProjects/CS3520-2017FA-PROJ/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Andrew Alcala/CLionProjects/CS3520-2017FA-PROJ/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Andrew Alcala/CLionProjects/CS3520-2017FA-PROJ/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Andrew Alcala/CLionProjects/CS3520-2017FA-PROJ/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Andrew Alcala/CLionProjects/CS3520-2017FA-PROJ/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug"/>
+				<Option working_dir="C:/Users/Andrew Alcala/CLionProjects/CS3520-2017FA-PROJ/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Andrew Alcala/CLionProjects/CS3520-2017FA-PROJ/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Andrew Alcala/CLionProjects/CS3520-2017FA-PROJ/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Andrew Alcala/CLionProjects/CS3520-2017FA-PROJ/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Andrew Alcala/CLionProjects/CS3520-2017FA-PROJ/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/main.cpp">
+		<Unit filename="C:/Users/Andrew Alcala/CLionProjects/CS3520-2017FA-PROJ/main.cpp">
 			<Option target="CS3520_2017FA_PROJ"/>
 		</Unit>
-		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/BattleMode.cpp">
+		<Unit filename="C:/Users/Andrew Alcala/CLionProjects/CS3520-2017FA-PROJ/model/BattleMode.cpp">
 			<Option target="CS3520_2017FA_PROJ"/>
 		</Unit>
-		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/BattleMode.h">
+		<Unit filename="C:/Users/Andrew Alcala/CLionProjects/CS3520-2017FA-PROJ/model/BattleMode.h">
 			<Option target="CS3520_2017FA_PROJ"/>
 		</Unit>
-		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Consumable.cpp">
+		<Unit filename="C:/Users/Andrew Alcala/CLionProjects/CS3520-2017FA-PROJ/model/Consumable.cpp">
 			<Option target="CS3520_2017FA_PROJ"/>
 		</Unit>
-		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Consumable.h">
+		<Unit filename="C:/Users/Andrew Alcala/CLionProjects/CS3520-2017FA-PROJ/model/Consumable.h">
 			<Option target="CS3520_2017FA_PROJ"/>
 		</Unit>
-		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Consumable_Type_t.h">
+		<Unit filename="C:/Users/Andrew Alcala/CLionProjects/CS3520-2017FA-PROJ/model/Consumable_Type_t.h">
 			<Option target="CS3520_2017FA_PROJ"/>
 		</Unit>
-		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Equipment/EquipType.h">
+		<Unit filename="C:/Users/Andrew Alcala/CLionProjects/CS3520-2017FA-PROJ/model/Direction.h">
 			<Option target="CS3520_2017FA_PROJ"/>
 		</Unit>
-		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Equipment/Equipment.cpp">
+		<Unit filename="C:/Users/Andrew Alcala/CLionProjects/CS3520-2017FA-PROJ/model/Equipment/EquipType.h">
 			<Option target="CS3520_2017FA_PROJ"/>
 		</Unit>
-		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Equipment/Equipment.h">
+		<Unit filename="C:/Users/Andrew Alcala/CLionProjects/CS3520-2017FA-PROJ/model/Equipment/Equipment.cpp">
 			<Option target="CS3520_2017FA_PROJ"/>
 		</Unit>
-		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Item.cpp">
+		<Unit filename="C:/Users/Andrew Alcala/CLionProjects/CS3520-2017FA-PROJ/model/Equipment/Equipment.h">
 			<Option target="CS3520_2017FA_PROJ"/>
 		</Unit>
-		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Item.h">
+		<Unit filename="C:/Users/Andrew Alcala/CLionProjects/CS3520-2017FA-PROJ/model/GameState.h">
 			<Option target="CS3520_2017FA_PROJ"/>
 		</Unit>
-		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Map.cpp">
+		<Unit filename="C:/Users/Andrew Alcala/CLionProjects/CS3520-2017FA-PROJ/model/Item.cpp">
 			<Option target="CS3520_2017FA_PROJ"/>
 		</Unit>
-		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Point.cpp">
+		<Unit filename="C:/Users/Andrew Alcala/CLionProjects/CS3520-2017FA-PROJ/model/Item.h">
 			<Option target="CS3520_2017FA_PROJ"/>
 		</Unit>
-		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Point.h">
+		<Unit filename="C:/Users/Andrew Alcala/CLionProjects/CS3520-2017FA-PROJ/model/MapCell.cpp">
 			<Option target="CS3520_2017FA_PROJ"/>
 		</Unit>
-		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Spell.h">
+		<Unit filename="C:/Users/Andrew Alcala/CLionProjects/CS3520-2017FA-PROJ/model/MapCell.h">
 			<Option target="CS3520_2017FA_PROJ"/>
 		</Unit>
-		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Units/AEntity.cpp">
+		<Unit filename="C:/Users/Andrew Alcala/CLionProjects/CS3520-2017FA-PROJ/model/Point.cpp">
 			<Option target="CS3520_2017FA_PROJ"/>
 		</Unit>
-		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Units/AEntity.h">
+		<Unit filename="C:/Users/Andrew Alcala/CLionProjects/CS3520-2017FA-PROJ/model/Point.h">
 			<Option target="CS3520_2017FA_PROJ"/>
 		</Unit>
-		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Units/EnemyUnit.cpp">
+		<Unit filename="C:/Users/Andrew Alcala/CLionProjects/CS3520-2017FA-PROJ/model/Spells/DamageType.h">
 			<Option target="CS3520_2017FA_PROJ"/>
 		</Unit>
-		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Units/EnemyUnit.h">
+		<Unit filename="C:/Users/Andrew Alcala/CLionProjects/CS3520-2017FA-PROJ/model/Spells/Spell.cpp">
 			<Option target="CS3520_2017FA_PROJ"/>
 		</Unit>
-		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Units/IUnit.cpp">
+		<Unit filename="C:/Users/Andrew Alcala/CLionProjects/CS3520-2017FA-PROJ/model/Spells/Spell.h">
 			<Option target="CS3520_2017FA_PROJ"/>
 		</Unit>
-		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Units/IUnit.h">
+		<Unit filename="C:/Users/Andrew Alcala/CLionProjects/CS3520-2017FA-PROJ/model/Spells/SpellType.h">
 			<Option target="CS3520_2017FA_PROJ"/>
 		</Unit>
-		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Units/NPCUnit.cpp">
+		<Unit filename="C:/Users/Andrew Alcala/CLionProjects/CS3520-2017FA-PROJ/model/Spells/TargetType.h">
 			<Option target="CS3520_2017FA_PROJ"/>
 		</Unit>
-		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Units/NPCUnit.h">
+		<Unit filename="C:/Users/Andrew Alcala/CLionProjects/CS3520-2017FA-PROJ/model/Units/AEntity.cpp">
 			<Option target="CS3520_2017FA_PROJ"/>
 		</Unit>
-		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Units/NPCUnitType.h">
+		<Unit filename="C:/Users/Andrew Alcala/CLionProjects/CS3520-2017FA-PROJ/model/Units/AEntity.h">
 			<Option target="CS3520_2017FA_PROJ"/>
 		</Unit>
-		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Units/PlayerUnit.cpp">
+		<Unit filename="C:/Users/Andrew Alcala/CLionProjects/CS3520-2017FA-PROJ/model/Units/EnemyUnit.cpp">
 			<Option target="CS3520_2017FA_PROJ"/>
 		</Unit>
-		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Units/PlayerUnit.h">
+		<Unit filename="C:/Users/Andrew Alcala/CLionProjects/CS3520-2017FA-PROJ/model/Units/EnemyUnit.h">
 			<Option target="CS3520_2017FA_PROJ"/>
 		</Unit>
-		<Unit filename="C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/CMakeLists.txt">
+		<Unit filename="C:/Users/Andrew Alcala/CLionProjects/CS3520-2017FA-PROJ/model/Units/IUnit.cpp">
+			<Option target="CS3520_2017FA_PROJ"/>
+		</Unit>
+		<Unit filename="C:/Users/Andrew Alcala/CLionProjects/CS3520-2017FA-PROJ/model/Units/IUnit.h">
+			<Option target="CS3520_2017FA_PROJ"/>
+		</Unit>
+		<Unit filename="C:/Users/Andrew Alcala/CLionProjects/CS3520-2017FA-PROJ/model/Units/NPCUnit.cpp">
+			<Option target="CS3520_2017FA_PROJ"/>
+		</Unit>
+		<Unit filename="C:/Users/Andrew Alcala/CLionProjects/CS3520-2017FA-PROJ/model/Units/NPCUnit.h">
+			<Option target="CS3520_2017FA_PROJ"/>
+		</Unit>
+		<Unit filename="C:/Users/Andrew Alcala/CLionProjects/CS3520-2017FA-PROJ/model/Units/NPCUnitType.h">
+			<Option target="CS3520_2017FA_PROJ"/>
+		</Unit>
+		<Unit filename="C:/Users/Andrew Alcala/CLionProjects/CS3520-2017FA-PROJ/model/Units/PlayerUnit.cpp">
+			<Option target="CS3520_2017FA_PROJ"/>
+		</Unit>
+		<Unit filename="C:/Users/Andrew Alcala/CLionProjects/CS3520-2017FA-PROJ/model/Units/PlayerUnit.h">
+			<Option target="CS3520_2017FA_PROJ"/>
+		</Unit>
+		<Unit filename="C:/Users/Andrew Alcala/CLionProjects/CS3520-2017FA-PROJ/model/World.cpp">
+			<Option target="CS3520_2017FA_PROJ"/>
+		</Unit>
+		<Unit filename="C:/Users/Andrew Alcala/CLionProjects/CS3520-2017FA-PROJ/model/World.h">
+			<Option target="CS3520_2017FA_PROJ"/>
+		</Unit>
+		<Unit filename="C:/Users/Andrew Alcala/CLionProjects/CS3520-2017FA-PROJ/model/WorldMap.cpp">
+			<Option target="CS3520_2017FA_PROJ"/>
+		</Unit>
+		<Unit filename="C:/Users/Andrew Alcala/CLionProjects/CS3520-2017FA-PROJ/model/WorldMap.h">
+			<Option target="CS3520_2017FA_PROJ"/>
+		</Unit>
+		<Unit filename="C:/Users/Andrew Alcala/CLionProjects/CS3520-2017FA-PROJ/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

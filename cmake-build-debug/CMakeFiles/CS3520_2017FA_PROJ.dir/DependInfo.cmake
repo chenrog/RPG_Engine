@@ -1,7 +1,30 @@
 # The set of languages for which implicit dependencies are needed:
 set(CMAKE_DEPENDS_LANGUAGES
+  "CXX"
   )
 # The set of files for implicit dependencies of each language:
+set(CMAKE_DEPENDS_CHECK_CXX
+  "C:/Users/Andrew Alcala/CLionProjects/CS3520-2017FA-PROJ/main.cpp" "C:/Users/Andrew Alcala/CLionProjects/CS3520-2017FA-PROJ/cmake-build-debug/CMakeFiles/CS3520_2017FA_PROJ.dir/main.cpp.obj"
+  "C:/Users/Andrew Alcala/CLionProjects/CS3520-2017FA-PROJ/model/BattleMode.cpp" "C:/Users/Andrew Alcala/CLionProjects/CS3520-2017FA-PROJ/cmake-build-debug/CMakeFiles/CS3520_2017FA_PROJ.dir/model/BattleMode.cpp.obj"
+  "C:/Users/Andrew Alcala/CLionProjects/CS3520-2017FA-PROJ/model/Consumable.cpp" "C:/Users/Andrew Alcala/CLionProjects/CS3520-2017FA-PROJ/cmake-build-debug/CMakeFiles/CS3520_2017FA_PROJ.dir/model/Consumable.cpp.obj"
+  "C:/Users/Andrew Alcala/CLionProjects/CS3520-2017FA-PROJ/model/Equipment/Equipment.cpp" "C:/Users/Andrew Alcala/CLionProjects/CS3520-2017FA-PROJ/cmake-build-debug/CMakeFiles/CS3520_2017FA_PROJ.dir/model/Equipment/Equipment.cpp.obj"
+  "C:/Users/Andrew Alcala/CLionProjects/CS3520-2017FA-PROJ/model/Item.cpp" "C:/Users/Andrew Alcala/CLionProjects/CS3520-2017FA-PROJ/cmake-build-debug/CMakeFiles/CS3520_2017FA_PROJ.dir/model/Item.cpp.obj"
+  "C:/Users/Andrew Alcala/CLionProjects/CS3520-2017FA-PROJ/model/MapCell.cpp" "C:/Users/Andrew Alcala/CLionProjects/CS3520-2017FA-PROJ/cmake-build-debug/CMakeFiles/CS3520_2017FA_PROJ.dir/model/MapCell.cpp.obj"
+  "C:/Users/Andrew Alcala/CLionProjects/CS3520-2017FA-PROJ/model/Point.cpp" "C:/Users/Andrew Alcala/CLionProjects/CS3520-2017FA-PROJ/cmake-build-debug/CMakeFiles/CS3520_2017FA_PROJ.dir/model/Point.cpp.obj"
+  "C:/Users/Andrew Alcala/CLionProjects/CS3520-2017FA-PROJ/model/Spells/Spell.cpp" "C:/Users/Andrew Alcala/CLionProjects/CS3520-2017FA-PROJ/cmake-build-debug/CMakeFiles/CS3520_2017FA_PROJ.dir/model/Spells/Spell.cpp.obj"
+  "C:/Users/Andrew Alcala/CLionProjects/CS3520-2017FA-PROJ/model/Units/AEntity.cpp" "C:/Users/Andrew Alcala/CLionProjects/CS3520-2017FA-PROJ/cmake-build-debug/CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/AEntity.cpp.obj"
+  "C:/Users/Andrew Alcala/CLionProjects/CS3520-2017FA-PROJ/model/Units/EnemyUnit.cpp" "C:/Users/Andrew Alcala/CLionProjects/CS3520-2017FA-PROJ/cmake-build-debug/CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/EnemyUnit.cpp.obj"
+  "C:/Users/Andrew Alcala/CLionProjects/CS3520-2017FA-PROJ/model/Units/IUnit.cpp" "C:/Users/Andrew Alcala/CLionProjects/CS3520-2017FA-PROJ/cmake-build-debug/CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/IUnit.cpp.obj"
+  "C:/Users/Andrew Alcala/CLionProjects/CS3520-2017FA-PROJ/model/Units/NPCUnit.cpp" "C:/Users/Andrew Alcala/CLionProjects/CS3520-2017FA-PROJ/cmake-build-debug/CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/NPCUnit.cpp.obj"
+  "C:/Users/Andrew Alcala/CLionProjects/CS3520-2017FA-PROJ/model/Units/PlayerUnit.cpp" "C:/Users/Andrew Alcala/CLionProjects/CS3520-2017FA-PROJ/cmake-build-debug/CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/PlayerUnit.cpp.obj"
+  "C:/Users/Andrew Alcala/CLionProjects/CS3520-2017FA-PROJ/model/World.cpp" "C:/Users/Andrew Alcala/CLionProjects/CS3520-2017FA-PROJ/cmake-build-debug/CMakeFiles/CS3520_2017FA_PROJ.dir/model/World.cpp.obj"
+  "C:/Users/Andrew Alcala/CLionProjects/CS3520-2017FA-PROJ/model/WorldMap.cpp" "C:/Users/Andrew Alcala/CLionProjects/CS3520-2017FA-PROJ/cmake-build-debug/CMakeFiles/CS3520_2017FA_PROJ.dir/model/WorldMap.cpp.obj"
+  )
+set(CMAKE_CXX_COMPILER_ID "GNU")
+
+# The include file search paths:
+set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
