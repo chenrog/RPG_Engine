@@ -1,7 +1,3 @@
-//
-// Created by Roger Chen on 11/8/17.
-//
-
 #include "Spell.h"
 
 Spell::Spell(string spell, int base_damage, int mod_damage, int base_hit_chance, int mod_hit_chance, spell_type_t spell_type,

@@ -1,5 +1,4 @@
 #include <cstdlib>
-#include <ctime>
 #include <iostream>
 #include "PlayerUnit.h"
 
@@ -31,8 +30,8 @@ PlayerUnit::PlayerUnit(string name, Point position, bool visible, unsigned int v
 }
 
 PlayerUnit::~PlayerUnit() {
-    delete[] this->spellList;
-    delete[] this->equipmentList;
+    delete this->spellList;
+    delete this->equipmentList;
 }
 
 Equipment PlayerUnit::equip(Equipment const equipment) {

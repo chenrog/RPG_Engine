@@ -11,8 +11,10 @@
 #include "../Direction.h"
 #include <string>
 #include <vector>
+#ifndef CS3520_2017FA_PROJ_SPELLS_H
+#include "../Spells/Spell.h"
 
-class Spell;
+#endif //CS3520_2017FA_PROJ_SPELL_H
 
 class IUnit : public AEntity {
 public:
@@ -20,7 +22,7 @@ public:
 
     IUnit(const IUnit &unit);
 
-    virtual ~IUnit();\
+    virtual ~IUnit();
 
     /**
      * Move this Unit in the given direction, x distance away

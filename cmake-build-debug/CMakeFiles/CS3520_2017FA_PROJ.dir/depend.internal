@@ -11,6 +11,10 @@ CMakeFiles/CS3520_2017FA_PROJ.dir/model/BattleMode.cpp.obj
  C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Equipment/Equipment.h
  C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Item.h
  C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Point.h
+ C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Spells/DamageType.h
+ C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Spells/Spell.h
+ C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Spells/SpellType.h
+ C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Spells/TargetType.h
  C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Units/AEntity.h
  C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Units/IUnit.h
 CMakeFiles/CS3520_2017FA_PROJ.dir/model/Equipment/Equipment.cpp.obj
@@ -55,6 +59,10 @@ CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/EnemyUnit.cpp.obj
  C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Equipment/Equipment.h
  C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Item.h
  C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Point.h
+ C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Spells/DamageType.h
+ C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Spells/Spell.h
+ C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Spells/SpellType.h
+ C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Spells/TargetType.h
  C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Units/AEntity.h
  C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Units/EnemyUnit.cpp
  C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Units/EnemyUnit.h
@@ -65,6 +73,10 @@ CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/IUnit.cpp.obj
  C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Equipment/Equipment.h
  C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Item.h
  C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Point.h
+ C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Spells/DamageType.h
+ C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Spells/Spell.h
+ C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Spells/SpellType.h
+ C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Spells/TargetType.h
  C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Units/AEntity.h
  C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Units/IUnit.cpp
  C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Units/IUnit.h
@@ -74,6 +86,10 @@ CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/NPCUnit.cpp.obj
  C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Equipment/Equipment.h
  C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Item.h
  C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Point.h
+ C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Spells/DamageType.h
+ C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Spells/Spell.h
+ C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Spells/SpellType.h
+ C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Spells/TargetType.h
  C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Units/AEntity.h
  C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Units/IUnit.h
  C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Units/NPCUnit.cpp

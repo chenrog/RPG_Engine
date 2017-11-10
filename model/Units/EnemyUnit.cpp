@@ -1,7 +1,7 @@
 #include "EnemyUnit.h"
 
 EnemyUnit::EnemyUnit(unsigned int vit, unsigned int intel, unsigned int speed, unsigned int str, bool is_melee,
-                     string name, Item drops[]) {
+                     string name, vector<Item> drops) {
     this->name = name;
     this->st_vit = vit;
     this->st_int = intel;

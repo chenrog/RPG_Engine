@@ -25,8 +25,6 @@ C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Equipment/EquipType.h
 C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Equipment/Equipment.cpp
 Equipment.h
 C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Equipment/Equipment.h
-iostream
--
 
 C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Equipment/Equipment.h
 EquipType.h
@@ -73,12 +71,12 @@ DamageType.h
 C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Spells/DamageType.h
 string
 -
-../Units/IUnit.h
-C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Units/IUnit.h
 SpellType.h
 C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Spells/SpellType.h
 TargetType.h
 C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Spells/TargetType.h
+../Units/IUnit.h
+C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Units/IUnit.h
 
 C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Spells/SpellType.h
 
@@ -125,6 +123,8 @@ string
 -
 vector
 -
+../Spells/Spell.h
+C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Spells/Spell.h
 
 C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Units/NPCUnit.cpp
 NPCUnit.h
@@ -144,8 +144,6 @@ C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Units/NPCUnitType.h
 
 C:/Users/whyar/Documents/GitHub/CS3520-2017FA-PROJ/model/Units/PlayerUnit.cpp
 cstdlib
--
-ctime
 -
 iostream
 -

@@ -6,10 +6,10 @@
 
 #include "DamageType.h"
 #include <string>
-#ifndef CS3520_2017FA_PROJ_UNIT_H
-#include "../Units/IUnit.h"
 #include "SpellType.h"
 #include "TargetType.h"
+#ifndef CS3520_2017FA_PROJ_UNIT_H
+#include "../Units/IUnit.h"
 
 #endif //CS3520_2017FA_PROJ_UNIT_H
 

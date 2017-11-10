@@ -10,6 +10,10 @@ CMakeFiles/CS3520_2017FA_PROJ.dir/model/BattleMode.cpp.obj: ../model/Equipment/E
 CMakeFiles/CS3520_2017FA_PROJ.dir/model/BattleMode.cpp.obj: ../model/Equipment/Equipment.h
 CMakeFiles/CS3520_2017FA_PROJ.dir/model/BattleMode.cpp.obj: ../model/Item.h
 CMakeFiles/CS3520_2017FA_PROJ.dir/model/BattleMode.cpp.obj: ../model/Point.h
+CMakeFiles/CS3520_2017FA_PROJ.dir/model/BattleMode.cpp.obj: ../model/Spells/DamageType.h
+CMakeFiles/CS3520_2017FA_PROJ.dir/model/BattleMode.cpp.obj: ../model/Spells/Spell.h
+CMakeFiles/CS3520_2017FA_PROJ.dir/model/BattleMode.cpp.obj: ../model/Spells/SpellType.h
+CMakeFiles/CS3520_2017FA_PROJ.dir/model/BattleMode.cpp.obj: ../model/Spells/TargetType.h
 CMakeFiles/CS3520_2017FA_PROJ.dir/model/BattleMode.cpp.obj: ../model/Units/AEntity.h
 CMakeFiles/CS3520_2017FA_PROJ.dir/model/BattleMode.cpp.obj: ../model/Units/IUnit.h
 
@@ -54,6 +58,10 @@ CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/EnemyUnit.cpp.obj: ../model/Equipm
 CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/EnemyUnit.cpp.obj: ../model/Equipment/Equipment.h
 CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/EnemyUnit.cpp.obj: ../model/Item.h
 CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/EnemyUnit.cpp.obj: ../model/Point.h
+CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/EnemyUnit.cpp.obj: ../model/Spells/DamageType.h
+CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/EnemyUnit.cpp.obj: ../model/Spells/Spell.h
+CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/EnemyUnit.cpp.obj: ../model/Spells/SpellType.h
+CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/EnemyUnit.cpp.obj: ../model/Spells/TargetType.h
 CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/EnemyUnit.cpp.obj: ../model/Units/AEntity.h
 CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/EnemyUnit.cpp.obj: ../model/Units/EnemyUnit.cpp
 CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/EnemyUnit.cpp.obj: ../model/Units/EnemyUnit.h
@@ -64,6 +72,10 @@ CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/IUnit.cpp.obj: ../model/Equipment/
 CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/IUnit.cpp.obj: ../model/Equipment/Equipment.h
 CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/IUnit.cpp.obj: ../model/Item.h
 CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/IUnit.cpp.obj: ../model/Point.h
+CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/IUnit.cpp.obj: ../model/Spells/DamageType.h
+CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/IUnit.cpp.obj: ../model/Spells/Spell.h
+CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/IUnit.cpp.obj: ../model/Spells/SpellType.h
+CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/IUnit.cpp.obj: ../model/Spells/TargetType.h
 CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/IUnit.cpp.obj: ../model/Units/AEntity.h
 CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/IUnit.cpp.obj: ../model/Units/IUnit.cpp
 CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/IUnit.cpp.obj: ../model/Units/IUnit.h
@@ -73,6 +85,10 @@ CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/NPCUnit.cpp.obj: ../model/Equipmen
 CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/NPCUnit.cpp.obj: ../model/Equipment/Equipment.h
 CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/NPCUnit.cpp.obj: ../model/Item.h
 CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/NPCUnit.cpp.obj: ../model/Point.h
+CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/NPCUnit.cpp.obj: ../model/Spells/DamageType.h
+CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/NPCUnit.cpp.obj: ../model/Spells/Spell.h
+CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/NPCUnit.cpp.obj: ../model/Spells/SpellType.h
+CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/NPCUnit.cpp.obj: ../model/Spells/TargetType.h
 CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/NPCUnit.cpp.obj: ../model/Units/AEntity.h
 CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/NPCUnit.cpp.obj: ../model/Units/IUnit.h
 CMakeFiles/CS3520_2017FA_PROJ.dir/model/Units/NPCUnit.cpp.obj: ../model/Units/NPCUnit.cpp
