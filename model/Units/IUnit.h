@@ -5,12 +5,17 @@
 #ifndef CS3520_2017FA_PROJ_UNIT_H
 #define CS3520_2017FA_PROJ_UNIT_H
 
+
+#ifndef CS3520_2017FA_PROJ_SPELLS_H
+#include "../Spells/Spell.h"
+#endif //CS3520_2017FA_PROJ_SPELL_H
 #include "../Equipment/Equipment.h"
 #include "../Item.h"
 #include "AEntity.h"
 #include "../Direction.h"
 #include <string>
 #include <vector>
+
 
 class Spell;
 
@@ -20,7 +25,7 @@ public:
 
     IUnit(const IUnit &unit);
 
-    virtual ~IUnit();\
+    ~IUnit();
 
     /**
      * Move this Unit in the given direction, x distance away

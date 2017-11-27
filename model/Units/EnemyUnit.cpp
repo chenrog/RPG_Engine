@@ -1,11 +1,11 @@
 #include "EnemyUnit.h"
 
 EnemyUnit::EnemyUnit(unsigned int vit, unsigned int intel, unsigned int speed, unsigned int str, bool is_melee,
-                     string name, Item drops[]) {
+                     string name, vector<Item> drops) {
     this->name = name;
     this->st_vit = vit;
-    this->st_intel = intel;
-    this->st_speed = speed;
+    this->st_int = intel;
+    this->st_dex = speed;
     this->st_str = str;
     this->is_melee = is_melee;
     updateStats();
@@ -18,8 +18,8 @@ EnemyUnit::EnemyUnit(unsigned int vit, unsigned int intel, unsigned int speed, u
 EnemyUnit::EnemyUnit(const EnemyUnit &unit) {
     this->name = name;
     this->st_vit = unit.st_vit;
-    this->st_intel = unit.st_intel;
-    this->st_speed = unit.st_speed;
+    this->st_int = unit.st_int;
+    this->st_dex = unit.st_dex;
     this->st_str = unit.st_str;
     this->is_melee = is_melee;
     updateStats();

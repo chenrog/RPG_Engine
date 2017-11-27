@@ -4,14 +4,18 @@
 #ifndef CS3520_2017FA_PROJ_SPELLS_H
 #define CS3520_2017FA_PROJ_SPELLS_H
 
-#include "DamageType.h"
-#include <string>
+
 #ifndef CS3520_2017FA_PROJ_UNIT_H
 #include "../Units/IUnit.h"
-#include "SpellType.h"
-#include "TargetType.h"
 
 #endif //CS3520_2017FA_PROJ_UNIT_H
+#include "DamageType.h"
+#include "SpellType.h"
+#include "TargetType.h"
+#include <string>
+
+
+class IUnit;
 
 using namespace std;
 
@@ -44,7 +48,7 @@ class Spell_Builder {
 public:
     // builder constructor and build function
     Spell_Builder(string spell, spell_type_t spell_type, damage_type_t damage_type, target_type_t target_type);
-    Spell & buildSpell();
+    Spell & build();
     // setters for the fields
     Spell_Builder setDamage(int damage);
     Spell_Builder setDamageMod(int damage_mod);

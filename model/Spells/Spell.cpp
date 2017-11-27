@@ -1,7 +1,3 @@
-//
-// Created by Roger Chen on 11/8/17.
-//
-
 #include "Spell.h"
 
 Spell::Spell(string spell, int base_damage, int mod_damage, int base_hit_chance, int mod_hit_chance, spell_type_t spell_type,
@@ -87,7 +83,7 @@ void Spell::display() {
 Spell_Builder::Spell_Builder(string spell, spell_type_t spell_type, damage_type_t damage_type, target_type_t target_type) :
         spellname(std::move(spell)), spell_type(spell_type), damage_type(damage_type), target_type(target_type) { }
 
-Spell& Spell_Builder::buildSpell() {
+Spell& Spell_Builder::build() {
     auto spell = new Spell(this->spellname, this->base_damage, this->mod_damage, this->base_hit_chance, this->mod_hit_chance,
                            this->spell_type, this->damage_type, this->target_type);
     return *spell;

@@ -10,7 +10,6 @@
 class Item : public AEntity {
 public:
     Item();
-    Item(const Item & item);
     string getDescription();
 
 protected:
