@@ -17,8 +17,9 @@
 //Path to a program.
 CMAKE_AR:FILEPATH=C:/MinGW/bin/ar.exe
 
-//No help, variable specified on the command line.
-CMAKE_BUILD_TYPE:UNINITIALIZED=Debug
+//Choose the type of build, options are: None(CMAKE_CXX_FLAGS or
+// CMAKE_C_FLAGS used) Debug Release RelWithDebInfo MinSizeRel.
+CMAKE_BUILD_TYPE:STRING=Debug
 
 //The CodeBlocks executable
 CMAKE_CODEBLOCKS_EXECUTABLE:FILEPATH=CMAKE_CODEBLOCKS_EXECUTABLE-NOTFOUND
@@ -205,6 +206,9 @@ CS3520_2017FA_PROJ_BINARY_DIR:STATIC=C:/Users/Andrew Alcala/CLionProjects/CS3520
 
 //Value Computed by CMake
 CS3520_2017FA_PROJ_SOURCE_DIR:STATIC=C:/Users/Andrew Alcala/CLionProjects/CS3520-2017FA-PROJ
+
+//The directory containing a CMake configuration file for SDL2.
+SDL2_DIR:PATH=SDL2_DIR-NOTFOUND
 
 
 ########################

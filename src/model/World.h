@@ -1,7 +1,3 @@
-//
-// Created by Andrew Alcala on 11/8/2017.
-//
-
 #ifndef CS3520_2017FA_PROJ_WORLD_H
 #define CS3520_2017FA_PROJ_WORLD_H
 
