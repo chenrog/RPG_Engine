@@ -12,7 +12,6 @@ public:
     Equipment(string name, Point position, bool visible, equip_type_t type, signed int v, unsigned int vm, signed int i,
               unsigned int im, signed int sp, unsigned int spm, signed int st, unsigned int stm);
     // functions
-    friend Equipment & build();
     void level_up();
     void display();
     // getters to return the value of the given stat
@@ -59,7 +58,7 @@ public:
 
 private:
     string       name;
-    Point        position = NULL;
+    Point        position;
     bool         visible = false;
     equip_type_t type;
     // vitality stats by this equipment

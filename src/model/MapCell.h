@@ -10,6 +10,8 @@
 
 class MapCell {
 public:
+    MapCell(Point position, bool walkable);
+
     MapCell(Point position, AEntity c_entity, bool walkable);
 
     Point getPosition();

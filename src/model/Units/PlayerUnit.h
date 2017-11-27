@@ -1,10 +1,10 @@
 #ifndef CS3520_2017FA_PROJ_PLAYERCHARACTER_H
 #define CS3520_2017FA_PROJ_PLAYERCHARACTER_H
 
-#include <vector>
 #include "IUnit.h"
 #include "../Equipment/Equipment.h"
 #include "../Spells/Spell.h"
+#include <vector>
 
 class PlayerUnit : public IUnit {
 public:
@@ -32,7 +32,6 @@ public:
                vector<Equipment> equipmentList, vector<Spell> spellList,
                double mod_vit, double mod_int, double mod_dex, double mod_str);
 
-    ~PlayerUnit() override;
 
     /**
      * Equips the chosen equipment to the player character and applies stat changes as necessary. Returns the old

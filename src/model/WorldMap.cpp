@@ -2,8 +2,8 @@
 // Created by Andrew Alcala on 11/9/2017.
 //
 
-#include <vector>
 #include "WorldMap.h"
+
 
 WorldMap::WorldMap() {
 
@@ -11,7 +11,7 @@ WorldMap::WorldMap() {
     for (int i = 0; i < WORLDMAP_HEIGHT; i++) {
         for (int j = 0; j < WORLDMAP_WIDTH; j++) {
             //TODO: Probably need new here.
-            gridMap[i].push_back(MapCell(Point(i, j), NULL, true));
+            gridMap[i].push_back(MapCell(Point(i, j), true));
         }
     }
 
@@ -19,6 +19,11 @@ WorldMap::WorldMap() {
 
 std::vector<vector<MapCell>> WorldMap::getWorldMap() {
     return gridMap;
+}
+
+WorldMap &WorldMap::operator=(const WorldMap &other) {
+    this->gridMap = other.gridMap;
+    return *this;
 }
 
 // some function that controls how this cell is displayed, will be based on whether or not this Cell is "inhabited"

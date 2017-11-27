@@ -5,17 +5,29 @@
 #ifndef CS3520_2017FA_PROJ_WORLD_H
 #define CS3520_2017FA_PROJ_WORLD_H
 
-
-#include <vector>
-#include <bits/unordered_map.h>
 #include "Units/PlayerUnit.h"
 #include "GameState.h"
 #include "WorldMap.h"
-#include "Units/EnemyUnit.h"
+#include "Item.h"
+#include <vector>
+
 
 class World {
 public:
-    World();
+    World()  {
+        worldMap = WorldMap();
+        Point starting_point = Point(0, 0);
+        vector<Equipment> equipmentList;
+        vector<Spell> spellList;
+//    this->inventory;
+        //TODO: probably need new here.
+
+        this->player = PlayerUnit("Twen", starting_point, true, STARTING_VIT, STARTING_INT, STARTING_DEX,
+                                  STARTING_STR, STARTING_LVL, true, equipmentList, spellList, STARTING_MOD_VIT,
+                                  STARTING_MOD_INT, STARTING_MOD_DEX, STARTING_MOD_STR);
+        this->gameState = OVERWORLD;
+
+    }
 
     ~World();
 
@@ -32,15 +44,10 @@ public:
     void movePlayer(direction_t direction, int distance);
 
     /**
-     * Begins a random encounter battle.
-     */
-    void startRandomEncounter();
-
-    /**
      * Returns the inventory as a map corresponding items to their quantity.
      * @return
      */
-    unordered_map<Item, int> getInventory();
+    //unordered_map<Item, int> getInventory();
 
     /**
      * Returns the Overworld and all its cells.
@@ -82,12 +89,12 @@ public:
     unsigned const int STARTING_MOD_DEX = 1;
     unsigned const int STARTING_MOD_STR = 1;
 
-    unsigned const double RANDOM_ENCOUNTER_CHANCE = .05;
+    const double RANDOM_ENCOUNTER_CHANCE = .05;
 
 private:
     // Only doing one player for now.
     PlayerUnit player;
-    unordered_map<Item, int> inventory;
+    //unordered_map inventory;
     WorldMap worldMap;
     game_state_t gameState;
     bool gameOver = false;

@@ -1,4 +1,8 @@
 "C:\Program Files\JetBrains\CLion 2017.2.2\bin\cmake\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" "C:\Users\Andrew Alcala\CLionProjects\CS3520-2017FA-PROJ"
--- Configuring done
--- Generating done
--- Build files have been written to: C:/Users/Andrew Alcala/CLionProjects/CS3520-2017FA-PROJ/cmake-build-debug
+CMake Error at CMakeLists.txt:6:
+  Parse error.  Expected a command name, got unquoted argument with text
+  "<<<<<<<".
+
+
+-- Configuring incomplete, errors occurred!
+See also "C:/Users/Andrew Alcala/CLionProjects/CS3520-2017FA-PROJ/cmake-build-debug/CMakeFiles/CMakeOutput.log".

@@ -5,8 +5,8 @@
 #ifndef CS3520_2017FA_PROJ_AENTITY_H
 #define CS3520_2017FA_PROJ_AENTITY_H
 
-#include <iostream>
 #include "../Point.h"
+#include <iostream>
 #include <string>
 
 using namespace std;

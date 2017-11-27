@@ -4,14 +4,18 @@
 #ifndef CS3520_2017FA_PROJ_SPELLS_H
 #define CS3520_2017FA_PROJ_SPELLS_H
 
-#include "DamageType.h"
-#include <string>
+
 #ifndef CS3520_2017FA_PROJ_UNIT_H
 #include "../Units/IUnit.h"
-#include "SpellType.h"
-#include "TargetType.h"
 
 #endif //CS3520_2017FA_PROJ_UNIT_H
+#include "DamageType.h"
+#include "SpellType.h"
+#include "TargetType.h"
+#include <string>
+
+
+class IUnit;
 
 using namespace std;
 
@@ -19,7 +23,6 @@ class Spell {
 public:
     Spell(string spell, int base_damage, int mod_damage, int base_hit_chance, int mod_hit_chance,
           spell_type_t spell_type, damage_type_t damage_type, target_type_t target_type);
-    friend Spell & build();
 
     int  getDamage(const IUnit & unit);
     int  getHitChance(const IUnit & unit);

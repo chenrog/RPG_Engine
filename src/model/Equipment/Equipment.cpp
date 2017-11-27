@@ -3,7 +3,6 @@
 //
 
 #include "Equipment.h"
-#include <iostream>
 
 using namespace std;
 
