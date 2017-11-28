@@ -10,9 +10,9 @@
 #include "../Spells/Spell.h"
 #endif //CS3520_2017FA_PROJ_SPELL_H
 #include "../Equipment/Equipment.h"
-#include "../Item.h"
+#include "../Item/Item.h"
 #include "AEntity.h"
-#include "../Direction.h"
+#include "../World/Direction.h"
 #include <string>
 #include <vector>
 

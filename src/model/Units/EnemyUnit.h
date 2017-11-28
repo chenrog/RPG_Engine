@@ -2,7 +2,7 @@
 #define CS3520_2017FA_PROJ_ENEMYUNIT_H
 
 #include "IUnit.h"
-#include "../Item.h"
+#include "../Item/Item.h"
 #include <tuple>
 
 class EnemyUnit : public IUnit {

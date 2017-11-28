@@ -2,7 +2,7 @@
 #define CS3520_2017FA_PROJ_EQUIPMENT_H
 
 #include "EquipType.h"
-#include "../Units/AEntity.h"
+#include "../../Units/AEntity.h"
 #include <string>
 
 using namespace std;
