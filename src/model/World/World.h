@@ -1,10 +1,10 @@
 #ifndef CS3520_2017FA_PROJ_WORLD_H
 #define CS3520_2017FA_PROJ_WORLD_H
 
-#include "Units/PlayerUnit.h"
-#include "GameState.h"
+#include "../Units/PlayerUnit.h"
+#include "../GameState.h"
 #include "WorldMap.h"
-#include "Item.h"
+#include "../Item/Item.h"
 #include <vector>
 
 

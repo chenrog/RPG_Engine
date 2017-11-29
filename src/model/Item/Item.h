@@ -5,7 +5,7 @@
 #ifndef CS3520_2017FA_PROJ_ITEM_H
 #define CS3520_2017FA_PROJ_ITEM_H
 
-#include "Units/AEntity.h"
+#include "../Units/AEntity.h"
 
 class Item : public AEntity {
 public:

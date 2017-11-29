@@ -5,7 +5,7 @@
 #ifndef CS3520_2017FA_PROJ_AENTITY_H
 #define CS3520_2017FA_PROJ_AENTITY_H
 
-#include "../Point.h"
+#include "../World/Point.h"
 #include <iostream>
 #include <string>
 

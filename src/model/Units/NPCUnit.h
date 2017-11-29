@@ -3,7 +3,7 @@
 
 #include "IUnit.h"
 #include "NPCUnitType.h"
-#include "../Item.h"
+#include "../Item/Item.h"
 
 class NPCUnit : public IUnit {
 public:
