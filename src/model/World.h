@@ -15,21 +15,17 @@ public:
         Point starting_point = Point(0, 0);
         vector<Equipment> equipmentList;
         vector<Spell> spellList;
-//    this->inventory;
-        //TODO: probably need new here.
-
         this->player = PlayerUnit("Twen", starting_point, true, STARTING_VIT, STARTING_INT, STARTING_DEX,
                                   STARTING_STR, STARTING_LVL, true, equipmentList, spellList, STARTING_MOD_VIT,
                                   STARTING_MOD_INT, STARTING_MOD_DEX, STARTING_MOD_STR);
         this->gameState = OVERWORLD;
-
     }
 
     ~World();
 
     /**
-     * Returns the allies.
-     * @return The allies.
+     * Returns the player.
+     * @return The player.
      */
     PlayerUnit getPlayer();
 
@@ -38,12 +34,6 @@ public:
      * cell that has random encounters, generate whether or not there is an encounter.
      */
     void movePlayer(direction_t direction, int distance);
-
-    /**
-     * Returns the inventory as a map corresponding items to their quantity.
-     * @return
-     */
-    //unordered_map<Item, int> getInventory();
 
     /**
      * Returns the Overworld and all its cells.
@@ -70,10 +60,6 @@ public:
     void onTick(int currTick);
 
     // Constants
-    const int INVENTORY_SLOTS = 5;
-    const int PARTY_SIZE = 2;
-
-    //TODO: not sure what these numbers are yet. i know they change per player though so it wont be const.
     unsigned const int STARTING_VIT = 1;
     unsigned const int STARTING_INT = 1;
     unsigned const int STARTING_DEX = 1;
@@ -88,9 +74,7 @@ public:
     const double RANDOM_ENCOUNTER_CHANCE = .05;
 
 private:
-    // Only doing one player for now.
     PlayerUnit player;
-    //unordered_map inventory;
     WorldMap worldMap;
     game_state_t gameState;
     bool gameOver = false;

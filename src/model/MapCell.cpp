@@ -8,12 +8,14 @@ MapCell::MapCell(Point position, bool walkable) {
     this->position = position;
     this->c_entity;
     this->walkable = walkable;
+    randomEncounterable = false;
 }
 
 MapCell::MapCell(Point position, AEntity c_entity, bool walkable) {
     this->position = position;
     this->c_entity = c_entity;
     this->walkable = walkable;
+    randomEncounterable = false;
 }
 
 Point MapCell::getPosition() {
