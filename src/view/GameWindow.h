@@ -12,14 +12,16 @@
 using namespace std;
 class GameWindow {
 public:
-    GameWindow(string title, int width, int length, int init_x_pos, int init_y_pos)  {
-        window = new SDL_Window(title, width, length, init_x_pos, init_y_pos, SDL_WINDOW_OPENGL);
+    GameWindow(World game, string title, int width, int length, int init_x_pos, int init_y_pos);
 
-    }
 
 private:
-    SDL_Window * window;
-    SDL_Renderer * renderer;
+    bool is_closed = false;
+    string title;
+    int width;
+    int length;
+    SDL_Window * window = nullptr;
+    SDL_Renderer * renderer = nullptr;
 };
 
 
