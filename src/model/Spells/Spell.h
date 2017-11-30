@@ -11,7 +11,6 @@
 #endif //CS3520_2017FA_PROJ_UNIT_H
 #include "DamageType.h"
 #include "SpellType.h"
-#include "TargetType.h"
 #include <string>
 
 
@@ -22,13 +21,12 @@ using namespace std;
 class Spell {
 public:
     Spell(string spell, int base_damage, int mod_damage, int base_hit_chance, int mod_hit_chance,
-          spell_type_t spell_type, damage_type_t damage_type, target_type_t target_type);
+          spell_type_t spell_type, damage_type_t damage_type);
 
     int  getDamage(const IUnit & unit);
     int  getHitChance(const IUnit & unit);
     spell_type_t  getSpellType();
     damage_type_t getDamageType();
-    target_type_t getTargetType();
 
     void display();
 
@@ -40,14 +38,13 @@ private:
     int           mod_hit_chance;
     spell_type_t  spell_type;
     damage_type_t damage_type;
-    target_type_t target_type;
 };
 
 
 class Spell_Builder {
 public:
     // builder constructor and build function
-    Spell_Builder(string spell, spell_type_t spell_type, damage_type_t damage_type, target_type_t target_type);
+    Spell_Builder(string spell, spell_type_t spell_type, damage_type_t damage_type);
     Spell & build();
     // setters for the fields
     Spell_Builder setDamage(int damage);
@@ -64,6 +61,5 @@ private:
     int           mod_hit_chance = 1;
     spell_type_t  spell_type;
     damage_type_t damage_type;
-    target_type_t target_type;
 };
 #endif //CS3520_2017FA_PROJ_SPELLS_H
