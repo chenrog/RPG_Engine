@@ -9,7 +9,7 @@
 #ifndef CS3520_2017FA_PROJ_SPELLS_H
 #include "../Spells/Spell.h"
 #endif //CS3520_2017FA_PROJ_SPELL_H
-#include "../Equipment/Equipment.h"
+#include "../Item/Equipment/Equipment.h"
 #include "../Item/Item.h"
 #include "AEntity.h"
 #include "../World/Direction.h"

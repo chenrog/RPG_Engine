@@ -2,7 +2,7 @@
 #define CS3520_2017FA_PROJ_PLAYERCHARACTER_H
 
 #include "IUnit.h"
-#include "../Equipment/Equipment.h"
+#include "../Item/Equipment/Equipment.h"
 #include "../Spells/Spell.h"
 #include <vector>
 
