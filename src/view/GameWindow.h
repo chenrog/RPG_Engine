@@ -8,15 +8,22 @@
 #include <SDL_video.h>
 #include <SDL_render.h>
 #include <iostream>
+#include "../model/World/World.h"
 
 using namespace std;
 class GameWindow {
 public:
-    GameWindow(World game, string title, int width, int length, int init_x_pos, int init_y_pos);
-
+    GameWindow(World game, string title, int width, int length);
+    ~GameWindow();
+    bool init();
+    inline bool is_closed() {return closed;};
+    void pollEvents();
+    void drawWorld(int R, int G, int B, int opacity) const;
+    
 
 private:
-    bool is_closed = false;
+    World game;
+    bool closed = false;
     string title;
     int width;
     int length;
