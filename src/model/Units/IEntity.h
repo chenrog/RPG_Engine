@@ -14,12 +14,12 @@ using namespace std;
 /**
  * Class representing an Entity.
  */
-class AEntity {
+class IEntity {
 public:
     // TODO: make uninstantiable
-    AEntity();
+    IEntity();
 
-    virtual ~AEntity();
+    virtual ~IEntity();
 
     virtual const string & getName() const;
 

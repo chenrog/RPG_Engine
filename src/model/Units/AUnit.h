@@ -11,7 +11,7 @@
 #endif //CS3520_2017FA_PROJ_SPELL_H
 #include "../Item/Equipment/Equipment.h"
 #include "../Item/Item.h"
-#include "AEntity.h"
+#include "IEntity.h"
 #include "../World/Direction.h"
 #include <string>
 #include <vector>
@@ -19,13 +19,13 @@
 
 class Spell;
 
-class IUnit : public AEntity {
+class AUnit : public IEntity {
 public:
-    IUnit();
+    AUnit();
 
-    IUnit(const IUnit &unit);
+    AUnit(const AUnit &unit);
 
-    ~IUnit();
+    ~AUnit();
 
     /**
      * Move this Unit in the given direction, x distance away

@@ -18,7 +18,7 @@ public:
         worldMap = WorldMap();
         Point starting_point = Point(0, 0);
         vector<Equipment> equipmentList;
-        vector<Spell> spellList;
+        vector<Spell>     spellList;
 //    this->inventory;
         //TODO: probably need new here.
 

@@ -10,7 +10,7 @@ MapCell::MapCell(Point position, bool walkable) {
     this->walkable = walkable;
 }
 
-MapCell::MapCell(Point position, AEntity c_entity, bool walkable) {
+MapCell::MapCell(Point position, IEntity c_entity, bool walkable) {
     this->position = position;
     this->c_entity = c_entity;
     this->walkable = walkable;
@@ -20,11 +20,11 @@ Point MapCell::getPosition() {
     return position;
 }
 
-AEntity MapCell::getEntity() {
+IEntity MapCell::getEntity() {
     return c_entity;
 }
 
-void MapCell::setEntity(const AEntity &entity) {
+void MapCell::setEntity(const IEntity &entity) {
     c_entity = entity;
 }
 

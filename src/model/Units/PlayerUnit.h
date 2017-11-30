@@ -1,12 +1,12 @@
 #ifndef CS3520_2017FA_PROJ_PLAYERCHARACTER_H
 #define CS3520_2017FA_PROJ_PLAYERCHARACTER_H
 
-#include "IUnit.h"
+#include "AUnit.h"
 #include "../Item/Equipment/Equipment.h"
 #include "../Spells/Spell.h"
 #include <vector>
 
-class PlayerUnit : public IUnit {
+class PlayerUnit : public AUnit {
 public:
     PlayerUnit();
 

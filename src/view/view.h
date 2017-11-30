@@ -6,7 +6,7 @@
 
 class view {
 public:
-    draw_world
+    //draw_world
 private:
     World world;
 

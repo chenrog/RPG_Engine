@@ -5,7 +5,7 @@ Spell::Spell(string spell, int base_damage, int mod_damage, int base_hit_chance,
         spellname(std::move(spell)), base_damage(base_damage), mod_damage(mod_damage), base_hit_chance(base_hit_chance),
         mod_hit_chance(mod_hit_chance), spell_type(spell_type), damage_type(damage_type) { }
 
-int Spell::getDamage(const IUnit &unit) {
+int Spell::getDamage(const AUnit &unit) {
     signed int total_damage;
     unsigned damage_stat = 0;
 
@@ -23,7 +23,7 @@ int Spell::getDamage(const IUnit &unit) {
     return total_damage * this->spell_type;
 }
 
-int Spell::getHitChance(const IUnit &unit) {
+int Spell::getHitChance(const AUnit &unit) {
     unsigned int total_hit_chance = this->base_hit_chance + (this->mod_hit_chance * unit.get_dex());
     return total_hit_chance;
 }

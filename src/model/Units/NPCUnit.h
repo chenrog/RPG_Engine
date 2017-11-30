@@ -1,11 +1,11 @@
 #ifndef CS3520_2017FA_PROJ_NPCUNIT_H
 #define CS3520_2017FA_PROJ_NPCUNIT_H
 
-#include "IUnit.h"
+#include "AUnit.h"
 #include "NPCUnitType.h"
 #include "../Item/Item.h"
 
-class NPCUnit : public IUnit {
+class NPCUnit : public AUnit {
 public:
     /**
      * A constructor for an NPC

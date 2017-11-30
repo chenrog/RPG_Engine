@@ -2,12 +2,12 @@
 #define CS3520_2017FA_PROJ_EQUIPMENT_H
 
 #include "EquipType.h"
-#include "../../Units/AEntity.h"
+#include "../../Units/IEntity.h"
 #include <string>
 
 using namespace std;
 
-class Equipment : public AEntity{
+class Equipment : public IEntity{
 public:
     Equipment(string name, Point position, bool visible, equip_type_t type, signed int v, unsigned int vm, signed int i,
               unsigned int im, signed int sp, unsigned int spm, signed int st, unsigned int stm);

@@ -1,8 +1,8 @@
 #ifndef CS3520_2017FA_PROJ_BATTLEMODE_H
 #define CS3520_2017FA_PROJ_BATTLEMODE_H
 
-#include "../Units/IUnit.h"
+#include "../Units/AUnit.h"
 
-static void doBattle(IUnit players[], IUnit enemies[]);
+static void doBattle(AUnit player, AUnit enemy);
 
 #endif //CS3520_2017FA_PROJ_BATTLEMODE_H

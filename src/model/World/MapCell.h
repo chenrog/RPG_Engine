@@ -6,19 +6,19 @@
 #define CS3520_2017FA_PROJ_MAPCELL_H
 
 
-#include "../Units/AEntity.h"
+#include "../Units/IEntity.h"
 
 class MapCell {
 public:
     MapCell(Point position, bool walkable);
 
-    MapCell(Point position, AEntity c_entity, bool walkable);
+    MapCell(Point position, IEntity c_entity, bool walkable);
 
     Point getPosition();
 
-    AEntity getEntity();
+    IEntity getEntity();
 
-    void setEntity(const AEntity& entity);
+    void setEntity(const IEntity& entity);
 
     bool isWalkable();
 
@@ -33,7 +33,7 @@ public:
 
 private:
     Point position;
-    AEntity c_entity;
+    IEntity c_entity;
     bool walkable;
     bool randomEncounterable;
 };

@@ -5,9 +5,9 @@
 #ifndef CS3520_2017FA_PROJ_ITEM_H
 #define CS3520_2017FA_PROJ_ITEM_H
 
-#include "../Units/AEntity.h"
+#include "../Units/IEntity.h"
 
-class Item : public AEntity {
+class Item : public IEntity {
 public:
     Item();
     string getDescription();
