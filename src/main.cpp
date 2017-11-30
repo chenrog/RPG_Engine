@@ -39,11 +39,11 @@ int main( int argc, char* args[] ) {
                 // quit out of the game
                 case SDL_QUIT:
                     is_running = false;
-
+                // check for key press
                 case SDL_KEYDOWN:
                     printf( "Key press detected\n" );
                 break;
-
+                // check for key release
                 case SDL_KEYUP:
                     printf( "Key release detected\n" );
                 break;
