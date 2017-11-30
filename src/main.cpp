@@ -2,15 +2,15 @@
 #include "SDL2/SDL.h"
 
 //Screen dimension constants
-const int SCREEN_WIDTH = 640;
-const int SCREEN_HEIGHT = 480;
+const int SCREEN_GRID_MULTIPLIER = 10;
+const int SCREEN_WIDTH = 64 * SCREEN_GRID_MULTIPLIER;
+const int SCREEN_HEIGHT = 48 * SCREEN_GRID_MULTIPLIER;
 int main( int argc, char* args[] ) {
 
     SDL_Window *window;                    // Declare a pointer to the window
-
     SDL_Init(SDL_INIT_VIDEO);              // Initialize SDL2
 
-// Create an application window with the following settings:
+// Create the game window with the following settings:
     window = SDL_CreateWindow(
             "AR-CUBED RPG",                    // window title
             SDL_WINDOWPOS_UNDEFINED,           // initial x position
@@ -49,7 +49,7 @@ int main( int argc, char* args[] ) {
                 break;
             }
         }
-        SDL_Delay(16);
+        SDL_Delay(20); // waits 20 milliseconds
     }
 
     // Close and destroy the window
