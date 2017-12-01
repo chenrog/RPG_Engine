@@ -13,8 +13,9 @@
 using namespace std;
 class GameWindow {
 public:
-    GameWindow(World game, string title, int width, int length);
+    GameWindow(string title, unsigned int width, unsigned int height);
     ~GameWindow();
+
     bool init();
     inline bool is_closed() {return closed;};
     void pollEvents();
@@ -22,13 +23,16 @@ public:
     
 
 private:
-    World game;
+    // the game being displayed
+    World game = World();
+    // below are properties of an SDL window
     bool closed = false;
     string title;
-    int width;
-    int length;
-    SDL_Window * window = nullptr;
-    SDL_Renderer * renderer = nullptr;
+    unsigned int width;
+    unsigned int height;
+    // both of the below variables are initialized by the init function
+    SDL_Window * window = nullptr;      // Declare a pointer to the window
+    SDL_Renderer * renderer = nullptr;  // Declare a pointer to the renderer
 };
 
 
