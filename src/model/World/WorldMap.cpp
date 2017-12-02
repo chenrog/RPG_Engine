@@ -8,10 +8,10 @@
 WorldMap::WorldMap() {
 
     // Generate the map.
-    for (int i = 0; i < WORLDMAP_HEIGHT; i++) {
-        for (int j = 0; j < WORLDMAP_WIDTH; j++) {
-            //TODO: Probably need new here.
-            gridMap[i].push_back(MapCell(Point(i, j), true));
+    for (unsigned int i = 0; i < WORLDMAP_HEIGHT; i++) {
+        for (unsigned int j = 0; j < WORLDMAP_WIDTH; j++) {
+            //TODO: Probably need new here. Something is definitely wrong here
+            gridMap[i].emplace_back(MapCell(Point(i, j), true));
         }
     }
 

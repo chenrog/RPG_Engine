@@ -7,7 +7,7 @@ using namespace std;
 PlayerUnit::PlayerUnit(string name, Point position, bool visible, unsigned int vit, unsigned int intel, unsigned int dex,
                        unsigned int str,  unsigned int lvl, bool is_melee, vector<Equipment> equipment,
                        vector<Spell> spell, double mod_vit, double mod_int, double mod_dex, double mod_str) {
-    this->name = name;
+    this->name = std::move(name);
     this->st_vit = vit;
     this->st_int = intel;
     this->st_dex = dex;
@@ -24,9 +24,11 @@ PlayerUnit::PlayerUnit(string name, Point position, bool visible, unsigned int v
 
     updateStats();
 
-    this->equipmentList = equipment;
-    this->spellList = spell;
+    this->equipmentList = std::move(equipment);
+    this->spellList = std::move(spell);
 }
+
+// PlayerUnit::PlayerUnit() = default;
 
 Equipment PlayerUnit::equip(Equipment const equipment) {
     Equipment curEquip = this->equipmentList[equipment.getType()];

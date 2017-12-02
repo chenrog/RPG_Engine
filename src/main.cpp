@@ -1,12 +1,13 @@
 #include <iostream>
 #include "SDL2/SDL.h"
-#include "model/World/World.h"
 #include "view/GameWindow.h"
 
 //Screen dimension constants
 const int SCREEN_GRID_MULTIPLIER = 10;
 const int SCREEN_WIDTH = 64;
 const int SCREEN_HEIGHT = 48;
+
+// TODO: FIX AND TURN ON WORLD IN GameWindow.h
 
 int main( int argc, char* args[] ) {
     // initialize the game

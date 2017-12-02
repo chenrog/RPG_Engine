@@ -8,8 +8,6 @@
 
 class PlayerUnit : public AUnit {
 public:
-    PlayerUnit();
-
     /**
      *
      * @param vit
@@ -31,6 +29,8 @@ public:
                unsigned int lvl, bool is_melee,
                vector<Equipment> equipmentList, vector<Spell> spellList,
                double mod_vit, double mod_int, double mod_dex, double mod_str);
+
+//    PlayerUnit();
 
 
     /**

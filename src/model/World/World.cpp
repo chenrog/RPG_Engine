@@ -3,11 +3,20 @@
 //
 
 #include "World.h"
-#include <ctime>
 #include <random>
 /**
  * World Creation method.
  */
+
+World::World()  {
+    worldMap = WorldMap();
+//    this->inventory;
+    //TODO: probably need new here.
+
+    this->gameState = OVERWORLD;
+}
+
+World::~World() {}
 
 
 PlayerUnit World::getPlayer() {

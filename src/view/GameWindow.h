@@ -24,6 +24,7 @@ public:
 
 private:
     // the game being displayed
+    // TODO: Fix world
     World game = World();
     // below are properties of an SDL window
     bool closed = false;

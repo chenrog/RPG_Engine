@@ -14,6 +14,8 @@ bool GameWindow::init() {
     if (SDL_Init(SDL_INIT_EVERYTHING) != 0) {
         cerr << "Failed to initialize SDL2" << endl;
     }
+
+//    Uint32 flags = SDL_WINDOW_INPUT_FOCUS | SDL_WINDOW_MAXIMIZED;
     // create a window with the following settings
     window = SDL_CreateWindow(
             title.c_str(),                    // window title

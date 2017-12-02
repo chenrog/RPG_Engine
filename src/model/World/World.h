@@ -14,20 +14,7 @@
 
 class World {
 public:
-    World()  {
-        worldMap = WorldMap();
-        Point starting_point = Point(0, 0);
-        vector<Equipment> equipmentList;
-        vector<Spell>     spellList;
-//    this->inventory;
-        //TODO: probably need new here.
-
-        this->player = PlayerUnit("Twen", starting_point, true, STARTING_VIT, STARTING_INT, STARTING_DEX,
-                                  STARTING_STR, STARTING_LVL, true, equipmentList, spellList, STARTING_MOD_VIT,
-                                  STARTING_MOD_INT, STARTING_MOD_DEX, STARTING_MOD_STR);
-        this->gameState = OVERWORLD;
-
-    }
+    World();
 
     ~World();
 
@@ -93,7 +80,11 @@ public:
 
 private:
     // Only doing one player for now.
-    PlayerUnit player;
+    PlayerUnit player = PlayerUnit("Twen", Point(0, 0), true,
+                                   STARTING_VIT, STARTING_INT, STARTING_DEX, STARTING_STR,
+                                   STARTING_LVL, true,
+                                   vector<Equipment>(), vector<Spell>(),
+                                   STARTING_MOD_VIT, STARTING_MOD_INT, STARTING_MOD_DEX, STARTING_MOD_STR);
     //unordered_map inventory;
     WorldMap worldMap;
     game_state_t gameState;
