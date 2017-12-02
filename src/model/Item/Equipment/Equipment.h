@@ -2,12 +2,12 @@
 #define CS3520_2017FA_PROJ_EQUIPMENT_H
 
 #include "EquipType.h"
-#include "../../Units/IEntity.h"
+#include "../Item.h"
 #include <string>
 
 using namespace std;
 
-class Equipment : public IEntity{
+class Equipment : public Item{
 public:
     Equipment(string name, Point position, bool visible, equip_type_t type, signed int v, unsigned int vm, signed int i,
               unsigned int im, signed int sp, unsigned int spm, signed int st, unsigned int stm);
@@ -44,7 +44,6 @@ public:
     Equip_Builder(string name, equip_type_t type);
     Equipment * build();
     // setters for the fields
-    Equip_Builder setName(const string &name);
     Equip_Builder setPosition(const Point &position);
     Equip_Builder setVisibility(const bool &visibility);
     Equip_Builder setVit(int vit);

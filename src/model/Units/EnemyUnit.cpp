@@ -15,6 +15,22 @@ EnemyUnit::EnemyUnit(unsigned int vit, unsigned int intel, unsigned int speed, u
     this->visible = false;
 }
 
+EnemyUnit::EnemyUnit(Point posn, unsigned int vit, unsigned int intel, unsigned int speed, unsigned int str, bool melee,
+                     string name, vector<Item> drops) {
+    this->position = posn;
+    this->name = name;
+    this->st_vit = vit;
+    this->st_int = intel;
+    this->st_dex = speed;
+    this->st_str = str;
+    this->melee = melee;
+    updateStats();
+    this->health = this->max_health;
+    this->mana = this->max_mana;
+    this->drop = drops;
+    this->visible = false;
+}
+
 EnemyUnit::EnemyUnit(const EnemyUnit &unit) {
     this->name = name;
     this->st_vit = unit.st_vit;

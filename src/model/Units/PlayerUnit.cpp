@@ -29,14 +29,14 @@ PlayerUnit::PlayerUnit(string name, Point position, unsigned int vit, unsigned i
     this->spellList = spell;
 }
 
-Equipment PlayerUnit::equip(Equipment const equipment) {
+Equipment PlayerUnit::equip(Equipment const equipment, Item * inventory, int curInventorySize) {
     Equipment curEquip = this->equipmentList[equipment.getType()];
     this->st_str -= curEquip.getStr();
     this->st_vit -= curEquip.getVit();
     this->st_int -= curEquip.getIntel();
     this->st_dex -= curEquip.getSpeed();
 
-    // have something here that moves the current equipment into the world inventory;
+    inventory[curInventorySize] = curEquip;
 
     this->st_str += equipment.getStr();
     this->st_vit += equipment.getVit();
