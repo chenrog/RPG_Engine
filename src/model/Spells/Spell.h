@@ -45,7 +45,7 @@ class Spell_Builder {
 public:
     // builder constructor and build function
     Spell_Builder(string spell, spell_type_t spell_type, damage_type_t damage_type);
-    Spell & build();
+    Spell * build();
     // setters for the fields
     Spell_Builder setDamage(int damage);
     Spell_Builder setDamageMod(int damage_mod);

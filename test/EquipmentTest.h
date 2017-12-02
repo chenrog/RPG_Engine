@@ -38,7 +38,7 @@ public:
         TS_ASSERT_EQUALS(equipment->getIntel(), 8);
         TS_ASSERT_EQUALS(equipment->getStr(), 10);
         TS_ASSERT_EQUALS(equipment->getSpeed(), 12);
-
+        delete equip_builder;
 
     }
 };
