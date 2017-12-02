@@ -61,12 +61,12 @@ void Spell::display() {
             spell_type = "Attack";
     }
 
-    cout << "{ " << this->spellname << " - " << target_type << " " << damage_type << " " << spell_type <<  ": ";
+    cout << "{ " << this->spellname << " - " << " " << damage_type << " " << spell_type <<  ": ";
     cout << "Damage [" << this->base_damage << " + (" << this->mod_damage << " * " << scaling_stat << ")] | ";
     cout << "HitRate [" << this->base_hit_chance << " + (" << this->mod_hit_chance << " * DEX)]" << endl;
 }
 
-Spell_Builder::Spell_Builder(string spell, spell_type_t spell_type, damage_type_t damage_type, target_type_t target_type) :
+Spell_Builder::Spell_Builder(string spell, spell_type_t spell_type, damage_type_t damage_type) :
         spellname(std::move(spell)), spell_type(spell_type), damage_type(damage_type) { }
 
 Spell& Spell_Builder::build() {
