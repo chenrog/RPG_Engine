@@ -80,9 +80,9 @@ int Equipment::getStr() const {
 Equip_Builder::Equip_Builder(string name, equip_type_t type) : name(std::move(name)), type(type) {}
 
 // this builds a new Equipment with the stats of this equipment
-Equipment &Equip_Builder::build() {
+Equipment * Equip_Builder::build() {
     auto equipment = new Equipment(name, position, visible, type, vit, vit_mod, intel, int_mod, speed, speed_mod, str, str_mod);
-    return *equipment;
+    return equipment;
 }
 
 Equip_Builder Equip_Builder::setName(const string &name) {

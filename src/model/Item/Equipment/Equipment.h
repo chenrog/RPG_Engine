@@ -42,7 +42,7 @@ class Equip_Builder {
 public:
     // builder constructor and build function
     Equip_Builder(string name, equip_type_t type);
-    Equipment & build();
+    Equipment * build();
     // setters for the fields
     Equip_Builder setName(const string &name);
     Equip_Builder setPosition(const Point &position);
