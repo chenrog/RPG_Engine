@@ -5,7 +5,6 @@
 #include <cxxtest/TestSuite.h>
 
 #include <iostream>
-#include <cstring>
 
 class EquipmentTest {
 public:

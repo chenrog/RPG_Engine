@@ -8,7 +8,6 @@
 #include <cxxtest/TestSuite.h>
 
 #include <iostream>
-#include <cstring>
 
 class SpellTest {
 public:
