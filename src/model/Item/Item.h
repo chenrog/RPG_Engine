@@ -9,7 +9,7 @@
 
 class Item : public IEntity {
 public:
-    Item();
+    Item(string name, string desc);
     string getDescription();
 
 protected:
