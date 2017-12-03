@@ -1,49 +1,30 @@
-#include "SDL2/SDL.h"
 #include <iostream>
-
+#include "SDL2/SDL.h"
+#include "model/World/World.h"
+#include "view/GameWindow.h"
 
 //Screen dimension constants
-const int SCREEN_WIDTH = 640;
-const int SCREEN_HEIGHT = 480;
+const int SCREEN_GRID_MULTIPLIER = 10;
+const int SCREEN_WIDTH = 64;
+const int SCREEN_HEIGHT = 48;
+
 int main( int argc, char* args[] ) {
+    // initialize the game
+    GameWindow g = GameWindow(
+            "$WAG",
+            SCREEN_WIDTH * SCREEN_GRID_MULTIPLIER,
+            SCREEN_HEIGHT * SCREEN_GRID_MULTIPLIER);
 
-    SDL_Window *window;                    // Declare a pointer
 
-    SDL_Init(SDL_INIT_VIDEO);              // Initialize SDL2
+    // A basic main loop to prevent blocking
+    while (!g.is_closed()) {
+        /* Poll for events. SDL_PollEvent() returns 0 when there are no  */
+        /* more events on the event queue, our while loop will exit when */
+        /* that occurs.                                                  */
+        g.pollEvents();
 
-// Create an application window with the following settings:
-    window = SDL_CreateWindow(
-            "An SDL2 window",                  // window title
-            SDL_WINDOWPOS_UNDEFINED,           // initial x position
-            SDL_WINDOWPOS_UNDEFINED,           // initial y position
-            SCREEN_WIDTH,                      // width, in pixels
-            SCREEN_HEIGHT,                     // height, in pixels
-            SDL_WINDOW_OPENGL                  // flags - see below
-    );
-
-// Check that the window was successfully created
-    if (window == NULL) {
-        // In the case that the window could not be made...
-        printf("Could not create window: %s\n", SDL_GetError());
-        return 1;
+        SDL_Delay(20); // waits 20 milliseconds
     }
 
-// A basic main loop to prevent blocking
-    bool is_running = true;
-    SDL_Event event;
-    while (is_running) {
-        while (SDL_PollEvent(&event)) {
-            if (event.type == SDL_QUIT) {
-                is_running = false;
-            }
-        }
-        SDL_Delay(16);
-    }
-
-// Close and destroy the window
-    SDL_DestroyWindow(window);
-
-// Clean up
-    SDL_Quit();
     return 0;
 }

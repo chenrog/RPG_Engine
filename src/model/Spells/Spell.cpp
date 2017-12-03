@@ -1,11 +1,11 @@
 #include "Spell.h"
 
 Spell::Spell(string spell, int base_damage, int mod_damage, int base_hit_chance, int mod_hit_chance, spell_type_t spell_type,
-             damage_type_t damage_type, target_type_t target_type) :
+             damage_type_t damage_type) :
         spellname(std::move(spell)), base_damage(base_damage), mod_damage(mod_damage), base_hit_chance(base_hit_chance),
-        mod_hit_chance(mod_hit_chance), spell_type(spell_type), damage_type(damage_type), target_type(target_type) { }
+        mod_hit_chance(mod_hit_chance), spell_type(spell_type), damage_type(damage_type) { }
 
-int Spell::getDamage(const IUnit &unit) {
+int Spell::getDamage(const AUnit &unit) {
     signed int total_damage;
     unsigned damage_stat = 0;
 
@@ -23,7 +23,7 @@ int Spell::getDamage(const IUnit &unit) {
     return total_damage * this->spell_type;
 }
 
-int Spell::getHitChance(const IUnit &unit) {
+int Spell::getHitChance(const AUnit &unit) {
     unsigned int total_hit_chance = this->base_hit_chance + (this->mod_hit_chance * unit.get_dex());
     return total_hit_chance;
 }
@@ -34,25 +34,11 @@ spell_type_t  Spell::getSpellType() {
 damage_type_t Spell::getDamageType() {
     return this->damage_type;
 }
-target_type_t Spell::getTargetType() {
-    return this->target_type;
-}
 
 void Spell::display() {
     string spell_type;
     string damage_type;
-    string target_type;
     string scaling_stat;
-
-    // single target or AOE
-    switch(this->target_type) {
-        case SINGLE :
-            target_type = "Single Target";
-            break;
-        case AOE :
-            target_type = "Area of Effect";
-            break;
-    }
 
     // physical or magical ability
     switch(this->damage_type) {
@@ -75,18 +61,27 @@ void Spell::display() {
             spell_type = "Attack";
     }
 
-    cout << "{ " << this->spellname << " - " << target_type << " " << damage_type << " " << spell_type <<  ": ";
+    cout << "{ " << this->spellname << " - " << " " << damage_type << " " << spell_type <<  ": ";
     cout << "Damage [" << this->base_damage << " + (" << this->mod_damage << " * " << scaling_stat << ")] | ";
     cout << "HitRate [" << this->base_hit_chance << " + (" << this->mod_hit_chance << " * DEX)]" << endl;
 }
 
-Spell_Builder::Spell_Builder(string spell, spell_type_t spell_type, damage_type_t damage_type, target_type_t target_type) :
-        spellname(std::move(spell)), spell_type(spell_type), damage_type(damage_type), target_type(target_type) { }
+// BUILDER FROM HERE ON OUT
 
-Spell& Spell_Builder::build() {
+static const int DEFAULT_BASE_DAMAGE = 0;
+static const int DEFAULT_MOD_DAMAGE = 1;
+static const int DEFAULT_BASE_HIT_CHANCE = 100;
+static const int DEFAULT_MOD_HIT_CHANCE = 1;
+
+Spell_Builder::Spell_Builder(string spell, spell_type_t spell_type, damage_type_t damage_type) :
+        spellname(std::move(spell)), spell_type(spell_type), damage_type(damage_type),
+        base_damage(DEFAULT_BASE_DAMAGE), mod_damage(DEFAULT_MOD_DAMAGE),
+        base_hit_chance(DEFAULT_BASE_HIT_CHANCE), mod_hit_chance(DEFAULT_MOD_HIT_CHANCE) { }
+
+Spell * Spell_Builder::build() {
     auto spell = new Spell(this->spellname, this->base_damage, this->mod_damage, this->base_hit_chance, this->mod_hit_chance,
-                           this->spell_type, this->damage_type, this->target_type);
-    return *spell;
+                           this->spell_type, this->damage_type);
+    return spell;
 }
 
 Spell_Builder Spell_Builder::setDamage(int damage) {

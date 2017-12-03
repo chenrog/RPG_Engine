@@ -4,9 +4,13 @@
 
 using namespace std;
 
-PlayerUnit::PlayerUnit(string name, Point position, bool visible, unsigned int vit, unsigned int intel, unsigned int dex,
-                       unsigned int str,  unsigned int lvl, bool is_melee, vector<Equipment> equipment,
-                       vector<Spell> spell, double mod_vit, double mod_int, double mod_dex, double mod_str) {
+PlayerUnit::PlayerUnit() {
+}
+
+PlayerUnit::PlayerUnit(string name, Posn position, unsigned int vit, unsigned int intel, unsigned int dex, unsigned int str,
+                       unsigned int lvl, bool is_melee,
+                       vector<Equipment> equipmentList, vector<Spell> spellList,
+                       double mod_vit, double mod_int, double mod_dex, double mod_str) {
     this->name = name;
     this->st_vit = vit;
     this->st_int = intel;
@@ -16,26 +20,27 @@ PlayerUnit::PlayerUnit(string name, Point position, bool visible, unsigned int v
     this->mod_int = mod_int;
     this->mod_str = mod_str;
     this->mod_dex = mod_dex;
-    this->is_melee = is_melee;
+    this->melee = melee;
     this->lvl = lvl;
     updateStats();
     this->health = this->max_health;
     this->mana = this->max_mana;
+    this->visible = true;
 
     updateStats();
 
-    this->equipmentList = equipment;
-    this->spellList = spell;
+    this->equipmentList = equipmentList;
+    this->spellList = spellList;
 }
 
-Equipment PlayerUnit::equip(Equipment const equipment) {
+Equipment PlayerUnit::equip(Equipment const equipment, Item * inventory, int curInventorySize) {
     Equipment curEquip = this->equipmentList[equipment.getType()];
     this->st_str -= curEquip.getStr();
     this->st_vit -= curEquip.getVit();
     this->st_int -= curEquip.getIntel();
     this->st_dex -= curEquip.getSpeed();
 
-    // have something here that moves the current equipment into the world inventory;
+    inventory[curInventorySize] = curEquip;
 
     this->st_str += equipment.getStr();
     this->st_vit += equipment.getVit();
@@ -60,4 +65,5 @@ bool PlayerUnit::addEXP(int const exp) {
         return false;
     }
 }
+
 

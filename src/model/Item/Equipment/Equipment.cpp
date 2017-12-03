@@ -6,13 +6,15 @@
 
 using namespace std;
 
-Equipment::Equipment(string name, Point position, bool visible, equip_type_t type, signed int v, unsigned int vm,
-                     signed int i, unsigned int im, signed int sp, unsigned int spm, signed int st, unsigned int stm) :
+Equipment::Equipment(string name, Posn position, bool visible, equip_type_t type, signed int v, unsigned int vm,
+                     signed int i, unsigned int im, signed int sp, unsigned int spm,
+                     signed int st, unsigned int stm, string description) :
         level(0), type(type), vit(v), vit_mod(vm), intel(i), int_mod(im), speed(sp), speed_mod(spm), str(st), str_mod(stm) {
 
         this->name = std::move(name);
         this->position = position;
         this->visible = visible;
+        this->description = std::move(description);
 }
 
 void Equipment::level_up() {
@@ -77,20 +79,34 @@ int Equipment::getStr() const {
     return str;
 }
 
-Equip_Builder::Equip_Builder(string name, equip_type_t type) : name(std::move(name)), type(type) {}
+// BUILDER FROM HERE ON OUT
+
+static const bool         DEFAULT_VIS = false;
+// vitality stats by this equipment
+static const signed int   DEFAULT_VIT = 0;
+static const unsigned int DEFAULT_VMOD = 0;
+// intelligence stats by this equipment
+static const signed int   DEFAULT_INT = 0;
+static const unsigned int DEFAULT_IMOD = 0;
+// dex stats by this equipment
+static const signed int   DEFAULT_DEX = 0;
+static const unsigned int DEFAULT_DMOD = 0;
+// strength stats by this equipment
+static const signed int   DEFAULT_STR = 0;
+static const unsigned int DEFAULT_SMOD = 0;
+static const string       DEFAULT_DESC = "Equipment.";
+
+Equip_Builder::Equip_Builder(string name, equip_type_t type) : name(std::move(name)), type(type),
+visible(DEFAULT_VIS), vit(DEFAULT_VIT), vit_mod(DEFAULT_VMOD), intel(DEFAULT_INT), int_mod(DEFAULT_IMOD),
+dex(DEFAULT_DEX), dex_mod(DEFAULT_DMOD), str(DEFAULT_STR), str_mod(DEFAULT_SMOD), desc(DEFAULT_DESC) { }
 
 // this builds a new Equipment with the stats of this equipment
-Equipment &Equip_Builder::build() {
-    auto equipment = new Equipment(name, position, visible, type, vit, vit_mod, intel, int_mod, speed, speed_mod, str, str_mod);
-    return *equipment;
+Equipment * Equip_Builder::build() {
+    auto equipment = new Equipment(name, position, visible, type, vit, vit_mod, intel, int_mod, dex, dex_mod, str, str_mod, desc);
+    return equipment;
 }
 
-Equip_Builder Equip_Builder::setName(const string &name) {
-    this->name = std::move(name);
-    return *this;
-}
-
-Equip_Builder Equip_Builder::setPosition(const Point &position) {
+Equip_Builder Equip_Builder::setPosition(const Posn &position) {
     this->position = position;
     return *this;
 }
@@ -119,13 +135,13 @@ Equip_Builder Equip_Builder::setInt_mod(unsigned int int_mod) {
     return *this;
 }
 
-Equip_Builder Equip_Builder::setSpeed(int speed) {
-    this->speed = speed;
+Equip_Builder Equip_Builder::setDex(int dex) {
+    this->dex = dex;
     return *this;
 }
 
-Equip_Builder Equip_Builder::setSpeed_mod(unsigned int speed_mod) {
-    this->speed_mod = speed_mod;
+Equip_Builder Equip_Builder::setDex_mod(unsigned int dex_mod) {
+    this->dex_mod = dex_mod;
     return *this;
 }
 
@@ -137,4 +153,9 @@ Equip_Builder Equip_Builder::setStr(int str) {
 Equip_Builder Equip_Builder::setStr_mod(unsigned int str_mod) {
     this->str_mod = str_mod;
     return *this;
+}
+
+Equip_Builder Equip_Builder::setDesc(string desc) {
+    //delete this->desc; //TODO: Not if needed causing build error
+    this->desc = std::move(desc);
 }

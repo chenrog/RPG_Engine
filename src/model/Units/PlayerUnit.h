@@ -1,12 +1,12 @@
 #ifndef CS3520_2017FA_PROJ_PLAYERCHARACTER_H
 #define CS3520_2017FA_PROJ_PLAYERCHARACTER_H
 
-#include "IUnit.h"
-#include "../Equipment/Equipment.h"
+#include "AUnit.h"
+#include "../Item/Equipment/Equipment.h"
 #include "../Spells/Spell.h"
 #include <vector>
 
-class PlayerUnit : public IUnit {
+class PlayerUnit : public AUnit {
 public:
     PlayerUnit();
 
@@ -26,8 +26,7 @@ public:
      * @param lvl
      * @param name
      */
-    PlayerUnit(string name, Point position, bool visible,
-               unsigned int vit, unsigned int intel, unsigned int dex, unsigned int str,
+    PlayerUnit(string name, Posn position, unsigned int vit, unsigned int intel, unsigned int dex, unsigned int str,
                unsigned int lvl, bool is_melee,
                vector<Equipment> equipmentList, vector<Spell> spellList,
                double mod_vit, double mod_int, double mod_dex, double mod_str);
@@ -38,7 +37,7 @@ public:
      * equipment, if there is one.
      * @param equipment
      */
-    Equipment equip(Equipment equipment);
+    Equipment equip(Equipment equipment, Item inventory[], int curInventorySize);
 
     /**
      * adds EXP from a battle to the exp of this unit. Then calculates if there is a level up by this unit. Returns

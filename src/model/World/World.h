@@ -1,3 +1,7 @@
+//
+// Created by Andrew Alcala on 11/8/2017.
+//
+
 #ifndef CS3520_2017FA_PROJ_WORLD_H
 #define CS3520_2017FA_PROJ_WORLD_H
 
@@ -10,22 +14,13 @@
 
 class World {
 public:
-    World()  {
-        worldMap = WorldMap();
-        Point starting_point = Point(0, 0);
-        vector<Equipment> equipmentList;
-        vector<Spell> spellList;
-        this->player = PlayerUnit("Twen", starting_point, true, STARTING_VIT, STARTING_INT, STARTING_DEX,
-                                  STARTING_STR, STARTING_LVL, true, equipmentList, spellList, STARTING_MOD_VIT,
-                                  STARTING_MOD_INT, STARTING_MOD_DEX, STARTING_MOD_STR);
-        this->gameState = OVERWORLD;
-    }
+    World();
 
     ~World();
 
     /**
-     * Returns the player.
-     * @return The player.
+     * Returns the allies.
+     * @return The allies.
      */
     PlayerUnit getPlayer();
 
@@ -34,6 +29,12 @@ public:
      * cell that has random encounters, generate whether or not there is an encounter.
      */
     void movePlayer(direction_t direction, int distance);
+
+    /**
+     * Returns the inventory as a map corresponding items to their quantity.
+     * @return
+     */
+    //unordered_map<Item, int> getInventory();
 
     /**
      * Returns the Overworld and all its cells.
@@ -59,7 +60,15 @@ public:
      */
     void onTick(int currTick);
 
+    inline bool addToInventory(Item item);
+
+    inline void trash(int i);
+
     // Constants
+    static const int INVENTORY_SLOTS = 20;
+    const int PARTY_SIZE = 2;
+
+    //TODO: not sure what these numbers are yet. i know they change per player though so it wont be const.
     unsigned const int STARTING_VIT = 1;
     unsigned const int STARTING_INT = 1;
     unsigned const int STARTING_DEX = 1;
@@ -74,8 +83,12 @@ public:
     const double RANDOM_ENCOUNTER_CHANCE = .05;
 
 private:
+    // Only doing one player for now.
     PlayerUnit player;
+    //unordered_map inventory;
     WorldMap worldMap;
+    Item inventory[INVENTORY_SLOTS];
+    int curInventorySize = 0;
     game_state_t gameState;
     bool gameOver = false;
 };

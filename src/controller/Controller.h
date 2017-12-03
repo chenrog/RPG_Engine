@@ -1,0 +1,10 @@
+#ifndef CS3520_2017FA_PROJ_CONTROLLER_H
+#define CS3520_2017FA_PROJ_CONTROLLER_H
+
+
+class Controller {
+
+};
+
+
+#endif //CS3520_2017FA_PROJ_CONTROLLER_H
