@@ -79,6 +79,10 @@ void World::movePlayer(direction_t direction, int distance) {
     }
 }
 
+void World::setCurrentGameState(game_state_t newGameState) {
+    this->gameState = newGameState;
+}
+
 World::~World() {
 
 }

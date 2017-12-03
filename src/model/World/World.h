@@ -68,6 +68,11 @@ public:
     static const int INVENTORY_SLOTS = 20;
     const int PARTY_SIZE = 2;
 
+    /**
+	* Sets the current gamestate to the given one
+	*/
+    void World::setCurrentGameState(game_state_t gameState);
+
     //TODO: not sure what these numbers are yet. i know they change per player though so it wont be const.
     unsigned const int STARTING_VIT = 1;
     unsigned const int STARTING_INT = 1;
