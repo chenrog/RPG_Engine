@@ -100,11 +100,13 @@ void GameWindow::drawWorld() const {
             cell.w = cell_x;
             cell.h = cell_y;
             SDL_SetRenderDrawColor(renderer, 94, 184, 92, 255);
+            int a = 0;
+            int b = 0;
             for (int i = game.getPlayer().getPosition().getX() - 4; i < game.getPlayer().getPosition().getX() + 4; i++) {
                 for (int j = game.getPlayer().getPosition().getY() - 4; j < game.getPlayer().getPosition().getY() + 4; j++) {
                     MapCell curCell = game.getWorldMap().getWorldMap()[i][j];
-                    cell.x = curCell.getPosition().getX();
-                    cell.y = curCell.getPosition().getY();
+                    cell.x = a * cell_x;
+                    cell.y = b * cell_y;
                     if (curCell.isWalkable()) {
                         SDL_SetRenderDrawColor(renderer, 94, 184, 92, 255);
 
@@ -124,7 +126,9 @@ void GameWindow::drawWorld() const {
                         }
                         SDL_RenderFillRect(renderer, cell);
                     }
+                    b++;
                 }
+                a++;
             }
             SDL_Rect player;
             player.w = cell_x - 5;
@@ -132,13 +136,9 @@ void GameWindow::drawWorld() const {
             player.x = game.getPlayer().getPosition().getX();
             player.y = game.getPlayer().getPosition().getY();
             SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
-        case(3):
-            SDL_Rect textBox;
-            textBox.y = 600;
-            textBox.x = 0;
-            textBox.w = 900;
-            textBox.h = 300;
-            TTF_Font * font = TTF_OpenFont(font/Final-Fantasy.ttf, 14);
+            break;
+        case(MENU):
+
 
     }
 
