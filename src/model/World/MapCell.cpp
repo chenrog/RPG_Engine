@@ -4,26 +4,28 @@
 
 #include "MapCell.h"
 
-MapCell::MapCell(Posn position, bool walkable) {
+MapCell::MapCell(Posn* position, bool walkable) {
     this->position = position;
     this->c_entity = nullptr;
     this->walkable = walkable;
     randomEncounterable = false;
+    this->randomEncounterable = false;
 }
 
-MapCell::MapCell(Posn position, IEntity c_entity, bool walkable) {
+MapCell::MapCell(Posn* position, IEntity* c_entity, bool walkable) {
     this->position = position;
-    this->c_entity = &c_entity;
+    this->c_entity = c_entity;
     this->walkable = walkable;
     randomEncounterable = false;
+    this->randomEncounterable = false;
 }
 
 Posn MapCell::getPosition() {
-    return position;
+    return *position;
 }
 
-IEntity *MapCell::getEntity() {
-    return c_entity;
+IEntity MapCell::getEntity() {
+    return *c_entity;
 }
 
 void MapCell::setEntity(const IEntity &entity) {

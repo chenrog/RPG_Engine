@@ -25,6 +25,10 @@ public:
 
     virtual Posn getPosition();
 
+    virtual void setPosition(Posn posn);
+
+    virtual bool is_item();
+
     virtual bool isVisible();
 
     virtual void enableVisibility();
@@ -36,6 +40,7 @@ protected:
     string name;
     Posn position;
     bool visible;
+    bool item;
 };
 
 

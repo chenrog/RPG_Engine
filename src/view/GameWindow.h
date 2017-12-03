@@ -13,13 +13,13 @@
 using namespace std;
 class GameWindow {
 public:
-    GameWindow(string title, unsigned int width, unsigned int height);
+    GameWindow(string title, unsigned int width, unsigned int height, unsigned int cell_x, unsigned int cell_y);
     ~GameWindow();
 
     bool init();
     inline bool is_closed() {return closed;};
     void pollEvents();
-    void drawWorld(int R, int G, int B, int opacity) const;
+    void drawWorld() const;
     
 
 private:
@@ -30,6 +30,8 @@ private:
     string title;
     unsigned int width;
     unsigned int height;
+    unsigned int cell_x;
+    unsigned int cell_y;
     // both of the below variables are initialized by the init function
     SDL_Window * window = nullptr;      // Declare a pointer to the window
     SDL_Renderer * renderer = nullptr;  // Declare a pointer to the renderer

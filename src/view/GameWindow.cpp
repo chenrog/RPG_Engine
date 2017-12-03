@@ -1,10 +1,13 @@
 #include <SDL.h>
 #include "GameWindow.h"
 
-GameWindow::GameWindow(string title, unsigned int width, unsigned int height) {
+GameWindow::GameWindow(string title, unsigned int width, unsigned int height, unsigned int cell_x,
+                       unsigned int cell_y) {
     this->title = move(title);
     this->width = width;
     this->height = height;
+    this->cell_x = cell_x;
+    this->cell_y = cell_y;
     // this calls init and sets the state of closed based on if the window opens properly
     closed = !init();
 }
@@ -13,6 +16,9 @@ bool GameWindow::init() {
     // attempt to initialize everything
     if (SDL_Init(SDL_INIT_EVERYTHING) != 0) {
         cerr << "Failed to initialize SDL2" << endl;
+    }
+    if (TTF_Init() = -1) {
+        cerr << "Failed to initialize TTF" << endl;
     }
     // create a window with the following settings
     window = SDL_CreateWindow(
@@ -50,6 +56,7 @@ GameWindow::~GameWindow() {
     SDL_DestroyWindow(window);
     SDL_DestroyRenderer(renderer);
     // Clean up
+    TTF_Quit();
     SDL_Quit();
 }
 
@@ -62,34 +69,80 @@ void GameWindow::pollEvents() {
                 this->closed = true;
                 break;
 
-            // check for key press
+                // check for key press
             case SDL_KEYDOWN:
-                printf( "Key press detected\n" );
+                printf("Key press detected\n");
                 break;
 
-            // check for key release
+                // check for key release
             case SDL_KEYUP:
-                printf( "Key release detected\n" );
+                printf("Key release detected\n");
                 break;
 
-            // default: do nothing
+                // default: do nothing
             default:
                 break;
         }
     }
 }
 
-void GameWindow::drawWorld(int R, int G, int B, int opacity) const {
+void GameWindow::drawWorld() const {
+    int R = 255;
+    int G = 255;
+    int B = 255;
+    int opacity = 0;
     SDL_SetRenderDrawColor(renderer, R, G, B, opacity);
-
-//    switch(game.getCurrentGameState()) {
-//        case (0) {
-//
-//        }
-//    }
-
-
     SDL_RenderClear(renderer);
+
+    switch (game.getCurrentGameState()) {
+        case (0):
+            SDL_Rect cell;
+            cell.w = cell_x;
+            cell.h = cell_y;
+            SDL_SetRenderDrawColor(renderer, 94, 184, 92, 255);
+            for (int i = game.getPlayer().getPosition().getX() - 4; i < game.getPlayer().getPosition().getX() + 4; i++) {
+                for (int j = game.getPlayer().getPosition().getY() - 4; j < game.getPlayer().getPosition().getY() + 4; j++) {
+                    MapCell curCell = game.getWorldMap().getWorldMap()[i][j];
+                    cell.x = curCell.getPosition().getX();
+                    cell.y = curCell.getPosition().getY();
+                    if (curCell.isWalkable()) {
+                        SDL_SetRenderDrawColor(renderer, 94, 184, 92, 255);
+
+                    } else {
+                        SDL_SetRenderDrawColor(renderer, 217, 83, 79, 255);
+                    }
+                    SDL_RenderFillRect(renderer, cell);
+                    if (!curCell.getEntity().isEmpty()) {
+                        cell.w = cell_x - 5;
+                        cell.h = cell_y - 5;
+                        cell.x = curCell.getPosition().getX();
+                        cell.y = curCell.getPosition().getY();
+                        if (curCell.getEntity().is_item()) {
+                            SDL_SetRenderDrawColor(renderer, 220, 105, 0, 255);
+                        } else {
+                            SDL_SetRenderDrawColor(renderer, 66, 139, 202, 255);
+                        }
+                        SDL_RenderFillRect(renderer, cell);
+                    }
+                }
+            }
+            SDL_Rect player;
+            player.w = cell_x - 5;
+            player.h = cell_y - 5;
+            player.x = game.getPlayer().getPosition().getX();
+            player.y = game.getPlayer().getPosition().getY();
+            SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
+        case(3):
+            SDL_Rect textBox;
+            textBox.y = 600;
+            textBox.x = 0;
+            textBox.w = 900;
+            textBox.h = 300;
+            TTF_Font * font = TTF_OpenFont(font/Final-Fantasy.ttf, 14);
+
+    }
+
+
     SDL_RenderPresent(renderer);
 }
 

@@ -10,9 +10,9 @@
 
 class MapCell {
 public:
-    MapCell(Posn position, bool walkable);
+    MapCell(Posn* position, bool walkable);
 
-    MapCell(Posn position, IEntity c_entity, bool walkable);
+    MapCell(Posn* position, IEntity* c_entity, bool walkable);
 
     Posn getPosition();
 
@@ -32,7 +32,7 @@ public:
 
 
 private:
-    Posn position;
+    Posn* position;
     IEntity* c_entity;
     bool walkable;
     bool randomEncounterable;
