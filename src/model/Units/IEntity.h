@@ -5,7 +5,7 @@
 #ifndef CS3520_2017FA_PROJ_AENTITY_H
 #define CS3520_2017FA_PROJ_AENTITY_H
 
-#include "../World/Point.h"
+#include "../World/Posn.h"
 #include <iostream>
 #include <string>
 
@@ -23,7 +23,7 @@ public:
 
     virtual const string & getName() const;
 
-    virtual Point getPosition();
+    virtual Posn getPosition();
 
     virtual bool isVisible();
 
@@ -34,7 +34,7 @@ public:
 protected:
     // The entity properties.
     string name;
-    Point position;
+    Posn position;
     bool visible;
 };
 

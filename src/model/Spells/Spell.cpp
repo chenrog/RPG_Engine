@@ -66,8 +66,17 @@ void Spell::display() {
     cout << "HitRate [" << this->base_hit_chance << " + (" << this->mod_hit_chance << " * DEX)]" << endl;
 }
 
+// BUILDER FROM HERE ON OUT
+
+static const int DEFAULT_BASE_DAMAGE = 0;
+static const int DEFAULT_MOD_DAMAGE = 1;
+static const int DEFAULT_BASE_HIT_CHANCE = 100;
+static const int DEFAULT_MOD_HIT_CHANCE = 1;
+
 Spell_Builder::Spell_Builder(string spell, spell_type_t spell_type, damage_type_t damage_type) :
-        spellname(std::move(spell)), spell_type(spell_type), damage_type(damage_type) { }
+        spellname(std::move(spell)), spell_type(spell_type), damage_type(damage_type),
+        base_damage(DEFAULT_BASE_DAMAGE), mod_damage(DEFAULT_MOD_DAMAGE),
+        base_hit_chance(DEFAULT_BASE_HIT_CHANCE), mod_hit_chance(DEFAULT_MOD_HIT_CHANCE) { }
 
 Spell * Spell_Builder::build() {
     auto spell = new Spell(this->spellname, this->base_damage, this->mod_damage, this->base_hit_chance, this->mod_hit_chance,

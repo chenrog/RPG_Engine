@@ -26,7 +26,7 @@ public:
      * @param lvl
      * @param name
      */
-    PlayerUnit(string name, Point position, unsigned int vit, unsigned int intel, unsigned int dex, unsigned int str,
+    PlayerUnit(string name, Posn position, unsigned int vit, unsigned int intel, unsigned int dex, unsigned int str,
                unsigned int lvl, bool is_melee,
                vector<Equipment> equipmentList, vector<Spell> spellList,
                double mod_vit, double mod_int, double mod_dex, double mod_str);

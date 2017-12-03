@@ -16,7 +16,7 @@ class World {
 public:
     World()  {
         worldMap = WorldMap();
-        Point starting_point = Point(0, 0);
+        Posn starting_point = Posn(0, 0);
         vector<Equipment> equipmentList;
         vector<Spell>     spellList;
 //    this->inventory;

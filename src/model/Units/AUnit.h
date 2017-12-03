@@ -7,15 +7,13 @@
 
 
 #ifndef CS3520_2017FA_PROJ_SPELLS_H
-
 #include "../Spells/Spell.h"
-
 #endif //CS3520_2017FA_PROJ_SPELL_H
 
 #include "../Item/Equipment/Equipment.h"
 #include "../Item/Item.h"
 #include "IEntity.h"
-#include "../World/Direction.h"
+#include "../World/DirectionType.h"
 #include <string>
 #include <vector>
 

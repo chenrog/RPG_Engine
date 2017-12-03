@@ -9,6 +9,7 @@
 using namespace std;
 
 class EnemyUnitTest : public CxxTest::TestSuite {
+public:
     void testConstructor() {
         EnemyUnit *enemyUnit = new EnemyUnit(1, 2, 3, 4, false, "Georgina", vector<Item>());
         TS_ASSERT_EQUALS(enemyUnit->getName(), "Georgina");
@@ -18,16 +19,16 @@ class EnemyUnitTest : public CxxTest::TestSuite {
         TS_ASSERT_EQUALS(enemyUnit->get_dex(), 3);
         TS_ASSERT_EQUALS(enemyUnit->get_str(), 4);
         TS_ASSERT(!enemyUnit->is_melee());
-        TS_ASSERT_EQUALS(enemyUnit->get_max_health(), playerUnit->get_vit() * 100);
-        TS_ASSERT_EQUALS(enemyUnit->get_max_mana(), playerUnit->get_int() * 100);
-        TS_ASSERT_EQUALS(enemyUnit->get_health(), playerUnit->get_max_health());
-        TS_ASSERT_EQUALS(enemyUnit->get_mana(), playerUnit->get_max_mana());
+        TS_ASSERT_EQUALS(enemyUnit->get_max_health(), enemyUnit->get_vit() * 100);
+        TS_ASSERT_EQUALS(enemyUnit->get_max_mana(), enemyUnit->get_int() * 100);
+        TS_ASSERT_EQUALS(enemyUnit->get_health(), enemyUnit->get_max_health());
+        TS_ASSERT_EQUALS(enemyUnit->get_mana(), enemyUnit->get_max_mana());
     }
 
     void testDrop() {
-        vector<Item> vector = new vector();
-        vector.push_back(Item("Key Item", "MAD COW"));
-        EnemyUnit *enemyUnit = new EnemyUnit(1, 2, 3, 4, false, "Georgina", vector);
+        vector<Item> * vector = new vector<Item>();
+        vector->push_back(Item("Key Item", "MAD COW"));
+        EnemyUnit *enemyUnit = new EnemyUnit(1, 2, 3, 4, false, "Georgina", *vector);
         TS_ASSERT_EQUALS(enemyUnit->calcDrop().getDescription(), "MAD COW");
 
     }

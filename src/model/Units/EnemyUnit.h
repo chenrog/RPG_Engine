@@ -10,7 +10,7 @@ public:
     EnemyUnit(unsigned int vit, unsigned int intel, unsigned int speed, unsigned int str,
               bool is_melee, string name, vector<Item> drop);
 
-    EnemyUnit(Point posn, unsigned int vit, unsigned int intel, unsigned int speed, unsigned int str,
+    EnemyUnit(Posn posn, unsigned int vit, unsigned int intel, unsigned int speed, unsigned int str,
               bool is_melee, string name, vector<Item> drop);
 
     EnemyUnit(const EnemyUnit &unit);

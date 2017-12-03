@@ -7,8 +7,8 @@
 
 #ifndef CS3520_2017FA_PROJ_UNIT_H
 #include "../Units/AUnit.h"
-
 #endif //CS3520_2017FA_PROJ_UNIT_H
+
 #include "DamageType.h"
 #include "SpellType.h"
 #include <string>
@@ -53,12 +53,11 @@ public:
     Spell_Builder setHitChanceMod(int chance_mod);
 
 private:
-
     string        spellname;
-    int           base_damage = 0;
-    int           mod_damage = 1;
-    int           base_hit_chance = 100;
-    int           mod_hit_chance = 1;
+    int           base_damage;
+    int           mod_damage;
+    int           base_hit_chance;
+    int           mod_hit_chance;
     spell_type_t  spell_type;
     damage_type_t damage_type;
 };

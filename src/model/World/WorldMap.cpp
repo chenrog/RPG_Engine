@@ -11,7 +11,7 @@ WorldMap::WorldMap() {
     for (int i = 0; i < WORLDMAP_HEIGHT; i++) {
         for (int j = 0; j < WORLDMAP_WIDTH; j++) {
             //TODO: Probably need new here.
-            gridMap[i].push_back(MapCell(Point(i, j), true));
+            gridMap[i].push_back(MapCell(Posn(i, j), true));
         }
     }
 

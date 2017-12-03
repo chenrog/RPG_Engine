@@ -12,7 +12,7 @@ const string &IEntity::getName() const {
     return name;
 }
 
-Point IEntity::getPosition() {
+Posn IEntity::getPosition() {
     return position;
 }
 

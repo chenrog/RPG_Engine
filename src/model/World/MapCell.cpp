@@ -4,19 +4,19 @@
 
 #include "MapCell.h"
 
-MapCell::MapCell(Point position, bool walkable) {
+MapCell::MapCell(Posn position, bool walkable) {
     this->position = position;
     this->c_entity;
     this->walkable = walkable;
 }
 
-MapCell::MapCell(Point position, IEntity c_entity, bool walkable) {
+MapCell::MapCell(Posn position, IEntity c_entity, bool walkable) {
     this->position = position;
     this->c_entity = c_entity;
     this->walkable = walkable;
 }
 
-Point MapCell::getPosition() {
+Posn MapCell::getPosition() {
     return position;
 }
 

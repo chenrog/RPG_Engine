@@ -15,7 +15,7 @@ EnemyUnit::EnemyUnit(unsigned int vit, unsigned int intel, unsigned int speed, u
     this->visible = false;
 }
 
-EnemyUnit::EnemyUnit(Point posn, unsigned int vit, unsigned int intel, unsigned int speed, unsigned int str, bool melee,
+EnemyUnit::EnemyUnit(Posn posn, unsigned int vit, unsigned int intel, unsigned int speed, unsigned int str, bool melee,
                      string name, vector<Item> drops) {
     this->position = posn;
     this->name = name;

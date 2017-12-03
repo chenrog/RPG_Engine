@@ -4,7 +4,7 @@
 
 using namespace std;
 
-PlayerUnit::PlayerUnit(string name, Point position, unsigned int vit, unsigned int intel, unsigned int dex,
+PlayerUnit::PlayerUnit(string name, Posn position, unsigned int vit, unsigned int intel, unsigned int dex,
                        unsigned int str,  unsigned int lvl, bool is_melee, vector<Equipment> equipment,
                        vector<Spell> spell, double mod_vit, double mod_int, double mod_dex, double mod_str) {
     this->name = name;

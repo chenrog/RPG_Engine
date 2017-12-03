@@ -9,8 +9,8 @@ using namespace std;
 
 class Equipment : public Item{
 public:
-    Equipment(string name, Point position, bool visible, equip_type_t type, signed int v, unsigned int vm, signed int i,
-              unsigned int im, signed int sp, unsigned int spm, signed int st, unsigned int stm);
+    Equipment(string name, Posn position, bool visible, equip_type_t type, signed int v, unsigned int vm, signed int i,
+              unsigned int im, signed int sp, unsigned int spm, signed int st, unsigned int stm, string description);
     // functions
     void level_up();
     void display();
@@ -30,7 +30,7 @@ private:
     // intelligence stats by this equipment
     signed int   intel;
     unsigned int int_mod;
-    // speed stats by this equipment
+    // dex stats by this equipment
     signed int   speed;
     unsigned int speed_mod;
     // strength stats by this equipment
@@ -44,34 +44,37 @@ public:
     Equip_Builder(string name, equip_type_t type);
     Equipment * build();
     // setters for the fields
-    Equip_Builder setPosition(const Point &position);
+    Equip_Builder setPosition(const Posn &position);
     Equip_Builder setVisibility(const bool &visibility);
     Equip_Builder setVit(int vit);
     Equip_Builder setVit_mod(unsigned int vit_mod);
     Equip_Builder setIntel(int intel);
     Equip_Builder setInt_mod(unsigned int int_mod);
-    Equip_Builder setSpeed(int speed);
-    Equip_Builder setSpeed_mod(unsigned int speed_mod);
+    Equip_Builder setDex(int dex);
+    Equip_Builder setDex_mod(unsigned int dex_mod);
     Equip_Builder setStr(int str);
     Equip_Builder setStr_mod(unsigned int str_mod);
+    Equip_Builder setDesc(string desc);
 
 private:
     string       name;
-    Point        position;
-    bool         visible = false;
+    Posn        position;
+    bool         visible;
     equip_type_t type;
     // vitality stats by this equipment
-    signed int   vit = 0;
-    unsigned int vit_mod = 0;
+    signed int   vit;
+    unsigned int vit_mod;
     // intelligence stats by this equipment
-    signed int   intel = 0;
-    unsigned int int_mod = 0;
-    // speed stats by this equipment
-    signed int   speed = 0;
-    unsigned int speed_mod = 0;
+    signed int   intel;
+    unsigned int int_mod;
+    // dex stats by this equipment
+    signed int   dex;
+    unsigned int dex_mod;
     // strength stats by this equipment
-    signed int   str = 0;
-    unsigned int str_mod = 0;
+    signed int   str;
+    unsigned int str_mod;
+    // description of the item
+    string       desc;
 };
 
 #endif //CS3520_2017FA_PROJ_EQUIPMENT_H
