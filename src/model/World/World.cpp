@@ -49,6 +49,7 @@ inline bool World::addToInventory(Item item) {
     } else {
         inventory[curInventorySize] = item;
         curInventorySize++;
+        return true;
     }
 }
 
