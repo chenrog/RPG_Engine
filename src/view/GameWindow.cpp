@@ -17,6 +17,9 @@ bool GameWindow::init() {
     if (SDL_Init(SDL_INIT_EVERYTHING) != 0) {
         cerr << "Failed to initialize SDL2" << endl;
     }
+    if (TTF_Init() = -1) {
+        cerr << "Failed to initialize TTF" << endl;
+    }
     // create a window with the following settings
     window = SDL_CreateWindow(
             title.c_str(),                    // window title
@@ -53,6 +56,7 @@ GameWindow::~GameWindow() {
     SDL_DestroyWindow(window);
     SDL_DestroyRenderer(renderer);
     // Clean up
+    TTF_Quit();
     SDL_Quit();
 }
 
@@ -129,7 +133,12 @@ void GameWindow::drawWorld() const {
             player.y = game.getPlayer().getPosition().getY();
             SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
         case(3):
-
+            SDL_Rect textBox;
+            textBox.y = 600;
+            textBox.x = 0;
+            textBox.w = 900;
+            textBox.h = 300;
+            TTF_Font * font = TTF_OpenFont(font/Final-Fantasy.ttf, 14);
 
     }
 
