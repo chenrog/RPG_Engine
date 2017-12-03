@@ -22,7 +22,7 @@ public:
      * Returns the allies.
      * @return The allies.
      */
-    PlayerUnit getPlayer();
+    PlayerUnit getPlayer()const;
 
     /**
      * Function that moves the player based on key input. If the player moves onto a
@@ -40,13 +40,13 @@ public:
      * Returns the Overworld and all its cells.
      * @return The game's overworld.
      */
-    WorldMap getWorldMap();
+    WorldMap getWorldMap()const;
 
     /**
      * Returns the current game state.
      * @return OVERWORLD, MENU, or BATTLE.
      */
-    game_state_t getCurrentGameState();
+    game_state_t getCurrentGameState()const;
 
     /**
      * Returns whether or not the game is over.
@@ -84,9 +84,9 @@ public:
 
 private:
     // Only doing one player for now.
-    PlayerUnit player;
+    PlayerUnit * player;
     //unordered_map inventory;
-    WorldMap worldMap;
+    WorldMap * worldMap;
     Item inventory[INVENTORY_SLOTS];
     int curInventorySize = 0;
     game_state_t gameState;
