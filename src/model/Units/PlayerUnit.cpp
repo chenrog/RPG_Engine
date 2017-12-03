@@ -4,9 +4,13 @@
 
 using namespace std;
 
-PlayerUnit::PlayerUnit(string name, Posn position, unsigned int vit, unsigned int intel, unsigned int dex,
-                       unsigned int str,  unsigned int lvl, bool is_melee, vector<Equipment> equipment,
-                       vector<Spell> spell, double mod_vit, double mod_int, double mod_dex, double mod_str) {
+PlayerUnit::PlayerUnit() {
+}
+
+PlayerUnit::PlayerUnit(string name, Posn position, unsigned int vit, unsigned int intel, unsigned int dex, unsigned int str,
+                       unsigned int lvl, bool is_melee,
+                       vector<Equipment> equipmentList, vector<Spell> spellList,
+                       double mod_vit, double mod_int, double mod_dex, double mod_str) {
     this->name = name;
     this->st_vit = vit;
     this->st_int = intel;
@@ -25,8 +29,8 @@ PlayerUnit::PlayerUnit(string name, Posn position, unsigned int vit, unsigned in
 
     updateStats();
 
-    this->equipmentList = equipment;
-    this->spellList = spell;
+    this->equipmentList = equipmentList;
+    this->spellList = spellList;
 }
 
 Equipment PlayerUnit::equip(Equipment const equipment, Item * inventory, int curInventorySize) {
@@ -61,4 +65,5 @@ bool PlayerUnit::addEXP(int const exp) {
         return false;
     }
 }
+
 

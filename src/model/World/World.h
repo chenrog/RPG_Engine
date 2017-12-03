@@ -14,20 +14,7 @@
 
 class World {
 public:
-    World()  {
-        worldMap = WorldMap();
-        Posn starting_point = Posn(0, 0);
-        vector<Equipment> equipmentList;
-        vector<Spell>     spellList;
-//    this->inventory;
-        //TODO: probably need new here.
-
-//        this->player = PlayerUnit("Twen", starting_point, true, STARTING_VIT, STARTING_INT, STARTING_DEX,
-//                                  STARTING_STR, STARTING_LVL, true, equipmentList, spellList, STARTING_MOD_VIT,
-//                                  STARTING_MOD_INT, STARTING_MOD_DEX, STARTING_MOD_STR);
-        this->gameState = OVERWORLD;
-
-    }
+    World();
 
     ~World();
 
@@ -73,24 +60,12 @@ public:
      */
     void onTick(int currTick);
 
-    inline bool addToInventory(Item item) {
-        if (curInventorySize == INVENTORY_SLOTS) {
-            return false;
-        } else {
-            inventory[curInventorySize] = item;
-            curInventorySize++;
-        }
-    }
+    inline bool addToInventory(Item item);
 
-    inline void trash(int i) {
-        Item trash = inventory[i];
-        inventory[i] = inventory[curInventorySize];
-        inventory[curInventorySize] = trash;
-        curInventorySize--;
-    }
+    inline void trash(int i);
 
     // Constants
-    const int INVENTORY_SLOTS = 20;
+    static const int INVENTORY_SLOTS = 20;
     const int PARTY_SIZE = 2;
 
     //TODO: not sure what these numbers are yet. i know they change per player though so it wont be const.

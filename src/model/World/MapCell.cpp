@@ -6,13 +6,13 @@
 
 MapCell::MapCell(Posn position, bool walkable) {
     this->position = position;
-    this->c_entity;
+    this->c_entity = nullptr;
     this->walkable = walkable;
 }
 
 MapCell::MapCell(Posn position, IEntity c_entity, bool walkable) {
     this->position = position;
-    this->c_entity = c_entity;
+    this->c_entity = &c_entity;
     this->walkable = walkable;
 }
 
@@ -21,11 +21,11 @@ Posn MapCell::getPosition() {
 }
 
 IEntity MapCell::getEntity() {
-    return c_entity;
+    return *c_entity;
 }
 
 void MapCell::setEntity(const IEntity &entity) {
-    c_entity = entity;
+    *c_entity = entity;
 }
 
 bool MapCell::isWalkable() {

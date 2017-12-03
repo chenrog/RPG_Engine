@@ -156,6 +156,6 @@ Equip_Builder Equip_Builder::setStr_mod(unsigned int str_mod) {
 }
 
 Equip_Builder Equip_Builder::setDesc(string desc) {
-    delete this->desc;
+    //delete this->desc; //TODO: Not if needed causing build error
     this->desc = std::move(desc);
 }

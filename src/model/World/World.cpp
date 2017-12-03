@@ -8,7 +8,20 @@
 /**
  * World Creation method.
  */
+World::World()  {
+    worldMap = WorldMap();
+    Posn starting_point = Posn(0, 0);
+    vector<Equipment> equipmentList;
+    vector<Spell>     spellList;
+//    this->inventory;
+    //TODO: probably need new here.
 
+        this->player = PlayerUnit("Twen", starting_point, STARTING_VIT, STARTING_INT, STARTING_DEX,
+                                  STARTING_STR, STARTING_LVL, true, equipmentList, spellList, STARTING_MOD_VIT,
+                                  STARTING_MOD_INT, STARTING_MOD_DEX, STARTING_MOD_STR);
+    this->gameState = OVERWORLD;
+
+}
 
 PlayerUnit World::getPlayer() {
     return player;
@@ -30,6 +43,22 @@ void World::onTick(int currTick) {
 
 }
 
+inline bool World::addToInventory(Item item) {
+    if (curInventorySize == INVENTORY_SLOTS) {
+        return false;
+    } else {
+        inventory[curInventorySize] = item;
+        curInventorySize++;
+    }
+}
+
+inline void World::trash(int i) {
+    Item trash = inventory[i];
+    inventory[i] = inventory[curInventorySize];
+    inventory[curInventorySize] = trash;
+    curInventorySize--;
+}
+
 //unordered_map<Item, int> World::getInventory() {
 //    return inventory;
 //}
@@ -48,4 +77,8 @@ void World::movePlayer(direction_t direction, int distance)
             // initiate a battle sequence
         }
     }
+}
+
+World::~World() {
+
 }

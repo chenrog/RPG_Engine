@@ -33,7 +33,7 @@ public:
 
 private:
     Posn position;
-    IEntity c_entity;
+    IEntity* c_entity;
     bool walkable;
     bool randomEncounterable;
 };
