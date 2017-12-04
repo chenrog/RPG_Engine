@@ -1,6 +1,7 @@
 #include <SDL.h>
 #include "GameWindow.h"
 #include "../model/GameState.h"
+#include "../model/Battle/Battle.h"
 
 GameWindow::GameWindow(string title, unsigned int width, unsigned int height, unsigned int multiplier) {
     this->title = move(title);
@@ -97,6 +98,10 @@ void GameWindow::pollEvents() {
                             direction = DOWN;
                             moved = true;
                             break;
+                        // "P" key: pauses
+                        case SDL_SCANCODE_P:
+                            game.setCurrentGameState(MENU);
+                            break;
                         // default/unused key
                         default:
                             break;
@@ -118,6 +123,12 @@ void GameWindow::pollEvents() {
                         // TODO: right
                         case SDLK_RIGHT:
                             break;
+                        // "P" key: unpauses
+                        case SDL_SCANCODE_P:
+                            game.setCurrentGameState(OVERWORLD);
+                            break;
+                        default:
+                            break;
                     }
                 }
 
@@ -128,8 +139,14 @@ void GameWindow::pollEvents() {
                         // TODO: left
                         case SDLK_LEFT:
                             break;
-                            // TODO: right
+                        // TODO: right
                         case SDLK_RIGHT:
+                            break;
+                        // TODO: fight and selecting
+                        case SDLK_RETURN:
+                            Battle b;
+                            b.doBattle(game.getPlayer(), ENEMY, SPELL);
+                        default:
                             break;
                     }
                 }
@@ -189,7 +206,7 @@ void GameWindow::pollEvents() {
                         }
 
                         // "P" key
-                    case SDLK_P:
+                    case SDL_SCANCODE_P:
 
                         // if the player is in the overworld, goes to menu game state
                         if (game.getCurrentGameState() == 0) {
@@ -200,16 +217,6 @@ void GameWindow::pollEvents() {
                         // if the player is in the menu, goes to overworld game state
                         if (game.getCurrentGameState() == 1) {
                             game.setCurrentGameState(OVERWORLD);
-                            break;
-                        }
-
-                        // if the player is in the battle menu, do nothing
-                        if (game.getCurrentGameState() == 2) {
-                            break;
-                        }
-
-                        // if the player is conversing, do nothing
-                        if (game.getCurrentGameState() == 3) {
                             break;
                         }
                 }
@@ -226,10 +233,11 @@ void GameWindow::drawWorld() const {
     SDL_RenderClear(renderer);
 
     switch (game.getCurrentGameState()) {
-        case (0):
-            SDL_Rect cell;
-            cell.w = cell_x;
-            cell.h = cell_y;
+        case OVERWORLD:
+            SDL_Rect* cp = new SDL_Rect();
+            SDL_Rect cell = *cp;
+            cell.w = multiplier;
+            cell.h = multiplier;
             SDL_SetRenderDrawColor(renderer, 94, 184, 92, 255);
             int a = 0;
             int b = 0;
@@ -238,18 +246,18 @@ void GameWindow::drawWorld() const {
                 for (int j = game.getPlayer().getPosition().getY() - 4;
                      j < game.getPlayer().getPosition().getY() + 4; j++) {
                     MapCell curCell = game.getWorldMap().getWorldMap()[i][j];
-                    cell.x = a * cell_x;
-                    cell.y = b * cell_y;
+                    cell.x = a * multiplier;
+                    cell.y = b * multiplier;
                     if (curCell.isWalkable()) {
                         SDL_SetRenderDrawColor(renderer, 94, 184, 92, 255);
 
                     } else {
                         SDL_SetRenderDrawColor(renderer, 217, 83, 79, 255);
                     }
-                    SDL_RenderFillRect(renderer, cell);
+                    SDL_RenderFillRect(renderer, cp);
                     if (!curCell.isEmpty()) {
-                        cell.w = cell_x - 5;
-                        cell.h = cell_y - 5;
+                        cell.w = multiplier - 5;
+                        cell.h = multiplier - 5;
                         cell.x = curCell.getPosition().getX();
                         cell.y = curCell.getPosition().getY();
                         if (curCell.getEntity().is_item()) {
@@ -257,19 +265,21 @@ void GameWindow::drawWorld() const {
                         } else {
                             SDL_SetRenderDrawColor(renderer, 66, 139, 202, 255);
                         }
-                        SDL_RenderFillRect(renderer, cell);
+                        SDL_RenderFillRect(renderer, cp);
                     }
                     b++;
                 }
                 a++;
             }
             SDL_Rect player;
-            player.w = cell_x - 5;
-            player.h = cell_y - 5;
+            player.w = multiplier - 5;
+            player.h = multiplier - 5;
             player.x = game.getPlayer().getPosition().getX();
             player.y = game.getPlayer().getPosition().getY();
             SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
             break;
+
+
         case (MENU):
             SDL_Rect textBox;
             textBox.y = 0;

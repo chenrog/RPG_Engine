@@ -1,3 +1,4 @@
+#include <random>
 #include "AUnit.h"
 
 AUnit::AUnit() {}
@@ -26,27 +27,38 @@ void AUnit::move(direction_t direction, unsigned int distance) {
     }
 }
 
-int AUnit::takeDamage(int damage, int hit_chance, bool is_physical) {
-    if (is_physical) {
-        if (hit_chance <= 1 + int((100 * -1) * rand() / (RAND_MAX + 1.0))) {
-            int damage_taken = (damage - p_defense);
-            if (this->health >= damage_taken) {
-                this->health -= damage_taken;
-            } else {
-                this->health = 0;
-            }
-            return damage_taken;
-        } else {
-            return 0;
+int AUnit::takeDamage(Spell s, AUnit attacker) {
+    std::random_device rd;
+    std::mt19937 mt(rd());
+    std::uniform_real_distribution<int> dist(0, 100);
+    int hit_roll = dist(mt);
+
+    // calculate if the attack hits
+    if (hit_roll < s.getHitChance(attacker)) {
+        // calculate this unit's damage mitigation
+        unsigned int defense;
+        // if the damage will be physical
+        if (s.getDamageType() == PHYSICAL) {
+            defense = p_defense;
         }
-    } else {
-        int damage_taken = (damage - m_defense);
-        if (this->health >= damage_taken) {
-            this->health -= damage_taken;
+        // if the damage will be magical
+        else {
+            defense = m_defense;
+        }
+
+        // calculate the damage
+        int damage = (float)s.getDamage(attacker) * (float)(100 / 100 + defense);
+        if (this->health >= damage) {
+            this->health -= damage;
         } else {
             this->health = 0;
         }
-        return damage_taken;
+
+        return damage;
+    }
+
+    else {
+        return 0;
     }
 }
 
@@ -104,6 +116,14 @@ unsigned int AUnit::get_lvl() const {
 
 bool AUnit::is_melee() const {
     return this->melee;
+}
+
+vector<Spell> AUnit::getSpells() const {
+    return *spellList;
+}
+
+Spell AUnit::getSpell(unsigned int i) const {
+    return (*spellList)[i];
 }
 
 void AUnit::updateStats() {

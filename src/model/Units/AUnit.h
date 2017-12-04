@@ -39,7 +39,7 @@ public:
      * taken by the unit
      * @param damage
      */
-    virtual int takeDamage(int damage, int hit_chance, bool is_physical);
+    virtual int takeDamage(Spell s, AUnit attacker);
 
     /**
      *
@@ -69,6 +69,10 @@ public:
 
     unsigned int get_lvl() const;
 
+    vector<Spell> getSpells() const;
+
+    Spell getSpell(unsigned int i) const;
+
     bool is_melee() const;
 
 protected:
@@ -76,8 +80,8 @@ protected:
     unsigned int st_vit, st_int, st_dex, st_str;
     unsigned int lvl, exp;
     bool melee;
-    vector<Equipment> equipmentList; // each element in the array pertains to a specific stats
-    vector<Spell> spellList; // will be displayed in a list when the player selects this option
+    vector<Equipment>* equipmentList; // each element in the array pertains to a specific stats
+    vector<Spell>* spellList; // will be displayed in a list when the player selects this option
 
     /**
     * updates the statistics of the unit.
