@@ -71,7 +71,7 @@ public:
     /**
 	* Sets the current gamestate to the given one
 	*/
-    void World::setCurrentGameState(game_state_t gameState);
+    void setCurrentGameState(game_state_t gameState);
 
     EnemyUnit getEnemyUnit();
 
@@ -94,7 +94,7 @@ private:
     // Only doing one player for now.
     PlayerUnit *player;
     WorldMap *worldMap;
-    EnemyUnit curEnemy;
+    EnemyUnit *curEnemy;
     Item inventory[INVENTORY_SLOTS];
     int curInventorySize = 0;
     game_state_t gameState;

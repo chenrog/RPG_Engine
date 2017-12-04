@@ -1,6 +1,8 @@
 #include "EnemyUnit.h"
 #include <random>
 
+EnemyUnit::EnemyUnit() { }
+
 EnemyUnit::EnemyUnit(unsigned int vit, unsigned int intel, unsigned int speed, unsigned int str, bool melee,
                      string name, vector<Item> drops) {
     this->name = name;

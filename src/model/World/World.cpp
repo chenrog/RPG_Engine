@@ -19,6 +19,7 @@ World::World()  {
                                   STARTING_STR, STARTING_LVL, true, equipmentList, spellList, STARTING_MOD_VIT,
                                   STARTING_MOD_INT, STARTING_MOD_DEX, STARTING_MOD_STR);
     this->gameState = OVERWORLD;
+    this->curEnemy = new EnemyUnit();
 
 }
 
@@ -78,7 +79,7 @@ void World::movePlayer(direction_t direction, int distance) {
             std::mt19937 mt(rd());
             std::uniform_real_distribution<int> dist(0, this->getWorldMap().getEnemies()->size());
             int random_enemy = dist(mt);
-            this->curEnemy = this->getWorldMap().getEnemies()->at(random_enemy);
+            this->curEnemy = &this->getWorldMap().getEnemies()->at(random_enemy);
             this->gameState = BATTLE;
             this->curMenuOption = 0;
         }
@@ -86,7 +87,7 @@ void World::movePlayer(direction_t direction, int distance) {
 }
 
 EnemyUnit World::getEnemyUnit() {
-    return this->curEnemy;
+    return *this->curEnemy;
 }
 
 void World::setCurrentGameState(game_state_t newGameState) {

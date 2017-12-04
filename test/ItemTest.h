@@ -5,6 +5,8 @@
 #include <cxxtest/TestSuite.h>
 #include <iostream>
 
+// Linker files: ../src/model/Item/Item.cpp ../src/model/Units/IEntity.cpp ../src/model/World/Posn.cpp
+
 class ItemTest : public CxxTest::TestSuite {
 public:
 

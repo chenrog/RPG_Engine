@@ -79,7 +79,7 @@ Spell_Builder::Spell_Builder(string spell, spell_type_t spell_type, damage_type_
         base_hit_chance(DEFAULT_BASE_HIT_CHANCE), mod_hit_chance(DEFAULT_MOD_HIT_CHANCE) { }
 
 Spell * Spell_Builder::build() {
-    auto spell = new Spell(this->spellname, this->base_damage, this->mod_damage, this->base_hit_chance, this->mod_hit_chance,
+    Spell* spell = new Spell(this->spellname, this->base_damage, this->mod_damage, this->base_hit_chance, this->mod_hit_chance,
                            this->spell_type, this->damage_type);
     return spell;
 }

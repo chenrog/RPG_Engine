@@ -102,7 +102,7 @@ dex(DEFAULT_DEX), dex_mod(DEFAULT_DMOD), str(DEFAULT_STR), str_mod(DEFAULT_SMOD)
 
 // this builds a new Equipment with the stats of this equipment
 Equipment * Equip_Builder::build() {
-    auto equipment = new Equipment(name, position, visible, type, vit, vit_mod, intel, int_mod, dex, dex_mod, str, str_mod, desc);
+    Equipment* equipment = new Equipment(name, position, visible, type, vit, vit_mod, intel, int_mod, dex, dex_mod, str, str_mod, desc);
     return equipment;
 }
 
@@ -156,6 +156,6 @@ Equip_Builder Equip_Builder::setStr_mod(unsigned int str_mod) {
 }
 
 Equip_Builder Equip_Builder::setDesc(string desc) {
-    //delete this->desc; //TODO: Not if needed causing build error
     this->desc = std::move(desc);
+    return *this;
 }

@@ -9,13 +9,15 @@
 
 #include <iostream>
 
-class SpellTest {
+// Linker files: ../src/model/Units/IEntity.cpp ../src/model/Units/AUnit.cpp ../src/model/Units/PlayerUnit.cpp ../src/model/Item/Item.cpp ../src/model/Spells/Spell.cpp ../src/model/World/Posn.cpp ../src/model/Item/Equipment/Equipment.cpp
+
+class SpellTest : public CxxTest::TestSuite {
 public:
 
     void testSpellBuilder() {
         Spell_Builder * sb = new Spell_Builder("Dabonem", DAMAGE, PHYSICAL);
         AUnit * playerUnit
-                = new PlayerUnit("Twen", Point(0, 0), true, 10, 9, 8, 7, 1, vector<Equipment>(), vector<Spell>(), 0.5, 0.4, 0.3, 0.2);
+                = new PlayerUnit("Twen", Posn(0, 0), true, 10, 9, 8, 7, 1, vector<Equipment>(), vector<Spell>(), 0.5, 0.4, 0.3, 0.2);
         sb->setDamage(10);
         sb->setDamageMod(5);
         sb->setHitChance(100);

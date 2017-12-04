@@ -29,12 +29,12 @@ PlayerUnit::PlayerUnit(string name, Posn position, unsigned int vit, unsigned in
 
     updateStats();
 
-    this->equipmentList = equipmentList;
-    this->spellList = spellList;
+    this->equipmentList = &equipmentList;
+    this->spellList = &spellList;
 }
 
-Equipment PlayerUnit::equip(Equipment const equipment, Item * inventory, int curInventorySize) {
-    Equipment curEquip = this->equipmentList[equipment.getType()];
+void PlayerUnit::equip(Equipment const equipment, Item * inventory, int curInventorySize) {
+    Equipment curEquip = (*this->equipmentList)[equipment.getType()];
     this->st_str -= curEquip.getStr();
     this->st_vit -= curEquip.getVit();
     this->st_int -= curEquip.getIntel();
@@ -46,7 +46,7 @@ Equipment PlayerUnit::equip(Equipment const equipment, Item * inventory, int cur
     this->st_vit += equipment.getVit();
     this->st_int += equipment.getIntel();
     this->st_dex += equipment.getSpeed();
-    this->equipmentList[equipment.getType()] = equipment;
+    (*this->equipmentList)[equipment.getType()] = equipment;
     updateStats();
 }
 

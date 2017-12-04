@@ -1,7 +1,7 @@
 #include <random>
 #include "Battle.h"
 
-static void Battle::doBattle(PlayerUnit p, EnemyUnit e, unsigned int attack) {
+void Battle::doBattle(PlayerUnit p, EnemyUnit e, unsigned int attack) {
     auto playerFirst = p.get_dex() > e.get_dex();
 
     // player goes first
