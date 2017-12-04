@@ -73,7 +73,7 @@ void GameWindow::pollEvents() {
             case SDL_KEYDOWN:
                 // OVERWORLD
                 if (game.getCurrentGameState() == OVERWORLD) {
-                    bool moved;
+                    bool moved = false;
                     auto direction;
                     switch (event.key.keysym.sym) {
                         // left
@@ -225,8 +225,7 @@ void GameWindow::drawWorld() const {
 
     switch (game.getCurrentGameState()) {
         case OVERWORLD:
-            SDL_Rect* cp = new SDL_Rect();
-            SDL_Rect cell = *cp;
+            SDL_Rect cell = SDL_Rect();
             cell.w = multiplier;
             cell.h = multiplier;
             SDL_SetRenderDrawColor(renderer, 94, 184, 92, 255);
@@ -245,7 +244,7 @@ void GameWindow::drawWorld() const {
                     } else {
                         SDL_SetRenderDrawColor(renderer, 217, 83, 79, 255);
                     }
-                    SDL_RenderFillRect(renderer, cp);
+                    SDL_RenderFillRect(renderer, &cell);
                     if (!curCell.isEmpty()) {
                         cell.w = multiplier - 5;
                         cell.h = multiplier - 5;
@@ -256,7 +255,7 @@ void GameWindow::drawWorld() const {
                         } else {
                             SDL_SetRenderDrawColor(renderer, 66, 139, 202, 255);
                         }
-                        SDL_RenderFillRect(renderer, cp);
+                        SDL_RenderFillRect(renderer, &cell);
                     }
                     b++;
                 }
