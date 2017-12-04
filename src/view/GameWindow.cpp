@@ -151,7 +151,8 @@ void GameWindow::pollEvents() {
                         // TODO: fight and selecting
                         case SDLK_RETURN:
                             Battle b;
-                            b.doBattle(game.getPlayer(), ENEMY, SPELL);
+
+                            b.doBattle(game.getPlayer(), game.getWorldMap().getEnemies()[0], SPELL);
                         default:
                             break;
                     }

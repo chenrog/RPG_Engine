@@ -19,6 +19,10 @@ WorldMap::WorldMap() {
 
 }
 
+vector<EnemyUnit> * WorldMap::getEnemies() {
+    return this->enemies;
+}
+
 std::vector<vector<MapCell>> WorldMap::getWorldMap() {
     return gridMap;
 }
