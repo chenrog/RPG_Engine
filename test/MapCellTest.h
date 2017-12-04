@@ -12,6 +12,8 @@
 
 #include <iostream>
 
+// ../src/model/Units/IEntity.cpp ../src/model/World/Posn.cpp
+
 class MapCellTest {
 
     void testMapCell1() {

@@ -6,8 +6,7 @@
 
 #include <iostream>
 
-// ../src/model/Unit/IEntity.h
-// ../src/model/Item/Item.h
+// ../src/model/Unit/IEntity.cpp ../src/model/Item/Item.cpp ../src/model/World/Posn.cpp
 
 class EquipmentTest : public CxxTest::TestSuite {
 public:
