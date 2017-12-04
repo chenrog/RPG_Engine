@@ -16,7 +16,7 @@ public:
 
     Posn getPosition();
 
-    IEntity getEntity();
+    IEntity * getEntity();
 
     void setEntity(const IEntity& entity);
 
