@@ -1,7 +1,6 @@
 #include <SDL.h>
 #include <random>
 #include "GameWindow.h"
-#include "../model/GameState.h"
 #include "../model/Battle/Battle.h"
 
 GameWindow::GameWindow(string title, unsigned int width, unsigned int height, unsigned int multiplier) {
