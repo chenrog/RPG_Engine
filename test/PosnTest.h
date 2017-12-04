@@ -2,8 +2,6 @@
 // Created by Andrew Alcala on 12/3/2017.
 //
 
-help
-
 #ifndef CS3520_2017FA_PROJ_POSN_H
 #define CS3520_2017FA_PROJ_POSN_H
 
