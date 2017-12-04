@@ -6,6 +6,9 @@
 
 #include <iostream>
 
+// ../src/model/Unit/IEntity.h
+// ../src/model/Item/Item.h
+
 class EquipmentTest : public CxxTest::TestSuite {
 public:
     void testEquipmentBuilder() {

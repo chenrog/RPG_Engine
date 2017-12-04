@@ -6,6 +6,11 @@
 
 #include <iostream>
 
+// ../src/model/Units/IEntity.h
+// ../src/model/Units/AUnit.h
+// ../src/model/Item/Item.h
+// ../src/model/Spell/Spell.h
+
 using namespace std;
 
 class EnemyUnitTest : public CxxTest::TestSuite {
