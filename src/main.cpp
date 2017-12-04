@@ -1,6 +1,5 @@
 #include <iostream>
 #include "SDL2/SDL.h"
-#include "model/World/World.h"
 #include "view/GameWindow.h"
 
 //Screen dimension constants

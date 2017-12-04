@@ -272,66 +272,66 @@ void GameWindow::drawWorld() const {
 
 
         case (MENU):
-            SDL_Rect textBox;
-            textBox.y = 0;
-            textBox.x = 0;
-            textBox.w = 900;
-            textBox.h = 100;
-            SDL_SetRenderDrawColor(renderer, 249, 249, 249, 255);
-            TTF_Font *font = TTF_OpenFont(font / Final - Fantasy.ttf, 14);
-            if (!font) {
-                std::cerr << "failed to load font" << endl;
-            }
-            string paused = "PAUSED";
-            auto text_surface = TTF_RenderText_Solid(font, paused.c_str(), SDL_Color(0, 0, 0));
-            if (!text_surface) {
-                cerr << "failed to create text surface" << endl;
-            }
-            auto text_texture = SDL_CreateTextureFromSurface(renderer, text_surface);
-            if (!text_texture) {
-                cerr << "failed to create text_texture" << endl;
-            }
-            SDL_FreeSurface(text_surface);
-            SDL_RenderCopy(renderer, text_texture, nullptr, textBox);
-
-            textBox.y = 100;
-            textBox.x = 0;
-            textBox.w = 450;
-            textBox.h = 100;
-            TTF_Font *font = TTF_OpenFont(font / Final - Fantasy.ttf, 14);
-            if (!font) {
-                std::cerr << "failed to load font" << endl;
-            }
-            auto text_surface = TTF_RenderText_Solid(font, game.getPlayer().getName().c_str(), SDL_Color(0, 0, 0));
-            if (!text_surface) {
-                cerr << "failed to create text surface" << endl;
-            }
-            auto text_texture = SDL_CreateTextureFromSurface(renderer, text_surface);
-            if (!text_texture) {
-                cerr << "failed to create text_texture" << endl;
-            }
-            SDL_FreeSurface(text_surface);
-            SDL_RenderCopy(renderer, text_texture, nullptr, textBox);
-
-            textBox.y = 100;
-            textBox.x = 450;
-            textBox.w = 450;
-            textBox.h = 100;
-            TTF_Font *font = TTF_OpenFont(font / Final - Fantasy.ttf, 14);
-            if (!font) {
-                std::cerr << "failed to load font" << endl;
-            }
-            string level = to_string(game.getPlayer().get_lvl());
-            auto text_surface = TTF_RenderText_Solid(font, level.c_str(), SDL_Color(0, 0, 0));
-            if (!text_surface) {
-                cerr << "failed to create text surface" << endl;
-            }
-            auto text_texture = SDL_CreateTextureFromSurface(renderer, text_surface);
-            if (!text_texture) {
-                cerr << "failed to create text_texture" << endl;
-            }
-            SDL_FreeSurface(text_surface);
-            SDL_RenderCopy(renderer, text_texture, nullptr, textBox);
+//            SDL_Rect textBox;
+//            textBox.y = 0;
+//            textBox.x = 0;
+//            textBox.w = 900;
+//            textBox.h = 100;
+//            SDL_SetRenderDrawColor(renderer, 249, 249, 249, 255);
+//            TTF_Font *font = TTF_OpenFont(font / Final - Fantasy.ttf, 14);
+//            if (!font) {
+//                std::cerr << "failed to load font" << endl;
+//            }
+//            string paused = "PAUSED";
+//            auto text_surface = TTF_RenderText_Solid(font, paused.c_str(), SDL_Color(0, 0, 0));
+//            if (!text_surface) {
+//                cerr << "failed to create text surface" << endl;
+//            }
+//            auto text_texture = SDL_CreateTextureFromSurface(renderer, text_surface);
+//            if (!text_texture) {
+//                cerr << "failed to create text_texture" << endl;
+//            }
+//            SDL_FreeSurface(text_surface);
+//            SDL_RenderCopy(renderer, text_texture, nullptr, textBox);
+//
+//            textBox.y = 100;
+//            textBox.x = 0;
+//            textBox.w = 450;
+//            textBox.h = 100;
+//            TTF_Font *font = TTF_OpenFont(font / Final - Fantasy.ttf, 14);
+//            if (!font) {
+//                std::cerr << "failed to load font" << endl;
+//            }
+//            auto text_surface = TTF_RenderText_Solid(font, game.getPlayer().getName().c_str(), SDL_Color(0, 0, 0));
+//            if (!text_surface) {
+//                cerr << "failed to create text surface" << endl;
+//            }
+//            auto text_texture = SDL_CreateTextureFromSurface(renderer, text_surface);
+//            if (!text_texture) {
+//                cerr << "failed to create text_texture" << endl;
+//            }
+//            SDL_FreeSurface(text_surface);
+//            SDL_RenderCopy(renderer, text_texture, nullptr, textBox);
+//
+//            textBox.y = 100;
+//            textBox.x = 450;
+//            textBox.w = 450;
+//            textBox.h = 100;
+//            TTF_Font *font = TTF_OpenFont(font / Final - Fantasy.ttf, 14);
+//            if (!font) {
+//                std::cerr << "failed to load font" << endl;
+//            }
+//            string level = to_string(game.getPlayer().get_lvl());
+//            auto text_surface = TTF_RenderText_Solid(font, level.c_str(), SDL_Color(0, 0, 0));
+//            if (!text_surface) {
+//                cerr << "failed to create text surface" << endl;
+//            }
+//            auto text_texture = SDL_CreateTextureFromSurface(renderer, text_surface);
+//            if (!text_texture) {
+//                cerr << "failed to create text_texture" << endl;
+//            }
+//            SDL_FreeSurface(text_surface);
+//            SDL_RenderCopy(renderer, text_texture, nullptr, textBox);
 
 
     }
