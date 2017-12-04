@@ -74,9 +74,7 @@ void GameWindow::pollEvents() {
                 // OVERWORLD
                 if (game.getCurrentGameState() == OVERWORLD) {
                     bool moved;
-                    bool acted;
                     auto direction;
-                    auto action;
                     switch (event.key.keysym.sym) {
                         // left
                         case SDLK_LEFT:
@@ -117,10 +115,10 @@ void GameWindow::pollEvents() {
                 // MENU
                 if (game.getCurrentGameState() == MENU) {
                     switch(event.key.keysym.sym) {
-                        // TODO: left
+                        // TODO: left: move menu
                         case SDLK_LEFT:
                             break;
-                        // TODO: right
+                        // TODO: right: move menu
                         case SDLK_RIGHT:
                             break;
                         // "P" key: unpauses
@@ -135,6 +133,14 @@ void GameWindow::pollEvents() {
 
                 // BATTLE
                 if (game.getCurrentGameState() == BATTLE) {
+                    if (game.getPlayer().get_health() == 0) {
+                        game.END();
+                    }
+
+                    elif (ENEMY.get_health() == 0) {
+                        game.setCurrentGameState(OVERWORLD);
+                    }
+
                     switch(event.key.keysym.sym) {
                         // TODO: left
                         case SDLK_LEFT:
@@ -202,21 +208,6 @@ void GameWindow::pollEvents() {
                         // if the player is conversing, advance or end the conversation
                         if (game.getCurrentGameState() == 3) {
                             // advance the text/make it go away
-                            break;
-                        }
-
-                        // "P" key
-                    case SDL_SCANCODE_P:
-
-                        // if the player is in the overworld, goes to menu game state
-                        if (game.getCurrentGameState() == 0) {
-                            game.setCurrentGameState(MENU);
-                            break;
-                        }
-
-                        // if the player is in the menu, goes to overworld game state
-                        if (game.getCurrentGameState() == 1) {
-                            game.setCurrentGameState(OVERWORLD);
                             break;
                         }
                 }
