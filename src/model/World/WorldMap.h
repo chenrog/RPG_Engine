@@ -3,6 +3,7 @@
 //
 
 #include "MapCell.h"
+#include "../Units/EnemyUnit.h"
 #include <vector>
 #include <iostream>
 
@@ -19,11 +20,14 @@ public:
 
     vector<vector<MapCell>> getWorldMap();
 
+    vector<EnemyUnit> * getEnemies();
+
     const int WORLDMAP_WIDTH = 30;
     const int WORLDMAP_HEIGHT = 30;
 
 private:
     vector<vector<MapCell>> gridMap;
+    vector<EnemyUnit> * enemies;
 };
 
 
