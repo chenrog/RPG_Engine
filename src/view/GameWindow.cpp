@@ -137,7 +137,7 @@ void GameWindow::pollEvents() {
                         game.END();
                     }
 
-                    elif (ENEMY.get_health() == 0) {
+                    else if (ENEMY.get_health() == 0) {
                         game.setCurrentGameState(OVERWORLD);
                     }
 
