@@ -67,15 +67,26 @@ void World::movePlayer(direction_t direction, int distance) {
     vector<vector<MapCell>> map = worldMap->getWorldMap();
     auto x = player->getPosition().getX();
     auto y = player->getPosition().getY();
-    if(map[x][y].isRandomEncounterable()){
+    if (map[x][y].isRandomEncounterable()) {
         std::random_device rd;
         std::mt19937 mt(rd());
         std::uniform_real_distribution<double> dist(0.0, 10.0);
         int random_number = dist(mt); // Between 0 and 9
         if (random_number > 1) {
             // initiate a battle sequence
+            std::random_device rd;
+            std::mt19937 mt(rd());
+            std::uniform_real_distribution<int> dist(0, this->getWorldMap().getEnemies()->size());
+            int random_enemy = dist(mt);
+            this->curEnemy = this->getWorldMap().getEnemies()->at(random_enemy);
+            this->gameState = BATTLE;
+            this->curMenuOption = 0;
         }
     }
+}
+
+EnemyUnit World::getEnemyUnit() {
+    return this->curEnemy;
 }
 
 void World::setCurrentGameState(game_state_t newGameState) {
@@ -83,5 +94,6 @@ void World::setCurrentGameState(game_state_t newGameState) {
 }
 
 World::~World() {
-
+    delete this->player;
+    delete this->worldMap;
 }

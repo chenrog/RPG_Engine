@@ -73,6 +73,8 @@ public:
 	*/
     void World::setCurrentGameState(game_state_t gameState);
 
+    EnemyUnit getEnemyUnit();
+
     //TODO: not sure what these numbers are yet. i know they change per player though so it wont be const.
     unsigned const int STARTING_VIT = 1;
     unsigned const int STARTING_INT = 1;
@@ -87,11 +89,12 @@ public:
 
     const double RANDOM_ENCOUNTER_CHANCE = .05;
 
+    int curMenuOption = 0;
 private:
     // Only doing one player for now.
     PlayerUnit *player;
-    //unordered_map inventory;
     WorldMap *worldMap;
+    EnemyUnit curEnemy;
     Item inventory[INVENTORY_SLOTS];
     int curInventorySize = 0;
     game_state_t gameState;
