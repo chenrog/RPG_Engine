@@ -24,8 +24,8 @@ Posn MapCell::getPosition() {
     return *position;
 }
 
-IEntity MapCell::getEntity() {
-    return *c_entity;
+IEntity* MapCell::getEntity() {
+    return c_entity;
 }
 
 void MapCell::setEntity(const IEntity &entity) {
