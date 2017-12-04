@@ -1,4 +1,5 @@
 #include <SDL.h>
+#include <random>
 #include "GameWindow.h"
 #include "../model/GameState.h"
 #include "../model/Battle/Battle.h"
@@ -81,26 +82,26 @@ void GameWindow::pollEvents() {
                             direction = LEFT;
                             moved = true;
                             break;
-                        // right
+                            // right
                         case SDLK_RIGHT:
                             direction = RIGHT;
                             moved = true;
                             break;
-                        // up
+                            // up
                         case SDLK_UP:
                             direction = UP;
                             moved = true;
                             break;
-                        // down
+                            // down
                         case SDLK_DOWN:
                             direction = DOWN;
                             moved = true;
                             break;
-                        // "P" key: pauses
+                            // "P" key: pauses
                         case SDL_SCANCODE_P:
                             game.setCurrentGameState(MENU);
                             break;
-                        // default/unused key
+                            // default/unused key
                         default:
                             break;
                     }
@@ -114,14 +115,14 @@ void GameWindow::pollEvents() {
 
                 // MENU
                 if (game.getCurrentGameState() == MENU) {
-                    switch(event.key.keysym.sym) {
+                    switch (event.key.keysym.sym) {
                         // TODO: left: move menu
                         case SDLK_LEFT:
                             break;
-                        // TODO: right: move menu
+                            // TODO: right: move menu
                         case SDLK_RIGHT:
                             break;
-                        // "P" key: unpauses
+                            // "P" key: unpauses
                         case SDL_SCANCODE_P:
                             game.setCurrentGameState(OVERWORLD);
                             break;
@@ -135,111 +136,104 @@ void GameWindow::pollEvents() {
                 if (game.getCurrentGameState() == BATTLE) {
                     if (game.getPlayer().get_health() == 0) {
                         game.END();
-                    }
-
-                    else if (ENEMY.get_health() == 0) {
+                    } else if (ENEMY.get_health() == 0) {
                         game.setCurrentGameState(OVERWORLD);
                     }
 
-                    switch(event.key.keysym.sym) {
-                        // TODO: left
+                    switch (event.key.keysym.sym) {
                         case SDLK_LEFT:
+                            if (!game.curMenuOption == 0) {
+                                game.curMenuOption--;
+                            }
                             break;
-                        // TODO: right
                         case SDLK_RIGHT:
+                            if (!game.curMenuOption == 3) {
+                                game.curMenuOption++;
+                            }
                             break;
-                        // TODO: fight and selecting
                         case SDLK_RETURN:
                             Battle b;
 
-                            b.doBattle(game.getPlayer(), game.getWorldMap().getEnemies()[0], SPELL);
+                            b.doBattle(game.getPlayer(), game.getEnemyUnit(), SPELL);
                         default:
                             break;
                     }
                 }
 
 
-                        // enter key
-                    case SDLK_ENTER:
+                // enter key
+            case SDLK_ENTER:
 
-                        // if the player is in the overworld, look for interactions at all adjacencies
-                        if (game.getCurrentGameState() == 0) {
+                // if the player is in the overworld, look for interactions at all adjacencies
+                if (game.getCurrentGameState() == 0) {
 
-                            // ********** interactions for beggining battle and collecting item will be made and used here**********
+                    // ********** interactions for beggining battle and collecting item will be made and used here**********
 
 
-                            // this is the code for making and advancing through text boxes
-                            /*
-                            SDL_Rect textBox;
-                            textBox.y = 600;
-                            textBox.x = 0;
-                            textBox.w = 900;
-                            textBox.h = 300;
-                            SDL_SetRenderDrawColor(renderer, 249, 249, 249, 255);
-                            TTF_Font * font = TTF_OpenFont(font / Final - Fantasy.ttf, 14);
-                            if (!font) {
-                            std::cerr << "failed to load font" << endl;
-                            }
-                            auto text_surface = TTF_RenderText_Solid(font, message.c_str(), SDL_Color(0, 0, 0));
-                            if (!text_surface) {
-                            cerr << "failed to create text surface" << endl;
-                            }
-                            auto text_texture = SDL_CreateTextureFromSurface(renderer, text_surface);
-                            if (!text_texture) {
-                            cerr << "failed to create text_texture" << endl;
-                            }
-                            SDL_FreeSurface(text_surface);
-                            SDL_RenderCopy(renderer, text_texture, nullptr, textBox);
-                            */
-                            break;
-                        }
+                    // this is the code for making and advancing through text boxes
+                    /*
+                    SDL_Rect textBox;
+                    textBox.y = 600;
+                    textBox.x = 0;
+                    textBox.w = 900;
+                    textBox.h = 300;
+                    SDL_SetRenderDrawColor(renderer, 249, 249, 249, 255);
+                    TTF_Font * font = TTF_OpenFont(font / Final - Fantasy.ttf, 14);
+                    if (!font) {
+                    std::cerr << "failed to load font" << endl;
+                    }
+                    auto text_surface = TTF_RenderText_Solid(font, message.c_str(), SDL_Color(0, 0, 0));
+                    if (!text_surface) {
+                    cerr << "failed to create text surface" << endl;
+                    }
+                    auto text_texture = SDL_CreateTextureFromSurface(renderer, text_surface);
+                    if (!text_texture) {
+                    cerr << "failed to create text_texture" << endl;
+                    }
+                    SDL_FreeSurface(text_surface);
+                    SDL_RenderCopy(renderer, text_texture, nullptr, textBox);
+                    */
+                    break;
+                }
 
-                        // if the player is in the menu, select option being hovered
-                        if (game.getCurrentGameState() == 1) {
-                            //select in menu
-                            break;
-                        }
+                // if the player is in the menu, select option being hovered
+                if (game.getCurrentGameState() == 1) {
+                    //select in menu
+                    break;
+                }
 
-                        // if the player is in the battle menu, select option being hovered
-                        if (game.getCurrentGameState() == 2) {
-                            //select in menu
-                            break;
-                        }
+                // if the player is in the battle menu, select option being hovered
+                if (game.getCurrentGameState() == 2) {
+                    //select in menu
+                    break;
+                }
 
-                        // if the player is conversing, advance or end the conversation
-                        if (game.getCurrentGameState() == 3) {
-                            // advance the text/make it go away
-                            break;
-                        }
+                // if the player is conversing, advance or end the conversation
+                if (game.getCurrentGameState() == 3) {
+                    // advance the text/make it go away
+                    break;
                 }
         }
     }
+}
 
 
 void GameWindow::drawWorld() const {
-    int R = 255;
-    int G = 255;
-    int B = 255;
-    int opacity = 0;
-    SDL_SetRenderDrawColor(renderer, R, G, B, opacity);
+    SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
     SDL_RenderClear(renderer);
 
     switch (game.getCurrentGameState()) {
         case OVERWORLD:
-            SDL_Rect* cp = new SDL_Rect();
-            SDL_Rect cell = *cp;
+            SDL_Rect *cp = new SDL_Rect();
+            SDL_Rect cell = cp;
             cell.w = multiplier;
             cell.h = multiplier;
             SDL_SetRenderDrawColor(renderer, 94, 184, 92, 255);
-            int a = 0;
-            int b = 0;
-            for (int i = game.getPlayer().getPosition().getX() - 4;
-                 i < game.getPlayer().getPosition().getX() + 4; i++) {
-                for (int j = game.getPlayer().getPosition().getY() - 4;
-                     j < game.getPlayer().getPosition().getY() + 4; j++) {
+            for (int i = 0;  i < game.getWorldMap().getWorldMap().size(); i++) {
+                for (int j = 0; j < game.getWorldMap().getWorldMap().size(); j++) {
                     MapCell curCell = game.getWorldMap().getWorldMap()[i][j];
-                    cell.x = a * multiplier;
-                    cell.y = b * multiplier;
+                    cell.x = i * multiplier;
+                    cell.y = j * multiplier;
                     if (curCell.isWalkable()) {
                         SDL_SetRenderDrawColor(renderer, 94, 184, 92, 255);
 
@@ -259,9 +253,7 @@ void GameWindow::drawWorld() const {
                         }
                         SDL_RenderFillRect(renderer, cp);
                     }
-                    b++;
                 }
-                a++;
             }
             SDL_Rect player;
             player.w = multiplier - 5;
