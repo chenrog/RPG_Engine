@@ -1,4 +1,5 @@
 #include <SDL.h>
+#include <SDL_ttf.h>
 #include <random>
 #include "GameWindow.h"
 #include "../model/Battle/Battle.h"

@@ -4,14 +4,13 @@
 
 using namespace std;
 
-PlayerUnit::PlayerUnit() {
-}
+PlayerUnit::PlayerUnit() = default;
 
 PlayerUnit::PlayerUnit(string name, Posn position, unsigned int vit, unsigned int intel, unsigned int dex, unsigned int str,
                        unsigned int lvl, bool is_melee,
-                       vector<Equipment> equipmentList, vector<Spell> spellList,
+                       vector<Equipment>* equipmentList, vector<Spell>* spellList,
                        double mod_vit, double mod_int, double mod_dex, double mod_str) {
-    this->name = name;
+    this->name = std::move(name);
     this->st_vit = vit;
     this->st_int = intel;
     this->st_dex = dex;
@@ -29,18 +28,23 @@ PlayerUnit::PlayerUnit(string name, Posn position, unsigned int vit, unsigned in
 
     updateStats();
 
-    this->equipmentList = &equipmentList;
-    this->spellList = &spellList;
+    this->equipmentList = equipmentList;
+    this->spellList = spellList;
 }
 
-void PlayerUnit::equip(Equipment const equipment, Item * inventory, int curInventorySize) {
+PlayerUnit::~PlayerUnit() {
+    delete[] this->equipmentList;
+    delete[] this->spellList;
+}
+
+void PlayerUnit::equip(Equipment const equipment, Item ** inventory, int curInventorySize) {
     Equipment curEquip = (*this->equipmentList)[equipment.getType()];
     this->st_str -= curEquip.getStr();
     this->st_vit -= curEquip.getVit();
     this->st_int -= curEquip.getIntel();
     this->st_dex -= curEquip.getSpeed();
 
-    inventory[curInventorySize] = curEquip;
+    inventory[curInventorySize] = &curEquip;
 
     this->st_str += equipment.getStr();
     this->st_vit += equipment.getVit();
@@ -55,10 +59,10 @@ bool PlayerUnit::addEXP(int const exp) {
     if (new_exp >= 100) {
         this->exp %= 100;
         lvl += 1;
-        this->st_vit += rand() % 10 * mod_vit;
-        this->st_int += rand() % 10 * mod_int;
-        this->st_dex += rand() % 10 * mod_dex;
-        this->st_str += rand() % 10 * mod_str;
+        this->st_vit += mod_vit;
+        this->st_int += mod_int;
+        this->st_dex += mod_dex;
+        this->st_str += mod_str;
         updateStats();
         return true;
     } else {
