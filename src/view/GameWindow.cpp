@@ -1,5 +1,7 @@
 #include <SDL.h>
+#include <SDL_image.h>
 #include <random>
+#include <SDL_ttf.h>
 #include "GameWindow.h"
 #include "../model/Battle/Battle.h"
 
@@ -18,11 +20,9 @@ bool GameWindow::init() {
     if (SDL_Init(SDL_INIT_EVERYTHING) != 0) {
         cerr << "Failed to initialize SDL2" << endl;
     }
-    /**
-    if (TTF_Init() = -1) {
+    if (TTF_Init() == -1) {
         cerr << "Failed to initialize TTF" << endl;
     }
-     **/
 
     // create a window with the following settings
     window = SDL_CreateWindow(
@@ -60,7 +60,7 @@ GameWindow::~GameWindow() {
     SDL_DestroyWindow(window);
     SDL_DestroyRenderer(renderer);
     // Clean up
-    /** TTF_Quit(); **/
+    TTF_Quit();
     SDL_Quit();
 }
 
@@ -386,17 +386,6 @@ void GameWindow::drawWorld() const {
         case (BATTLE): {
             SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
             SDL_Rect cell = SDL_Rect();
-//            cell.w = 30;
-//            cell.h = 30;
-//            cell.x = 0;
-//            cell.y = 0;
-//            SDL_RenderFillRect(renderer, &cell);
-//            cell.w = game->getWorldMap().WORLDMAP_WIDTH * multiplier;
-//            cell.h = (game->getWorldMap().WORLDMAP_HEIGHT / 3) * multiplier;
-//            cell.x = 0;
-//            cell.y = 2 * (game->getWorldMap().WORLDMAP_HEIGHT / 3) * multiplier;
-//            SDL_SetRenderDrawColor(renderer, 66, 139, 202, 255);
-//            SDL_RenderFillRect(renderer, &cell);
             // draw Menu Options
             // top left box
             cell.w = (game->getWorldMap().WORLDMAP_WIDTH * multiplier)/2;
@@ -408,6 +397,45 @@ void GameWindow::drawWorld() const {
             } else {
                 SDL_SetRenderDrawColor(renderer, 227, 178, 178, 255);
             }
+
+            SDL_Rect textBox;
+            SDL_SetRenderDrawColor(renderer, 249, 249, 249, 255);
+
+            // create the font
+            TTF_Font * font;
+            font = TTF_OpenFont("/Users/roger/CLionProjects/CS3520-2017FA-PROJ/src/view/font/Final-Fantasy.ttf", 14);
+            if (!font) {
+                std::cerr << "failed to load font" << endl;
+            }
+
+            // create the surface
+            SDL_Surface* screen;
+
+            // create the color
+            SDL_Color color = {0, 0, 0};
+
+            // create the text surface
+            SDL_Surface* text_surface;
+
+            if(!(text_surface=TTF_RenderText_Solid(font,"Attack!",color))) {
+                cerr << "failed to create text surface" << endl;
+            } else {
+                SDL_BlitSurface(text_surface,nullptr,screen,nullptr);
+                //perhaps we can reuse it, but I assume not for simplicity.
+                SDL_FreeSurface(text_surface);
+            }
+
+
+            auto text_texture = SDL_CreateTextureFromSurface(renderer, text_surface);
+            if (!text_texture) {
+                cerr << "failed to create text_texture" << endl;
+            }
+
+            SDL_FreeSurface(text_surface);
+            SDL_RenderCopy(renderer, text_texture, nullptr, &cell);
+
+            break;
+
             SDL_RenderFillRect(renderer, &cell);
             // top right box
             cell.w = (game->getWorldMap().WORLDMAP_WIDTH * multiplier)/2;
