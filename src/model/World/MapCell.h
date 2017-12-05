@@ -14,9 +14,11 @@ public:
 
     MapCell(Posn* position, IEntity* c_entity, bool walkable);
 
+    ~MapCell();
+
     Posn getPosition();
 
-    IEntity * getEntity();
+    IEntity getEntity();
 
     void setEntity(IEntity* entity);
 

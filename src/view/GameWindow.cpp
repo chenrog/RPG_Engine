@@ -1,5 +1,4 @@
 #include <SDL.h>
-#include <SDL_ttf.h>
 #include <random>
 #include "GameWindow.h"
 #include "../model/Battle/Battle.h"
@@ -18,16 +17,19 @@ bool GameWindow::init() {
     if (SDL_Init(SDL_INIT_EVERYTHING) != 0) {
         cerr << "Failed to initialize SDL2" << endl;
     }
+    /**
     if (TTF_Init() = -1) {
         cerr << "Failed to initialize TTF" << endl;
     }
+     **/
+
     // create a window with the following settings
     window = SDL_CreateWindow(
             title.c_str(),                    // window title
             SDL_WINDOWPOS_CENTERED,           // initial x position
             SDL_WINDOWPOS_CENTERED,           // initial y position
-            width,                            // width, in pixels
-            height,                           // height, in pixels
+            width * multiplier,               // width, in pixels
+            height * multiplier,              // height, in pixels
             SDL_WINDOW_MAXIMIZED
     );
 
@@ -57,7 +59,7 @@ GameWindow::~GameWindow() {
     SDL_DestroyWindow(window);
     SDL_DestroyRenderer(renderer);
     // Clean up
-    TTF_Quit();
+    /** TTF_Quit(); **/
     SDL_Quit();
 }
 
@@ -73,105 +75,126 @@ void GameWindow::pollEvents() {
                 // check for specific key press, output based on current game state
             case SDL_KEYDOWN:
                 // OVERWORLD
-                if (game.getCurrentGameState() == OVERWORLD) {
-                    bool moved;
-                    auto direction;
+                if (game->getCurrentGameState() == OVERWORLD) {
+                    bool moved = false;
+                    direction_t direction;
                     switch (event.key.keysym.sym) {
                         // left
-                        case SDLK_LEFT:
+                        case SDLK_LEFT: {
                             direction = LEFT;
                             moved = true;
                             break;
+                        }
                             // right
-                        case SDLK_RIGHT:
+                        case SDLK_RIGHT: {
                             direction = RIGHT;
                             moved = true;
                             break;
+                        }
                             // up
-                        case SDLK_UP:
+                        case SDLK_UP: {
                             direction = UP;
                             moved = true;
                             break;
+                        }
                             // down
-                        case SDLK_DOWN:
+                        case SDLK_DOWN: {
                             direction = DOWN;
                             moved = true;
                             break;
+                        }
                             // "P" key: pauses
-                        case SDL_SCANCODE_P:
-                            game.setCurrentGameState(MENU);
+                        case SDL_SCANCODE_P: {
+                            game->setCurrentGameState(MENU);
                             break;
+                        }
                             // default/unused key
-                        default:
+                        default: {
                             break;
+                        }
                     }
 
                     // checks if it was movement
                     if (moved) {
-                        game.movePlayer(direction, 1);
+                        game->movePlayer(direction, 1);
                     }
                 }
 
 
                 // MENU
-                if (game.getCurrentGameState() == MENU) {
+                if (game->getCurrentGameState() == MENU) {
                     switch (event.key.keysym.sym) {
                         // TODO: left: move menu
-                        case SDLK_LEFT:
+                        case SDLK_LEFT: {
                             break;
+                        }
                             // TODO: right: move menu
-                        case SDLK_RIGHT:
+                        case SDLK_RIGHT: {
                             break;
+                        }
                             // "P" key: unpauses
-                        case SDL_SCANCODE_P:
-                            game.setCurrentGameState(OVERWORLD);
+                        case SDL_SCANCODE_P: {
+                            game->setCurrentGameState(OVERWORLD);
                             break;
-                        default:
+                        }
+                        default: {
                             break;
+                        }
                     }
                 }
 
 
                 // BATTLE
-                if (game.getCurrentGameState() == BATTLE) {
-                    if (game.getPlayer().get_health() == 0) {
-                        game.END();
-                    } else if (ENEMY.get_health() == 0) {
-                        game.setCurrentGameState(OVERWORLD);
+                if (game->getCurrentGameState() == BATTLE) {
+                    if (game->getPlayer().get_health() == 0) {
+                        /** game->END(); **/
+                    } else if (game->getEnemyUnit().get_health() == 0) {
+                        game->setCurrentGameState(OVERWORLD);
                     }
 
                     switch (event.key.keysym.sym) {
-                        case SDLK_LEFT:
-                            if (!game.curMenuOption == 0) {
-                                game.curMenuOption--;
+                        case SDLK_LEFT: {
+                            if (game->curMenuOption != 0) {
+                                game->curMenuOption--;
                             }
                             break;
-                        case SDLK_RIGHT:
-                            if (!game.curMenuOption == 3) {
-                                game.curMenuOption++;
+                        }
+
+                        case SDLK_RIGHT: {
+                            if (game->curMenuOption != 3) {
+                                game->curMenuOption++;
                             }
                             break;
-                        case SDLK_RETURN:
+                        }
+
+                        case SDLK_RETURN: {
                             Battle b;
 
-                            b.doBattle(game.getPlayer(), game.getEnemyUnit(), SPELL);
-                        default:
+                            PlayerUnit p = game->getPlayer();
+                            EnemyUnit e = game->getEnemyUnit();
+
+                            b.doBattle(&p, &e, 0);
                             break;
+                        }
+
+                        default: {
+                            break;
+                        }
                     }
                 }
 
 
+                /**
                 // enter key
             case SDLK_ENTER:
 
                 // if the player is in the overworld, look for interactions at all adjacencies
-                if (game.getCurrentGameState() == 0) {
+                if (game->getCurrentGameState() == 0) {
 
                     // ********** interactions for beggining battle and collecting item will be made and used here**********
 
 
                     // this is the code for making and advancing through text boxes
-                    /*
                     SDL_Rect textBox;
                     textBox.y = 600;
                     textBox.x = 0;
@@ -192,27 +215,31 @@ void GameWindow::pollEvents() {
                     }
                     SDL_FreeSurface(text_surface);
                     SDL_RenderCopy(renderer, text_texture, nullptr, textBox);
-                    */
+
                     break;
                 }
 
                 // if the player is in the menu, select option being hovered
-                if (game.getCurrentGameState() == 1) {
+                if (game->getCurrentGameState() == 1) {
                     //select in menu
                     break;
                 }
 
                 // if the player is in the battle menu, select option being hovered
-                if (game.getCurrentGameState() == 2) {
+                if (game->getCurrentGameState() == 2) {
                     //select in menu
                     break;
                 }
 
                 // if the player is conversing, advance or end the conversation
-                if (game.getCurrentGameState() == 3) {
+                if (game->getCurrentGameState() == 3) {
                     // advance the text/make it go away
                     break;
                 }
+                **/
+
+            default:
+                break;
         }
     }
 }
@@ -222,16 +249,16 @@ void GameWindow::drawWorld() const {
     SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
     SDL_RenderClear(renderer);
 
-    switch (game.getCurrentGameState()) {
-        case OVERWORLD:
+    switch (game->getCurrentGameState()) {
+        case OVERWORLD: {
             SDL_Rect *cp = new SDL_Rect();
-            SDL_Rect cell = cp;
+            SDL_Rect cell = *cp;
             cell.w = multiplier;
             cell.h = multiplier;
             SDL_SetRenderDrawColor(renderer, 94, 184, 92, 255);
-            for (int i = 0;  i < game.getWorldMap().getWorldMap().size(); i++) {
-                for (int j = 0; j < game.getWorldMap().getWorldMap().size(); j++) {
-                    MapCell curCell = game.getWorldMap().getWorldMap()[i][j];
+            for (int i = 0; i < game->getWorldMap().getWorldMap().size(); i++) {
+                for (int j = 0; j < game->getWorldMap().getWorldMap().size(); j++) {
+                    MapCell curCell = game->getWorldMap().getWorldMap()[i][j];
                     cell.x = i * multiplier;
                     cell.y = j * multiplier;
                     if (curCell.isWalkable()) {
@@ -258,13 +285,14 @@ void GameWindow::drawWorld() const {
             SDL_Rect player;
             player.w = multiplier - 5;
             player.h = multiplier - 5;
-            player.x = game.getPlayer().getPosition().getX();
-            player.y = game.getPlayer().getPosition().getY();
+            player.x = game->getPlayer().getPosition().getX();
+            player.y = game->getPlayer().getPosition().getY();
             SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
             break;
+        }
 
 
-        case (MENU):
+//        case (MENU):
 //            SDL_Rect textBox;
 //            textBox.y = 0;
 //            textBox.x = 0;
@@ -295,7 +323,7 @@ void GameWindow::drawWorld() const {
 //            if (!font) {
 //                std::cerr << "failed to load font" << endl;
 //            }
-//            auto text_surface = TTF_RenderText_Solid(font, game.getPlayer().getName().c_str(), SDL_Color(0, 0, 0));
+//            auto text_surface = TTF_RenderText_Solid(font, game->getPlayer().getName().c_str(), SDL_Color(0, 0, 0));
 //            if (!text_surface) {
 //                cerr << "failed to create text surface" << endl;
 //            }
@@ -314,7 +342,7 @@ void GameWindow::drawWorld() const {
 //            if (!font) {
 //                std::cerr << "failed to load font" << endl;
 //            }
-//            string level = to_string(game.getPlayer().get_lvl());
+//            string level = to_string(game->getPlayer().get_lvl());
 //            auto text_surface = TTF_RenderText_Solid(font, level.c_str(), SDL_Color(0, 0, 0));
 //            if (!text_surface) {
 //                cerr << "failed to create text surface" << endl;
@@ -326,7 +354,9 @@ void GameWindow::drawWorld() const {
 //            SDL_FreeSurface(text_surface);
 //            SDL_RenderCopy(renderer, text_texture, nullptr, textBox);
 
-
+        default: {
+            break;
+        }
     }
 
 

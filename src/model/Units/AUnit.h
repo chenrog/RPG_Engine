@@ -26,7 +26,7 @@ public:
 
     AUnit(const AUnit &unit);
 
-    ~AUnit();
+    ~AUnit() override;
 
     /**
      * Move this Unit in the given direction, x distance away
@@ -39,7 +39,7 @@ public:
      * taken by the unit
      * @param damage
      */
-    virtual int takeDamage(Spell s, AUnit attacker);
+    virtual int takeDamage(Spell s, AUnit* attacker);
 
     /**
      *

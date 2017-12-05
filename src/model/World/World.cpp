@@ -11,8 +11,8 @@
 World::World()  {
     worldMap = new WorldMap();
     Posn starting_point = Posn(0, 0);
-    vector<Equipment> equipmentList;
-    vector<Spell>     spellList;
+    vector<Equipment>* equipmentList;
+    vector<Spell>*     spellList;
 //    this->inventory;
     //TODO: probably need new here.
     this->player = new PlayerUnit("Twen", starting_point, STARTING_VIT, STARTING_INT, STARTING_DEX,

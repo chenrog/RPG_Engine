@@ -5,26 +5,26 @@ Spell::Spell(string spell, int base_damage, int mod_damage, int base_hit_chance,
         spellname(std::move(spell)), base_damage(base_damage), mod_damage(mod_damage), base_hit_chance(base_hit_chance),
         mod_hit_chance(mod_hit_chance), spell_type(spell_type), damage_type(damage_type) { }
 
-int Spell::getDamage(const AUnit &unit) {
+int Spell::getDamage(const AUnit* unit) {
     signed int total_damage;
     unsigned damage_stat = 0;
 
     // this determines if the damage type is physical or magical before adding base damage or ratios
     switch(this->damage_type) {
         case PHYSICAL :
-            damage_stat = unit.get_str();
+            damage_stat = unit->get_str();
             break;
         case MAGICAL :
-            damage_stat = unit.get_int();
+            damage_stat = unit->get_int();
             break;
     }
-    cout<< "BASE: " << this->base_damage << "MOD DAMAGE: " << this->mod_damage << "DMG STAT: " << unit.get_str() << endl;
+    cout<< "BASE: " << this->base_damage << "MOD DAMAGE: " << this->mod_damage << "DMG STAT: " << unit->get_str() << endl;
     total_damage = this->base_damage + (this->mod_damage * damage_stat);
     return total_damage * this->spell_type;
 }
 
-int Spell::getHitChance(const AUnit &unit) {
-    unsigned int total_hit_chance = this->base_hit_chance + (this->mod_hit_chance * unit.get_dex());
+int Spell::getHitChance(const AUnit* unit) {
+    unsigned int total_hit_chance = this->base_hit_chance + (this->mod_hit_chance * unit->get_dex());
     return total_hit_chance;
 }
 

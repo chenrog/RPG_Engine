@@ -1,11 +1,11 @@
 #include <random>
 #include "AUnit.h"
 
-AUnit::AUnit() {}
+AUnit::AUnit() = default;
 
-AUnit::AUnit(const AUnit &unit) {}
+AUnit::AUnit(const AUnit &unit) = default;
 
-AUnit::~AUnit() {}
+AUnit::~AUnit() = default;
 
 void AUnit::move(direction_t direction, unsigned int distance) {
     //TODO: Add prevention of going OOB in world.
@@ -27,14 +27,14 @@ void AUnit::move(direction_t direction, unsigned int distance) {
     }
 }
 
-int AUnit::takeDamage(Spell s, AUnit attacker) {
+int AUnit::takeDamage(Spell s, AUnit* attacker) {
     std::random_device rd;
     std::mt19937 mt(rd());
     std::uniform_real_distribution<double> dist(0, 100);
-    int hit_roll = dist(mt);
+    double hit_roll = dist(mt);
 
     // calculate if the attack hits
-    if (hit_roll < s.getHitChance(attacker)) {
+    if ((int) hit_roll < s.getHitChance(attacker)) {
         // calculate this unit's damage mitigation
         unsigned int defense;
         // if the damage will be physical

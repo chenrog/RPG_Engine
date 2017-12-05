@@ -31,7 +31,7 @@ public:
                vector<Equipment>* equipmentList, vector<Spell>* spellList,
                double mod_vit, double mod_int, double mod_dex, double mod_str);
 
-    ~PlayerUnit();
+    ~PlayerUnit() override;
 
 
     /**

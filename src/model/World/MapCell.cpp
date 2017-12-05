@@ -20,12 +20,14 @@ MapCell::MapCell(Posn *position, IEntity *c_entity, bool walkable) {
     this->randomEncounterable = false;
 }
 
+MapCell::~MapCell() = default;
+
 Posn MapCell::getPosition() {
     return *position;
 }
 
-IEntity *MapCell::getEntity() {
-    return c_entity;
+IEntity MapCell::getEntity() {
+    return *c_entity;
 }
 
 void MapCell::setEntity(IEntity *entity) {

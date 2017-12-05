@@ -6,7 +6,7 @@
 
 class Battle {
 public:
-    static void doBattle(PlayerUnit player, EnemyUnit enemy, unsigned int attack);
+    static void doBattle(PlayerUnit* player, EnemyUnit* enemy, unsigned int attack);
 };
 
 #endif //CS3520_2017FA_PROJ_BATTLEMODE_H

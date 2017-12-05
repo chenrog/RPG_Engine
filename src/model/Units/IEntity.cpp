@@ -1,11 +1,8 @@
 #include "IEntity.h"
 
-IEntity::IEntity() {
-}
+IEntity::IEntity() = default;
 
-IEntity::~IEntity() {
-
-}
+IEntity::~IEntity() = default;
 
 const string &IEntity::getName() const {
     return name;
