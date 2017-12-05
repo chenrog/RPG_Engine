@@ -60,20 +60,22 @@ public:
      */
     void onTick(int currTick);
 
+    Item *getInventory();
+
     inline bool addToInventory(Item item);
 
     inline void trash(int i);
 
-    // Constants
-    static const int INVENTORY_SLOTS = 20;
-    const int PARTY_SIZE = 2;
-
     /**
-	* Sets the current gamestate to the given one
-	*/
+    * Sets the current gamestate to the given one
+    */
     void setCurrentGameState(game_state_t gameState);
 
     EnemyUnit getEnemyUnit();
+
+    // Constants
+    static const int INVENTORY_SLOTS = 20;
+
 
     //TODO: not sure what these numbers are yet. i know they change per player though so it wont be const.
     unsigned const int STARTING_VIT = 1;
