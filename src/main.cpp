@@ -1,9 +1,10 @@
 #include <iostream>
 #include "SDL2/SDL.h"
+#include "SDL_ttf.h"
 #include "view/GameWindow.h"
 
 //Screen dimension constants
-const int SCREEN_GRID_MULTIPLIER = 30;
+const int SCREEN_GRID_MULTIPLIER = 15;
 const int SCREEN_WIDTH = 30;
 const int SCREEN_HEIGHT = 30;
 
