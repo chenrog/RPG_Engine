@@ -6,7 +6,7 @@
 
 using namespace std;
 
-Equipment::Equipment(string name, Posn position, bool visible, equip_type_t type, signed int v, unsigned int vm,
+Equipment::Equipment(string name, Posn* position, bool visible, equip_type_t type, signed int v, unsigned int vm,
                      signed int i, unsigned int im, signed int sp, unsigned int spm,
                      signed int st, unsigned int stm, string description) :
         level(0), type(type), vit(v), vit_mod(vm), intel(i), int_mod(im), speed(sp), speed_mod(spm), str(st), str_mod(stm) {
@@ -107,7 +107,7 @@ Equipment * Equip_Builder::build() {
 }
 
 Equip_Builder Equip_Builder::setPosition(unsigned int a, unsigned int b) {
-    this->position = Posn(a, b);
+    this->position = new Posn(a, b);
     return *this;
 }
 Equip_Builder Equip_Builder::setVisibility(const bool &visible) {

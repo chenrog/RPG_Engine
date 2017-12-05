@@ -22,13 +22,13 @@ public:
      * Returns the allies.
      * @return The allies.
      */
-    PlayerUnit getPlayer() const;
+    PlayerUnit* getPlayer() const;
 
     /**
      * Function that moves the player based on key input. If the player moves onto a
      * cell that has random encounters, generate whether or not there is an encounter.
      */
-    void movePlayer(direction_t direction, int distance);
+    void movePlayer(direction_t direction);
 
     /**
      * Returns the inventory as a map corresponding items to their quantity.
@@ -60,24 +60,20 @@ public:
      */
     void onTick(int currTick);
 
-    Item *getInventory();
-
     inline bool addToInventory(Item item);
 
     inline void trash(int i);
 
-    /**
-    * Sets the current gamestate to the given one
-    */
-    void setCurrentGameState(game_state_t gameState);
-
-    EnemyUnit getEnemyUnit();
-
     // Constants
     static const int INVENTORY_SLOTS = 20;
 
+    /**
+	* Sets the current gamestate to the given one
+	*/
+    void setCurrentGameState(game_state_t gameState);
 
-    //TODO: not sure what these numbers are yet. i know they change per player though so it wont be const.
+    EnemyUnit * getEnemyUnit();
+
     unsigned const int STARTING_VIT = 1;
     unsigned const int STARTING_INT = 1;
     unsigned const int STARTING_DEX = 1;

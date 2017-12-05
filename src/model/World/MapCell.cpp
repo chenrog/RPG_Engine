@@ -8,6 +8,7 @@ MapCell::MapCell(Posn *position, bool walkable) {
     this->position = position;
     this->c_entity = nullptr;
     this->walkable = walkable;
+    this->empty = true;
     randomEncounterable = false;
     this->randomEncounterable = false;
 }
@@ -20,11 +21,13 @@ MapCell::MapCell(Posn *position, IEntity *c_entity, bool walkable) {
     this->randomEncounterable = false;
 }
 
-Posn MapCell::getPosition() {
-    return *position;
+MapCell::~MapCell() = default;
+
+Posn* MapCell::getPosition() {
+    return position;
 }
 
-IEntity *MapCell::getEntity() {
+IEntity* MapCell::getEntity() {
     return c_entity;
 }
 
@@ -32,7 +35,9 @@ void MapCell::setEntity(IEntity *entity) {
     if (c_entity != nullptr) {
         delete c_entity;
     }
+    this->empty = false;
     c_entity = entity;
+    this->walkable = false;
 }
 
 bool MapCell::isWalkable() {
@@ -48,7 +53,7 @@ void MapCell::setRandomEncounters(bool encounter) {
 }
 
 bool MapCell::isEmpty() {
-    return this->c_entity == nullptr;
+    return this->empty;
 }
 
 // some function that controls how this cell is displayed, will be based on whether or not this Cell is "inhabited"

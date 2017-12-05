@@ -6,8 +6,11 @@
 
 using namespace std;
 
-// Constructor - The default values are specified in the declaration
+// Constructor
 Posn::Posn(unsigned int x, unsigned int y) : x(x), y(y) {}
+
+// Constructor - The default values are specified in the declaration
+Posn::Posn() : x(0), y(0) {}
 
 // Getters
 unsigned int Posn::getX() const { return x; }

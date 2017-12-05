@@ -1,11 +1,11 @@
 #include "EnemyUnit.h"
 #include <random>
 
-EnemyUnit::EnemyUnit() { }
+EnemyUnit::EnemyUnit() = default;
 
 EnemyUnit::EnemyUnit(unsigned int vit, unsigned int intel, unsigned int speed, unsigned int str, bool melee,
-                     string name, vector<Item> drops) {
-    this->name = name;
+                     string name, vector<Item>* drops) {
+    this->name = std::move(name);
     this->st_vit = vit;
     this->st_int = intel;
     this->st_dex = speed;
@@ -15,13 +15,14 @@ EnemyUnit::EnemyUnit(unsigned int vit, unsigned int intel, unsigned int speed, u
     this->health = this->max_health;
     this->mana = this->max_mana;
     this->drop = drops;
+    this->spellList = new Spell*[4];
     this->visible = false;
 }
 
-EnemyUnit::EnemyUnit(Posn posn, unsigned int vit, unsigned int intel, unsigned int speed, unsigned int str, bool melee,
-                     string name, vector<Item> drops) {
+EnemyUnit::EnemyUnit(Posn *posn, unsigned int vit, unsigned int intel, unsigned int speed, unsigned int str, bool melee,
+                     string name, vector<Item>* drops) {
     this->position = posn;
-    this->name = name;
+    this->name = std::move(name);
     this->st_vit = vit;
     this->st_int = intel;
     this->st_dex = speed;
@@ -34,6 +35,7 @@ EnemyUnit::EnemyUnit(Posn posn, unsigned int vit, unsigned int intel, unsigned i
     this->visible = false;
 }
 
+/* UNNECESSARY COPY CONSTRUCTOR
 EnemyUnit::EnemyUnit(const EnemyUnit &unit) {
     this->name = name;
     this->st_vit = unit.st_vit;
@@ -51,11 +53,17 @@ EnemyUnit::EnemyUnit(const EnemyUnit &unit) {
         i++;
     }
 }
+ */
+
+EnemyUnit::~EnemyUnit() {
+    drop->clear();
+    delete position;
+}
 
 Item EnemyUnit::calcDrop() {
     std::random_device rd;
     std::mt19937 mt(rd());
-    std::uniform_real_distribution<double> dist(0.0, drop.size());
-    int random_int = dist(mt);
-    return this->drop[random_int];
+    std::uniform_real_distribution<double> dist(0.0, drop->size());
+    double random_int = dist(mt);
+    return (*this->drop)[(int) random_int];
 }

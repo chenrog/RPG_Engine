@@ -23,7 +23,7 @@ public:
 
     virtual const string & getName() const;
 
-    virtual Posn getPosition();
+    virtual Posn* getPosition();
 
     virtual void setPosition(unsigned int a, unsigned int b);
 
@@ -38,7 +38,7 @@ public:
 protected:
     // The entity properties.
     string name;
-    Posn position;
+    Posn * position;
     bool visible;
     bool item;
 };
