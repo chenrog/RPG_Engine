@@ -11,12 +11,20 @@
  */
 World::World()  {
     worldMap = new WorldMap(1);
-    NPCUnit * npcUnit = new NPCUnit(DIALOGUE, new Posn(0,0), "A", "HI");
-    Item * item = new Item("Name", "Description");
+    NPCUnit * npcUnit = new NPCUnit(DIALOGUE, new Posn(0,0), "GET THE LEGENDARY COW", "HI");
+    Item * item = new Item("The Legendary Cow", "Description");
     EnemyUnit *enemyUnit = new EnemyUnit(1, 2, 3, 4, false, "Georgina", new vector<Item>());
     worldMap->setEnemy(enemyUnit);
-    worldMap->getWorldMap()[0][7]->setEntity(npcUnit);
-    worldMap->getWorldMap()[5][5]->setEntity(item);
+    worldMap->getWorldMap()[10][5]->setEntity(npcUnit);
+    worldMap->getWorldMap()[20][15]->setEntity(item);
+    for (int i = 1; i < 30; i++) {
+        for (int j = 1; j < 30; j++) {
+            int random_number = rand() %100;
+            if (random_number > 90) {
+                worldMap->getWorldMap()[i][j]->setWalkability(false);
+            }
+        }
+    }
     worldMap->getWorldMap()[10][10]->setWalkability(false);
     for (int i = 15; i < 30; i++) {
         for (int j = 0; j < 30; j++) {
@@ -34,6 +42,7 @@ World::World()  {
     this->gameState = OVERWORLD;
     this->curEnemy = new EnemyUnit();
 
+    this->curMenuOption = 0;
 }
 
 PlayerUnit* World::getPlayer() const {
@@ -74,6 +83,7 @@ inline void World::trash(int i) {
 }
 
 void World::movePlayer(direction_t direction) {
+    this->player->setDirection(direction);
     switch (direction) {
         case UP:
             if (this->player->getPosition()->getY() != 0 &&
@@ -133,8 +143,8 @@ void World::movePlayer(direction_t direction) {
     }
 }
 
-EnemyUnit World::getEnemyUnit() {
-    return *this->curEnemy;
+EnemyUnit * World::getEnemyUnit() {
+    return this->curEnemy;
 }
 
 void World::setCurrentGameState(game_state_t newGameState) {

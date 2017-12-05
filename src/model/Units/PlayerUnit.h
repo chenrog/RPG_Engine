@@ -48,9 +48,14 @@ public:
      */
     bool addEXP(int exp);
 
+    direction_t getDirection();
+
+    void setDirection(direction_t direction);
+
 
 private:
     double mod_vit, mod_int, mod_dex, mod_str;
+    direction_t direction;
 };
 
 

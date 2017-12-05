@@ -105,8 +105,46 @@ void GameWindow::pollEvents() {
                             break;
                         }
                             // "P" key: pauses
-                        case SDL_SCANCODE_P: {
+                        case SDLK_p: {
                             game->setCurrentGameState(MENU);
+                            break;
+                        }
+                        case SDLK_x: {
+                            int x = game->getPlayer()->getPosition()->getX();
+                            int y = game->getPlayer()->getPosition()->getY();
+                            switch (game->getPlayer()->getDirection()) {
+                                case UP: {
+                                    if (y != 0 && !game->getWorldMap().getWorldMap()[x][y - 1]->isEmpty()) {
+                                        cout << game->getWorldMap().getWorldMap()[x][y - 1]->getEntity()->getName()
+                                             << endl;
+                                    }
+                                    break;
+                                }
+                                case DOWN: {
+                                    if (y != game->getWorldMap().WORLDMAP_HEIGHT &&
+                                        !game->getWorldMap().getWorldMap()[x][y + 1]->isEmpty())
+                                        cout << game->getWorldMap().getWorldMap()[x][y + 1]->getEntity()->getName()
+                                             << endl;
+                                    break;
+                                }
+                                case LEFT: {
+                                    if (x != 0 && !game->getWorldMap().getWorldMap()[x - 1][y]->isEmpty()) {
+                                        cout << game->getWorldMap().getWorldMap()[x - 1][y]->getEntity()->getName()
+                                             << endl;
+                                    }
+                                    break;
+                                }
+                                case RIGHT: {
+                                    if (x != game->getWorldMap().WORLDMAP_WIDTH &&
+                                        !game->getWorldMap().getWorldMap()[x + 1][y]->isEmpty()) {
+                                        cout << game->getWorldMap().getWorldMap()[x + 1][y]->getEntity()->getName()
+                                             << endl;
+                                    }
+                                    break;
+                                }
+                                default:
+                                    break;
+                            }
                             break;
                         }
                             // default/unused key
@@ -149,32 +187,45 @@ void GameWindow::pollEvents() {
                 if (game->getCurrentGameState() == BATTLE) {
                     if (game->getPlayer()->get_health() == 0) {
                         /** game->END(); **/
-                    } else if (game->getEnemyUnit().get_health() == 0) {
+                    } else if (game->getEnemyUnit()->get_health() == 0) {
                         game->setCurrentGameState(OVERWORLD);
                     }
 
                     switch (event.key.keysym.sym) {
                         case SDLK_LEFT: {
-                            if (game->curMenuOption != 0) {
+                            if (game->curMenuOption > 0) {
                                 game->curMenuOption--;
                             }
                             break;
                         }
 
                         case SDLK_RIGHT: {
-                            if (game->curMenuOption != 3) {
+                            if (game->curMenuOption < 3) {
                                 game->curMenuOption++;
                             }
                             break;
                         }
 
-                        case SDLK_RETURN: {
+                        case SDLK_x: {
                             Battle b;
+                            PlayerUnit *p = game->getPlayer();
+                            EnemyUnit *e = game->getEnemyUnit();
 
-                            PlayerUnit* p = game->getPlayer();
-                            EnemyUnit e = game->getEnemyUnit();
+                            if (game->curMenuOption == 0) {
+                                b.doBattle(p, e, p->calcBasicAttack());
+                            }
+                            if (game->curMenuOption == 1) {
+                                b.doBattle(p, e, 10);
+                            }
+                            if (game->curMenuOption == 2) {
+                                b.doBattle(p, e, 10);
+                            }
+                            if (game->curMenuOption == 3) {
+                                game->setCurrentGameState(OVERWORLD);
+                                cout << "hello" << endl;
+                            }
 
-                            b.doBattle(p, &e, 0);
+
                             break;
                         }
 
@@ -250,25 +301,15 @@ void GameWindow::drawWorld() const {
     SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
     SDL_RenderClear(renderer);
 
-//    cout << "fukc" << endl;
-//    cout << game->getPlayer()->get_health() << endl;
-//    cout << "Hello" << endl;
-//    player.w = multiplier - 5;
-//    player.h = multiplier - 5;
-//    player.x = game->getPlayer()->getPosition()->getX() * multiplier;
-//    player.y = game->getPlayer()->getPosition()->getY() * multiplier;
-//
-//    SDL_SetRenderDrawColor(renderer, 200, 0, 0, 255);
-//    SDL_RenderFillRect(renderer, &player);
-
     switch (game->getCurrentGameState()) {
         case OVERWORLD: {
+
             SDL_Rect cell = SDL_Rect();
             cell.w = multiplier;
             cell.h = multiplier;
-            for (int i = 0; i < 30; i++) {
-                for (int j = 0; j < 30; j++) {
-                    MapCell* curCell = game->getWorldMap().getWorldMap()[i][j];
+            for (int i = 0; i < game->getWorldMap().WORLDMAP_WIDTH; i++) {
+                for (int j = 0; j < game->getWorldMap().WORLDMAP_HEIGHT; j++) {
+                    MapCell *curCell = game->getWorldMap().getWorldMap()[i][j];
                     cell.x = i * multiplier;
                     cell.y = j * multiplier;
 
@@ -287,7 +328,7 @@ void GameWindow::drawWorld() const {
                         cell.y = curCell->getPosition()->getY() * multiplier;
 
                         if (curCell->getEntity()->is_item()) {
-                            SDL_SetRenderDrawColor(renderer, 220, 105, 0, 255);
+                            SDL_SetRenderDrawColor(renderer, 238, 216, 150, 255);
 
                         } else {
                             SDL_SetRenderDrawColor(renderer, 66, 139, 202, 255);
@@ -305,16 +346,131 @@ void GameWindow::drawWorld() const {
             player.y = game->getPlayer()->getPosition()->getY() * multiplier;
             SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
             SDL_RenderFillRect(renderer, &player);
+
+            player.w = multiplier / 4;
+            player.h = multiplier / 4;
+            switch (game->getPlayer()->getDirection()) {
+                case UP: {
+                    player.x = game->getPlayer()->getPosition()->getX() * multiplier + 15;
+                    player.y = game->getPlayer()->getPosition()->getY() * multiplier;
+                    break;
+                }
+                case DOWN: {
+                    player.x = game->getPlayer()->getPosition()->getX() * multiplier + 15;
+                    player.y = game->getPlayer()->getPosition()->getY() * multiplier + 30;
+                    break;
+                }
+                case LEFT: {
+                    player.x = game->getPlayer()->getPosition()->getX() * multiplier;
+                    player.y = game->getPlayer()->getPosition()->getY() * multiplier + 15;
+                    break;
+                }
+                case RIGHT: {
+                    player.x = game->getPlayer()->getPosition()->getX() * multiplier + 30;
+                    player.y = game->getPlayer()->getPosition()->getY() * multiplier + 15;
+                    break;
+                }
+                default:
+                    break;
+            }
+            SDL_SetRenderDrawColor(renderer, 2, 2, 2, 2);
+
+            SDL_RenderFillRect(renderer, &player);
             break;
         }
         case (BATTLE): {
             SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
             SDL_Rect cell = SDL_Rect();
-            cell.w = 30;
-            cell.h = 30;
+//            cell.w = 30;
+//            cell.h = 30;
+//            cell.x = 0;
+//            cell.y = 0;
+//            SDL_RenderFillRect(renderer, &cell);
+//            cell.w = game->getWorldMap().WORLDMAP_WIDTH * multiplier;
+//            cell.h = (game->getWorldMap().WORLDMAP_HEIGHT / 3) * multiplier;
+//            cell.x = 0;
+//            cell.y = 2 * (game->getWorldMap().WORLDMAP_HEIGHT / 3) * multiplier;
+//            SDL_SetRenderDrawColor(renderer, 66, 139, 202, 255);
+//            SDL_RenderFillRect(renderer, &cell);
+            // draw Menu Options
+            // top left box
+            cell.w = (game->getWorldMap().WORLDMAP_WIDTH * multiplier)/2;
+            cell.h = ((game->getWorldMap().WORLDMAP_HEIGHT / 3) * multiplier)/2;
+            cell.x = 0;
+            cell.y = 2 * (game->getWorldMap().WORLDMAP_HEIGHT / 3) * multiplier/2;
+            if (game->curMenuOption == 0) {
+                SDL_SetRenderDrawColor(renderer, 66, 139, 202, 255);
+            } else {
+                SDL_SetRenderDrawColor(renderer, 227, 178, 178, 255);
+            }
+            SDL_RenderFillRect(renderer, &cell);
+            // top right box
+            cell.w = (game->getWorldMap().WORLDMAP_WIDTH * multiplier)/2;
+            cell.h = ((game->getWorldMap().WORLDMAP_HEIGHT / 3) * multiplier)/2;
+            cell.x = (game->getWorldMap().WORLDMAP_WIDTH * multiplier)/2;
+            cell.y = 2 * (game->getWorldMap().WORLDMAP_HEIGHT / 3) * multiplier/2;
+            if (game->curMenuOption == 1) {
+                SDL_SetRenderDrawColor(renderer, 66, 139, 202, 255);
+            } else {
+                SDL_SetRenderDrawColor(renderer, 227, 178, 178, 255);
+            }
+            SDL_RenderFillRect(renderer, &cell);
+            //bottom left box
+            cell.w = (game->getWorldMap().WORLDMAP_WIDTH * multiplier)/2;
+            cell.h = ((game->getWorldMap().WORLDMAP_HEIGHT / 3) * multiplier)/2;
+            cell.x = 0;
+            cell.y = 2 * (game->getWorldMap().WORLDMAP_HEIGHT / 3) * multiplier;
+            if (game->curMenuOption == 2) {
+                SDL_SetRenderDrawColor(renderer, 66, 139, 202, 255);
+            } else {
+                SDL_SetRenderDrawColor(renderer, 227, 178, 178, 255);
+            }
+            //bottom right box
+            SDL_RenderFillRect(renderer, &cell);
+            cell.w = game->getWorldMap().WORLDMAP_WIDTH * multiplier;
+            cell.h = (game->getWorldMap().WORLDMAP_HEIGHT / 3) * multiplier;
+            cell.x = 0;
+            cell.y = 2 * (game->getWorldMap().WORLDMAP_HEIGHT / 3) * multiplier;
+            if (game->curMenuOption == 3) {
+                SDL_SetRenderDrawColor(renderer, 66, 139, 202, 255);
+            } else {
+                SDL_SetRenderDrawColor(renderer, 227, 178, 178, 255);
+            }
+            SDL_RenderFillRect(renderer, &cell);
+
+            // player health bar outline
             cell.x = 0;
             cell.y = 0;
+            cell.w = (game->getWorldMap().WORLDMAP_WIDTH / 2) * multiplier;
+            cell.h = multiplier;
+            // enemy health bar outline
+            SDL_SetRenderDrawColor(renderer, 17, 126, 52, 255);
             SDL_RenderFillRect(renderer, &cell);
+            cell.x = (game->getWorldMap().WORLDMAP_WIDTH / 2) * multiplier;
+            cell.y = 0;
+            cell.w = (game->getWorldMap().WORLDMAP_WIDTH / 2) * multiplier;
+            cell.h = multiplier;
+            SDL_SetRenderDrawColor(renderer, 197, 40, 0, 255);
+            SDL_RenderFillRect(renderer, &cell);
+            // player health bar
+            cell.x = 0;
+            cell.y = 0;
+            cell.w = (game->getWorldMap().WORLDMAP_WIDTH / 2) * multiplier - 5 * (float) game->getPlayer()->get_health()
+                                                                             /
+                                                                             (float) game->getPlayer()->get_max_health();
+            cell.h = multiplier - 5;
+            SDL_SetRenderDrawColor(renderer, 94, 184, 92, 255);
+            SDL_RenderFillRect(renderer, &cell);
+            //enemy health bar
+            cell.x = (game->getWorldMap().WORLDMAP_WIDTH / 2) * multiplier + 5;
+            cell.y = 0;
+            cell.w = (game->getWorldMap().WORLDMAP_WIDTH / 2) * multiplier -
+                     5 * (float) game->getEnemyUnit()->get_health()
+                     / (float) game->getEnemyUnit()->get_max_health();
+            cell.h = multiplier - 5;
+            SDL_SetRenderDrawColor(renderer, 217, 83, 79, 255);
+            SDL_RenderFillRect(renderer, &cell);
+
             break;
         }
 

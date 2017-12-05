@@ -12,6 +12,7 @@ PlayerUnit::PlayerUnit(string name, Posn* position, unsigned int vit, unsigned i
                        double mod_vit, double mod_int, double mod_dex, double mod_str) {
     this->name = std::move(name);
     this->position = position;
+    this->direction = DOWN;
     this->st_vit = vit;
     this->st_int = intel;
     this->st_dex = dex;
@@ -72,6 +73,13 @@ bool PlayerUnit::addEXP(int const exp) {
     }
 }
 
+direction_t PlayerUnit::getDirection() {
+    return this->direction;
+}
+
+void PlayerUnit::setDirection(direction_t direction) {
+    this->direction = direction;
+}
 
 
 

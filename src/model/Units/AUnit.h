@@ -69,6 +69,8 @@ public:
 
     bool is_melee() const;
 
+
+
 protected:
     unsigned int health, max_health, mana, max_mana, p_defense, m_defense;
     unsigned int st_vit, st_int, st_dex, st_str;

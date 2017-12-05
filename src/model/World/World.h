@@ -72,7 +72,7 @@ public:
 	*/
     void setCurrentGameState(game_state_t gameState);
 
-    EnemyUnit getEnemyUnit();
+    EnemyUnit * getEnemyUnit();
 
     unsigned const int STARTING_VIT = 1;
     unsigned const int STARTING_INT = 1;
