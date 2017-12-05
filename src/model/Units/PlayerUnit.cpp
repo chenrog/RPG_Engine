@@ -41,7 +41,7 @@ void PlayerUnit::equip(Equipment const equipment, Item * inventory, int curInven
     this->st_int -= curEquip.getIntel();
     this->st_dex -= curEquip.getSpeed();
 
-    inventory[curInventorySize] = curEquip;
+    inventory[curInventorySize] = curEquip; // TODO: SLICING
 
     this->st_str += equipment.getStr();
     this->st_vit += equipment.getVit();
@@ -66,5 +66,8 @@ bool PlayerUnit::addEXP(int const exp) {
         return false;
     }
 }
+
+
+
 
 

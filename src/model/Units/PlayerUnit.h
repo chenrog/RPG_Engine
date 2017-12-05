@@ -4,6 +4,7 @@
 #include "AUnit.h"
 #include "../Item/Equipment/Equipment.h"
 #include "../Spells/Spell.h"
+#include "EnemyUnit.h"
 #include <vector>
 
 class PlayerUnit : public AUnit {
@@ -45,6 +46,7 @@ public:
      * @param exp
      */
     bool addEXP(int exp);
+
 
 
 private:
