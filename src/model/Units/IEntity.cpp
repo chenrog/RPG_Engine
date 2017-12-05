@@ -8,7 +8,7 @@ const string &IEntity::getName() const {
     return name;
 }
 
-Posn IEntity::getPosition() {
+Posn* IEntity::getPosition() {
     return position;
 }
 
@@ -25,7 +25,7 @@ void IEntity::disableVisibility() {
 }
 
 void IEntity::setPosition(unsigned int a, unsigned int b) {
-    position = Posn(a, b);
+    position = new Posn(a, b);
 }
 
 bool IEntity::is_item() {

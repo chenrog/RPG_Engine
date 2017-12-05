@@ -7,26 +7,6 @@ AUnit::AUnit(const AUnit &unit) = default;
 
 AUnit::~AUnit() = default;
 
-void AUnit::move(direction_t direction, unsigned int distance) {
-    //TODO: Add prevention of going OOB in world.
-    switch (direction) {
-        case UP:
-            this->position.setY(this->position.getY() + distance);
-            break;
-        case DOWN:
-            this->position.setY(this->position.getY() - distance);
-            break;
-        case LEFT:
-            this->position.setX(this->position.getX() - distance);
-            break;
-        case RIGHT:
-            this->position.setX(this->position.getX() + distance);
-            break;
-        default:
-            break;
-    }
-}
-
 int AUnit::takeDamage(Spell s, AUnit* attacker) {
     std::random_device rd;
     std::mt19937 mt(rd());

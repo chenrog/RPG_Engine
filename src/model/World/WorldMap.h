@@ -14,20 +14,24 @@
 
 class WorldMap {
 public:
-    WorldMap();
+    WorldMap(int numEnemies);
 
-    WorldMap& operator=(const WorldMap& other);
+    MapCell*** getWorldMap();
 
-    vector<vector<MapCell>> getWorldMap();
+    EnemyUnit ** getEnemies();
 
-    vector<EnemyUnit> * getEnemies();
+    void setEnemy(EnemyUnit * eu);
 
-    const int WORLDMAP_WIDTH = 30;
-    const int WORLDMAP_HEIGHT = 30;
+    int getCurSize();
+
+    static const int WORLDMAP_WIDTH = 30;
+    static const int WORLDMAP_HEIGHT = 30;
 
 private:
-    vector<vector<MapCell>> gridMap;
-    vector<EnemyUnit> * enemies;
+    //vector<vector<MapCell*>> * gridMap;
+    int curEnemies;
+    MapCell*** gridMap;
+    EnemyUnit ** enemies;
 };
 
 

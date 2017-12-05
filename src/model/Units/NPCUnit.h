@@ -12,14 +12,14 @@ public:
      * @param type
      * @param dialogue
      */
-    NPCUnit(NPCUnitType_t type, Posn point, string name, string dialogue);
+    NPCUnit(NPCUnitType_t type, Posn* point, string name, string dialogue);
 
     /**
      * A constructor for an NPC of type VENDOR throws an assert error if type is not VENDOR
      * @param type
      * @param dialogue
      */
-    NPCUnit(NPCUnitType_t type, Posn point, string name, string dialogue, Item** items);
+    NPCUnit(NPCUnitType_t type, Posn* point, string name, string dialogue, Item** items);
 
    ~NPCUnit() override;
 

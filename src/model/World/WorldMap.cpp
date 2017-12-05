@@ -5,32 +5,43 @@
 #include "WorldMap.h"
 
 
-WorldMap::WorldMap() {
-
+WorldMap::WorldMap(int numEnemies) {
+    gridMap = new MapCell**[WORLDMAP_WIDTH];
+    for (int i = 0; i < WORLDMAP_WIDTH; i++) {
+        gridMap[i] = new MapCell*[WORLDMAP_HEIGHT];
+    }
     // Generate the map.
     for (int i = 0; i < WORLDMAP_HEIGHT; i++) {
         for (int j = 0; j < WORLDMAP_WIDTH; j++) {
-            //TODO: Probably need new here.
-            auto point = new Posn(i, j);
-            auto cell = new MapCell(point, true);
-            gridMap[i].emplace_back(*cell);
+            gridMap[i][j] = new MapCell(new Posn(i, j), true);;
         }
     }
+    curEnemies = 0;
+    this->enemies = new EnemyUnit*[numEnemies];
 
 }
 
-vector<EnemyUnit> * WorldMap::getEnemies() {
+EnemyUnit ** WorldMap::getEnemies() {
     return this->enemies;
 }
 
-std::vector<vector<MapCell>> WorldMap::getWorldMap() {
+MapCell***  WorldMap::getWorldMap() {
     return gridMap;
 }
 
-WorldMap &WorldMap::operator=(const WorldMap &other) {
-    this->gridMap = other.gridMap;
-    return *this;
+void WorldMap::setEnemy(EnemyUnit *eu) {
+    this->enemies[curEnemies] = eu;
+    curEnemies++;
 }
+
+int WorldMap::getCurSize() {
+    return this->curEnemies;
+}
+
+//WorldMap &WorldMap::operator=(const WorldMap &other) {
+//    this->gridMap = other.gridMap;
+//    return *this;
+//}
 
 // some function that controls how this cell is displayed, will be based on whether or not this Cell is "inhabited"
 void draw() {

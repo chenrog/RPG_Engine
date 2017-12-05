@@ -24,7 +24,7 @@ public:
 
 private:
     // the game being displayed
-    World* game = new World();
+    World* game;
     // below are properties of an SDL window
     bool closed = false;
     string title;

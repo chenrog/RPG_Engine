@@ -18,7 +18,7 @@ EnemyUnit::EnemyUnit(unsigned int vit, unsigned int intel, unsigned int speed, u
     this->visible = false;
 }
 
-EnemyUnit::EnemyUnit(Posn posn, unsigned int vit, unsigned int intel, unsigned int speed, unsigned int str, bool melee,
+EnemyUnit::EnemyUnit(Posn *posn, unsigned int vit, unsigned int intel, unsigned int speed, unsigned int str, bool melee,
                      string name, vector<Item>* drops) {
     this->position = posn;
     this->name = std::move(name);
@@ -56,6 +56,7 @@ EnemyUnit::EnemyUnit(const EnemyUnit &unit) {
 
 EnemyUnit::~EnemyUnit() {
     drop->clear();
+    delete position;
 }
 
 Item EnemyUnit::calcDrop() {

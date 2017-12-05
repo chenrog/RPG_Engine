@@ -22,13 +22,13 @@ public:
      * Returns the allies.
      * @return The allies.
      */
-    PlayerUnit getPlayer() const;
+    PlayerUnit* getPlayer() const;
 
     /**
      * Function that moves the player based on key input. If the player moves onto a
      * cell that has random encounters, generate whether or not there is an encounter.
      */
-    void movePlayer(direction_t direction, int distance);
+    void movePlayer(direction_t direction);
 
     /**
      * Returns the inventory as a map corresponding items to their quantity.

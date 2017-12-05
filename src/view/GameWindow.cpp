@@ -8,6 +8,7 @@ GameWindow::GameWindow(string title, unsigned int width, unsigned int height, un
     this->width = width;
     this->height = height;
     this->multiplier = multiplier;
+    this->game = new World();
     // this calls init and sets the state of closed based on if the window opens properly
     closed = !init();
 }
@@ -116,7 +117,7 @@ void GameWindow::pollEvents() {
 
                     // checks if it was movement
                     if (moved) {
-                        game->movePlayer(direction, 1);
+                        game->movePlayer(direction);
                     }
                 }
 
@@ -146,7 +147,7 @@ void GameWindow::pollEvents() {
 
                 // BATTLE
                 if (game->getCurrentGameState() == BATTLE) {
-                    if (game->getPlayer().get_health() == 0) {
+                    if (game->getPlayer()->get_health() == 0) {
                         /** game->END(); **/
                     } else if (game->getEnemyUnit().get_health() == 0) {
                         game->setCurrentGameState(OVERWORLD);
@@ -170,10 +171,10 @@ void GameWindow::pollEvents() {
                         case SDLK_RETURN: {
                             Battle b;
 
-                            PlayerUnit p = game->getPlayer();
+                            PlayerUnit* p = game->getPlayer();
                             EnemyUnit e = game->getEnemyUnit();
 
-                            b.doBattle(&p, &e, 0);
+                            b.doBattle(p, &e, 0);
                             break;
                         }
 
@@ -249,45 +250,71 @@ void GameWindow::drawWorld() const {
     SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
     SDL_RenderClear(renderer);
 
+//    cout << "fukc" << endl;
+//    cout << game->getPlayer()->get_health() << endl;
+//    cout << "Hello" << endl;
+//    player.w = multiplier - 5;
+//    player.h = multiplier - 5;
+//    player.x = game->getPlayer()->getPosition()->getX() * multiplier;
+//    player.y = game->getPlayer()->getPosition()->getY() * multiplier;
+//
+//    SDL_SetRenderDrawColor(renderer, 200, 0, 0, 255);
+//    SDL_RenderFillRect(renderer, &player);
+
     switch (game->getCurrentGameState()) {
         case OVERWORLD: {
-            SDL_Rect *cp = new SDL_Rect();
-            SDL_Rect cell = *cp;
+            SDL_Rect cell = SDL_Rect();
             cell.w = multiplier;
             cell.h = multiplier;
-            SDL_SetRenderDrawColor(renderer, 94, 184, 92, 255);
-            for (int i = 0; i < game->getWorldMap().getWorldMap().size(); i++) {
-                for (int j = 0; j < game->getWorldMap().getWorldMap().size(); j++) {
-                    MapCell curCell = game->getWorldMap().getWorldMap()[i][j];
+            for (int i = 0; i < 30; i++) {
+                for (int j = 0; j < 30; j++) {
+                    MapCell* curCell = game->getWorldMap().getWorldMap()[i][j];
                     cell.x = i * multiplier;
                     cell.y = j * multiplier;
-                    if (curCell.isWalkable()) {
+
+                    if (curCell->isWalkable()) {
                         SDL_SetRenderDrawColor(renderer, 94, 184, 92, 255);
 
                     } else {
                         SDL_SetRenderDrawColor(renderer, 217, 83, 79, 255);
                     }
-                    SDL_RenderFillRect(renderer, cp);
-                    if (!curCell.isEmpty()) {
-                        cell.w = multiplier - 5;
-                        cell.h = multiplier - 5;
-                        cell.x = curCell.getPosition().getX();
-                        cell.y = curCell.getPosition().getY();
-                        if (curCell.getEntity().is_item()) {
+                    SDL_RenderFillRect(renderer, &cell);
+                    if (!curCell->isEmpty()) {
+                        cell.w = multiplier;
+                        cell.h = multiplier;
+
+                        cell.x = curCell->getPosition()->getX() * multiplier;
+                        cell.y = curCell->getPosition()->getY() * multiplier;
+
+                        if (curCell->getEntity()->is_item()) {
                             SDL_SetRenderDrawColor(renderer, 220, 105, 0, 255);
+
                         } else {
                             SDL_SetRenderDrawColor(renderer, 66, 139, 202, 255);
                         }
-                        SDL_RenderFillRect(renderer, cp);
+                        SDL_RenderFillRect(renderer, &cell);
                     }
                 }
             }
-            SDL_Rect player;
-            player.w = multiplier - 5;
-            player.h = multiplier - 5;
-            player.x = game->getPlayer().getPosition().getX();
-            player.y = game->getPlayer().getPosition().getY();
+
+
+            SDL_Rect player = SDL_Rect();
+            player.w = multiplier;
+            player.h = multiplier;
+            player.x = game->getPlayer()->getPosition()->getX() * multiplier;
+            player.y = game->getPlayer()->getPosition()->getY() * multiplier;
             SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
+            SDL_RenderFillRect(renderer, &player);
+            break;
+        }
+        case (BATTLE): {
+            SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
+            SDL_Rect cell = SDL_Rect();
+            cell.w = 30;
+            cell.h = 30;
+            cell.x = 0;
+            cell.y = 0;
+            SDL_RenderFillRect(renderer, &cell);
             break;
         }
 
@@ -323,7 +350,7 @@ void GameWindow::drawWorld() const {
 //            if (!font) {
 //                std::cerr << "failed to load font" << endl;
 //            }
-//            auto text_surface = TTF_RenderText_Solid(font, game->getPlayer().getName().c_str(), SDL_Color(0, 0, 0));
+//            auto text_surface = TTF_RenderText_Solid(font, game->getPlayer()->getName().c_str(), SDL_Color(0, 0, 0));
 //            if (!text_surface) {
 //                cerr << "failed to create text surface" << endl;
 //            }
@@ -342,7 +369,7 @@ void GameWindow::drawWorld() const {
 //            if (!font) {
 //                std::cerr << "failed to load font" << endl;
 //            }
-//            string level = to_string(game->getPlayer().get_lvl());
+//            string level = to_string(game->getPlayer()->get_lvl());
 //            auto text_surface = TTF_RenderText_Solid(font, level.c_str(), SDL_Color(0, 0, 0));
 //            if (!text_surface) {
 //                cerr << "failed to create text surface" << endl;

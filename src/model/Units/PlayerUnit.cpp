@@ -6,7 +6,7 @@ using namespace std;
 
 PlayerUnit::PlayerUnit() = default;
 
-PlayerUnit::PlayerUnit(string name, Posn position, unsigned int vit, unsigned int intel, unsigned int dex, unsigned int str,
+PlayerUnit::PlayerUnit(string name, Posn* position, unsigned int vit, unsigned int intel, unsigned int dex, unsigned int str,
                        unsigned int lvl, bool is_melee,
                        vector<Equipment>* equipmentList, vector<Spell>* spellList,
                        double mod_vit, double mod_int, double mod_dex, double mod_str) {
@@ -34,8 +34,9 @@ PlayerUnit::PlayerUnit(string name, Posn position, unsigned int vit, unsigned in
 }
 
 PlayerUnit::~PlayerUnit() {
-    delete[] this->equipmentList;
-    delete[] this->spellList;
+    this->equipmentList->clear();
+    this->spellList->clear();
+    delete position;
 }
 
 void PlayerUnit::equip(Equipment const equipment, Item ** inventory, int curInventorySize) {
