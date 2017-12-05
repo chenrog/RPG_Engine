@@ -26,20 +26,14 @@ public:
 
     AUnit(const AUnit &unit);
 
-    ~AUnit();
-
-    /**
-     * Move this Unit in the given direction, x distance away
-     * @param direction
-     */
-    virtual void move(direction_t direction, unsigned int distance);
+    ~AUnit() override;
 
     /**
      * Calculates the damage a unit takes based on a damage stat passed in by the class. Returns the amount of damage
      * taken by the unit
      * @param damage
      */
-    virtual int takeDamage(Spell s, AUnit attacker);
+    virtual int takeDamage(Spell * s, AUnit* attacker);
 
     /**
      *
@@ -69,11 +63,16 @@ public:
 
     unsigned int get_lvl() const;
 
-    vector<Spell> getSpells() const;
+    void addSpell(Spell * spell);
 
-    Spell getSpell(unsigned int i) const;
+    Spell ** getSpells() const;
+
+    Spell * getSpell(unsigned int i) const;
 
     bool is_melee() const;
+
+    int curSpellSize = 0;
+
 
 protected:
     unsigned int health, max_health, mana, max_mana, p_defense, m_defense;
@@ -81,7 +80,7 @@ protected:
     unsigned int lvl, exp;
     bool melee;
     vector<Equipment>* equipmentList; // each element in the array pertains to a specific stats
-    vector<Spell>* spellList; // will be displayed in a list when the player selects this option
+    Spell ** spellList; // will be displayed in a list when the player selects this option
 
     /**
     * updates the statistics of the unit.

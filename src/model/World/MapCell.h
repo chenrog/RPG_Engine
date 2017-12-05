@@ -14,9 +14,11 @@ public:
 
     MapCell(Posn* position, IEntity* c_entity, bool walkable);
 
-    Posn getPosition();
+    ~MapCell();
 
-    IEntity * getEntity();
+    Posn* getPosition();
+
+    IEntity* getEntity();
 
     void setEntity(IEntity* entity);
 
@@ -33,10 +35,12 @@ public:
     void draw();
 
 
+
 private:
     Posn* position;
     IEntity* c_entity;
     bool walkable;
+    bool empty;
     bool randomEncounterable;
 };
 

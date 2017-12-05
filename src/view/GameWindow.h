@@ -24,7 +24,7 @@ public:
 
 private:
     // the game being displayed
-    World game = World();
+    World* game;
     // below are properties of an SDL window
     bool closed = false;
     string title;
@@ -34,6 +34,7 @@ private:
     // both of the below variables are initialized by the init function
     SDL_Window * window = nullptr;      // Declare a pointer to the window
     SDL_Renderer * renderer = nullptr;  // Declare a pointer to the renderer
+    string menuStrings[4] = {"ATTACK", "SPELLS", "ITEM", "FLEE"};
 };
 
 

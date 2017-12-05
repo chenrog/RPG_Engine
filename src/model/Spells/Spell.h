@@ -23,8 +23,8 @@ public:
     Spell(string spell, int base_damage, int mod_damage, int base_hit_chance, int mod_hit_chance,
           spell_type_t spell_type, damage_type_t damage_type);
 
-    int  getDamage(const AUnit & unit);
-    int  getHitChance(const AUnit & unit);
+    int getDamage(const AUnit* unit);
+    int getHitChance(const AUnit* unit);
     spell_type_t  getSpellType();
     damage_type_t getDamageType();
 

@@ -9,7 +9,7 @@ using namespace std;
 
 class Equipment : public Item{
 public:
-    Equipment(string name, Posn position, bool visible, equip_type_t type, signed int v, unsigned int vm, signed int i,
+    Equipment(string name, Posn * position, bool visible, equip_type_t type, signed int v, unsigned int vm, signed int i,
               unsigned int im, signed int sp, unsigned int spm, signed int st, unsigned int stm, string description);
     // functions
     void level_up();
@@ -58,7 +58,7 @@ public:
 
 private:
     string       name;
-    Posn        position;
+    Posn*        position;
     bool         visible;
     equip_type_t type;
     // vitality stats by this equipment

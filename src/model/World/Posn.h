@@ -9,7 +9,8 @@ private:
     unsigned int x, y;  // Private data members
 
 public:
-    Posn(unsigned int x = 0, unsigned int y = 0); // Constructor with default arguments
+    Posn(unsigned int x, unsigned int y); // Constructor with default arguments
+    Posn();
     unsigned int getX() const;  // Getter
     void setX(unsigned int x);  // Setter
     unsigned int getY() const;

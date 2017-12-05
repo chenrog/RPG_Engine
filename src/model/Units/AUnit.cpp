@@ -1,44 +1,27 @@
 #include <random>
 #include "AUnit.h"
 
-AUnit::AUnit() {}
+AUnit::AUnit() = default;
 
-AUnit::AUnit(const AUnit &unit) {}
+AUnit::AUnit(const AUnit &unit) = default;
 
-AUnit::~AUnit() {}
+AUnit::~AUnit() = default;
 
-void AUnit::move(direction_t direction, unsigned int distance) {
-    //TODO: Add prevention of going OOB in world.
-    switch (direction) {
-        case UP:
-            this->position.setY(this->position.getY() + distance);
-            break;
-        case DOWN:
-            this->position.setY(this->position.getY() - distance);
-            break;
-        case LEFT:
-            this->position.setX(this->position.getX() - distance);
-            break;
-        case RIGHT:
-            this->position.setX(this->position.getX() + distance);
-            break;
-        default:
-            break;
-    }
-}
-
-int AUnit::takeDamage(Spell s, AUnit attacker) {
-    std::random_device rd;
-    std::mt19937 mt(rd());
-    std::uniform_real_distribution<double> dist(0, 100);
-    int hit_roll = dist(mt);
+int AUnit::takeDamage(Spell * s, AUnit* attacker) {
+//    std::random_device rd;
+//    std::mt19937 mt(rd());
+//    std::uniform_real_distribution<double> dist(0, 100);
+    double hit_roll = 100;
+    cout<<s->getHitChance(attacker)<<endl;
 
     // calculate if the attack hits
-    if (hit_roll < s.getHitChance(attacker)) {
+    if ((int) hit_roll < s->getHitChance(attacker)) {
+        cout<<"HIT????TTT"<<endl;
+
         // calculate this unit's damage mitigation
         unsigned int defense;
         // if the damage will be physical
-        if (s.getDamageType() == PHYSICAL) {
+        if (s->getDamageType() == PHYSICAL) {
             defense = p_defense;
         }
         // if the damage will be magical
@@ -47,9 +30,9 @@ int AUnit::takeDamage(Spell s, AUnit attacker) {
         }
 
         // calculate the damage
-        cout<< "DAMAGE: " << s.getDamage(attacker) << endl;
+        cout<< "DAMAGE: " << s->getDamage(attacker) << endl;
 
-        int damage = (int)((float)s.getDamage(attacker) * (float)(100 / (100 + defense)));
+        int damage = (int)((float)s->getDamage(attacker) * (float)(100 / (100 + defense)));
         cout<< "DAMAGE: " << damage << endl;
         if (this->health >= damage) {
             this->health -= damage;
@@ -121,12 +104,19 @@ bool AUnit::is_melee() const {
     return this->melee;
 }
 
-vector<Spell> AUnit::getSpells() const {
-    return *spellList;
+Spell ** AUnit::getSpells() const {
+    return spellList;
 }
 
-Spell AUnit::getSpell(unsigned int i) const {
-    return (*spellList)[i];
+void AUnit::addSpell(Spell *spell) {
+    if (curSpellSize == 4) {
+        this->spellList[this->curSpellSize] = spell;
+        curSpellSize++;
+    }
+}
+
+Spell * AUnit::getSpell(unsigned int i) const {
+    return (spellList)[i];
 }
 
 void AUnit::updateStats() {
