@@ -403,16 +403,16 @@ void GameWindow::drawWorld() const {
                 }
                 case DOWN: {
                     player.x += player.w;
-                    player.y += multiplier;
+                    player.y -= multiplier;
                     break;
                 }
                 case LEFT: {
-                    player.x -= player.w;
+                    player.x += player.w;
                     player.y += player.h;
                     break;
                 }
                 case RIGHT: {
-                    player.x += multiplier;
+                    player.x -= multiplier;
                     player.y += player.h;
                     break;
                 }
@@ -445,7 +445,7 @@ void GameWindow::drawWorld() const {
                 }
 
                 // top boxes
-                cell.y = (game->getWorldMap().WORLDMAP_HEIGHT / 3) * 2;
+                cell.y = (game->getWorldMap().WORLDMAP_HEIGHT / 3) * multiplier * 2;
 
                 // bottom boxes
                 if (i == 2 || i == 3) {
@@ -465,53 +465,6 @@ void GameWindow::drawWorld() const {
                 SDL_SetRenderDrawColor(renderer, 249, 249, 249, 255);
             }
 
-
-            /**
-            cell.x = 0;
-            cell.y = ((2 * (game->getWorldMap().WORLDMAP_HEIGHT / 3)) * (double) multiplier/1.3);
-            if (game->curMenuOption == 0) {
-                SDL_SetRenderDrawColor(renderer, 66, 139, 202, 255);
-            } else {
-                SDL_SetRenderDrawColor(renderer, 227, 178, 178, 255);
-            }
-            SDL_RenderFillRect(renderer, &cell);
-
-            SDL_SetRenderDrawColor(renderer, 249, 249, 249, 255);
-
-            // top right box
-            cell.w = (game->getWorldMap().WORLDMAP_WIDTH * multiplier)/2;
-            cell.h = ((game->getWorldMap().WORLDMAP_HEIGHT / 3) * multiplier)/2;
-            cell.x = (game->getWorldMap().WORLDMAP_WIDTH * multiplier)/2;
-            cell.y = ((2 * (game->getWorldMap().WORLDMAP_HEIGHT / 3)) * (double) multiplier/1.3);
-            if (game->curMenuOption == 1) {
-                SDL_SetRenderDrawColor(renderer, 66, 139, 202, 255);
-            } else {
-                SDL_SetRenderDrawColor(renderer, 227, 178, 178, 255);
-            }
-            SDL_RenderFillRect(renderer, &cell);
-            //bottom left box
-            cell.w = (game->getWorldMap().WORLDMAP_WIDTH * multiplier)/2;
-            cell.h = ((game->getWorldMap().WORLDMAP_HEIGHT / 3) * multiplier);
-            cell.x = 0;
-            cell.y = 2 * (game->getWorldMap().WORLDMAP_HEIGHT / 3) * multiplier;
-            if (game->curMenuOption == 2) {
-                SDL_SetRenderDrawColor(renderer, 66, 139, 202, 255);
-            } else {
-                SDL_SetRenderDrawColor(renderer, 227, 178, 178, 255);
-            }
-            //bottom right box
-            SDL_RenderFillRect(renderer, &cell);
-            cell.w = game->getWorldMap().WORLDMAP_WIDTH * multiplier/2;
-            cell.h = (game->getWorldMap().WORLDMAP_HEIGHT / 3) * multiplier;
-            cell.x = game->getWorldMap().WORLDMAP_WIDTH * multiplier/2;
-            cell.y = 2 * (game->getWorldMap().WORLDMAP_HEIGHT / 3) * multiplier;
-            if (game->curMenuOption == 3) {
-                SDL_SetRenderDrawColor(renderer, 66, 139, 202, 255);
-            } else {
-                SDL_SetRenderDrawColor(renderer, 227, 178, 178, 255);
-            }
-            SDL_RenderFillRect(renderer, &cell);
-            **/
 
             // player health bar outline
             cell.x = 0;
