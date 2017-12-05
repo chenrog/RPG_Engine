@@ -83,6 +83,8 @@ public:
     const double RANDOM_ENCOUNTER_CHANCE = .05;
 
     int curMenuOption = 0;
+    string menuStrings[4] = {"ATTACK", "SPELLS", "ITEM", "FLEE"};
+
 private:
     // Only doing one player for now.
     PlayerUnit *player;
@@ -92,6 +94,7 @@ private:
     int curInventorySize = 0;
     game_state_t gameState;
     bool gameOver = false;
+
 };
 
 

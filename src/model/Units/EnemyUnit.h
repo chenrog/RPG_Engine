@@ -23,6 +23,7 @@ public:
      */
     Item* calcDrop();
 
+
     int curSpellSize = 0;
 
 private:

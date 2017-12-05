@@ -71,3 +71,4 @@ Item* EnemyUnit::calcDrop() {
     }
     return (this->drop)[random_int];
 }
+

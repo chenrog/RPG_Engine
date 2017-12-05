@@ -12,7 +12,6 @@ int AUnit::takeDamage(Spell * s, AUnit* attacker) {
 //    std::mt19937 mt(rd());
 //    std::uniform_real_distribution<double> dist(0, 100);
     double hit_roll = 100;
-
     // calculate if the attack hits
     if ((int) hit_roll < s->getHitChance(attacker)) {
 
@@ -30,12 +29,12 @@ int AUnit::takeDamage(Spell * s, AUnit* attacker) {
         // calculate the damage
 
         int damage = (int)((float)s->getDamage(attacker) * (float)(100.0 / (100.0 + defense)));
+        cout << attacker->getName() << " DID " << damage << " DAMAGE!" << endl;
         if (this->health >= damage) {
             this->health -= damage;
         } else {
             this->health = 0;
         }
-
         return damage;
     }
 
@@ -105,7 +104,7 @@ Spell ** AUnit::getSpells() const {
 }
 
 void AUnit::addSpell(Spell *spell) {
-    if (curSpellSize == 4) {
+    if (curSpellSize < 4) {
         this->spellList[this->curSpellSize] = spell;
         curSpellSize++;
     }
@@ -113,6 +112,11 @@ void AUnit::addSpell(Spell *spell) {
 
 Spell * AUnit::getSpell(unsigned int i) const {
     return (spellList)[i];
+}
+
+void AUnit::reset(){
+    this->health = this->max_health;
+    this->mana = this->max_mana;
 }
 
 void AUnit::updateStats() {
