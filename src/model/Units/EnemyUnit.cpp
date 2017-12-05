@@ -15,6 +15,7 @@ EnemyUnit::EnemyUnit(unsigned int vit, unsigned int intel, unsigned int speed, u
     this->health = this->max_health;
     this->mana = this->max_mana;
     this->drop = drops;
+    this->spellList = new Spell*[4];
     this->visible = false;
 }
 

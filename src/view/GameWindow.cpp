@@ -313,10 +313,13 @@ void GameWindow::drawWorld() const {
                     cell.x = i * multiplier;
                     cell.y = j * multiplier;
 
-                    if (curCell->isWalkable()) {
-                        SDL_SetRenderDrawColor(renderer, 94, 184, 92, 255);
+                    if (curCell->isWalkable() && curCell->isRandomEncounterable()) {
+                        SDL_SetRenderDrawColor(renderer, 10, 86, 27, 255);
 
-                    } else {
+                    } else if(curCell->isWalkable()){
+                        SDL_SetRenderDrawColor(renderer, 94, 184, 92, 255);
+                    }
+                    else{
                         SDL_SetRenderDrawColor(renderer, 217, 83, 79, 255);
                     }
                     SDL_RenderFillRect(renderer, &cell);
@@ -397,7 +400,7 @@ void GameWindow::drawWorld() const {
             cell.w = (game->getWorldMap().WORLDMAP_WIDTH * multiplier)/2;
             cell.h = ((game->getWorldMap().WORLDMAP_HEIGHT / 3) * multiplier)/2;
             cell.x = 0;
-            cell.y = 2 * (game->getWorldMap().WORLDMAP_HEIGHT / 3) * multiplier/2;
+            cell.y = ((2 * (game->getWorldMap().WORLDMAP_HEIGHT / 3)) * (double) multiplier/1.3);
             if (game->curMenuOption == 0) {
                 SDL_SetRenderDrawColor(renderer, 66, 139, 202, 255);
             } else {
@@ -408,7 +411,7 @@ void GameWindow::drawWorld() const {
             cell.w = (game->getWorldMap().WORLDMAP_WIDTH * multiplier)/2;
             cell.h = ((game->getWorldMap().WORLDMAP_HEIGHT / 3) * multiplier)/2;
             cell.x = (game->getWorldMap().WORLDMAP_WIDTH * multiplier)/2;
-            cell.y = 2 * (game->getWorldMap().WORLDMAP_HEIGHT / 3) * multiplier/2;
+            cell.y = ((2 * (game->getWorldMap().WORLDMAP_HEIGHT / 3)) * (double) multiplier/1.3);
             if (game->curMenuOption == 1) {
                 SDL_SetRenderDrawColor(renderer, 66, 139, 202, 255);
             } else {
@@ -417,7 +420,7 @@ void GameWindow::drawWorld() const {
             SDL_RenderFillRect(renderer, &cell);
             //bottom left box
             cell.w = (game->getWorldMap().WORLDMAP_WIDTH * multiplier)/2;
-            cell.h = ((game->getWorldMap().WORLDMAP_HEIGHT / 3) * multiplier)/2;
+            cell.h = ((game->getWorldMap().WORLDMAP_HEIGHT / 3) * multiplier);
             cell.x = 0;
             cell.y = 2 * (game->getWorldMap().WORLDMAP_HEIGHT / 3) * multiplier;
             if (game->curMenuOption == 2) {
@@ -427,9 +430,9 @@ void GameWindow::drawWorld() const {
             }
             //bottom right box
             SDL_RenderFillRect(renderer, &cell);
-            cell.w = game->getWorldMap().WORLDMAP_WIDTH * multiplier;
+            cell.w = game->getWorldMap().WORLDMAP_WIDTH * multiplier/2;
             cell.h = (game->getWorldMap().WORLDMAP_HEIGHT / 3) * multiplier;
-            cell.x = 0;
+            cell.x = game->getWorldMap().WORLDMAP_WIDTH * multiplier/2;
             cell.y = 2 * (game->getWorldMap().WORLDMAP_HEIGHT / 3) * multiplier;
             if (game->curMenuOption == 3) {
                 SDL_SetRenderDrawColor(renderer, 66, 139, 202, 255);

@@ -63,9 +63,11 @@ public:
 
     unsigned int get_lvl() const;
 
-    vector<Spell> getSpells() const;
+    void addSpell(Spell * spell);
 
-    Spell getSpell(unsigned int i) const;
+    Spell ** getSpells() const;
+
+    Spell * getSpell(unsigned int i) const;
 
     bool is_melee() const;
 
@@ -77,7 +79,7 @@ protected:
     unsigned int lvl, exp;
     bool melee;
     vector<Equipment>* equipmentList; // each element in the array pertains to a specific stats
-    vector<Spell>* spellList; // will be displayed in a list when the player selects this option
+    vector ** spellList; // will be displayed in a list when the player selects this option
 
     /**
     * updates the statistics of the unit.

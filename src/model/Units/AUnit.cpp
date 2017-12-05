@@ -101,12 +101,12 @@ bool AUnit::is_melee() const {
     return this->melee;
 }
 
-vector<Spell> AUnit::getSpells() const {
-    return *spellList;
+Spell ** AUnit::getSpells() const {
+    return spellList;
 }
 
-Spell AUnit::getSpell(unsigned int i) const {
-    return (*spellList)[i];
+Spell * AUnit::getSpell(unsigned int i) const {
+    return (spellList)[i];
 }
 
 void AUnit::updateStats() {

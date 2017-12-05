@@ -15,8 +15,12 @@ World::World()  {
     Item * item = new Item("The Legendary Cow", "Description");
     EnemyUnit *enemyUnit = new EnemyUnit(1, 2, 3, 4, false, "Georgina", new vector<Item>());
     worldMap->setEnemy(enemyUnit);
+    int cow_x = (rand() %14) +15;
+    int cow_y = (rand() %14) +15;
+
+
     worldMap->getWorldMap()[10][5]->setEntity(npcUnit);
-    worldMap->getWorldMap()[20][15]->setEntity(item);
+    worldMap->getWorldMap()[cow_x][cow_y]->setEntity(item);
     for (int i = 1; i < 30; i++) {
         for (int j = 1; j < 30; j++) {
             int random_number = rand() %100;
@@ -26,9 +30,12 @@ World::World()  {
         }
     }
     worldMap->getWorldMap()[10][10]->setWalkability(false);
-    for (int i = 15; i < 30; i++) {
+    for (int i = 0; i < 30; i++) {
         for (int j = 0; j < 30; j++) {
-            worldMap->getWorldMap()[i][j]->setRandomEncounters(true);
+            int random_number = rand() %100;
+            if (random_number > 70) {
+                worldMap->getWorldMap()[i][j]->setRandomEncounters(true);
+            }
         }
     }
     Posn * starting_point = new Posn(0, 0);
@@ -40,8 +47,6 @@ World::World()  {
                                   STARTING_STR, STARTING_LVL, true, equipmentList, spellList, STARTING_MOD_VIT,
                                   STARTING_MOD_INT, STARTING_MOD_DEX, STARTING_MOD_STR);
     this->gameState = OVERWORLD;
-    this->curEnemy = new EnemyUnit();
-
     this->curMenuOption = 0;
 }
 
