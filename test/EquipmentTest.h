@@ -24,8 +24,8 @@ public:
         equip_builder->setVisibility(true);
         Equipment *equipment = equip_builder->build();
         TS_ASSERT_EQUALS(equipment->getName(), "Helmet");
-        TS_ASSERT_EQUALS(equipment->getPosition().getX(), 0);
-        TS_ASSERT_EQUALS(equipment->getPosition().getY(), 1);
+        TS_ASSERT_EQUALS(equipment->getPosition()->getX(), 0);
+        TS_ASSERT_EQUALS(equipment->getPosition()->getY(), 1);
         TS_ASSERT(equipment->isVisible());
         TS_ASSERT_EQUALS(equipment->getVit(), 1);
         TS_ASSERT_EQUALS(equipment->getIntel(), 2);

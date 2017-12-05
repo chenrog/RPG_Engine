@@ -4,7 +4,7 @@
 EnemyUnit::EnemyUnit() = default;
 
 EnemyUnit::EnemyUnit(unsigned int vit, unsigned int intel, unsigned int speed, unsigned int str, bool melee,
-                     string name, vector<Item>* drops) {
+                     string name, Item** drops) {
     this->name = std::move(name);
     this->st_vit = vit;
     this->st_int = intel;
@@ -20,7 +20,7 @@ EnemyUnit::EnemyUnit(unsigned int vit, unsigned int intel, unsigned int speed, u
 }
 
 EnemyUnit::EnemyUnit(Posn *posn, unsigned int vit, unsigned int intel, unsigned int speed, unsigned int str, bool melee,
-                     string name, vector<Item>* drops) {
+                     string name, Item** drops) {
     this->position = posn;
     this->name = std::move(name);
     this->st_vit = vit;
@@ -56,14 +56,11 @@ EnemyUnit::EnemyUnit(const EnemyUnit &unit) {
  */
 
 EnemyUnit::~EnemyUnit() {
-    drop->clear();
+    delete [] drop;
     delete position;
 }
 
 Item EnemyUnit::calcDrop() {
-    std::random_device rd;
-    std::mt19937 mt(rd());
-    std::uniform_real_distribution<double> dist(0.0, drop->size());
-    double random_int = dist(mt);
-    return (*this->drop)[(int) random_int];
+    int random_int = rand() % 4;
+    return (*this->drop)[random_int];
 }

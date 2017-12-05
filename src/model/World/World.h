@@ -31,12 +31,6 @@ public:
     void movePlayer(direction_t direction);
 
     /**
-     * Returns the inventory as a map corresponding items to their quantity.
-     * @return
-     */
-    //unordered_map<Item, int> getInventory();
-
-    /**
      * Returns the Overworld and all its cells.
      * @return The game's overworld.
      */
@@ -60,7 +54,9 @@ public:
      */
     void onTick(int currTick);
 
-    inline bool addToInventory(Item item);
+    Item **getInventory();
+
+    inline bool addToInventory(Item* item);
 
     inline void trash(int i);
 
@@ -93,7 +89,7 @@ private:
     PlayerUnit *player;
     WorldMap *worldMap;
     EnemyUnit *curEnemy;
-    Item inventory[INVENTORY_SLOTS];
+    Item** inventory;
     int curInventorySize = 0;
     game_state_t gameState;
     bool gameOver = false;
