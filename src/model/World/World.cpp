@@ -13,7 +13,7 @@ World::World()  {
     worldMap = new WorldMap(1);
     NPCUnit * npcUnit = new NPCUnit(DIALOGUE, new Posn(0,0), "GET THE LEGENDARY COW", "HI");
     Item * item = new Item("The Legendary Cow", "Description");
-    EnemyUnit *enemyUnit = new EnemyUnit(1, 2, 3, 4, false, "Georgina", new vector<Item>());
+    EnemyUnit *enemyUnit = new EnemyUnit(1, 2, 3, 4, false, "Georgina", nullptr);
     Spell * spell = new Spell("Punch", 10, 2, 100, 100, DAMAGE,PHYSICAL);
     enemyUnit->addSpell(spell);
 
