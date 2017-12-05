@@ -44,9 +44,9 @@ World::World()  {
     Posn * starting_point = new Posn(0, 0);
     vector<Equipment>* equipmentList;
     Spell**     spellList;
-    this->player = new PlayerUnit("Twen", starting_point, STARTING_VIT, STARTING_INT, STARTING_DEX,
-                                  STARTING_STR, STARTING_LVL, true, equipmentList, spellList, STARTING_MOD_VIT,
-                                  STARTING_MOD_INT, STARTING_MOD_DEX, STARTING_MOD_STR);
+    this->player = new PlayerUnit("Twen", starting_point, 10, 9, 8,
+                                  7, 1, true, equipmentList, spellList, 0.1,
+                                  0.2, 0.3, 0.4);
     this->inventory = new Item*[INVENTORY_SLOTS];
     this->gameState = OVERWORLD;
     this->curMenuOption = 0;
