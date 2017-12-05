@@ -6,7 +6,7 @@
 
 #include <iostream>
 
-// ../src/model/Item/Equipment/Equipment.cpp ../src/model/Units/PlayerUnit.cpp ../src/model/Units/IEntity.cpp ../src/model/Units/AUnit.cpp ../src/model/Item/Item.cpp  ../src/model/Spells/Spell.cpp ../src/model/World/Posn.cpp
+// ../src/model/Item/Equipment/Equipment.cpp ../src/model/Units/EnemyUnit.cpp ../src/model/Units/PlayerUnit.cpp ../src/model/Units/IEntity.cpp ../src/model/Units/AUnit.cpp ../src/model/Item/Item.cpp  ../src/model/Spells/Spell.cpp ../src/model/World/Posn.cpp
 
 using namespace std;
 
@@ -43,27 +43,29 @@ public:
                 = new PlayerUnit("Twen", new Posn(0, 0), 10, 9, 8, 7, 1, true, new  vector<Equipment>(), nullptr, 0.5, 0.4, 0.3, 0.2);
         Spell * spell = new Spell("Punch", 50, 2, 100, 100, HEAL, PHYSICAL);
         TS_ASSERT_EQUALS(playerUnit->get_health(), playerUnit->get_max_health());
-        playerUnit->takeDamage(spell, playerUnit); // TODO: slicing is NOT ok here
-        TS_ASSERT_EQUALS(playerUnit->get_health(), playerUnit->get_max_health() - (100 - playerUnit->get_p_def()));
+            int prev_health = playerUnit->get_health();
+            playerUnit->takeDamage(spell, playerUnit); // TODO: slicing is NOT ok here
+        TS_ASSERT_EQUALS(playerUnit->get_health(), prev_health - (int) ((float) spell->getDamage(playerUnit) * (float) (100.0 / (100.0 + playerUnit->get_m_def()) ) ));
         delete playerUnit;
         delete spell;
     }
 
     void testTakeMagicDamage() {
-        Spell * spell = new Spell("Punch", 10, 2, 100, 100, DAMAGE,PHYSICAL);
+        Spell * spell = new Spell("Punch", 10, 2, 100, 100, DAMAGE,MAGICAL);
         PlayerUnit * playerUnit
                 = new PlayerUnit("Twen", new Posn(0, 0), 10, 9, 8, 7, 1,  true, new vector<Equipment>(), nullptr, 0.5, 0.4, 0.3, 0.2);
         TS_ASSERT_EQUALS(playerUnit->get_health(), playerUnit->get_max_health());
+        int prev_health = playerUnit->get_health();
         playerUnit->takeDamage(spell, playerUnit); // TODO: slicing is NOT ok here
-        TS_ASSERT_EQUALS(playerUnit->get_health(), playerUnit->get_max_health() - (100 - playerUnit->get_m_def()));
+        TS_ASSERT_EQUALS(playerUnit->get_health(), prev_health - (int) ((float) spell->getDamage(playerUnit) * (float) (100.0 / (100.0 + playerUnit->get_m_def()) ) ));
         delete playerUnit;
     }
 
     void testTakeLethalDamage() {
-        Spell * spell = new Spell("Punch", 10, 2, 100, 100, DAMAGE,PHYSICAL);
+        Spell * spell = new Spell("Punch", 1000000, 2, 100, 100, DAMAGE,PHYSICAL);
         PlayerUnit * playerUnit
                 = new PlayerUnit("Twen", new Posn(0, 0), 10, 9, 8, 7, 1, true, new vector<Equipment>(), nullptr, 0.5, 0.4, 0.3, 0.2);
-        EnemyUnit *enemyUnit = new EnemyUnit(1, 2, 3, 4, false, "Georgina", nullptr));
+        EnemyUnit *enemyUnit = new EnemyUnit(1, 2, 3, 4, false, "Georgina", nullptr);
         TS_ASSERT_EQUALS(playerUnit->get_health(), playerUnit->get_max_health());
         playerUnit->takeDamage(spell, enemyUnit); // TODO: slicing is NOT ok here
         TS_ASSERT_EQUALS(playerUnit->get_health(), 0);

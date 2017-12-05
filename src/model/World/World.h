@@ -56,9 +56,9 @@ public:
 
     Item **getInventory();
 
-    inline bool addToInventory(Item* item);
+     bool addToInventory(Item* item);
 
-    inline void trash(int i);
+     void trash(int i);
 
     // Constants
     static const int INVENTORY_SLOTS = 20;
@@ -70,17 +70,15 @@ public:
 
     EnemyUnit * getEnemyUnit();
 
-    unsigned const int STARTING_VIT = 1;
-    unsigned const int STARTING_INT = 1;
-    unsigned const int STARTING_DEX = 1;
-    unsigned const int STARTING_STR = 1;
-    unsigned const int STARTING_LVL = 1;
-
-    unsigned const int STARTING_MOD_VIT = 1;
-    unsigned const int STARTING_MOD_INT = 1;
-    unsigned const int STARTING_MOD_DEX = 1;
-    unsigned const int STARTING_MOD_STR = 1;
-
+    const int STARTING_VIT = 10;
+    const int STARTING_INT = 9;
+    const int STARTING_DEX = 8;
+    const int STARTING_STR = 7;
+    const int STARTING_LVL = 1;
+    const double STARTING_MOD_VIT = .2;
+    const double STARTING_MOD_INT = .3;
+    const double STARTING_MOD_DEX = .4;
+    const double STARTING_MOD_STR = .5;
     const double RANDOM_ENCOUNTER_CHANCE = .05;
 
     int curMenuOption = 0;

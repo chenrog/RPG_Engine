@@ -21,7 +21,7 @@ public:
      * Calculates what drops when the unit is defeated.
      * @return the item determined randomly
      */
-    Item calcDrop();
+    Item* calcDrop();
 
     int curSpellSize = 0;
 

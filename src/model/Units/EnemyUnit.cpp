@@ -60,7 +60,14 @@ EnemyUnit::~EnemyUnit() {
     delete position;
 }
 
-Item EnemyUnit::calcDrop() {
+Item* EnemyUnit::calcDrop() {
     int random_int = rand() % 4;
-    return (*this->drop)[random_int];
+    int size = 0;
+    while(this->drop[size] != NULL){
+        size++;
+    }
+    while (random_int >= size){
+        random_int--;
+    }
+    return (this->drop)[random_int];
 }

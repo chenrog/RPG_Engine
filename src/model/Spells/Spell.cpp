@@ -18,7 +18,6 @@ int Spell::getDamage(const AUnit* unit) {
             damage_stat = unit->get_int();
             break;
     }
-    cout<< "BASE: " << this->base_damage << "MOD DAMAGE: " << this->mod_damage << "DMG STAT: " << unit->get_str() << endl;
     total_damage = this->base_damage + (this->mod_damage * damage_stat);
     return total_damage * this->spell_type;
 }

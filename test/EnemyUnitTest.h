@@ -28,11 +28,16 @@ public:
     }
 
     void testDrop() {
-        std::vector<Item> *vector = new std::vector<Item>();
-        vector->push_back(Item("Key Item", "MAD COW"));
-        EnemyUnit *enemyUnit = new EnemyUnit(1, 2, 3, 4, false, "Georgina", *vector);
-        TS_ASSERT_EQUALS(enemyUnit->calcDrop().getDescription(), "MAD COW");
+        Item ** vector = new Item*[1];
 
+        Item* item = new Item("Key Item", "MAD COW");
+
+        vector[0] = item;
+        EnemyUnit *enemyUnit = new EnemyUnit(1, 2, 3, 4, false, "Georgina", vector);
+        TS_ASSERT_EQUALS(enemyUnit->calcDrop()->getDescription(), "MAD COW");
+
+        delete item;
+        delete vector;
     }
 };
 
