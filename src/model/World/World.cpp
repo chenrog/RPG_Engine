@@ -16,6 +16,7 @@ World::World() {
     Item *item = new Item("The Legendary Cow", "Description");
     EnemyUnit *enemyUnit = new EnemyUnit(1, 2, 3, 4, false, "Georgina", nullptr);
     Spell *spell = new Spell("Punch", 10, 2, 100, 100, DAMAGE, PHYSICAL);
+    Spell *spell2 = new Spell("MegaPunch", 10, 2, 100, 100, DAMAGE, PHYSICAL);
     enemyUnit->addSpell(spell);
 
     worldMap->setEnemy(enemyUnit);
@@ -44,12 +45,13 @@ World::World() {
     }
     Posn *starting_point = new Posn(0, 0);
     vector<Equipment> *equipmentList;
-    Spell **spellList;
+    Spell **spellList = new Spell*[4];
     this->inventory = new Item *[INVENTORY_SLOTS];
     //TODO: probably need new here.
     this->player = new PlayerUnit("Twen", starting_point, STARTING_VIT, STARTING_INT, STARTING_DEX,
                                   STARTING_STR, STARTING_LVL, true, equipmentList, spellList, STARTING_MOD_VIT,
                                   STARTING_MOD_INT, STARTING_MOD_DEX, STARTING_MOD_STR);
+    player->addSpell(spell2);
     this->gameState = OVERWORLD;
     this->curMenuOption = 0;
 
@@ -138,6 +140,7 @@ void World::movePlayer(direction_t direction) {
         std::uniform_real_distribution<double> dist(0.0, 10.0);
         int random_number = dist(mt); // Between 0 and 9
         if (random_number == 1) {
+
             cout << "*:*:*:ENTERING BATTLE:*:*:*" << endl;
             // initiate a battle sequence
 //            std::random_device rd;
@@ -149,9 +152,13 @@ void World::movePlayer(direction_t direction) {
 //            cout << "eat my shorts" << endl;
             this->curEnemy = this->getWorldMap().getEnemies()[0];
             cout << "A WILD " << this->curEnemy->getName() << " HAS APPEARED!" << endl;
-            this->gameState = BATTLE;
+            cout << this->curEnemy->getName() << " HP: " <<  this->curEnemy->get_health() << endl;
+
+            this->setCurrentGameState(BATTLE);
             cout << "WHAT WILL YOU DO?" << endl;
             this->curMenuOption = 0;
+            cout << this->curMenuOption + 1 << ": " << this->menuStrings[this->curMenuOption] << endl;
+
         }
     }
 }

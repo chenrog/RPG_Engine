@@ -34,7 +34,6 @@ private:
     // both of the below variables are initialized by the init function
     SDL_Window * window = nullptr;      // Declare a pointer to the window
     SDL_Renderer * renderer = nullptr;  // Declare a pointer to the renderer
-    string menuStrings[4] = {"ATTACK", "SPELLS", "ITEM", "FLEE"};
 };
 
 

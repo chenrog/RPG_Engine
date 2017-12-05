@@ -202,17 +202,12 @@ void GameWindow::pollEvents() {
 
                 // BATTLE
                 if (game->getCurrentGameState() == BATTLE) {
-                    if (game->getPlayer()->get_health() == 0) {
-                        /** game->END(); **/
-                    } else if (game->getEnemyUnit()->get_health() == 0) {
-                        game->setCurrentGameState(OVERWORLD);
-                    }
 
                     switch (event.key.keysym.sym) {
                         case SDLK_LEFT: {
                             if (game->curMenuOption > 0) {
                                 game->curMenuOption--;
-                                cout << game->curMenuOption + 1 << ": " << this->menuStrings[game->curMenuOption] << endl;
+                                cout << game->curMenuOption + 1 << ": " << game->menuStrings[game->curMenuOption] << endl;
                             }
                             break;
                         }
@@ -220,7 +215,7 @@ void GameWindow::pollEvents() {
                         case SDLK_RIGHT: {
                             if (game->curMenuOption < 3) {
                                 game->curMenuOption++;
-                                cout << game->curMenuOption + 1 << ": " << this->menuStrings[game->curMenuOption] << endl;
+                                cout << game->curMenuOption + 1 << ": " << game->menuStrings[game->curMenuOption] << endl;
                             }
                             break;
                         }
@@ -231,16 +226,17 @@ void GameWindow::pollEvents() {
                             EnemyUnit *e = game->getEnemyUnit();
 
                             if (game->curMenuOption == 0) {
-                                b.doBattle(p, e, p->calcBasicAttack());
+                                b.doBattle(p, e, 0);
                             }
                             if (game->curMenuOption == 1) {
-                                b.doBattle(p, e, 10);
+                                b.doBattle(p, e, 0);
                             }
                             if (game->curMenuOption == 2) {
-                                b.doBattle(p, e, 10);
+                                b.doBattle(p, e, 0);
                             }
                             if (game->curMenuOption == 3) {
                                 game->setCurrentGameState(OVERWORLD);
+                                game->getEnemyUnit()->reset();
                                 cout << "YOU FLED THE BATTLE. weakling..." << endl;
                             }
 
@@ -251,6 +247,15 @@ void GameWindow::pollEvents() {
                         default: {
                             break;
                         }
+
+
+
+                        }
+                    if (game->getPlayer()->get_health() == 0) {
+                        /** game->END(); **/
+                    } else if (game->getEnemyUnit()->get_health() == 0) {
+                        game->setCurrentGameState(OVERWORLD);
+                        game->getEnemyUnit()->reset();
                     }
                 }
 
@@ -419,13 +424,6 @@ void GameWindow::drawWorld() const {
             SDL_Rect textBox;
             SDL_SetRenderDrawColor(renderer, 249, 249, 249, 255);
 
-            // create the color
-            SDL_Color color = SDL_Color();
-            color.r = 255;
-            color.g = 255;
-            color.b = 255;
-            color.a = 255;
-
             /**
             // create the font
             TTF_Font * font;
@@ -433,6 +431,13 @@ void GameWindow::drawWorld() const {
             if (!font) {
                 std::cout << "failed to load font" << endl;
             }
+
+             // create the color
+            SDL_Color color = SDL_Color();
+            color.r = 255;
+            color.g = 255;
+            color.b = 255;
+            color.a = 255;
 
             // create the text surface
             SDL_Surface* text_surface = TTF_RenderText_Solid(font, "Attack!", color);

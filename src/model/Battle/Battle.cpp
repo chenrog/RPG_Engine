@@ -3,11 +3,11 @@
 
 void Battle::doBattle(PlayerUnit* p, EnemyUnit* e, unsigned int attack) {
 
+
     auto playerFirst = p->get_dex() > e->get_dex();
 
     // player goes first
     if (playerFirst) {
-
         // enemy gets hit
         e->takeDamage(p->getSpell(attack), p);
 
@@ -32,16 +32,15 @@ void Battle::doBattle(PlayerUnit* p, EnemyUnit* e, unsigned int attack) {
         std::uniform_real_distribution<int> dist(0, e->curSpellSize);
 
         int spell = 0;
-        cout<<"SPwefewfwefwefell assewfwegewgwegwgigned"<<endl;
 
         // player takes damage
 
         p->takeDamage(e->getSpell(spell), e);
-        cout<<"ouch"<<endl;
-
         // if player is alive, they attack
         if (p->get_health() > 0) {
             e->takeDamage(p->getSpell(attack), p);
         }
     }
+    cout << p->getName() << " HP: " <<  p->get_health() << endl;
+    cout << e->getName() << " HP: " <<  e->get_health() << endl;
 }
