@@ -14,6 +14,9 @@ World::World()  {
     NPCUnit * npcUnit = new NPCUnit(DIALOGUE, new Posn(0,0), "GET THE LEGENDARY COW", "HI");
     Item * item = new Item("The Legendary Cow", "Description");
     EnemyUnit *enemyUnit = new EnemyUnit(1, 2, 3, 4, false, "Georgina", new vector<Item>());
+    Spell * spell = new Spell("Punch", 10, 2, 100, 100, DAMAGE,PHYSICAL);
+    enemyUnit->addSpell(spell);
+
     worldMap->setEnemy(enemyUnit);
     int cow_x = (rand() %14) +15;
     int cow_y = (rand() %14) +15;
@@ -40,7 +43,7 @@ World::World()  {
     }
     Posn * starting_point = new Posn(0, 0);
     vector<Equipment>* equipmentList;
-    vector<Spell>*     spellList;
+    Spell**     spellList;
 //    this->inventory;
     //TODO: probably need new here.
     this->player = new PlayerUnit("Twen", starting_point, STARTING_VIT, STARTING_INT, STARTING_DEX,
@@ -132,7 +135,7 @@ void World::movePlayer(direction_t direction) {
         std::uniform_real_distribution<double> dist(0.0, 10.0);
         int random_number = dist(mt); // Between 0 and 9
         if (random_number == 1) {
-            cout << "eat my shorts" << endl;
+            cout << "*:*:*:ENTERING BATTLE:*:*:*" << endl;
             // initiate a battle sequence
 //            std::random_device rd;
 //            std::mt19937 mt(rd());
@@ -142,7 +145,9 @@ void World::movePlayer(direction_t direction) {
 //            int random_enemy = dist(mt);
 //            cout << "eat my shorts" << endl;
             this->curEnemy = this->getWorldMap().getEnemies()[0];
+            cout << "A WILD " << this->curEnemy->getName() << " HAS APPEARED!" << endl;
             this->gameState = BATTLE;
+            cout << "WHAT WILL YOU DO?" << endl;
             this->curMenuOption = 0;
         }
     }

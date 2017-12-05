@@ -2,6 +2,7 @@
 #include "Battle.h"
 
 void Battle::doBattle(PlayerUnit* p, EnemyUnit* e, unsigned int attack) {
+
     auto playerFirst = p->get_dex() > e->get_dex();
 
     // player goes first
@@ -28,14 +29,15 @@ void Battle::doBattle(PlayerUnit* p, EnemyUnit* e, unsigned int attack) {
         // player gets hit
         std::random_device rd;
         std::mt19937 mt(rd());
-        cout<<"SPell aqwfwqfqwssigned"<<endl;
-        std::uniform_real_distribution<int> dist(0, (int) e->getSpells().size());
-        cout<<"SPell assigned"<<endl;
+        std::uniform_real_distribution<int> dist(0, e->curSpellSize);
 
-        int spell = dist(mt);
+        int spell = 0;
+        cout<<"SPwefewfwefwefell assewfwegewgwegwgigned"<<endl;
 
         // player takes damage
+
         p->takeDamage(e->getSpell(spell), e);
+        cout<<"ouch"<<endl;
 
         // if player is alive, they attack
         if (p->get_health() > 0) {

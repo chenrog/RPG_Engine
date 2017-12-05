@@ -33,7 +33,7 @@ public:
      * taken by the unit
      * @param damage
      */
-    virtual int takeDamage(Spell s, AUnit* attacker);
+    virtual int takeDamage(Spell * s, AUnit* attacker);
 
     /**
      *
@@ -71,6 +71,7 @@ public:
 
     bool is_melee() const;
 
+    int curSpellSize = 0;
 
 
 protected:
@@ -79,7 +80,7 @@ protected:
     unsigned int lvl, exp;
     bool melee;
     vector<Equipment>* equipmentList; // each element in the array pertains to a specific stats
-    vector ** spellList; // will be displayed in a list when the player selects this option
+    Spell ** spellList; // will be displayed in a list when the player selects this option
 
     /**
     * updates the statistics of the unit.

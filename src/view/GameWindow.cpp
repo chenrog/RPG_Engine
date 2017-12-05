@@ -195,6 +195,7 @@ void GameWindow::pollEvents() {
                         case SDLK_LEFT: {
                             if (game->curMenuOption > 0) {
                                 game->curMenuOption--;
+                                cout << game->curMenuOption + 1 << ": " << this->menuStrings[game->curMenuOption] << endl;
                             }
                             break;
                         }
@@ -202,6 +203,7 @@ void GameWindow::pollEvents() {
                         case SDLK_RIGHT: {
                             if (game->curMenuOption < 3) {
                                 game->curMenuOption++;
+                                cout << game->curMenuOption + 1 << ": " << this->menuStrings[game->curMenuOption] << endl;
                             }
                             break;
                         }
@@ -222,7 +224,7 @@ void GameWindow::pollEvents() {
                             }
                             if (game->curMenuOption == 3) {
                                 game->setCurrentGameState(OVERWORLD);
-                                cout << "hello" << endl;
+                                cout << "YOU FLED THE BATTLE. weakling..." << endl;
                             }
 
 
