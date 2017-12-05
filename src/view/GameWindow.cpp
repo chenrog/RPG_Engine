@@ -427,8 +427,44 @@ void GameWindow::drawWorld() const {
             SDL_Rect cell = SDL_Rect();
             // draw Menu Options
             // top left box
-            cell.w = (game->getWorldMap().WORLDMAP_WIDTH * multiplier)/2;
-            cell.h = ((game->getWorldMap().WORLDMAP_HEIGHT / 3) * multiplier)/2;
+            cell.w = (game->getWorldMap().WORLDMAP_WIDTH * multiplier)/2;        // width of an option box
+            cell.h = ((game->getWorldMap().WORLDMAP_HEIGHT / 3) * multiplier)/2; // height of an option box
+
+            // create each box
+            for (int i = 0; i < 4; i++) {
+                // left boxes
+                if (i == 0 || i == 2) {
+                    cell.x = 0;
+                }
+
+                // right boxes
+                if (i == 1 || i == 3) {
+                    cell.x = cell.w;
+                }
+
+                // top boxes
+                cell.y = (game->getWorldMap().WORLDMAP_HEIGHT / 3) * 2;
+
+                // bottom boxes
+                if (i == 2 || i == 3) {
+                    cell.y += cell.h;
+                }
+
+                // determine if the current option box is the one being hovered
+                if (game->curMenuOption == i) {
+                    SDL_SetRenderDrawColor(renderer, 66, 139, 202, 255);
+                } else {
+                    SDL_SetRenderDrawColor(renderer, 227, 178, 178, 255);
+                }
+
+                // color the box
+                SDL_RenderFillRect(renderer, &cell);
+
+                SDL_SetRenderDrawColor(renderer, 249, 249, 249, 255);
+            }
+
+
+            /**
             cell.x = 0;
             cell.y = ((2 * (game->getWorldMap().WORLDMAP_HEIGHT / 3)) * (double) multiplier/1.3);
             if (game->curMenuOption == 0) {
@@ -438,42 +474,7 @@ void GameWindow::drawWorld() const {
             }
             SDL_RenderFillRect(renderer, &cell);
 
-            SDL_Rect textBox;
             SDL_SetRenderDrawColor(renderer, 249, 249, 249, 255);
-
-            /**
-            // create the font
-            TTF_Font * font;
-            font = TTF_OpenFont("/Users/roger/CLionProjects/CS3520-2017FA-PROJ/src/view/font/Final-Fantasy.ttf", 14);
-            if (!font) {
-                std::cout << "failed to load font" << endl;
-            }
-
-             // create the color
-            SDL_Color color = SDL_Color();
-            color.r = 255;
-            color.g = 255;
-            color.b = 255;
-            color.a = 255;
-
-            // create the text surface
-            SDL_Surface* text_surface = TTF_RenderText_Solid(font, "Attack!", color);
-            if(!text_surface) {
-                cout << "failed to create text surface" << endl;
-            }
-            SDL_Texture * text_texture = SDL_CreateTextureFromSurface(renderer, text_surface);
-
-            cout << "te" << endl;
-
-            if (!text_texture) {
-                cout << "failed to create text_texture" << endl;
-            }
-
-            SDL_FreeSurface(text_surface);
-            SDL_RenderCopy(renderer, text_texture, nullptr, &cell);
-            SDL_RenderFillRect(renderer, &cell);
-            break;
-            **/
 
             // top right box
             cell.w = (game->getWorldMap().WORLDMAP_WIDTH * multiplier)/2;
@@ -508,6 +509,7 @@ void GameWindow::drawWorld() const {
                 SDL_SetRenderDrawColor(renderer, 227, 178, 178, 255);
             }
             SDL_RenderFillRect(renderer, &cell);
+            **/
 
             // player health bar outline
             cell.x = 0;
