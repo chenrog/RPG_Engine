@@ -60,6 +60,7 @@ public:
 
      void trash(int i);
 
+
     // Constants
     static const int INVENTORY_SLOTS = 20;
 
