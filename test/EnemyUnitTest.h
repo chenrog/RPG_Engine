@@ -6,7 +6,7 @@
 
 #include <iostream>
 
-// ../src/model/Units/IEntity.cpp ../src/model/Units/AUnit.cpp ../src/model/Item/Item.cpp ../src/model/Spell/Spell.cpp ../src/model/World/Posn.cpp
+// ../src/model/Units/EnemyUnit.cpp ../src/model/Units/IEntity.cpp ../src/model/Units/AUnit.cpp ../src/model/Item/Item.cpp ../src/model/Spells/Spell.cpp ../src/model/World/Posn.cpp
 
 using namespace std;
 
