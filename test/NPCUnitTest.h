@@ -11,36 +11,37 @@ using namespace std;
 
 class NPCUnitTest : public CxxTest::TestSuite {
 public:
-    Item item[3];
 
     void testConstructor() {
-        NPCUnit * npcUnit = new NPCUnit(DIALOGUE, Posn(0,0), "A", "HI");
+        NPCUnit * npcUnit = new NPCUnit(DIALOGUE, new Posn(0,0), "A", "HI");
         TS_ASSERT_EQUALS(npcUnit->getDialogue(),  "HI");
         TS_ASSERT_EQUALS(npcUnit->getNPCUnitType(),  DIALOGUE);
     }
 
     void testVendorConstructor() {
-        item[0] = Item("Key Item", "THE LEGENDARY COW");
-        item[1] = Item("Lock Item", "THE SADDENED CLOWN");
-        item[2] = Item("Shiny Item", "THE BEAUTEOUS BEARDED LADY");
+        Item** item = new Item*[3];
+        item[0] = new Item("Key Item", "THE LEGENDARY COW");
+        item[1] = new Item("Lock Item", "THE SADDENED CLOWN");
+        item[2] = new Item("Shiny Item", "THE BEAUTEOUS BEARDED LADY");
 
-        NPCUnit * npcUnit = new NPCUnit(VENDOR, Posn(0,0), "R^3", "Hello World!", item);
+        NPCUnit * npcUnit = new NPCUnit(VENDOR, new Posn(0,0), "R^3", "Hello World!", item);
         TS_ASSERT_EQUALS(npcUnit->getDialogue(),  "Hello World!");
         TS_ASSERT_EQUALS(npcUnit->getNPCUnitType(),  VENDOR);
-        TS_ASSERT_EQUALS(npcUnit->getItem(0).getDescription(), "THE LEGENDARY COW");
-        TS_ASSERT_EQUALS(npcUnit->getItem(1).getDescription(), "THE SADDENED CLOWN");
+        TS_ASSERT_EQUALS(npcUnit->getItem(0)->getDescription(), "THE LEGENDARY COW");
+        TS_ASSERT_EQUALS(npcUnit->getItem(1)->getDescription(), "THE SADDENED CLOWN");
+        delete [] item;
     }
 
     void testAddItems() {
-        item[0] = Item("Key Item", "THE LEGENDARY COW");
-        item[1] = Item("Lock Item", "THE SADDENED CLOWN");
-        item[2] = Item("Shiny Item", "THE BEAUTEOUS BEARDED LADY");
+        Item** item = new Item*[3];
+        item[0] = new Item("Key Item", "THE LEGENDARY COW");
+        item[1] = new Item("Lock Item", "THE SADDENED CLOWN");
+        item[2] = new Item("Shiny Item", "THE BEAUTEOUS BEARDED LADY");
 
-        NPCUnit * npcUnit = new NPCUnit(VENDOR, Posn(0,0), "R^3", "Hello World!");
-        npcUnit->addItems(item);
-        TS_ASSERT_EQUALS(npcUnit->getItem(0).getDescription(), "THE LEGENDARY COW");
-        TS_ASSERT_EQUALS(npcUnit->getItem(1).getDescription(), "THE SADDENED CLOWN");
-
+        NPCUnit * npcUnit = new NPCUnit(VENDOR, new Posn(0,0), "R^3", "Hello World!");
+        npcUnit->setItems(item);
+        TS_ASSERT_EQUALS(npcUnit->getItem(0)->getDescription(), "THE LEGENDARY COW");
+        TS_ASSERT_EQUALS(npcUnit->getItem(1)->getDescription(), "THE SADDENED CLOWN");
     }
 };
 #endif //CS3520_2017FA_PROJ_TESTNPCUNIT_H

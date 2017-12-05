@@ -31,12 +31,6 @@ public:
     void movePlayer(direction_t direction);
 
     /**
-     * Returns the inventory as a map corresponding items to their quantity.
-     * @return
-     */
-    //unordered_map<Item, int> getInventory();
-
-    /**
      * Returns the Overworld and all its cells.
      * @return The game's overworld.
      */
@@ -60,18 +54,14 @@ public:
      */
     void onTick(int currTick);
 
-    Item *getInventory();
+    Item **getInventory();
 
-    inline bool addToInventory(Item item);
+    inline bool addToInventory(Item* item);
 
     inline void trash(int i);
 
-<<<<<<< HEAD
-=======
     // Constants
     static const int INVENTORY_SLOTS = 20;
-
->>>>>>> refs/remotes/origin/master
     /**
     * Sets the current gamestate to the given one
     */
@@ -79,34 +69,13 @@ public:
 
     EnemyUnit * getEnemyUnit();
 
-<<<<<<< HEAD
-    // Constants
-    static const int INVENTORY_SLOTS = 20;
-
-
-    //TODO: not sure what these numbers are yet. i know they change per player though so it wont be const.
-=======
->>>>>>> refs/remotes/origin/master
-    unsigned const int STARTING_VIT = 1;
-    unsigned const int STARTING_INT = 1;
-    unsigned const int STARTING_DEX = 1;
-    unsigned const int STARTING_STR = 1;
-    unsigned const int STARTING_LVL = 1;
-
-    unsigned const int STARTING_MOD_VIT = 1;
-    unsigned const int STARTING_MOD_INT = 1;
-    unsigned const int STARTING_MOD_DEX = 1;
-    unsigned const int STARTING_MOD_STR = 1;
-
-    const double RANDOM_ENCOUNTER_CHANCE = .05;
-
     int curMenuOption = 0;
 private:
     // Only doing one player for now.
     PlayerUnit *player;
     WorldMap *worldMap;
     EnemyUnit *curEnemy;
-    Item inventory[INVENTORY_SLOTS];
+    Item** inventory;
     int curInventorySize = 0;
     game_state_t gameState;
     bool gameOver = false;

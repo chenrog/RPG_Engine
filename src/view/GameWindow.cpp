@@ -541,16 +541,9 @@ void GameWindow::drawWorld() const {
 //            }
 //            SDL_FreeSurface(text_surface);
 //            SDL_RenderCopy(renderer, text_texture, nullptr, textBox);
-<<<<<<< HEAD
-            break;
-        default:
-            break;
-=======
-
         default: {
             break;
         }
->>>>>>> refs/remotes/origin/master
     }
 
 

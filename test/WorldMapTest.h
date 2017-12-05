@@ -14,9 +14,8 @@ class WorldMapTest : public CxxTest::TestSuite {
 public:
 
     testconstructor() {
-        WorldMap wm = new WorldMap();
-        TS_ASSERT_EQUALS(wm.getWorldMap().size(), 30);
-        TS_ASSERT_EQUALS(wm.getWorldMap()[0].size(), 30);
+        WorldMap * wm = new WorldMap(4);
+        TS_ASSERT_EQUALS(wm->getCurSize(), 0);
     }
 };
 

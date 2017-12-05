@@ -10,12 +10,6 @@
  * World Creation method.
  */
 World::World()  {
-<<<<<<< HEAD
-    worldMap = new WorldMap();
-    Posn starting_point = Posn(0, 0);
-    vector<Equipment> equipmentList;
-    vector<Spell>     spellList;
-=======
     worldMap = new WorldMap(1);
     NPCUnit * npcUnit = new NPCUnit(DIALOGUE, new Posn(0,0), "GET THE LEGENDARY COW", "HI");
     Item * item = new Item("The Legendary Cow", "Description");
@@ -50,12 +44,10 @@ World::World()  {
     Posn * starting_point = new Posn(0, 0);
     vector<Equipment>* equipmentList;
     Spell**     spellList;
-//    this->inventory;
-    //TODO: probably need new here.
->>>>>>> refs/remotes/origin/master
     this->player = new PlayerUnit("Twen", starting_point, STARTING_VIT, STARTING_INT, STARTING_DEX,
                                   STARTING_STR, STARTING_LVL, true, equipmentList, spellList, STARTING_MOD_VIT,
                                   STARTING_MOD_INT, STARTING_MOD_DEX, STARTING_MOD_STR);
+    this->inventory = new Item*[INVENTORY_SLOTS];
     this->gameState = OVERWORLD;
     this->curMenuOption = 0;
 }
@@ -80,7 +72,7 @@ void World::onTick(int currTick) {
 
 }
 
-inline bool World::addToInventory(Item item) {
+inline bool World::addToInventory(Item*item) {
     if (curInventorySize == INVENTORY_SLOTS) {
         return false;
     } else {
@@ -91,10 +83,11 @@ inline bool World::addToInventory(Item item) {
 }
 
 inline void World::trash(int i) {
-    Item trash = inventory[i];
+    Item* trash = inventory[i];
     inventory[i] = inventory[curInventorySize];
     inventory[curInventorySize] = trash;
     curInventorySize--;
+    delete trash;
 }
 
 void World::movePlayer(direction_t direction) {
@@ -164,7 +157,7 @@ EnemyUnit * World::getEnemyUnit() {
     return this->curEnemy;
 }
 
-Item* World::getInventory() {
+Item** World::getInventory() {
     return this->inventory;
 }
 

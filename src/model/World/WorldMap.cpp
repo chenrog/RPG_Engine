@@ -34,16 +34,7 @@ void WorldMap::setEnemy(EnemyUnit *eu) {
     curEnemies++;
 }
 
-int WorldMap::getCurSize() {
+int WorldMap::getCurEnemiesSize() {
     return this->curEnemies;
 }
 
-//WorldMap &WorldMap::operator=(const WorldMap &other) {
-//    this->gridMap = other.gridMap;
-//    return *this;
-//}
-
-// some function that controls how this cell is displayed, will be based on whether or not this Cell is "inhabited"
-void draw() {
-    //holds the body of the function where SDL will display the graphical representation of the map
-}

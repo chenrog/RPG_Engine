@@ -13,7 +13,7 @@ using namespace std;
 class EnemyUnitTest : public CxxTest::TestSuite {
 public:
     void testConstructor() {
-        EnemyUnit *enemyUnit = new EnemyUnit(1, 2, 3, 4, false, "Georgina", vector<Item>());
+        EnemyUnit *enemyUnit = new EnemyUnit(1, 2, 3, 4, false, "Georgina", new Item*[2]);
         TS_ASSERT_EQUALS(enemyUnit->getName(), "Georgina");
         TS_ASSERT(!enemyUnit->isVisible());
         TS_ASSERT_EQUALS(enemyUnit->get_vit(), 1);
