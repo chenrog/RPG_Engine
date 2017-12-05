@@ -263,61 +263,6 @@ void GameWindow::pollEvents() {
                     }
                 }
 
-
-                /**
-                // enter key
-            case SDLK_ENTER:
-
-                // if the player is in the overworld, look for interactions at all adjacencies
-                if (game->getCurrentGameState() == 0) {
-
-                    // ********** interactions for beggining battle and collecting item will be made and used here**********
-
-
-                    // this is the code for making and advancing through text boxes
-                    SDL_Rect textBox;
-                    textBox.y = 600;
-                    textBox.x = 0;
-                    textBox.w = 900;
-                    textBox.h = 300;
-                    SDL_SetRenderDrawColor(renderer, 249, 249, 249, 255);
-                    TTF_Font * font = TTF_OpenFont(font / Final - Fantasy.ttf, 14);
-                    if (!font) {
-                    std::cerr << "failed to load font" << endl;
-                    }
-                    auto text_surface = TTF_RenderText_Solid(font, message.c_str(), SDL_Color(0, 0, 0));
-                    if (!text_surface) {
-                    cerr << "failed to create text surface" << endl;
-                    }
-                    auto text_texture = SDL_CreateTextureFromSurface(renderer, text_surface);
-                    if (!text_texture) {
-                    cerr << "failed to create text_texture" << endl;
-                    }
-                    SDL_FreeSurface(text_surface);
-                    SDL_RenderCopy(renderer, text_texture, nullptr, textBox);
-
-                    break;
-                }
-
-                // if the player is in the menu, select option being hovered
-                if (game->getCurrentGameState() == 1) {
-                    //select in menu
-                    break;
-                }
-
-                // if the player is in the battle menu, select option being hovered
-                if (game->getCurrentGameState() == 2) {
-                    //select in menu
-                    break;
-                }
-
-                // if the player is conversing, advance or end the conversation
-                if (game->getCurrentGameState() == 3) {
-                    // advance the text/make it go away
-                    break;
-                }
-                **/
-
             default:
                 break;
         }
@@ -403,16 +348,17 @@ void GameWindow::drawWorld() const {
                 }
                 case DOWN: {
                     player.x += player.w;
-                    player.y -= multiplier;
+                    player.y += multiplier;
+                    player.y -= player.h;
                     break;
                 }
                 case LEFT: {
-                    player.x += player.w;
                     player.y += player.h;
                     break;
                 }
                 case RIGHT: {
-                    player.x -= multiplier;
+                    player.x += multiplier;
+                    player.x -= player.w;
                     player.y += player.h;
                     break;
                 }
