@@ -2,14 +2,15 @@
 #include "Battle.h"
 
 void Battle::doBattle(PlayerUnit* p, EnemyUnit* e, unsigned int attack) {
-
-
     auto playerFirst = p->get_dex() > e->get_dex();
 
     // player goes first
     if (playerFirst) {
         // enemy gets hit
-        e->takeDamage(p->getSpell(attack), p);
+        if (attack != 4) {
+            e->takeDamage(p->getSpell(attack), p);
+        }
+
 
         // if enemy is alive, they attack
         if (e->get_health() > 0) {

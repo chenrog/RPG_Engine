@@ -234,7 +234,9 @@ void GameWindow::pollEvents() {
                                 b.doBattle(p, e, 0);
                             }
                             if (game->curMenuOption == 2) {
-                                b.doBattle(p, e, 0);
+                                p->reset();
+                                cout << "You Healed" << endl;
+                                b.doBattle(p, e, 4);
                             }
                             if (game->curMenuOption == 3) {
                                 game->setCurrentGameState(OVERWORLD);
