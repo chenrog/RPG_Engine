@@ -373,13 +373,47 @@ void GameWindow::drawWorld() const {
         case (BATTLE): {
             SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
             SDL_Rect cell = SDL_Rect();
+            SDL_Rect icon = SDL_Rect();
             // draw Menu Options
             // top left box
             cell.w = (game->getWorldMap().WORLDMAP_WIDTH * multiplier)/2;        // width of an option box
             cell.h = ((game->getWorldMap().WORLDMAP_HEIGHT / 3) * multiplier)/2; // height of an option box
+            SDL_surface * surface;
+            SDL_texture * texture;
 
             // create each box
             for (int i = 0; i < 4; i++) {
+                // determine the icon for the ability
+                switch (i) {
+                    case 0: {
+                        surface = SDL_LoadBMP("battleicons/sword.bmp");
+                        break;
+                    }
+                    case 1: {
+                        surface = SDL_LoadBMP("battleicons/spell.bmp");
+                        break;
+                    }
+                    case 2: {
+                        surface = SDL_LoadBMP("battleicons/potion.bmp");
+                        break;
+                    }
+                    case 3: {
+                        surface = SDL_LoadBMP("battleicons/running_man.bmp");
+                        break;
+                    }
+                    default:
+                        if (surface == nullptr) {
+                            printf("Could not create surface: %s\n", SDL_GetError());
+                        }
+                        break;
+                }
+
+                // creates the texture which will clear some space
+                texture = SDL_CreateTextureFromSurface(renderer, surface);
+                if (texture == nullptr) {
+                    printf("Could not create texture: %s\n", SDL_GetError());
+                }
+
                 // left boxes
                 if (i == 0 || i == 2) {
                     cell.x = 0;
@@ -398,6 +432,12 @@ void GameWindow::drawWorld() const {
                     cell.y += cell.h;
                 }
 
+                // create icon
+                icon.w = cell.h;                                             // the icon is a square
+                icon.h = cell.h;                                             // the icon is a square
+                icon.x = cell.x + (cell.w / 2) - (icon.w / 2);               // place in the center
+                icon.y = cell.y;                                             // place in the center
+
                 // determine if the current option box is the one being hovered
                 if (game->curMenuOption == i) {
                     SDL_SetRenderDrawColor(renderer, 66, 139, 202, 255);
@@ -407,8 +447,10 @@ void GameWindow::drawWorld() const {
 
                 // color the box
                 SDL_RenderFillRect(renderer, &cell);
-
                 SDL_SetRenderDrawColor(renderer, 249, 249, 249, 255);
+
+                // put icon on top
+                SDL_RenderCopy(renderer, texture, NULL, icon);
             }
 
 
