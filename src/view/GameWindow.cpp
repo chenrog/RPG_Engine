@@ -231,7 +231,7 @@ void GameWindow::pollEvents() {
                                 b.doBattle(p, e, 0);
                             }
                             if (game->curMenuOption == 1) {
-                                b.doBattle(p, e, 0);
+                                b.doBattle(p, e, 1);
                             }
                             if (game->curMenuOption == 2) {
                                 p->reset();
@@ -483,9 +483,8 @@ void GameWindow::drawWorld() const {
             // player health bar
             cell.x = 0;
             cell.y = 0;
-            cell.w = (game->getWorldMap().WORLDMAP_WIDTH / 2) * multiplier - 5 * (float) game->getPlayer()->get_health()
-                                                                             /
-                                                                             (float) game->getPlayer()->get_max_health();
+            cell.w = (game->getWorldMap().WORLDMAP_WIDTH / 2) * multiplier - 5 *
+                                                                             (float) game->getPlayer()->get_health() / (float) game->getPlayer()->get_max_health();
             cell.h = multiplier - 5;
             SDL_SetRenderDrawColor(renderer, 94, 184, 92, 255);
             SDL_RenderFillRect(renderer, &cell);

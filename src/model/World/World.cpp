@@ -16,7 +16,7 @@ World::World() {
     Item *item = new Item("The Legendary Cow", "Description");
     EnemyUnit *enemyUnit = new EnemyUnit(1, 2, 3, 4, false, "Georgina", nullptr);
     Spell *spell = new Spell("Punch", 10, 2, 100, 100, DAMAGE, PHYSICAL);
-    Spell *spell2 = new Spell("MegaPunch", 10, 2, 100, 100, DAMAGE, PHYSICAL);
+    Spell *spell2 = new Spell("MegaPunch", 10, 2, 100, 100, DAMAGE, MAGICAL);
     enemyUnit->addSpell(spell);
 
     worldMap->setEnemy(enemyUnit);
@@ -52,6 +52,7 @@ World::World() {
                                   STARTING_STR, STARTING_LVL, true, equipmentList, spellList, STARTING_MOD_VIT,
                                   STARTING_MOD_INT, STARTING_MOD_DEX, STARTING_MOD_STR);
     player->addSpell(spell2);
+    player->addSpell(spell);
     this->gameState = OVERWORLD;
     this->curMenuOption = 0;
 
