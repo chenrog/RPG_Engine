@@ -17,12 +17,14 @@ GameWindow::GameWindow(string title, unsigned int width, unsigned int height, un
 
 bool GameWindow::init() {
     // attempt to initialize everything
-    if (SDL_Init(SDL_INIT_EVERYTHING) != 0) {
+    if (SDL_Init(SDL_INIT_VIDEO) != 0) {
         cerr << "Failed to initialize SDL2" << endl;
     }
+    /**
     if (TTF_Init() == -1) {
         cerr << "Failed to initialize TTF" << endl;
     }
+    **/
 
     // create a window with the following settings
     window = SDL_CreateWindow(
@@ -317,79 +319,94 @@ void GameWindow::pollEvents() {
 
 
 void GameWindow::drawWorld() const {
-    SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
     SDL_RenderClear(renderer);
+    SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
 
     switch (game->getCurrentGameState()) {
         case OVERWORLD: {
-
+            // determine the size of a cell
             SDL_Rect cell = SDL_Rect();
             cell.w = multiplier;
             cell.h = multiplier;
+
+            // draws map
             for (int i = 0; i < game->getWorldMap().WORLDMAP_WIDTH; i++) {
                 for (int j = 0; j < game->getWorldMap().WORLDMAP_HEIGHT; j++) {
                     MapCell *curCell = game->getWorldMap().getWorldMap()[i][j];
                     cell.x = i * multiplier;
                     cell.y = j * multiplier;
 
+                    // tall grass
                     if (curCell->isWalkable() && curCell->isRandomEncounterable()) {
                         SDL_SetRenderDrawColor(renderer, 10, 86, 27, 255);
 
+                    // regular walkable terrain
                     } else if(curCell->isWalkable()){
                         SDL_SetRenderDrawColor(renderer, 94, 184, 92, 255);
                     }
+                    // unwalkable terrain (wall)
                     else{
                         SDL_SetRenderDrawColor(renderer, 217, 83, 79, 255);
                     }
+                    // colors in the rectangle after the cell type is determined
                     SDL_RenderFillRect(renderer, &cell);
+
+                    // if there is something in the cell
                     if (!curCell->isEmpty()) {
                         cell.w = multiplier;
                         cell.h = multiplier;
 
+                        // get the position of the cell
                         cell.x = curCell->getPosition()->getX() * multiplier;
                         cell.y = curCell->getPosition()->getY() * multiplier;
 
+                        // color as an item
                         if (curCell->getEntity()->is_item()) {
                             SDL_SetRenderDrawColor(renderer, 238, 216, 150, 255);
 
+                        // color as an npc
                         } else {
                             SDL_SetRenderDrawColor(renderer, 66, 139, 202, 255);
                         }
+
+                        // draw the unit on top of the cell
                         SDL_RenderFillRect(renderer, &cell);
                     }
                 }
             }
 
-
+            // render the player
             SDL_Rect player = SDL_Rect();
             player.w = multiplier;
             player.h = multiplier;
+            // get the position
             player.x = game->getPlayer()->getPosition()->getX() * multiplier;
             player.y = game->getPlayer()->getPosition()->getY() * multiplier;
+            // choose the color
             SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
             SDL_RenderFillRect(renderer, &player);
 
-            player.w = multiplier / 4;
-            player.h = multiplier / 4;
+            // draw the box showing which direction the player is facing
+            player.w = multiplier / 3;
+            player.h = multiplier / 3;
             switch (game->getPlayer()->getDirection()) {
                 case UP: {
-                    player.x = game->getPlayer()->getPosition()->getX() * multiplier + 15;
-                    player.y = game->getPlayer()->getPosition()->getY() * multiplier;
+                    player.x += player.w;
                     break;
                 }
                 case DOWN: {
-                    player.x = game->getPlayer()->getPosition()->getX() * multiplier + 15;
-                    player.y = game->getPlayer()->getPosition()->getY() * multiplier + 30;
+                    player.x += player.w;
+                    player.y += multiplier;
                     break;
                 }
                 case LEFT: {
-                    player.x = game->getPlayer()->getPosition()->getX() * multiplier;
-                    player.y = game->getPlayer()->getPosition()->getY() * multiplier + 15;
+                    player.x -= player.w;
+                    player.y += player.h;
                     break;
                 }
                 case RIGHT: {
-                    player.x = game->getPlayer()->getPosition()->getX() * multiplier + 30;
-                    player.y = game->getPlayer()->getPosition()->getY() * multiplier + 15;
+                    player.x += multiplier;
+                    player.y += player.h;
                     break;
                 }
                 default:
