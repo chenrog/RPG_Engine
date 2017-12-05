@@ -12,6 +12,7 @@ PlayerUnit::PlayerUnit(string name, Posn position, unsigned int vit, unsigned in
                        vector<Equipment> equipmentList, vector<Spell> spellList,
                        double mod_vit, double mod_int, double mod_dex, double mod_str) {
     this->name = name;
+    this->position = position;
     this->st_vit = vit;
     this->st_int = intel;
     this->st_dex = dex;

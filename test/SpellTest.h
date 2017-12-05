@@ -17,15 +17,15 @@ public:
     void testSpellBuilder() {
         Spell_Builder * sb = new Spell_Builder("Dabonem", DAMAGE, PHYSICAL);
         AUnit * playerUnit
-                = new PlayerUnit("Twen", Posn(0, 0), true, 10, 9, 8, 7, 1, vector<Equipment>(), vector<Spell>(), 0.5, 0.4, 0.3, 0.2);
+                = new PlayerUnit("Twen", Posn(0, 0), 10, 9, 8, 7, 1, true, vector<Equipment>(), vector<Spell>(), 0.5, 0.4, 0.3, 0.2);
         sb->setDamage(10);
         sb->setDamageMod(5);
         sb->setHitChance(100);
         sb->setHitChanceMod(10);
         Spell * spell = sb->build();
-        TS_ASSERT_EQUALS(spell->getDamage(*playerUnit), 10 + 5 * 8);
+        TS_ASSERT_EQUALS(spell->getDamage(*playerUnit), 10 + 5 * 7);
         TS_ASSERT_EQUALS(spell->getDamageType(), PHYSICAL);
-        TS_ASSERT_EQUALS(spell->getHitChance(*playerUnit), 100 + 10 * 7);
+        TS_ASSERT_EQUALS(spell->getHitChance(*playerUnit), 100 + 10 * 8);
         TS_ASSERT_EQUALS(spell->getSpellType(), DAMAGE);
     }
 };

@@ -18,7 +18,7 @@ public:
 
     IEntity * getEntity();
 
-    void setEntity(const IEntity& entity);
+    void setEntity(IEntity* entity);
 
     bool isWalkable();
 

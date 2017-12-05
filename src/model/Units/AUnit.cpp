@@ -30,7 +30,7 @@ void AUnit::move(direction_t direction, unsigned int distance) {
 int AUnit::takeDamage(Spell s, AUnit attacker) {
     std::random_device rd;
     std::mt19937 mt(rd());
-    std::uniform_real_distribution<int> dist(0, 100);
+    std::uniform_real_distribution<double> dist(0, 100);
     int hit_roll = dist(mt);
 
     // calculate if the attack hits
@@ -47,7 +47,10 @@ int AUnit::takeDamage(Spell s, AUnit attacker) {
         }
 
         // calculate the damage
-        int damage = (float)s.getDamage(attacker) * (float)(100 / 100 + defense);
+        cout<< "DAMAGE: " << s.getDamage(attacker) << endl;
+
+        int damage = (int)((float)s.getDamage(attacker) * (float)(100 / (100 + defense)));
+        cout<< "DAMAGE: " << damage << endl;
         if (this->health >= damage) {
             this->health -= damage;
         } else {

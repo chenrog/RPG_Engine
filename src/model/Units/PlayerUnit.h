@@ -37,7 +37,7 @@ public:
      * equipment, if there is one.
      * @param equipment
      */
-    Equipment equip(Equipment equipment, Item inventory[], int curInventorySize);
+    void equip(Equipment equipment, Item inventory[], int curInventorySize);
 
     /**
      * adds EXP from a battle to the exp of this unit. Then calculates if there is a level up by this unit. Returns

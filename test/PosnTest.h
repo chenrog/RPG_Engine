@@ -4,10 +4,10 @@
 
 #ifndef CS3520_2017FA_PROJ_POSN_H
 #define CS3520_2017FA_PROJ_POSN_H
-
+#include <cxxtest/TestSuite.h>
 #include "../src/model/World/Posn.h"
-
-class PosnTest {
+// LINKER: ../src/model/World/Posn.cpp
+class PosnTest : public CxxTest::TestSuite {
 public:
 
     void testPosn1Get() {
