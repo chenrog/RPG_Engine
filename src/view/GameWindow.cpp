@@ -117,18 +117,31 @@ void GameWindow::pollEvents() {
                                     if (y != 0 && !game->getWorldMap().getWorldMap()[x][y - 1]->isEmpty()) {
                                         cout << game->getWorldMap().getWorldMap()[x][y - 1]->getEntity()->getName()
                                              << endl;
+                                        if (game->getWorldMap().getWorldMap()[x][y - 1]->getEntity()->is_item()) {
+                                            game->getWorldMap().getWorldMap()[x][y - 1]->setWalkability(true);
+                                            game->getWorldMap().getWorldMap()[x][y-1]->setIsEmpty(true);
+                                        }
                                     }
                                     break;
                                 }
                                 case DOWN: {
                                     if (y != game->getWorldMap().WORLDMAP_HEIGHT &&
-                                        !game->getWorldMap().getWorldMap()[x][y + 1]->isEmpty())
+                                        !game->getWorldMap().getWorldMap()[x][y + 1]->isEmpty()) {
+                                        if (game->getWorldMap().getWorldMap()[x][y + 1]->getEntity()->is_item()) {
+                                            game->getWorldMap().getWorldMap()[x][y + 1]->setWalkability(true);
+                                            game->getWorldMap().getWorldMap()[x][y + 1]->setIsEmpty(true);
+                                        }
                                         cout << game->getWorldMap().getWorldMap()[x][y + 1]->getEntity()->getName()
                                              << endl;
+                                    }
                                     break;
                                 }
                                 case LEFT: {
                                     if (x != 0 && !game->getWorldMap().getWorldMap()[x - 1][y]->isEmpty()) {
+                                        if (game->getWorldMap().getWorldMap()[x-1][y]->getEntity()->is_item()) {
+                                            game->getWorldMap().getWorldMap()[x-1][y]->setWalkability(true);
+                                            game->getWorldMap().getWorldMap()[x-1][y]->setIsEmpty(true);
+                                        }
                                         cout << game->getWorldMap().getWorldMap()[x - 1][y]->getEntity()->getName()
                                              << endl;
                                     }
@@ -137,6 +150,10 @@ void GameWindow::pollEvents() {
                                 case RIGHT: {
                                     if (x != game->getWorldMap().WORLDMAP_WIDTH &&
                                         !game->getWorldMap().getWorldMap()[x + 1][y]->isEmpty()) {
+                                        if (game->getWorldMap().getWorldMap()[x+1][y]->getEntity()->is_item()) {
+                                            game->getWorldMap().getWorldMap()[x+1][y]->setWalkability(true);
+                                            game->getWorldMap().getWorldMap()[x+1][y]->setIsEmpty(true);
+                                        }
                                         cout << game->getWorldMap().getWorldMap()[x + 1][y]->getEntity()->getName()
                                              << endl;
                                     }

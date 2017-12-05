@@ -48,6 +48,10 @@ void MapCell::setWalkability(bool new_walkable) {
     walkable = new_walkable;
 }
 
+void MapCell::setIsEmpty(bool empty) {
+    this->empty = empty;
+}
+
 void MapCell::setRandomEncounters(bool encounter) {
     randomEncounterable = encounter;
 }

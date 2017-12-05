@@ -26,6 +26,8 @@ public:
 
     void setWalkability(bool new_walkable);
 
+    void setIsEmpty(bool empty);
+
     bool isRandomEncounterable();
 
     void setRandomEncounters(bool encounter);
