@@ -17,12 +17,14 @@ GameWindow::GameWindow(string title, unsigned int width, unsigned int height, un
 
 bool GameWindow::init() {
     // attempt to initialize everything
-    if (SDL_Init(SDL_INIT_EVERYTHING) != 0) {
+    if (SDL_Init(SDL_INIT_VIDEO) != 0) {
         cerr << "Failed to initialize SDL2" << endl;
     }
+    /**
     if (TTF_Init() == -1) {
         cerr << "Failed to initialize TTF" << endl;
     }
+    **/
 
     // create a window with the following settings
     window = SDL_CreateWindow(
@@ -117,18 +119,31 @@ void GameWindow::pollEvents() {
                                     if (y != 0 && !game->getWorldMap().getWorldMap()[x][y - 1]->isEmpty()) {
                                         cout << game->getWorldMap().getWorldMap()[x][y - 1]->getEntity()->getName()
                                              << endl;
+                                        if (game->getWorldMap().getWorldMap()[x][y - 1]->getEntity()->is_item()) {
+                                            game->getWorldMap().getWorldMap()[x][y - 1]->setWalkability(true);
+                                            game->getWorldMap().getWorldMap()[x][y-1]->setIsEmpty(true);
+                                        }
                                     }
                                     break;
                                 }
                                 case DOWN: {
                                     if (y != game->getWorldMap().WORLDMAP_HEIGHT &&
-                                        !game->getWorldMap().getWorldMap()[x][y + 1]->isEmpty())
+                                        !game->getWorldMap().getWorldMap()[x][y + 1]->isEmpty()) {
+                                        if (game->getWorldMap().getWorldMap()[x][y + 1]->getEntity()->is_item()) {
+                                            game->getWorldMap().getWorldMap()[x][y + 1]->setWalkability(true);
+                                            game->getWorldMap().getWorldMap()[x][y + 1]->setIsEmpty(true);
+                                        }
                                         cout << game->getWorldMap().getWorldMap()[x][y + 1]->getEntity()->getName()
                                              << endl;
+                                    }
                                     break;
                                 }
                                 case LEFT: {
                                     if (x != 0 && !game->getWorldMap().getWorldMap()[x - 1][y]->isEmpty()) {
+                                        if (game->getWorldMap().getWorldMap()[x-1][y]->getEntity()->is_item()) {
+                                            game->getWorldMap().getWorldMap()[x-1][y]->setWalkability(true);
+                                            game->getWorldMap().getWorldMap()[x-1][y]->setIsEmpty(true);
+                                        }
                                         cout << game->getWorldMap().getWorldMap()[x - 1][y]->getEntity()->getName()
                                              << endl;
                                     }
@@ -137,6 +152,10 @@ void GameWindow::pollEvents() {
                                 case RIGHT: {
                                     if (x != game->getWorldMap().WORLDMAP_WIDTH &&
                                         !game->getWorldMap().getWorldMap()[x + 1][y]->isEmpty()) {
+                                        if (game->getWorldMap().getWorldMap()[x+1][y]->getEntity()->is_item()) {
+                                            game->getWorldMap().getWorldMap()[x+1][y]->setWalkability(true);
+                                            game->getWorldMap().getWorldMap()[x+1][y]->setIsEmpty(true);
+                                        }
                                         cout << game->getWorldMap().getWorldMap()[x + 1][y]->getEntity()->getName()
                                              << endl;
                                     }
@@ -185,17 +204,20 @@ void GameWindow::pollEvents() {
 
                 // BATTLE
                 if (game->getCurrentGameState() == BATTLE) {
-                    if (game->getPlayer()->get_health() == 0) {
-                        /** game->END(); **/
-                    } else if (game->getEnemyUnit()->get_health() == 0) {
-                        game->setCurrentGameState(OVERWORLD);
-                    }
 
                     switch (event.key.keysym.sym) {
                         case SDLK_LEFT: {
                             if (game->curMenuOption > 0) {
                                 game->curMenuOption--;
-                                cout << game->curMenuOption + 1 << ": " << this->menuStrings[game->curMenuOption] << endl;
+                                cout << game->curMenuOption + 1 << ": " << game->menuStrings[game->curMenuOption] << endl;
+                            }
+                            break;
+                        }
+
+                        case SDLK_UP: {
+                            if (game->curMenuOption > 1) {
+                                game->curMenuOption-= 2;
+                                cout << game->curMenuOption + 1 << ": " << game->menuStrings[game->curMenuOption] << endl;
                             }
                             break;
                         }
@@ -203,7 +225,15 @@ void GameWindow::pollEvents() {
                         case SDLK_RIGHT: {
                             if (game->curMenuOption < 3) {
                                 game->curMenuOption++;
-                                cout << game->curMenuOption + 1 << ": " << this->menuStrings[game->curMenuOption] << endl;
+                                cout << game->curMenuOption + 1 << ": " << game->menuStrings[game->curMenuOption] << endl;
+                            }
+                            break;
+                        }
+
+                        case SDLK_DOWN: {
+                            if (game->curMenuOption < 2) {
+                                game->curMenuOption+= 2;
+                                cout << game->curMenuOption + 1 << ": " << game->menuStrings[game->curMenuOption] << endl;
                             }
                             break;
                         }
@@ -214,16 +244,23 @@ void GameWindow::pollEvents() {
                             EnemyUnit *e = game->getEnemyUnit();
 
                             if (game->curMenuOption == 0) {
-                                b.doBattle(p, e, p->calcBasicAttack());
+                                b.doBattle(p, e, 0);
                             }
                             if (game->curMenuOption == 1) {
-                                b.doBattle(p, e, 10);
+                                b.doBattle(p, e, 1);
                             }
                             if (game->curMenuOption == 2) {
-                                b.doBattle(p, e, 10);
+                                cout << "YOU HAVE " << game->curNumPotion << " POTIONS!" << endl;
+                                if (game->curNumPotion != 0) {
+                                    p->reset();
+                                    game->curNumPotion--;
+                                    cout << "You Healed" << endl;
+                                }
+                                b.doBattle(p, e, 4);
                             }
                             if (game->curMenuOption == 3) {
                                 game->setCurrentGameState(OVERWORLD);
+                                game->getEnemyUnit()->reset();
                                 cout << "YOU FLED THE BATTLE. weakling..." << endl;
                             }
 
@@ -234,63 +271,15 @@ void GameWindow::pollEvents() {
                         default: {
                             break;
                         }
+
+                        }
+                    if (game->getPlayer()->get_health() == 0) {
+                        game->setCurrentGameState(DEAD);
+                    } else if (game->getEnemyUnit()->get_health() == 0) {
+                        game->setCurrentGameState(OVERWORLD);
+                        game->getEnemyUnit()->reset();
                     }
                 }
-
-
-                /**
-                // enter key
-            case SDLK_ENTER:
-
-                // if the player is in the overworld, look for interactions at all adjacencies
-                if (game->getCurrentGameState() == 0) {
-
-                    // ********** interactions for beggining battle and collecting item will be made and used here**********
-
-
-                    // this is the code for making and advancing through text boxes
-                    SDL_Rect textBox;
-                    textBox.y = 600;
-                    textBox.x = 0;
-                    textBox.w = 900;
-                    textBox.h = 300;
-                    SDL_SetRenderDrawColor(renderer, 249, 249, 249, 255);
-                    TTF_Font * font = TTF_OpenFont(font / Final - Fantasy.ttf, 14);
-                    if (!font) {
-                    std::cerr << "failed to load font" << endl;
-                    }
-                    auto text_surface = TTF_RenderText_Solid(font, message.c_str(), SDL_Color(0, 0, 0));
-                    if (!text_surface) {
-                    cerr << "failed to create text surface" << endl;
-                    }
-                    auto text_texture = SDL_CreateTextureFromSurface(renderer, text_surface);
-                    if (!text_texture) {
-                    cerr << "failed to create text_texture" << endl;
-                    }
-                    SDL_FreeSurface(text_surface);
-                    SDL_RenderCopy(renderer, text_texture, nullptr, textBox);
-
-                    break;
-                }
-
-                // if the player is in the menu, select option being hovered
-                if (game->getCurrentGameState() == 1) {
-                    //select in menu
-                    break;
-                }
-
-                // if the player is in the battle menu, select option being hovered
-                if (game->getCurrentGameState() == 2) {
-                    //select in menu
-                    break;
-                }
-
-                // if the player is conversing, advance or end the conversation
-                if (game->getCurrentGameState() == 3) {
-                    // advance the text/make it go away
-                    break;
-                }
-                **/
 
             default:
                 break;
@@ -300,79 +289,95 @@ void GameWindow::pollEvents() {
 
 
 void GameWindow::drawWorld() const {
-    SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
     SDL_RenderClear(renderer);
+    SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
 
     switch (game->getCurrentGameState()) {
         case OVERWORLD: {
-
+            // determine the size of a cell
             SDL_Rect cell = SDL_Rect();
             cell.w = multiplier;
             cell.h = multiplier;
+
+            // draws map
             for (int i = 0; i < game->getWorldMap().WORLDMAP_WIDTH; i++) {
                 for (int j = 0; j < game->getWorldMap().WORLDMAP_HEIGHT; j++) {
                     MapCell *curCell = game->getWorldMap().getWorldMap()[i][j];
                     cell.x = i * multiplier;
                     cell.y = j * multiplier;
 
+                    // tall grass
                     if (curCell->isWalkable() && curCell->isRandomEncounterable()) {
                         SDL_SetRenderDrawColor(renderer, 10, 86, 27, 255);
 
+                    // regular walkable terrain
                     } else if(curCell->isWalkable()){
                         SDL_SetRenderDrawColor(renderer, 94, 184, 92, 255);
                     }
+                    // unwalkable terrain (wall)
                     else{
                         SDL_SetRenderDrawColor(renderer, 217, 83, 79, 255);
                     }
+                    // colors in the rectangle after the cell type is determined
                     SDL_RenderFillRect(renderer, &cell);
+
+                    // if there is something in the cell
                     if (!curCell->isEmpty()) {
                         cell.w = multiplier;
                         cell.h = multiplier;
 
+                        // get the position of the cell
                         cell.x = curCell->getPosition()->getX() * multiplier;
                         cell.y = curCell->getPosition()->getY() * multiplier;
 
+                        // color as an item
                         if (curCell->getEntity()->is_item()) {
                             SDL_SetRenderDrawColor(renderer, 238, 216, 150, 255);
 
+                        // color as an npc
                         } else {
                             SDL_SetRenderDrawColor(renderer, 66, 139, 202, 255);
                         }
+
+                        // draw the unit on top of the cell
                         SDL_RenderFillRect(renderer, &cell);
                     }
                 }
             }
 
-
+            // render the player
             SDL_Rect player = SDL_Rect();
             player.w = multiplier;
             player.h = multiplier;
+            // get the position
             player.x = game->getPlayer()->getPosition()->getX() * multiplier;
             player.y = game->getPlayer()->getPosition()->getY() * multiplier;
+            // choose the color
             SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
             SDL_RenderFillRect(renderer, &player);
 
-            player.w = multiplier / 4;
-            player.h = multiplier / 4;
+            // draw the box showing which direction the player is facing
+            player.w = multiplier / 3;
+            player.h = multiplier / 3;
             switch (game->getPlayer()->getDirection()) {
                 case UP: {
-                    player.x = game->getPlayer()->getPosition()->getX() * multiplier + 15;
-                    player.y = game->getPlayer()->getPosition()->getY() * multiplier;
+                    player.x += player.w;
                     break;
                 }
                 case DOWN: {
-                    player.x = game->getPlayer()->getPosition()->getX() * multiplier + 15;
-                    player.y = game->getPlayer()->getPosition()->getY() * multiplier + 30;
+                    player.x += player.w;
+                    player.y += multiplier;
+                    player.y -= player.h;
                     break;
                 }
                 case LEFT: {
-                    player.x = game->getPlayer()->getPosition()->getX() * multiplier;
-                    player.y = game->getPlayer()->getPosition()->getY() * multiplier + 15;
+                    player.y += player.h;
                     break;
                 }
                 case RIGHT: {
-                    player.x = game->getPlayer()->getPosition()->getX() * multiplier + 30;
-                    player.y = game->getPlayer()->getPosition()->getY() * multiplier + 15;
+                    player.x += multiplier;
+                    player.x -= player.w;
+                    player.y += player.h;
                     break;
                 }
                 default:
@@ -385,91 +390,117 @@ void GameWindow::drawWorld() const {
         }
         case (BATTLE): {
             SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
+            SDL_Rect background = SDL_Rect();
             SDL_Rect cell = SDL_Rect();
+            SDL_Rect icon = SDL_Rect();
+            // draw Background
+            background.w = (game->getWorldMap().WORLDMAP_WIDTH * multiplier);
+            background.h = (game->getWorldMap().WORLDMAP_HEIGHT * multiplier);
+            background.x = 0;
+            background.y = 0;
+
+            SDL_RenderFillRect(renderer, &background);  // draw the background
+
+            // draw the enemy
+            SDL_Surface * surface;
+            SDL_Texture * texture;
+
+            surface = SDL_LoadBMP("/Users/roger/CLionProjects/CS3520-2017FA-PROJ/src/view/icons/enemyicon/GeorginaTheGoblin.bmp");
+            if (!surface) {
+                printf("Could not create surface: %s\n", SDL_GetError());
+            }
+
+            texture = SDL_CreateTextureFromSurface(renderer, surface);
+            if (!texture) {
+                printf("Could not create texture: %s\n", SDL_GetError());
+            }
+
+            icon.w = background.w / 3;
+            icon.h = icon.w;
+
+            icon.x = (background.w / 2) - (icon.w / 2);
+            icon.y = ((game->getWorldMap().WORLDMAP_HEIGHT / 3) * multiplier) - (icon.h / 2);
+
+            // put icon on top of the background
+            SDL_RenderCopy(renderer, texture, NULL, &icon);
+
+
             // draw Menu Options
             // top left box
-            cell.w = (game->getWorldMap().WORLDMAP_WIDTH * multiplier)/2;
-            cell.h = ((game->getWorldMap().WORLDMAP_HEIGHT / 3) * multiplier)/2;
-            cell.x = 0;
-            cell.y = ((2 * (game->getWorldMap().WORLDMAP_HEIGHT / 3)) * (double) multiplier/1.3);
-            if (game->curMenuOption == 0) {
-                SDL_SetRenderDrawColor(renderer, 66, 139, 202, 255);
-            } else {
-                SDL_SetRenderDrawColor(renderer, 227, 178, 178, 255);
+            cell.w = (game->getWorldMap().WORLDMAP_WIDTH * multiplier)/2;        // width of an option box
+            cell.h = ((game->getWorldMap().WORLDMAP_HEIGHT / 3) * multiplier)/2; // height of an option box
+
+            // create each box
+            for (int i = 0; i < 4; i++) {
+                // determine the icon for the ability
+                switch (i) {
+                    case 0: {
+                        surface = SDL_LoadBMP("/Users/roger/CLionProjects/CS3520-2017FA-PROJ/src/view/icons/battleicons/sword.bmp");
+                        break;
+                    }
+                    case 1: {
+                        surface = SDL_LoadBMP("/Users/roger/CLionProjects/CS3520-2017FA-PROJ/src/view/icons/battleicons/spell.bmp");
+                        break;
+                    }
+                    case 2: {
+                        surface = SDL_LoadBMP("/Users/roger/CLionProjects/CS3520-2017FA-PROJ/src/view/icons/battleicons/potion.bmp");
+                        break;
+                    }
+                    case 3: {
+                        surface = SDL_LoadBMP("/Users/roger/CLionProjects/CS3520-2017FA-PROJ/src/view/icons/battleicons/running_man.bmp");
+                        break;
+                    }
+                    default:
+                        if (!surface) {
+                            printf("Could not create surface: %s\n", SDL_GetError());
+                        }
+                        break;
+                }
+
+                texture = SDL_CreateTextureFromSurface(renderer, surface);
+                if (!texture) {
+                    printf("Could not create texture: %s\n", SDL_GetError());
+                }
+
+                // left boxes
+                if (i == 0 || i == 2) {
+                    cell.x = 0;
+                }
+
+                // right boxes
+                if (i == 1 || i == 3) {
+                    cell.x = cell.w;
+                }
+
+                // top boxes
+                cell.y = (game->getWorldMap().WORLDMAP_HEIGHT / 3) * multiplier * 2;
+
+                // bottom boxes
+                if (i == 2 || i == 3) {
+                    cell.y += cell.h;
+                }
+
+                // create icon
+                icon.w = cell.h;                                             // the icon is a square
+                icon.h = cell.h;                                             // the icon is a square
+                icon.x = cell.x + (cell.w / 2) - (icon.w / 2);               // place in the center
+                icon.y = cell.y;                                             // place in the center
+
+                // determine if the current option box is the one being hovered
+                if (game->curMenuOption == i) {
+                    SDL_SetRenderDrawColor(renderer, 66, 139, 202, 255);
+                } else {
+                    SDL_SetRenderDrawColor(renderer, 227, 178, 178, 255);
+                }
+
+                // color the box
+                SDL_RenderFillRect(renderer, &cell);
+                SDL_SetRenderDrawColor(renderer, 249, 249, 249, 255);
+
+                // put icon on top
+                SDL_RenderCopy(renderer, texture, NULL, &icon);
             }
 
-            SDL_Rect textBox;
-            SDL_SetRenderDrawColor(renderer, 249, 249, 249, 255);
-
-            // create the font
-            TTF_Font * font;
-            font = TTF_OpenFont("/Users/roger/CLionProjects/CS3520-2017FA-PROJ/src/view/font/Final-Fantasy.ttf", 14);
-            if (!font) {
-                std::cerr << "failed to load font" << endl;
-            }
-
-            // create the surface
-            SDL_Surface* screen;
-
-            // create the color
-            SDL_Color color = {0, 0, 0};
-
-            // create the text surface
-            SDL_Surface* text_surface;
-
-            if(!(text_surface=TTF_RenderText_Solid(font,"Attack!",color))) {
-                cerr << "failed to create text surface" << endl;
-            } else {
-                SDL_BlitSurface(text_surface,nullptr,screen,nullptr);
-                //perhaps we can reuse it, but I assume not for simplicity.
-                SDL_FreeSurface(text_surface);
-            }
-
-
-            auto text_texture = SDL_CreateTextureFromSurface(renderer, text_surface);
-            if (!text_texture) {
-                cerr << "failed to create text_texture" << endl;
-            }
-
-            SDL_FreeSurface(text_surface);
-            SDL_RenderCopy(renderer, text_texture, nullptr, &cell);
-
-            break;
-
-            SDL_RenderFillRect(renderer, &cell);
-            // top right box
-            cell.w = (game->getWorldMap().WORLDMAP_WIDTH * multiplier)/2;
-            cell.h = ((game->getWorldMap().WORLDMAP_HEIGHT / 3) * multiplier)/2;
-            cell.x = (game->getWorldMap().WORLDMAP_WIDTH * multiplier)/2;
-            cell.y = ((2 * (game->getWorldMap().WORLDMAP_HEIGHT / 3)) * (double) multiplier/1.3);
-            if (game->curMenuOption == 1) {
-                SDL_SetRenderDrawColor(renderer, 66, 139, 202, 255);
-            } else {
-                SDL_SetRenderDrawColor(renderer, 227, 178, 178, 255);
-            }
-            SDL_RenderFillRect(renderer, &cell);
-            //bottom left box
-            cell.w = (game->getWorldMap().WORLDMAP_WIDTH * multiplier)/2;
-            cell.h = ((game->getWorldMap().WORLDMAP_HEIGHT / 3) * multiplier);
-            cell.x = 0;
-            cell.y = 2 * (game->getWorldMap().WORLDMAP_HEIGHT / 3) * multiplier;
-            if (game->curMenuOption == 2) {
-                SDL_SetRenderDrawColor(renderer, 66, 139, 202, 255);
-            } else {
-                SDL_SetRenderDrawColor(renderer, 227, 178, 178, 255);
-            }
-            //bottom right box
-            SDL_RenderFillRect(renderer, &cell);
-            cell.w = game->getWorldMap().WORLDMAP_WIDTH * multiplier/2;
-            cell.h = (game->getWorldMap().WORLDMAP_HEIGHT / 3) * multiplier;
-            cell.x = game->getWorldMap().WORLDMAP_WIDTH * multiplier/2;
-            cell.y = 2 * (game->getWorldMap().WORLDMAP_HEIGHT / 3) * multiplier;
-            if (game->curMenuOption == 3) {
-                SDL_SetRenderDrawColor(renderer, 66, 139, 202, 255);
-            } else {
-                SDL_SetRenderDrawColor(renderer, 227, 178, 178, 255);
-            }
-            SDL_RenderFillRect(renderer, &cell);
 
             // player health bar outline
             cell.x = 0;
@@ -488,87 +519,49 @@ void GameWindow::drawWorld() const {
             // player health bar
             cell.x = 0;
             cell.y = 0;
-            cell.w = (game->getWorldMap().WORLDMAP_WIDTH / 2) * multiplier - 5 * (float) game->getPlayer()->get_health()
-                                                                             /
-                                                                             (float) game->getPlayer()->get_max_health();
+            cell.w = ((game->getWorldMap().WORLDMAP_WIDTH / 2)  *
+                     (double) game->getPlayer()->get_health() / (double) game->getPlayer()->get_max_health()) * multiplier - 5;
             cell.h = multiplier - 5;
             SDL_SetRenderDrawColor(renderer, 94, 184, 92, 255);
             SDL_RenderFillRect(renderer, &cell);
             //enemy health bar
             cell.x = (game->getWorldMap().WORLDMAP_WIDTH / 2) * multiplier + 5;
             cell.y = 0;
-            cell.w = (game->getWorldMap().WORLDMAP_WIDTH / 2) * multiplier -
-                     5 * (float) game->getEnemyUnit()->get_health()
-                     / (float) game->getEnemyUnit()->get_max_health();
+            cell.w = ((game->getWorldMap().WORLDMAP_WIDTH / 2) * (double) game->getEnemyUnit()->get_health()
+                     / (double) game->getEnemyUnit()->get_max_health()) * multiplier - 5;
             cell.h = multiplier - 5;
             SDL_SetRenderDrawColor(renderer, 217, 83, 79, 255);
             SDL_RenderFillRect(renderer, &cell);
 
             break;
         }
+        case(DEAD): {
+            SDL_Rect screen = SDL_Rect();
 
+            // create the screen
+            screen.w = (game->getWorldMap().WORLDMAP_WIDTH * multiplier);
+            screen.h = (game->getWorldMap().WORLDMAP_HEIGHT * multiplier);
+            screen.x = 0;
+            screen.y = 0;
 
-//        case (MENU):
-//            SDL_Rect textBox;
-//            textBox.y = 0;
-//            textBox.x = 0;
-//            textBox.w = 900;
-//            textBox.h = 100;
-//            SDL_SetRenderDrawColor(renderer, 249, 249, 249, 255);
-//            TTF_Font *font = TTF_OpenFont(font / Final - Fantasy.ttf, 14);
-//            if (!font) {
-//                std::cerr << "failed to load font" << endl;
-//            }
-//            string paused = "PAUSED";
-//            auto text_surface = TTF_RenderText_Solid(font, paused.c_str(), SDL_Color(0, 0, 0));
-//            if (!text_surface) {
-//                cerr << "failed to create text surface" << endl;
-//            }
-//            auto text_texture = SDL_CreateTextureFromSurface(renderer, text_surface);
-//            if (!text_texture) {
-//                cerr << "failed to create text_texture" << endl;
-//            }
-//            SDL_FreeSurface(text_surface);
-//            SDL_RenderCopy(renderer, text_texture, nullptr, textBox);
-//
-//            textBox.y = 100;
-//            textBox.x = 0;
-//            textBox.w = 450;
-//            textBox.h = 100;
-//            TTF_Font *font = TTF_OpenFont(font / Final - Fantasy.ttf, 14);
-//            if (!font) {
-//                std::cerr << "failed to load font" << endl;
-//            }
-//            auto text_surface = TTF_RenderText_Solid(font, game->getPlayer()->getName().c_str(), SDL_Color(0, 0, 0));
-//            if (!text_surface) {
-//                cerr << "failed to create text surface" << endl;
-//            }
-//            auto text_texture = SDL_CreateTextureFromSurface(renderer, text_surface);
-//            if (!text_texture) {
-//                cerr << "failed to create text_texture" << endl;
-//            }
-//            SDL_FreeSurface(text_surface);
-//            SDL_RenderCopy(renderer, text_texture, nullptr, textBox);
-//
-//            textBox.y = 100;
-//            textBox.x = 450;
-//            textBox.w = 450;
-//            textBox.h = 100;
-//            TTF_Font *font = TTF_OpenFont(font / Final - Fantasy.ttf, 14);
-//            if (!font) {
-//                std::cerr << "failed to load font" << endl;
-//            }
-//            string level = to_string(game->getPlayer()->get_lvl());
-//            auto text_surface = TTF_RenderText_Solid(font, level.c_str(), SDL_Color(0, 0, 0));
-//            if (!text_surface) {
-//                cerr << "failed to create text surface" << endl;
-//            }
-//            auto text_texture = SDL_CreateTextureFromSurface(renderer, text_surface);
-//            if (!text_texture) {
-//                cerr << "failed to create text_texture" << endl;
-//            }
-//            SDL_FreeSurface(text_surface);
-//            SDL_RenderCopy(renderer, text_texture, nullptr, textBox);
+            // draw the screen
+            SDL_Surface * surface;
+            SDL_Texture * texture;
+
+            surface = SDL_LoadBMP("/Users/roger/CLionProjects/CS3520-2017FA-PROJ/src/view/icons/gameover.bmp");
+            if (!surface) {
+                printf("Could not create surface: %s\n", SDL_GetError());
+            }
+
+            texture = SDL_CreateTextureFromSurface(renderer, surface);
+            if (!texture) {
+                printf("Could not create texture: %s\n", SDL_GetError());
+            }
+
+            // put icon on top of the background
+            SDL_RenderCopy(renderer, texture, NULL, &screen);
+        }
+
         default: {
             break;
         }

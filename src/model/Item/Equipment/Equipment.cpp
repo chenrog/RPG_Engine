@@ -47,7 +47,6 @@ void Equipment::display() {
             break;
     }
 
-    cout << "{ " << type << " - " << this->name;
 
     if (this->level > 0) {
         cout << "+" << this->level;

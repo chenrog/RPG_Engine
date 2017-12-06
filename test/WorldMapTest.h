@@ -9,13 +9,14 @@
 
 #include <cxxtest/TestSuite.h>
 
+//LINKER: ../src/model/World/WorldMap.cpp
 
 class WorldMapTest : public CxxTest::TestSuite {
 public:
 
-    testconstructor() {
+    void testConstructor() {
         WorldMap * wm = new WorldMap(4);
-        TS_ASSERT_EQUALS(wm->getCurSize(), 0);
+        TS_ASSERT_EQUALS(wm->getCurEnemiesSize(), 0);
     }
 };
 

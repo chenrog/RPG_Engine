@@ -56,20 +56,36 @@ public:
 
     Item **getInventory();
 
-    inline bool addToInventory(Item* item);
+     bool addToInventory(Item* item);
 
-    inline void trash(int i);
+     void trash(int i);
+
 
     // Constants
     static const int INVENTORY_SLOTS = 20;
+
     /**
-    * Sets the current gamestate to the given one
-    */
+	* Sets the current gamestate to the given one
+	*/
     void setCurrentGameState(game_state_t gameState);
 
     EnemyUnit * getEnemyUnit();
 
+    const int STARTING_VIT = 1;
+    const int STARTING_INT = 9;
+    const int STARTING_DEX = 8;
+    const int STARTING_STR = 7;
+    const int STARTING_LVL = 1;
+    const double STARTING_MOD_VIT = .2;
+    const double STARTING_MOD_INT = .3;
+    const double STARTING_MOD_DEX = .4;
+    const double STARTING_MOD_STR = .5;
+    const double RANDOM_ENCOUNTER_CHANCE = .05;
+
+    int curNumPotion = 3;
     int curMenuOption = 0;
+    string menuStrings[4] = {"ATTACK", "SPELLS", "ITEM", "FLEE"};
+
 private:
     // Only doing one player for now.
     PlayerUnit *player;
@@ -79,6 +95,7 @@ private:
     int curInventorySize = 0;
     game_state_t gameState;
     bool gameOver = false;
+
 };
 
 

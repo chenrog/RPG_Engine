@@ -71,6 +71,9 @@ public:
 
     bool is_melee() const;
 
+    void reset();
+
+
     int curSpellSize = 0;
 
 

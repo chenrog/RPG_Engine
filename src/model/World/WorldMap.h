@@ -22,7 +22,7 @@ public:
 
     void setEnemy(EnemyUnit * eu);
 
-    int getCurSize();
+    int getCurEnemiesSize();
 
     static const int WORLDMAP_WIDTH = 30;
     static const int WORLDMAP_HEIGHT = 30;
