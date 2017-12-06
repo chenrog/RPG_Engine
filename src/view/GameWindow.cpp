@@ -374,6 +374,8 @@ void GameWindow::drawWorld() const {
             SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
             SDL_Rect cell = SDL_Rect();
             SDL_Rect icon = SDL_Rect();
+            // draw
+
             // draw Menu Options
             // top left box
             cell.w = (game->getWorldMap().WORLDMAP_WIDTH * multiplier)/2;        // width of an option box
