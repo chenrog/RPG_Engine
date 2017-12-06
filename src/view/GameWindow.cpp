@@ -374,8 +374,25 @@ void GameWindow::drawWorld() const {
         }
         case (BATTLE): {
             SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
+            SDL_Rect background = SDL_Rect();
             SDL_Rect cell = SDL_Rect();
             SDL_Rect icon = SDL_Rect();
+            // draw Background
+            background.w = (game->getWorldMap().WORLDMAP_WIDTH * multiplier);
+            background.h = (game->getWorldMap().WORLDMAP_HEIGHT * multiplier);
+            background.x = 0;
+            background.y = 0;
+
+            SDL_RenderFillRect(renderer, &cell);  // draw the background
+
+            icon.w = background.w / 3;
+            icon.h = icon.w;
+
+            icon.x = (background.w / 2) - (icon.w / 2);
+            icon.y = ((game->getWorldMap().WORLDMAP_HEIGHT / 3) * multiplier) - (icon.h / 2);
+
+
+
             // draw Menu Options
             // top left box
             cell.w = (game->getWorldMap().WORLDMAP_WIDTH * multiplier)/2;        // width of an option box
