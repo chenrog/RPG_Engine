@@ -29,7 +29,7 @@ int AUnit::takeDamage(Spell * s, AUnit* attacker) {
         // calculate the damage
 
         int damage = (int)((float)s->getDamage(attacker) * (float)(100.0 / (100.0 + defense)));
-        cout << attacker->getName() << " DID " << damage << " DAMAGE!" << endl;
+        cout << attacker->getName() << " USED " << s->getName() << " AND DID " << damage << " DAMAGE!" << endl;
         if (this->health >= damage) {
             this->health -= damage;
         } else {

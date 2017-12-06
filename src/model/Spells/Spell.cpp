@@ -65,6 +65,10 @@ void Spell::display() {
     cout << "HitRate [" << this->base_hit_chance << " + (" << this->mod_hit_chance << " * DEX)]" << endl;
 }
 
+string Spell::getName() {
+    return this->spellname;
+}
+
 // BUILDER FROM HERE ON OUT
 
 static const int DEFAULT_BASE_DAMAGE = 0;

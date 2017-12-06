@@ -378,31 +378,32 @@ void GameWindow::drawWorld() const {
             // top left box
             cell.w = (game->getWorldMap().WORLDMAP_WIDTH * multiplier)/2;        // width of an option box
             cell.h = ((game->getWorldMap().WORLDMAP_HEIGHT / 3) * multiplier)/2; // height of an option box
-            SDL_surface * surface;
-            SDL_texture * texture;
 
             // create each box
             for (int i = 0; i < 4; i++) {
+                SDL_Surface * surface;
+                SDL_Texture * texture;
+
                 // determine the icon for the ability
                 switch (i) {
                     case 0: {
-                        surface = SDL_LoadBMP("battleicons/sword.bmp");
+                        surface = SDL_LoadBMP("/Users/roger/CLionProjects/CS3520-2017FA-PROJ/src/view/battleicons/sword.bmp");
                         break;
                     }
                     case 1: {
-                        surface = SDL_LoadBMP("battleicons/spell.bmp");
+                        surface = SDL_LoadBMP("/Users/roger/CLionProjects/CS3520-2017FA-PROJ/src/view/battleicons/spell.bmp");
                         break;
                     }
                     case 2: {
-                        surface = SDL_LoadBMP("battleicons/potion.bmp");
+                        surface = SDL_LoadBMP("/Users/roger/CLionProjects/CS3520-2017FA-PROJ/src/view/battleicons/potion.bmp");
                         break;
                     }
                     case 3: {
-                        surface = SDL_LoadBMP("battleicons/running_man.bmp");
+                        surface = SDL_LoadBMP("/Users/roger/CLionProjects/CS3520-2017FA-PROJ/src/view/battleicons/running_man.bmp");
                         break;
                     }
                     default:
-                        if (surface == nullptr) {
+                        if (!surface) {
                             printf("Could not create surface: %s\n", SDL_GetError());
                         }
                         break;
@@ -410,7 +411,7 @@ void GameWindow::drawWorld() const {
 
                 // creates the texture which will clear some space
                 texture = SDL_CreateTextureFromSurface(renderer, surface);
-                if (texture == nullptr) {
+                if (!texture) {
                     printf("Could not create texture: %s\n", SDL_GetError());
                 }
 
@@ -450,7 +451,7 @@ void GameWindow::drawWorld() const {
                 SDL_SetRenderDrawColor(renderer, 249, 249, 249, 255);
 
                 // put icon on top
-                SDL_RenderCopy(renderer, texture, NULL, icon);
+                SDL_RenderCopy(renderer, texture, NULL, &icon);
             }
 
 
@@ -472,7 +473,7 @@ void GameWindow::drawWorld() const {
             cell.x = 0;
             cell.y = 0;
             cell.w = (game->getWorldMap().WORLDMAP_WIDTH / 2) * multiplier - 5 *
-                                                                             (float) game->getPlayer()->get_health() / (float) game->getPlayer()->get_max_health();
+                     (float) game->getPlayer()->get_health() / (float) game->getPlayer()->get_max_health();
             cell.h = multiplier - 5;
             SDL_SetRenderDrawColor(renderer, 94, 184, 92, 255);
             SDL_RenderFillRect(renderer, &cell);

@@ -30,6 +30,8 @@ public:
 
     void display();
 
+    string getName();
+
 private:
     string        spellname;
     int           base_damage;
