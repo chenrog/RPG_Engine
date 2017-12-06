@@ -78,6 +78,7 @@ void World::onTick(int currTick) {
 
 }
 
+
 bool World::addToInventory(Item *item) {
     if (curInventorySize == INVENTORY_SLOTS) {
         return false;

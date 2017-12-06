@@ -82,6 +82,7 @@ public:
     const double STARTING_MOD_STR = .5;
     const double RANDOM_ENCOUNTER_CHANCE = .05;
 
+    int curNumPotion = 3;
     int curMenuOption = 0;
     string menuStrings[4] = {"ATTACK", "SPELLS", "ITEM", "FLEE"};
 

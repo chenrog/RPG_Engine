@@ -234,8 +234,12 @@ void GameWindow::pollEvents() {
                                 b.doBattle(p, e, 1);
                             }
                             if (game->curMenuOption == 2) {
-                                p->reset();
-                                cout << "You Healed" << endl;
+                                cout << "YOU HAVE " << game->curNumPotion << " POTIONS!" << endl;
+                                if (game->curNumPotion != 0) {
+                                    p->reset();
+                                    game->curNumPotion--;
+                                    cout << "You Healed" << endl;
+                                }
                                 b.doBattle(p, e, 4);
                             }
                             if (game->curMenuOption == 3) {
@@ -252,11 +256,9 @@ void GameWindow::pollEvents() {
                             break;
                         }
 
-
-
                         }
                     if (game->getPlayer()->get_health() == 0) {
-                        /** game->END(); **/
+                        game->setCurrentGameState(DEAD);
                     } else if (game->getEnemyUnit()->get_health() == 0) {
                         game->setCurrentGameState(OVERWORLD);
                         game->getEnemyUnit()->reset();
@@ -487,6 +489,9 @@ void GameWindow::drawWorld() const {
             SDL_RenderFillRect(renderer, &cell);
 
             break;
+        }
+        case(DEAD): {
+            //TODO: RENDER DEAD SCREEN
         }
 
         default: {
