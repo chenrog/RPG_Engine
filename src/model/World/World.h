@@ -71,7 +71,7 @@ public:
 
     EnemyUnit * getEnemyUnit();
 
-    const int STARTING_VIT = 10;
+    const int STARTING_VIT = 1;
     const int STARTING_INT = 9;
     const int STARTING_DEX = 8;
     const int STARTING_STR = 7;

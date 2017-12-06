@@ -51,8 +51,8 @@ World::World() {
     this->player = new PlayerUnit("Twen", starting_point, STARTING_VIT, STARTING_INT, STARTING_DEX,
                                   STARTING_STR, STARTING_LVL, true, equipmentList, spellList, STARTING_MOD_VIT,
                                   STARTING_MOD_INT, STARTING_MOD_DEX, STARTING_MOD_STR);
-    player->addSpell(spell2);
     player->addSpell(spell);
+    player->addSpell(spell2);
     this->gameState = OVERWORLD;
     this->curMenuOption = 0;
 
