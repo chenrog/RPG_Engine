@@ -214,9 +214,25 @@ void GameWindow::pollEvents() {
                             break;
                         }
 
+                        case SDLK_UP: {
+                            if (game->curMenuOption > 1) {
+                                game->curMenuOption-= 2;
+                                cout << game->curMenuOption + 1 << ": " << game->menuStrings[game->curMenuOption] << endl;
+                            }
+                            break;
+                        }
+
                         case SDLK_RIGHT: {
                             if (game->curMenuOption < 3) {
                                 game->curMenuOption++;
+                                cout << game->curMenuOption + 1 << ": " << game->menuStrings[game->curMenuOption] << endl;
+                            }
+                            break;
+                        }
+
+                        case SDLK_DOWN: {
+                            if (game->curMenuOption < 2) {
+                                game->curMenuOption+= 2;
                                 cout << game->curMenuOption + 1 << ": " << game->menuStrings[game->curMenuOption] << endl;
                             }
                             break;
@@ -383,7 +399,21 @@ void GameWindow::drawWorld() const {
             background.x = 0;
             background.y = 0;
 
-            SDL_RenderFillRect(renderer, &cell);  // draw the background
+            SDL_RenderFillRect(renderer, &background);  // draw the background
+
+            // draw the enemy
+            SDL_Surface * surface;
+            SDL_Texture * texture;
+
+            surface = SDL_LoadBMP("/Users/roger/CLionProjects/CS3520-2017FA-PROJ/src/view/icons/enemyicon/GeorginaTheGoblin.bmp");
+            if (!surface) {
+                printf("Could not create surface: %s\n", SDL_GetError());
+            }
+
+            texture = SDL_CreateTextureFromSurface(renderer, surface);
+            if (!texture) {
+                printf("Could not create texture: %s\n", SDL_GetError());
+            }
 
             icon.w = background.w / 3;
             icon.h = icon.w;
@@ -391,6 +421,8 @@ void GameWindow::drawWorld() const {
             icon.x = (background.w / 2) - (icon.w / 2);
             icon.y = ((game->getWorldMap().WORLDMAP_HEIGHT / 3) * multiplier) - (icon.h / 2);
 
+            // put icon on top of the background
+            SDL_RenderCopy(renderer, texture, NULL, &icon);
 
 
             // draw Menu Options
@@ -400,25 +432,22 @@ void GameWindow::drawWorld() const {
 
             // create each box
             for (int i = 0; i < 4; i++) {
-                SDL_Surface * surface;
-                SDL_Texture * texture;
-
                 // determine the icon for the ability
                 switch (i) {
                     case 0: {
-                        surface = SDL_LoadBMP("/Users/roger/CLionProjects/CS3520-2017FA-PROJ/src/view/battleicons/sword.bmp");
+                        surface = SDL_LoadBMP("/Users/roger/CLionProjects/CS3520-2017FA-PROJ/src/view/icons/battleicons/sword.bmp");
                         break;
                     }
                     case 1: {
-                        surface = SDL_LoadBMP("/Users/roger/CLionProjects/CS3520-2017FA-PROJ/src/view/battleicons/spell.bmp");
+                        surface = SDL_LoadBMP("/Users/roger/CLionProjects/CS3520-2017FA-PROJ/src/view/icons/battleicons/spell.bmp");
                         break;
                     }
                     case 2: {
-                        surface = SDL_LoadBMP("/Users/roger/CLionProjects/CS3520-2017FA-PROJ/src/view/battleicons/potion.bmp");
+                        surface = SDL_LoadBMP("/Users/roger/CLionProjects/CS3520-2017FA-PROJ/src/view/icons/battleicons/potion.bmp");
                         break;
                     }
                     case 3: {
-                        surface = SDL_LoadBMP("/Users/roger/CLionProjects/CS3520-2017FA-PROJ/src/view/battleicons/running_man.bmp");
+                        surface = SDL_LoadBMP("/Users/roger/CLionProjects/CS3520-2017FA-PROJ/src/view/icons/battleicons/running_man.bmp");
                         break;
                     }
                     default:
@@ -428,7 +457,6 @@ void GameWindow::drawWorld() const {
                         break;
                 }
 
-                // creates the texture which will clear some space
                 texture = SDL_CreateTextureFromSurface(renderer, surface);
                 if (!texture) {
                     printf("Could not create texture: %s\n", SDL_GetError());
@@ -508,7 +536,30 @@ void GameWindow::drawWorld() const {
             break;
         }
         case(DEAD): {
-            //TODO: RENDER DEAD SCREEN
+            SDL_Rect screen = SDL_Rect();
+
+            // create the screen
+            screen.w = (game->getWorldMap().WORLDMAP_WIDTH * multiplier);
+            screen.h = (game->getWorldMap().WORLDMAP_HEIGHT * multiplier);
+            screen.x = 0;
+            screen.y = 0;
+
+            // draw the screen
+            SDL_Surface * surface;
+            SDL_Texture * texture;
+
+            surface = SDL_LoadBMP("/Users/roger/CLionProjects/CS3520-2017FA-PROJ/src/view/icons/gameover.bmp");
+            if (!surface) {
+                printf("Could not create surface: %s\n", SDL_GetError());
+            }
+
+            texture = SDL_CreateTextureFromSurface(renderer, surface);
+            if (!texture) {
+                printf("Could not create texture: %s\n", SDL_GetError());
+            }
+
+            // put icon on top of the background
+            SDL_RenderCopy(renderer, texture, NULL, &screen);
         }
 
         default: {
