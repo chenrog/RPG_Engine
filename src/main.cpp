@@ -11,7 +11,7 @@ const int SCREEN_HEIGHT = 30;
 int main( int argc, char* args[] ) {
     // initialize the game
     GameWindow g = GameWindow(
-            "$WAG",
+            "Georginacide",
             SCREEN_WIDTH,
             SCREEN_HEIGHT,
             SCREEN_GRID_MULTIPLIER);
